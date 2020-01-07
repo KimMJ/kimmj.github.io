@@ -1,0 +1,43 @@
+[
+{
+	"uri": "http://192.168.8.21/",
+	"title": "Ibiza",
+	"tags": [],
+	"description": "",
+	"content": "Ibiza Do Learn\nBuilt with from Grav and Hugo\n"
+},
+{
+	"uri": "http://192.168.8.21/basics/",
+	"title": "Basics",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 Basics Discover what this Hugo theme is all about and the core concepts behind it.\n"
+},
+{
+	"uri": "http://192.168.8.21/test-folder/",
+	"title": "test-folder",
+	"tags": [],
+	"description": "",
+	"content": "Hello Hello World!\n"
+},
+{
+	"uri": "http://192.168.8.21/basics/second-content/",
+	"title": "Second Content",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://192.168.8.21/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://192.168.8.21/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

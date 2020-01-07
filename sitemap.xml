@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://192.168.8.21/</loc>
+    <lastmod>2020-01-08T01:00:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/basics/</loc>
+    <lastmod>2020-01-07T22:08:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/test-folder/</loc>
+    <lastmod>2020-01-07T22:08:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/basics/second-content/</loc>
+    <lastmod>2020-01-07T22:10:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/</loc>
+  </url>
+  
+</urlset>
