@@ -6,9 +6,109 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2020 01:52:47 +0900</lastBuildDate>
     
 	<atom:link href="http://192.168.8.21/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ansible</title>
+      <link>http://192.168.8.21/tags/ansible/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:47 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>libvirt</title>
+      <link>http://192.168.8.21/tags/libvirt/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:47 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/libvirt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>preseed.cfg</title>
+      <link>http://192.168.8.21/tags/preseed.cfg/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/preseed.cfg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu 18.04 server</title>
+      <link>http://192.168.8.21/tags/ubuntu-18.04-server/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/ubuntu-18.04-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boot parameter</title>
+      <link>http://192.168.8.21/tags/boot-parameter/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/boot-parameter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>install</title>
+      <link>http://192.168.8.21/tags/install/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://192.168.8.21/tags/ubuntu/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>passwordless</title>
+      <link>http://192.168.8.21/tags/passwordless/</link>
+      <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/passwordless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sudo</title>
+      <link>http://192.168.8.21/tags/sudo/</link>
+      <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/sudo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>http://192.168.8.21/tags/blog/</link>
+      <pubDate>Wed, 08 Jan 2020 01:51:18 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://192.168.8.21/tags/hugo/</link>
+      <pubDate>Wed, 08 Jan 2020 01:51:18 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/tags/hugo/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

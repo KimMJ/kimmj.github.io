@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>preseed.cfg on Ibiza</title>
+    <link>http://192.168.8.21/tags/preseed.cfg/</link>
+    <description>Recent content in preseed.cfg on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2020 01:52:32 +0900</lastBuildDate>
+    
+	<atom:link href="http://192.168.8.21/tags/preseed.cfg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unattended Ubuntu</title>
+      <link>http://192.168.8.21/category/ubuntu/unattended-ubuntu/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/category/ubuntu/unattended-ubuntu/</guid>
+      <description>어디에 좋을까 Ubuntu Server를 설치하기 위해서는 많은 추가 입력이 있어야 합니다. 사용자가 어떻게 설치하기를 원하는지 모르기 때문에, 또 다양한 옵션을 사용자가 선택하기 위해서는 어찌보면 당연한 것이겠지요. 하지만 만약 똑같은 설정을 사용할 것인데, 여러대의 서버에 OS를 설치하는 상황이라고 생각해보면 정말 암울합니다. 온전히 시간을 OS 설치에만 투자하자니 이건 간단한 업무로 인해 다른 업무를 보지 못하게 됩니다. 또 다른 업무와 동시에 하자니 다음 입력창이 뜰 때인지 한번씩 확인해 주어야 합니다.
+따라서 어차피 같은 설정을 한다면, 이러한 설정을 미리 해 놓는 방법이 Ubuntu iso 파일 내부에 있을 것이라고 추측했습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Ibiza</title>
+    <title>Unattended Ubuntu :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1578418007" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/category/ubuntu/unattended-ubuntu/">
     <nav id="sidebar" class="">
 
 
@@ -145,7 +145,7 @@ hello world!
   
     
     <li data-nav-id="/category/" title="Category" class="dd-item 
-        
+        parent
         
         
         ">
@@ -172,7 +172,7 @@ hello world!
   
     
     <li data-nav-id="/category/ubuntu/" title="Ubuntu" class="dd-item 
-        
+        parent
         
         
         ">
@@ -196,7 +196,7 @@ hello world!
  
   
     
-      <li data-nav-id="/category/ubuntu/unattended-ubuntu/" title="Unattended Ubuntu" class="dd-item ">
+      <li data-nav-id="/category/ubuntu/unattended-ubuntu/" title="Unattended Ubuntu" class="dd-item active">
         <a href="/category/ubuntu/unattended-ubuntu/">
         Unattended Ubuntu
         
@@ -380,7 +380,19 @@ hello world!
             
           
           
-            <a href='/'>Ibiza</a> > Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/ubuntu/'>Ubuntu</a> > Unattended Ubuntu
+          
+         
+          
+         
           
          
           
@@ -391,7 +403,16 @@ hello world!
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#어디에-좋을까">어디에 좋을까</a></li>
+    <li><a href="#사전-준비">사전 준비</a></li>
+    <li><a href="#preseedcfg-작성">preseed.cfg 작성</a></li>
+    <li><a href="#iso-파일-생성하기">iso 파일 생성하기</a></li>
+    <li><a href="#설치-테스트">설치 테스트</a></li>
+    <li><a href="#마치며">마치며</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -401,13 +422,21 @@ hello world!
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/ubuntu-18.04-server">ubuntu 18.04 server</a>
+
+  <a class="tag-link" href="/tags/preseed.cfg">preseed.cfg</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Tags
+              Unattended Ubuntu
             </h1>
           
 
@@ -415,39 +444,56 @@ hello world!
 
 
 
-
-
-
-<ul>
-	
-		<li><a href="/tags/ansible/">ansible</a></li>
-	
-		<li><a href="/tags/libvirt/">libvirt</a></li>
-	
-		<li><a href="/tags/preseed.cfg/">preseed.cfg</a></li>
-	
-		<li><a href="/tags/ubuntu-18.04-server/">ubuntu 18.04 server</a></li>
-	
-		<li><a href="/tags/boot-parameter/">boot parameter</a></li>
-	
-		<li><a href="/tags/install/">install</a></li>
-	
-		<li><a href="/tags/ubuntu/">ubuntu</a></li>
-	
-		<li><a href="/tags/passwordless/">passwordless</a></li>
-	
-		<li><a href="/tags/sudo/">sudo</a></li>
-	
-		<li><a href="/tags/blog/">blog</a></li>
-	
-		<li><a href="/tags/hugo/">hugo</a></li>
-	
-</ul>
+<h2 id="어디에-좋을까">어디에 좋을까</h2>
+<p>Ubuntu Server를 설치하기 위해서는 많은 추가 입력이 있어야 합니다.
+사용자가 어떻게 설치하기를 원하는지 모르기 때문에, 또 다양한 옵션을 사용자가 선택하기 위해서는 어찌보면 당연한 것이겠지요.
+하지만 만약 똑같은 설정을 사용할 것인데, 여러대의 서버에 OS를 설치하는 상황이라고 생각해보면 정말 암울합니다.
+온전히 시간을 OS 설치에만 투자하자니 이건 간단한 업무로 인해 다른 업무를 보지 못하게 됩니다.
+또 다른 업무와 동시에 하자니 다음 입력창이 뜰 때인지 한번씩 확인해 주어야 합니다.</p>
+<p>따라서 어차피 같은 설정을 한다면, 이러한 설정을 미리 해 놓는 방법이 Ubuntu iso 파일 내부에 있을 것이라고 추측했습니다.
+분명 누군가가 이런 불편함을 해결했으리라 생각했죠.
+다행이 몇번의 구글링을 통해 <code>preseed.cfg</code>라는 파일이 제가 말했던 사용자의 입력을 미리 정해놓는 파일이라는 것을 알 수 있었습니다.</p>
+<p>이 <code>preseed.cfg</code> 파일을 잘만 활용한다면, 서버에 OS를 설치할 때 불필요한 시간 낭비를 줄일 수 있을 것입니다.</p>
+<p>차라리 VM이었다면, 그냥 VM을 복사해서 IP나 MAC, hostname 같은 것들만 변경해도 됐을 수 있습니다.
+하지만 <code>preseed.cfg</code>를 이해하게 되면 언제 어디서든 내가 원하는 설정을 해주는 우분투 설치 파일을 만들 수 있을 것입니다.</p>
+<h2 id="사전-준비">사전 준비</h2>
+<p>먼저, 설정을 넣어줄 Ubuntu 18.04 Server가 필요합니다.
+물론 Ubuntu 18.04 Desktop에도 적용이 될 것으로 보입니다. (검색했을 때 대부분이 Desktop 설치 이미지에 관한 내용이었으니까요.)</p>
+<p>여기서 중요한 점은 <code>live</code>라고 적혀있는 이미지가 아니어야 합니다. live가 붙은 것은 인터넷으로 파일들을 다운로드 받게 되고,
+그럴 경우 오프라인 설치가 필요한 환경에서는 적합하지도 않고 작업할 때 필요한 파일 또한 없습니다.</p>
+<p>두번째로 중요한 점은 <code>amd64</code>입니다. 처음에 잘못받고 <code>arm64</code>를 다운받았었는데, 내부 파일들의 폴더 명도 다르고 동작방식도 달라
+구글링을 통해 <code>amd64</code> 이미지를 따로 받았습니다.</p>
+<h2 id="preseedcfg-작성">preseed.cfg 작성</h2>
+<p>제가 설정했던 preseed.cfg 파일은 다음과 같습니다.</p>
+<!-- raw HTML omitted -->
+<p>설명은 후에 추가하도록 하겠습니다.</p>
+<h2 id="iso-파일-생성하기">iso 파일 생성하기</h2>
+<p>크게 순서를 정한다면 이렇게 됩니다.</p>
+<ol>
+<li><code>initrd.gz</code>를 압축해제한 뒤 <code>preseed.cfg</code> 관련 정보를 <code>initrd.gz</code>에 추가</li>
+<li>다시 <code>initrd.gz</code>로 압축</li>
+<li><code>md5sum</code>을 통한 checksum 재생성</li>
+<li><code>genisoimage</code>를 통한 부팅용 이미지 생성</li>
+</ol>
+<p>그러나 <code>preseed.cfg</code>를 수정할 때마다 이를 반복하는 것은 여간 귀찮은 일이 아닐 수 없습니다.
+그래서 저는 이를 <code>bakeIsoImage.sh</code>이라는 간단한 shell 프로그램으로 만들어서 iso파일을 생성하도록 하였습니다.</p>
+<!-- raw HTML omitted -->
+<h2 id="설치-테스트">설치 테스트</h2>
+<p>위의 방식대로 진행을 했다면 <code>baked-ubuntu.iso</code>라는 파일이 생성되었을 것입니다.
+이를 <code>virt-manager</code>나 <code>virtual box</code>등을 통해 가상머신을 생성하여 설치 테스트를 합니다.</p>
+<p>설치를 하면서 아무런 입력을 하지 않았다면, 원래의 의도대로 잘 설치가 된 것이라고 볼 수 있겠네요.</p>
+<h2 id="마치며">마치며</h2>
+<p><code>preseed.cfg</code>라는 엄청나게 유용한 방법이 있음에도 불구하고, 공식적인 가이드 자체가 많이 없는 상황입니다.
+어떤 옵션들이 있는지도 잘 모르고, 설명도 자세히 되어있지 않았습니다.
+단지 주어진 것이라고는 공식 문서에서 예시로 제공하는 <code>preseed.cfg</code> 파일 하나와, 다른사람들이 작성해 놓은 파일들 뿐이었습니다.</p>
+<p>저 또한 입력없이 설치하는 우분투 설치 이미지를 만들기 위해 고군분투했습니다.
+누군가가 이 글을 통해서 환경에 맞는 설정을 해주는 우분투 설치 이미지를 생성하여 자동화를 할 수 있게된다면 정말 좋을 것 같습니다.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -531,6 +577,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -546,6 +593,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -558,6 +606,7 @@ hello world!
             
             
                 
+                    
                     
                 
                 
@@ -574,6 +623,9 @@ hello world!
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -675,3 +727,4 @@ hello world!
 
   </body>
 </html>
+

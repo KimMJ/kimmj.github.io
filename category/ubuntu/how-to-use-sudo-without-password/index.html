@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Ibiza</title>
+    <title>How to Use Sudo Without Password :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1578418007" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/category/ubuntu/how-to-use-sudo-without-password/">
     <nav id="sidebar" class="">
 
 
@@ -145,7 +145,7 @@ hello world!
   
     
     <li data-nav-id="/category/" title="Category" class="dd-item 
-        
+        parent
         
         
         ">
@@ -172,7 +172,7 @@ hello world!
   
     
     <li data-nav-id="/category/ubuntu/" title="Ubuntu" class="dd-item 
-        
+        parent
         
         
         ">
@@ -234,7 +234,7 @@ hello world!
  
   
     
-      <li data-nav-id="/category/ubuntu/how-to-use-sudo-without-password/" title="How to Use Sudo Without Password" class="dd-item ">
+      <li data-nav-id="/category/ubuntu/how-to-use-sudo-without-password/" title="How to Use Sudo Without Password" class="dd-item active">
         <a href="/category/ubuntu/how-to-use-sudo-without-password/">
         How to Use Sudo Without Password
         
@@ -380,7 +380,19 @@ hello world!
             
           
           
-            <a href='/'>Ibiza</a> > Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/ubuntu/'>Ubuntu</a> > How to Use Sudo Without Password
+          
+         
+          
+         
           
          
           
@@ -391,7 +403,7 @@ hello world!
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -401,13 +413,23 @@ hello world!
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/sudo">sudo</a>
+
+  <a class="tag-link" href="/tags/passwordless">passwordless</a>
+
+  <a class="tag-link" href="/tags/ubuntu">ubuntu</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Tags
+              How to Use Sudo Without Password
             </h1>
           
 
@@ -415,39 +437,25 @@ hello world!
 
 
 
-
-
-
-<ul>
-	
-		<li><a href="/tags/ansible/">ansible</a></li>
-	
-		<li><a href="/tags/libvirt/">libvirt</a></li>
-	
-		<li><a href="/tags/preseed.cfg/">preseed.cfg</a></li>
-	
-		<li><a href="/tags/ubuntu-18.04-server/">ubuntu 18.04 server</a></li>
-	
-		<li><a href="/tags/boot-parameter/">boot parameter</a></li>
-	
-		<li><a href="/tags/install/">install</a></li>
-	
-		<li><a href="/tags/ubuntu/">ubuntu</a></li>
-	
-		<li><a href="/tags/passwordless/">passwordless</a></li>
-	
-		<li><a href="/tags/sudo/">sudo</a></li>
-	
-		<li><a href="/tags/blog/">blog</a></li>
-	
-		<li><a href="/tags/hugo/">hugo</a></li>
-	
-</ul>
+<p><code>/etc/sudoers</code>는 <code>sudo</code>를 사용할 수 있는 파일입니다.
+이 파일을 열어보면 다음과 같은 글이 적혀 있습니다.</p>
+<blockquote>
+<p>Please consider adding local content in /etc/sudoers.d/ instead of directly modifying this file</p>
+</blockquote>
+<p>즉, 직접 이 파일을 수정해서 <code>sudo</code> 권한을 주지 말고, <code>/etc/sudoers.d/</code> 폴더 내에 파일을 추가하라는 의미입니다.</p>
+<p>이 곳에는 <code>/etc/sudoers</code>와 마찬가지로 계정에 대한 설정을 추가할 수 있습니다.
+그리고 <code>/etc/sudoers</code>에서는 &ldquo;NOPASSWD&quot;라는 옵션을 주어 password없이 타 계정의 권한을 가지게 만들 수 있습니다.</p>
+<p>이 두가지를 종합하여 내 linux 계정이 sudo 명령어를 입력할 때, 즉 root 권한을 가지게 될 때 password를 입력하지 않도록 설정할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export ACCOUNT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>whoami<span style="color:#66d9ef">)</span>
+echo <span style="color:#e6db74">&#34;</span>$ACCOUNT<span style="color:#e6db74"> ALL = (root) NOPASSWD:ALL</span><span style="color:#e6db74">&#34;</span> | sudo tee /etc/sudoers.d/$ACCOUNT
+sudo chmod <span style="color:#ae81ff">0440</span> /etc/sudoers.d/$ACCOUNT
+</code></pre></div><p>이제 <code>sudo</code> 명령어를 쳐도 더 이상 password를 입력하라는 출력이 뜨지 않습니다.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -531,6 +539,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -546,6 +555,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -558,6 +568,9 @@ hello world!
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -591,6 +604,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -609,6 +623,9 @@ hello world!
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -675,3 +692,4 @@ hello world!
 
   </body>
 </html>
+

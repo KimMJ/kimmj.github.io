@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Ibiza</title>
+    <title>How to Edit Boot Parameter During Install :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1578418007" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/category/ubuntu/how-to-edit-boot-parameter-during-install/">
     <nav id="sidebar" class="">
 
 
@@ -145,7 +145,7 @@ hello world!
   
     
     <li data-nav-id="/category/" title="Category" class="dd-item 
-        
+        parent
         
         
         ">
@@ -172,7 +172,7 @@ hello world!
   
     
     <li data-nav-id="/category/ubuntu/" title="Ubuntu" class="dd-item 
-        
+        parent
         
         
         ">
@@ -215,7 +215,7 @@ hello world!
  
   
     
-      <li data-nav-id="/category/ubuntu/how-to-edit-boot-parameter-during-install/" title="How to Edit Boot Parameter During Install" class="dd-item ">
+      <li data-nav-id="/category/ubuntu/how-to-edit-boot-parameter-during-install/" title="How to Edit Boot Parameter During Install" class="dd-item active">
         <a href="/category/ubuntu/how-to-edit-boot-parameter-during-install/">
         How to Edit Boot Parameter During Install
         
@@ -380,7 +380,19 @@ hello world!
             
           
           
-            <a href='/'>Ibiza</a> > Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/ubuntu/'>Ubuntu</a> > How to Edit Boot Parameter During Install
+          
+         
+          
+         
           
          
           
@@ -391,7 +403,11 @@ hello world!
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-시에-설정으로-넣어버리기">install 시에 설정으로 넣어버리기</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -401,13 +417,23 @@ hello world!
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/ubuntu">ubuntu</a>
+
+  <a class="tag-link" href="/tags/install">install</a>
+
+  <a class="tag-link" href="/tags/boot-parameter">boot parameter</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Tags
+              How to Edit Boot Parameter During Install
             </h1>
           
 
@@ -415,39 +441,29 @@ hello world!
 
 
 
-
-
-
-<ul>
-	
-		<li><a href="/tags/ansible/">ansible</a></li>
-	
-		<li><a href="/tags/libvirt/">libvirt</a></li>
-	
-		<li><a href="/tags/preseed.cfg/">preseed.cfg</a></li>
-	
-		<li><a href="/tags/ubuntu-18.04-server/">ubuntu 18.04 server</a></li>
-	
-		<li><a href="/tags/boot-parameter/">boot parameter</a></li>
-	
-		<li><a href="/tags/install/">install</a></li>
-	
-		<li><a href="/tags/ubuntu/">ubuntu</a></li>
-	
-		<li><a href="/tags/passwordless/">passwordless</a></li>
-	
-		<li><a href="/tags/sudo/">sudo</a></li>
-	
-		<li><a href="/tags/blog/">blog</a></li>
-	
-		<li><a href="/tags/hugo/">hugo</a></li>
-	
-</ul>
+<p>Ubuntu 설치할 때 boot parameter가 필요한 상황이 간혹 발생할 수 있습니다.</p>
+<p>특히 저의 경우, <code>preseed.cfg</code>를 수정하기 위해 인스톨러가 질의하는 것이 <code>preseed.cfg</code>의 어떤것과 대응이 되는지를 보기 위해 <code>DEBCONF_DEBUG=5</code>라는 옵션을 boot parameter로 주어야 했습니다.
+이 때 사용할 수 있는 방법을 소개드립니다.</p>
+<p>먼저 평소와 같이 ubuntu를 설치하기 위해 설치 이미지를 삽입합니다.
+그 다음에는 언어를 선택하시면, 다음으로 넘어가기 전에 메뉴가 뜹니다.</p>
+<p>이 상태에서 <code>F6</code>을 누르시면 옵션을 선택할 수 있고, 이 때 <code>ESC</code>키를 누르면 boot parameter가 하단에 보일 것입니다.
+여기서 원하는 boot parameter를 입력하면 됩니다.</p>
+<p>이 때, 위아래 방향키를 누르게 되면 입력했던 내용이 사라지게 됩니다.
+따라서 미리 맨 위 install ubuntu에 커서를 올리고 수정하시기 바랍니다.</p>
+<h2 id="install-시에-설정으로-넣어버리기">install 시에 설정으로 넣어버리기</h2>
+<p><code>preseed.cfg</code>로 미리 질문에 대한 답을 다 정할 수 있었듯이, boot parameter 또한 미리 설정할 수 있습니다.
+해당 파일은 iso 파일을 압축해제 하였을 때, <code>/isolinux/txt.cfg</code> 파일 내에 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -ri <span style="color:#e6db74">&#39;initrd&#39;</span> .
+</code></pre></div><p>이렇게 검색해 보았을 때 <code>quiet ---</code>이라고 적힌 것들이 있는데, <code>---</code> 뒤에가 boot parameter로 쓰이는 것들입니다.</p>
+<p>vim으로 <code>/isolinux/txt.cfg</code> 파일을 열고 원하는 설정을 기입하면 됩니다.</p>
+<p>이렇게 원하는 boot parameter를 적었다면, 다시 <code>md5sum</code>을 통해 체크섬을 만들어주어야 합니다.
+이에 대한 내용은 앞선 [포스트]({% post_url 2020-01-05-unattended-ubuntu %})에서도 확인할 수 있으니 <code>bakeIsoImage.sh</code> 스크립트를 참조하여 <code>md5sum</code>을 하고 iso 파일을 만들면 됩니다.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -531,6 +547,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -546,6 +563,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -558,6 +576,9 @@ hello world!
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -575,6 +596,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -590,6 +612,9 @@ hello world!
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -675,3 +700,4 @@ hello world!
 
   </body>
 </html>
+

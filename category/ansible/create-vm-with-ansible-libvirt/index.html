@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Ibiza</title>
+    <title>Create Vm With Ansible Libvirt :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1578418007" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/category/ansible/create-vm-with-ansible-libvirt/">
     <nav id="sidebar" class="">
 
 
@@ -145,7 +145,7 @@ hello world!
   
     
     <li data-nav-id="/category/" title="Category" class="dd-item 
-        
+        parent
         
         
         ">
@@ -263,7 +263,7 @@ hello world!
   
     
     <li data-nav-id="/category/ansible/" title="Ansible" class="dd-item 
-        
+        parent
         
         
         ">
@@ -287,7 +287,7 @@ hello world!
  
   
     
-      <li data-nav-id="/category/ansible/create-vm-with-ansible-libvirt/" title="Create Vm With Ansible Libvirt" class="dd-item ">
+      <li data-nav-id="/category/ansible/create-vm-with-ansible-libvirt/" title="Create Vm With Ansible Libvirt" class="dd-item active">
         <a href="/category/ansible/create-vm-with-ansible-libvirt/">
         Create Vm With Ansible Libvirt
         
@@ -380,7 +380,19 @@ hello world!
             
           
           
-            <a href='/'>Ibiza</a> > Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/ansible/'>Ansible</a> > Create Vm With Ansible Libvirt
+          
+         
+          
+         
           
          
           
@@ -391,7 +403,16 @@ hello world!
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ansible-role-libvirt-vm">ansible-role-libvirt-vm</a></li>
+    <li><a href="#테스트-환경">테스트 환경</a></li>
+    <li><a href="#playyaml">play.yaml</a></li>
+    <li><a href="#test">Test</a></li>
+    <li><a href="#확인">확인</a></li>
+    <li><a href="#마치며">마치며</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -401,13 +422,21 @@ hello world!
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/ansible">ansible</a>
+
+  <a class="tag-link" href="/tags/libvirt">libvirt</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Tags
+              Create Vm With Ansible Libvirt
             </h1>
           
 
@@ -415,39 +444,50 @@ hello world!
 
 
 
-
-
-
-<ul>
-	
-		<li><a href="/tags/ansible/">ansible</a></li>
-	
-		<li><a href="/tags/libvirt/">libvirt</a></li>
-	
-		<li><a href="/tags/preseed.cfg/">preseed.cfg</a></li>
-	
-		<li><a href="/tags/ubuntu-18.04-server/">ubuntu 18.04 server</a></li>
-	
-		<li><a href="/tags/boot-parameter/">boot parameter</a></li>
-	
-		<li><a href="/tags/install/">install</a></li>
-	
-		<li><a href="/tags/ubuntu/">ubuntu</a></li>
-	
-		<li><a href="/tags/passwordless/">passwordless</a></li>
-	
-		<li><a href="/tags/sudo/">sudo</a></li>
-	
-		<li><a href="/tags/blog/">blog</a></li>
-	
-		<li><a href="/tags/hugo/">hugo</a></li>
-	
-</ul>
+<p>Ansible은 어떠한 프로세스를 자동화 할 때 사용할 수 있는 툴입니다.
+그리고 libvirt는 linux 환경에서 qemu를 이용하여 VM을 생성할 때 사용하는 python 모듈입니다.</p>
+<p>이 두가지를 합하여 Ansible을 통해 VM을 생성하는 방법에 대해 알아보도록 하겠습니다.</p>
+<h2 id="ansible-role-libvirt-vm">ansible-role-libvirt-vm</h2>
+<p>참조 Github : <a href="https://github.com/stackhpc/ansible-role-libvirt-vm">https://github.com/stackhpc/ansible-role-libvirt-vm</a></p>
+<p>위의 Github 프로젝트는 libvirt를 ansible에서 사용할 수 있도록 만든 오픈소스입니다.
+이를 이용하여 ansible-playbook을 통해 VM을 생성해 볼 것입니다.</p>
+<p>이를 로컬에 clone 합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/stackhpc/ansible-role-libvirt-vm
+</code></pre></div><h2 id="테스트-환경">테스트 환경</h2>
+<p>저는 Ubuntu 18.04.3 Desktop을 사용하고 있습니다.
+그리고 설치에 사용될 iso는 제 포스트에서 작성한 적이 있었던 <code>preseed.cfg</code>를 이용한 자동 설치 이미지입니다.
+따라서 이미지를 넣고 부팅만 하면 실행할 수 있습니다.</p>
+<h2 id="playyaml">play.yaml</h2>
+<!-- raw HTML omitted -->
+<p>저는 이러한 <code>play.yaml</code> 파일을 사용하였습니다.</p>
+<p>여기서 <code>cdrom</code>을 사용하였는데, 이미지는 <code>baked-ubuntu.iso</code>를 사용하였습니다.</p>
+<p>또한 장비들에 대한 설정을 xml로 추가적으로 하고싶어서 <code>xml_file</code>을 설정해 주었습니다.</p>
+<p><code>xml_file</code>또한 업로드 해두었습니다.</p>
+<!-- raw HTML omitted -->
+<p>네트워크는 설정을 빼놓을 경우 설치중에 확인창이 발생하여 기본적으로 NAT를 사용하도록 하였습니다.
+이는 필요에 따라 변경을 해야 합니다.
+또한 <code>enable_vnc</code>의 경우 virt-manager를 통해 상황의 경과를 확인하고 싶어서 추가하였습니다.</p>
+<p>위의 파일들을 workspace에 두시면 됩니다.</p>
+<h2 id="test">Test</h2>
+<p>이렇게까지 한 뒤 <code>play.yaml</code>이 있는 위치에서 시작합니다.</p>
+<p>그러면 <code>ansible-playbook</code>은 <code>ansible-role-libvirt-vm</code>이라는 role을 해당 위치에서 검색하고, 실행이 될 것입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ansible-playbook play.yaml
+</code></pre></div><p>실행 중 <code>sudo</code> 권한이 필요하다고 할 수도 있습니다. 이럴 경우 <code>sudo su</code>로 잠시 로그인 후 <code>exit</code>로 빠져나오시면 에러가 발생하지 않습니다.</p>
+<h2 id="확인">확인</h2>
+<p><code>virt-manager</code>를 통해 GUI 환경에서 실제로 잘 되고 있는지 확인할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virt-manager
+</code></pre></div><p><code>preseed.cfg</code>를 사용한 이미지라면 30초 후 설치 언어가 자동으로 영어로 설정이 되면서 계속해서 설치가 진행될 것입니다.</p>
+<h2 id="마치며">마치며</h2>
+<p>vm을 생성하는 일이 잦다면, 이 또한 굉장히 귀찮은 일이 아닐 수 없습니다.
+소규모가 아닌 대규모로의 확장성을 생각한다면 당연히 자동화를 하는 것이 올바른 접근이라고 생각합니다.</p>
+<p>VM 설치 자동화의 방법이 여러가지가 있을 것이고 이 방법 또한 그 여러가지 방법 중 하나입니다.</p>
+<p>더 좋은, 더 편한 방법이 있다면 알려주시면 감사하겠습니다.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -531,6 +571,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -546,18 +587,8 @@ hello world!
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -566,9 +597,6 @@ hello world!
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -602,6 +630,22 @@ hello world!
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -610,6 +654,7 @@ hello world!
             
                 
                     
+                    
                 
                 
 
@@ -622,6 +667,7 @@ hello world!
             
             
                 
+                    
                     
                 
                 
@@ -675,3 +721,4 @@ hello world!
 
   </body>
 </html>
+

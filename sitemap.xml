@@ -3,31 +3,122 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://192.168.8.21/my-story/</loc>
+    <lastmod>2020-01-08T01:49:46+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://192.168.8.21/</loc>
     <lastmod>2020-01-08T01:00:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.8.21/basics/</loc>
-    <lastmod>2020-01-07T22:08:55+09:00</lastmod>
+    <loc>http://192.168.8.21/category/</loc>
+    <lastmod>2020-01-08T02:09:58+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.8.21/test-folder/</loc>
-    <lastmod>2020-01-07T22:08:55+09:00</lastmod>
+    <loc>http://192.168.8.21/category/ubuntu/</loc>
+    <lastmod>2020-01-08T01:51:33+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.8.21/basics/second-content/</loc>
-    <lastmod>2020-01-07T22:10:51+09:00</lastmod>
+    <loc>http://192.168.8.21/category/ansible/</loc>
+    <lastmod>2020-01-08T01:52:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.8.21/categories/</loc>
+    <loc>http://192.168.8.21/tags/ansible/</loc>
+    <lastmod>2020-01-08T01:52:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/category/ansible/create-vm-with-ansible-libvirt/</loc>
+    <lastmod>2020-01-08T01:52:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/libvirt/</loc>
+    <lastmod>2020-01-08T01:52:47+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://192.168.8.21/tags/</loc>
+    <lastmod>2020-01-08T01:52:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/preseed.cfg/</loc>
+    <lastmod>2020-01-08T01:52:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/ubuntu-18.04-server/</loc>
+    <lastmod>2020-01-08T01:52:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/category/ubuntu/unattended-ubuntu/</loc>
+    <lastmod>2020-01-08T01:52:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/boot-parameter/</loc>
+    <lastmod>2020-01-08T01:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/category/ubuntu/how-to-edit-boot-parameter-during-install/</loc>
+    <lastmod>2020-01-08T01:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/install/</loc>
+    <lastmod>2020-01-08T01:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/ubuntu/</loc>
+    <lastmod>2020-01-08T01:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/category/ubuntu/how-to-use-sudo-without-password/</loc>
+    <lastmod>2020-01-08T01:51:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/passwordless/</loc>
+    <lastmod>2020-01-08T01:51:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/sudo/</loc>
+    <lastmod>2020-01-08T01:51:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/my-story/2020-plan/</loc>
+    <lastmod>2020-01-08T01:51:18+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/blog/</loc>
+    <lastmod>2020-01-08T01:51:18+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/tags/hugo/</loc>
+    <lastmod>2020-01-08T01:51:18+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/my-story/ibiza-project/</loc>
+    <lastmod>2020-01-08T01:50:49+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://192.168.8.21/categories/</loc>
   </url>
   
 </urlset>

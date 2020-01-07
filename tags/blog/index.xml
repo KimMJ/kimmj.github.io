@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Ibiza</title>
+    <link>http://192.168.8.21/tags/blog/</link>
+    <description>Recent content in blog on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2020 01:51:18 +0900</lastBuildDate>
+    
+	<atom:link href="http://192.168.8.21/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020 Plan</title>
+      <link>http://192.168.8.21/my-story/2020-plan/</link>
+      <pubDate>Wed, 08 Jan 2020 01:51:18 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/my-story/2020-plan/</guid>
+      <description>2020 새해에는 몇가지 목표가 있다.
+ 꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 jekyll blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.
+특히 지금은 누군가가 만든 블로그 테마를 사용하고 있지만 나중에는 내가 원하는 대로 커스터마이징이 가능하도록 나만의 블로그 테마를 만들고 싶다.
+이를 위해서는 무엇이 필요한지도, 어떤 기술 스택을 쌓아야 할지도 모르지만 일단 도전해보고자 한다.</description>
+    </item>
+    
+    <item>
+      <title>Ibiza Project</title>
+      <link>http://192.168.8.21/my-story/ibiza-project/</link>
+      <pubDate>Wed, 08 Jan 2020 01:50:49 +0900</pubDate>
+      
+      <guid>http://192.168.8.21/my-story/ibiza-project/</guid>
+      <description>Ibiza Project는 나만의 블로그을 만들기 위한 프로젝트이다.
+기본적으로 hugo-theme-learn에서 시작하여, 나의 커스텀 파일들을 추가하여 내가 원하는 사이트를 만들 것이다.
+기간 : 2020.4.15 (작성일 기준 + 100일)</description>
+    </item>
+    
+  </channel>
+</rss>
