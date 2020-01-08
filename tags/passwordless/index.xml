@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>passwordless on Ibiza</title>
-    <link>http://192.168.8.21/tags/passwordless/</link>
+    <link>http://kimmj.github.io/tags/passwordless/</link>
     <description>Recent content in passwordless on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2020 01:51:54 +0900</lastBuildDate>
     
-	<atom:link href="http://192.168.8.21/tags/passwordless/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kimmj.github.io/tags/passwordless/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Use Sudo Without Password</title>
-      <link>http://192.168.8.21/category/ubuntu/how-to-use-sudo-without-password/</link>
+      <link>http://kimmj.github.io/category/ubuntu/how-to-use-sudo-without-password/</link>
       <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
       
-      <guid>http://192.168.8.21/category/ubuntu/how-to-use-sudo-without-password/</guid>
+      <guid>http://kimmj.github.io/category/ubuntu/how-to-use-sudo-without-password/</guid>
       <description>/etc/sudoers는 sudo를 사용할 수 있는 파일입니다. 이 파일을 열어보면 다음과 같은 글이 적혀 있습니다.
  Please consider adding local content in /etc/sudoers.d/ instead of directly modifying this file
  즉, 직접 이 파일을 수정해서 sudo 권한을 주지 말고, /etc/sudoers.d/ 폴더 내에 파일을 추가하라는 의미입니다.

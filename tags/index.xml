@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ibiza</title>
-    <link>http://192.168.8.21/tags/</link>
+    <link>http://kimmj.github.io/tags/</link>
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2020 01:52:47 +0900</lastBuildDate>
     
-	<atom:link href="http://192.168.8.21/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ansible</title>
-      <link>http://192.168.8.21/tags/ansible/</link>
+      <link>http://kimmj.github.io/tags/ansible/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:47 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/ansible/</guid>
+      <guid>http://kimmj.github.io/tags/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>libvirt</title>
-      <link>http://192.168.8.21/tags/libvirt/</link>
+      <link>http://kimmj.github.io/tags/libvirt/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:47 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/libvirt/</guid>
+      <guid>http://kimmj.github.io/tags/libvirt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>preseed.cfg</title>
-      <link>http://192.168.8.21/tags/preseed.cfg/</link>
+      <link>http://kimmj.github.io/tags/preseed.cfg/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/preseed.cfg/</guid>
+      <guid>http://kimmj.github.io/tags/preseed.cfg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ubuntu 18.04 server</title>
-      <link>http://192.168.8.21/tags/ubuntu-18.04-server/</link>
+      <link>http://kimmj.github.io/tags/ubuntu-18.04-server/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/ubuntu-18.04-server/</guid>
+      <guid>http://kimmj.github.io/tags/ubuntu-18.04-server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>boot parameter</title>
-      <link>http://192.168.8.21/tags/boot-parameter/</link>
+      <link>http://kimmj.github.io/tags/boot-parameter/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/boot-parameter/</guid>
+      <guid>http://kimmj.github.io/tags/boot-parameter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>install</title>
-      <link>http://192.168.8.21/tags/install/</link>
+      <link>http://kimmj.github.io/tags/install/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/install/</guid>
+      <guid>http://kimmj.github.io/tags/install/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ubuntu</title>
-      <link>http://192.168.8.21/tags/ubuntu/</link>
+      <link>http://kimmj.github.io/tags/ubuntu/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/ubuntu/</guid>
+      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>passwordless</title>
-      <link>http://192.168.8.21/tags/passwordless/</link>
+      <link>http://kimmj.github.io/tags/passwordless/</link>
       <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/passwordless/</guid>
+      <guid>http://kimmj.github.io/tags/passwordless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sudo</title>
-      <link>http://192.168.8.21/tags/sudo/</link>
+      <link>http://kimmj.github.io/tags/sudo/</link>
       <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/sudo/</guid>
+      <guid>http://kimmj.github.io/tags/sudo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blog</title>
-      <link>http://192.168.8.21/tags/blog/</link>
+      <link>http://kimmj.github.io/tags/blog/</link>
       <pubDate>Wed, 08 Jan 2020 01:51:18 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/blog/</guid>
+      <guid>http://kimmj.github.io/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>http://192.168.8.21/tags/hugo/</link>
+      <link>http://kimmj.github.io/tags/hugo/</link>
       <pubDate>Wed, 08 Jan 2020 01:51:18 +0900</pubDate>
       
-      <guid>http://192.168.8.21/tags/hugo/</guid>
+      <guid>http://kimmj.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
