@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Installation on Ibiza</title>
+    <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/</link>
+    <description>Recent content in Installation on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2020 01:28:34 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/category/ci-cd/spinnaker/installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install</title>
+      <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</link>
+      <pubDate>Fri, 10 Jan 2020 01:02:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</guid>
+      <description>Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.
+가장 먼저 최소 사양을 확인해보도록 하겠습니다.
+링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements
+ 램 18 GB CPU 4코어 Ubuntu 14.04, 16.04, 18.04  Spinnaker 자체가 클라우드 환경에만 배포가 가능하기 때문에, 아마도 &amp;ldquo;전체 클라우드를 합하여 저정도면 된다&amp;quot;를 의미하는 것 같습니다.
+설치 방법은 두가지로 나뉩니다.
+ 테스트를 목적으로 Helm Chart를 통한 설치 실제로 사용할 목적으로 halyard를 통한 설치  저는 여기서 2번 halyard를 통한 설치를 해보려고 합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

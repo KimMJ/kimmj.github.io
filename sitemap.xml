@@ -13,17 +13,22 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ci-cd/spinnaker/installation/</loc>
+    <loc>http://kimmj.github.io/category/hugo/</loc>
+    <lastmod>2020-01-10T02:21:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/installation/</loc>
     <lastmod>2020-01-10T01:28:34+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ci-cd/spinnaker/</loc>
+    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/</loc>
     <lastmod>2020-01-10T00:58:33+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ci-cd/</loc>
+    <loc>http://kimmj.github.io/category/ci-cd/</loc>
     <lastmod>2020-01-10T00:56:33+09:00</lastmod>
   </url>
   
@@ -33,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ci-cd/spinnaker/tips/</loc>
+    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/tips/</loc>
     <lastmod>2020-01-10T01:32:07+09:00</lastmod>
   </url>
   
@@ -48,12 +53,17 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/</loc>
+    <loc>http://kimmj.github.io/category/hugo/hugo-with-html/</loc>
+    <lastmod>2020-01-10T02:22:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/tips/pipeline-expressions/</loc>
     <lastmod>2020-01-10T01:33:32+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</loc>
+    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</loc>
     <lastmod>2020-01-10T01:02:39+09:00</lastmod>
   </url>
   
