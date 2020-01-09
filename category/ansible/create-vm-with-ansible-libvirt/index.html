@@ -11,20 +11,20 @@
     <title>Create Vm With Ansible Libvirt :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1578589415" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1578589415" rel="stylesheet">
-    <link href="/css/hybrid.css?1578589415" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1578589415" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1578589415" rel="stylesheet">
-    <link href="/css/auto-complete.css?1578589415" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1578589415" rel="stylesheet">
-    <link href="/css/theme.css?1578589415" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1578589415" rel="stylesheet">
+    <link href="/css/nucleus.css?1578590221" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1578590221" rel="stylesheet">
+    <link href="/css/hybrid.css?1578590221" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1578590221" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1578590221" rel="stylesheet">
+    <link href="/css/auto-complete.css?1578590221" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1578590221" rel="stylesheet">
+    <link href="/css/theme.css?1578590221" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1578590221" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1578589415" rel="stylesheet">
+      <link href="/css/theme-mine.css?1578590221" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1578589415"></script>
+    <script src="/js/jquery-3.3.1.min.js?1578590221"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1578589415"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1578589415"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1578590221"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1578590221"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1578589415"></script>
+<script type="text/javascript" src="/js/search.js?1578590221"></script>
 
     
   </div>
@@ -655,12 +655,12 @@
 그리고 설치에 사용될 iso는 제 포스트에서 작성한 적이 있었던 <code>preseed.cfg</code>를 이용한 자동 설치 이미지입니다.
 따라서 이미지를 넣고 부팅만 하면 실행할 수 있습니다.</p>
 <h2 id="playyaml">play.yaml</h2>
-<!-- raw HTML omitted -->
+<script src="https://gist.github.com/KimMJ/00c08cf5d11770ac08f17419f1a2fae9.js"></script>
 <p>저는 이러한 <code>play.yaml</code> 파일을 사용하였습니다.</p>
 <p>여기서 <code>cdrom</code>을 사용하였는데, 이미지는 <code>baked-ubuntu.iso</code>를 사용하였습니다.</p>
 <p>또한 장비들에 대한 설정을 xml로 추가적으로 하고싶어서 <code>xml_file</code>을 설정해 주었습니다.</p>
 <p><code>xml_file</code>또한 업로드 해두었습니다.</p>
-<!-- raw HTML omitted -->
+<script src="https://gist.github.com/KimMJ/0e74dea0e988b9072d26628fa69f0ee1.js"></script>
 <p>네트워크는 설정을 빼놓을 경우 설치중에 확인창이 발생하여 기본적으로 NAT를 사용하도록 하였습니다.
 이는 필요에 따라 변경을 해야 합니다.
 또한 <code>enable_vnc</code>의 경우 virt-manager를 통해 상황의 경과를 확인하고 싶어서 추가하였습니다.</p>
@@ -1014,19 +1014,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1578589415"></script>
-    <script src="/js/perfect-scrollbar.min.js?1578589415"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1578589415"></script>
-    <script src="/js/jquery.sticky.js?1578589415"></script>
-    <script src="/js/featherlight.min.js?1578589415"></script>
-    <script src="/js/highlight.pack.js?1578589415"></script>
+    <script src="/js/clipboard.min.js?1578590221"></script>
+    <script src="/js/perfect-scrollbar.min.js?1578590221"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1578590221"></script>
+    <script src="/js/jquery.sticky.js?1578590221"></script>
+    <script src="/js/featherlight.min.js?1578590221"></script>
+    <script src="/js/highlight.pack.js?1578590221"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1578589415"></script>
-    <script src="/js/learn.js?1578589415"></script>
-    <script src="/js/hugo-learn.js?1578589415"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1578590221"></script>
+    <script src="/js/learn.js?1578590221"></script>
+    <script src="/js/hugo-learn.js?1578590221"></script>
 
-    <link href="/mermaid/mermaid.css?1578589415" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1578589415"></script>
+    <link href="/mermaid/mermaid.css?1578590221" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1578590221"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
