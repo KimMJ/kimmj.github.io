@@ -12,6 +12,44 @@
     
     
     <item>
+      <title>Pipeline Expressions</title>
+      <link>http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/</link>
+      <pubDate>Fri, 10 Jan 2020 01:33:32 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/</guid>
+      <description>Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.
+이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.
+pipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).
+ 위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>Install</title>
+      <link>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</link>
+      <pubDate>Fri, 10 Jan 2020 01:02:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</guid>
+      <description>Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.
+가장 먼저 최소 사양을 확인해보도록 하겠습니다.
+링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements
+ 램 18 GB CPU 4코어 Ubuntu 14.04, 16.04, 18.04  Spinnaker 자체가 클라우드 환경에만 배포가 가능하기 때문에, 아마도 &amp;ldquo;전체 클라우드를 합하여 저정도면 된다&amp;quot;를 의미하는 것 같습니다.
+설치 방법은 두가지로 나뉩니다.
+ 테스트를 목적으로 Helm Chart를 통한 설치 실제로 사용할 목적으로 halyard를 통한 설치  저는 여기서 2번 halyard를 통한 설치를 해보려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>Importance of Record</title>
+      <link>http://kimmj.github.io/my-story/importance-of-record/</link>
+      <pubDate>Fri, 10 Jan 2020 00:47:03 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/my-story/importance-of-record/</guid>
+      <description>기록의 중요성 몇개월 전부터 Spinnaker라는 툴을 가지고 일을 하기 시작했다.
+처음 halyard를 통해 deploy하기까지 꽤나 많은 시간을 소요했던 것으로 기억한다. 집에서 하는게 아니라 회사에서 구축을 해야했기 때문에, 프록시와 관련된 설정들이 너무나도 어려웠다. 특히 spinnaker의 docs가 제대로 되어있는 것도 아니기에, 문제가 하나 발생하면 이를 해결하는 데 너무나도 많은 시간이 걸렸다.
+하지만 나의 최대 실수는 바로 기록하지 않은 것이다.
+그렇게 많은 노력끝에 약 한달만에 첫 deploy를 할 수 있었는데, 이 때 했던 설정을 &amp;ldquo;나중에 정리해야지&amp;quot;라는 안일한 생각으로 지금까지 정리를 안하고 있었다.</description>
+    </item>
+    
+    <item>
       <title>Create Vm With Ansible Libvirt</title>
       <link>http://kimmj.github.io/category/ansible/create-vm-with-ansible-libvirt/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:47 +0900</pubDate>

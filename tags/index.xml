@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 01:52:47 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 00:47:03 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blog</title>
+      <link>http://kimmj.github.io/tags/blog/</link>
+      <pubDate>Fri, 10 Jan 2020 00:47:03 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>record</title>
+      <link>http://kimmj.github.io/tags/record/</link>
+      <pubDate>Fri, 10 Jan 2020 00:47:03 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/record/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ansible</title>
@@ -89,15 +107,6 @@
       <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/sudo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>http://kimmj.github.io/tags/blog/</link>
-      <pubDate>Wed, 08 Jan 2020 01:51:18 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/blog/</guid>
       <description></description>
     </item>
     

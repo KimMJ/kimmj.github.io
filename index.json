@@ -14,11 +14,39 @@
 	"content": "Ibiza 배우고 배우자.\n"
 },
 {
+	"uri": "http://kimmj.github.io/ci-cd/spinnaker/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": "Spinnaker Installation spinnaker를 설치해 볼 것입니다.\n쉽지 않았던 여정들을 기록하려고 합니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/ci-cd/spinnaker/",
+	"title": "Spinnaker",
+	"tags": [],
+	"description": "",
+	"content": "CI/CD Spinnaker Spinnaker는 Kubernetes 환경에서 배포 자동화를 위해 만들어진 툴입니다.\n배포하려는 클러스터가 GKE인지, EKS인지, On-Premise 환경인지 상관없이 하나의 툴로 배포하기 위해 만들어졌습니다.\n이 툴 자체가 MSA 구조로 만들어져있습니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/ci-cd/",
+	"title": "CI/CD",
+	"tags": [],
+	"description": "",
+	"content": "CI/CD CI는 Countinuous Integration, CD는 Countinuous Deploy/Delivery의 약자입니다.\n"
+},
+{
 	"uri": "http://kimmj.github.io/category/",
 	"title": "Category",
 	"tags": [],
 	"description": "",
 	"content": "Study My Study 배우고 때때로 익히니 기쁘지 아니한가.\n"
+},
+{
+	"uri": "http://kimmj.github.io/ci-cd/spinnaker/tips/",
+	"title": "Tips",
+	"tags": [],
+	"description": "",
+	"content": "Spinnaker Tips spinnaker를 운영하며 생기는 팁들을 모아보았습니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/category/ubuntu/",
@@ -33,6 +61,48 @@
 	"tags": [],
 	"description": "",
 	"content": "Ansible Ansible은 자동화를 할 때 사용하는 툴입니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/",
+	"title": "Pipeline Expressions",
+	"tags": [],
+	"description": "",
+	"content": "Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.\n이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.\npipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).\n 위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.\n기본적으로 ${ expression }의 형태를 가지게 됩니다.\n여기서 한가지 기억해 두어야 할 것은 nested가 되지 않는다는 것입니다. 즉, ${ expression1 ${expression2} }가 되지 않습니다.\n언제 pipeline expression을 사용하나요? pipeline expression은 Spinnaker UI로는 해결할 수 없는 문제들을 해결하여줍니다. 예를 들어 특정 stage가 성공했는지의 여부에 따라 stage를 실행할지, 말지 결정하는 방법을 제공해 줍니다. 또는 가장 최근에 deploy된 pod를 알아낸다거나, spinnaker를 통한 canary analysis를 할 때 비교할 두가지 대상을 선택하기 위해 사용할 수도 있습니다.\nSpinnaker는 모든 파이프라인을 JSON 형태로도 관리할 수 있기 때문에, UI에는 없는 값들도 입력할 수 있습니다. 이렇게 좀 더 유연한 방법으로 Spinnaker를 이용하고자 한다면 pipeline expression은 꼭 알아두어야 합니다.\n원하는 값을 어떻게 찾나요? pipeline이 구동되고 나면, Details를 누르고 Source를 눌렀을 때 해당 pipeline의 실행결과가 json형태로 출력됩니다. 이를 VS Code나 다른 편집기를 이용하여, json으로 인식하게 한 뒤, 자동 들여쓰기를 하면 보기 좋게 만들어줍니다.\n이를 통해서 어떤 값을 내가 사용할 지 확인하여 pipeline expression을 작성하면 됩니다.\n내가 작성한 pipeline expression은 어떻게 테스트하나요? 작성한 pipeline expression을 테스트하기 위해 파이프라인을 구동한다는 것은 끔직한 일입니다. Spinnaker는 이를 테스트하기 위해 API endpoint를 제공합니다. 즉, 파이프라인을 다시 구동시키지 않고도 어떤 결과값이 나오는지 확인할 수 있다는 것을 의미합니다.\n테스트 방법은 간단합니다. 다음과 같이 curl을 통해 endpoint로 테스트하면 됩니다.\nPIPELINE_ID=[your_pipeline_id] curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression \\  -H \u0026#34;Content-Type: text/plain\u0026#34; \\  --data \u0026#39;${ #stage(\u0026#34;Deploy\u0026#34;).status.toString() }\u0026#39; 여기서 api.my.spinnaker는 Gate의 Service를 보고 포트를 참조하여 작성하면 됩니다. 기본값은 localhost:8084입니다. 이렇게 하면 Deploy라는 stage가 성공했을 때 다음과 같은 결과를 볼 수 있습니다.\n{\u0026#34;result\u0026#34;: \u0026#34;SUCCEEDED\u0026#34;} Spinnaker가 expression을 통해 결과를 만들어내지 못한다면 다음과 같이 에러와 로그가 발생합니다.\n{ \u0026#34;detail\u0026#34;: { \u0026#34;{ #stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;: [ { \u0026#34;description\u0026#34;: \u0026#34;Failed to evaluate [expression] Expression [{ #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() ] @0: No ending suffix \u0026#39;}\u0026#39; for expression starting at character 0: { #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;, \u0026#34;exceptionType\u0026#34;:\u0026#34;org.springframework.expression.ParseException\u0026#34;, \u0026#34;level\u0026#34;:\u0026#34;ERROR\u0026#34;, \u0026#34;timestamp\u0026#34;:1531254890849 } ] }, \u0026#34;result\u0026#34;:\u0026#34;${#stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34; } Reference Spinnaker Docs: https://www.spinnaker.io/guides/user/pipeline/expressions/\n"
+},
+{
+	"uri": "http://kimmj.github.io/ci-cd/spinnaker/installation/overview/",
+	"title": "Install",
+	"tags": [],
+	"description": "",
+	"content": "Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.\n가장 먼저 최소 사양을 확인해보도록 하겠습니다.\n링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements\n 램 18 GB CPU 4코어 Ubuntu 14.04, 16.04, 18.04  Spinnaker 자체가 클라우드 환경에만 배포가 가능하기 때문에, 아마도 \u0026ldquo;전체 클라우드를 합하여 저정도면 된다\u0026quot;를 의미하는 것 같습니다.\n설치 방법은 두가지로 나뉩니다.\n 테스트를 목적으로 Helm Chart를 통한 설치 실제로 사용할 목적으로 halyard를 통한 설치  저는 여기서 2번 halyard를 통한 설치를 해보려고 합니다.\n전체적인 프로세스를 먼저 설명드리자면 다음과 같습니다.\n halyard 설치 Cloud Provider(클라우드 제공자) 선택 배포 환경 선택 Storage Service 선택 배포 및 접속 config 백업하기  그리고 저는 다음과 같은 환경에서 테스트를 할 예정입니다.\n Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Environment: Distributed installation on Kubernetes Storage Service: Minio Deploy and Connect: expose by NodePort OS : Ubuntu 18.04.2 Server  "
+},
+{
+	"uri": "http://kimmj.github.io/tags/blog/",
+	"title": "blog",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/my-story/importance-of-record/",
+	"title": "Importance of Record",
+	"tags": ["record", "blog"],
+	"description": "",
+	"content": "기록의 중요성 몇개월 전부터 Spinnaker라는 툴을 가지고 일을 하기 시작했다.\n처음 halyard를 통해 deploy하기까지 꽤나 많은 시간을 소요했던 것으로 기억한다. 집에서 하는게 아니라 회사에서 구축을 해야했기 때문에, 프록시와 관련된 설정들이 너무나도 어려웠다. 특히 spinnaker의 docs가 제대로 되어있는 것도 아니기에, 문제가 하나 발생하면 이를 해결하는 데 너무나도 많은 시간이 걸렸다.\n하지만 나의 최대 실수는 바로 기록하지 않은 것이다.\n그렇게 많은 노력끝에 약 한달만에 첫 deploy를 할 수 있었는데, 이 때 했던 설정을 \u0026ldquo;나중에 정리해야지\u0026quot;라는 안일한 생각으로 지금까지 정리를 안하고 있었다.\n요즘들어 회사에서 spinnaker를 사용할 일이 잦아지고, 다른 시료에도 deploy하게되는 일이 많아졌는데 내가 기록을 해놓지 않음으로 인해서 많은 차질이 생기고 있다. 당장만 해도 deploy 자체를 할 수 없으며, 내가 예전에 해 두었던 pipeline 설정들이 다 날아가버려서 지금 복구하는 데 한숨만 나올 뿐이다.\n그 많은 정보들을 정리해두었다면, 로그를 남겨두었다면 이런 일은 발생하지 않았을수도 있다.\n오늘 난 기록의 중요성을 다시 한번 깨달았고, 차곡차곡 이 블로그에 쌓아두기로 마음먹었다. 하루에 하나씩 쓴다는 것은 어려운 일일지 모르지만, 그래도 최대한 자주 기록을 함으로써, 나의 성장에도 도움이 되고 다른 사람들의 암흑같은 여정에 한줄기 빛이 될 수 있으면 좋겠다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/tags/record/",
+	"title": "record",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "http://kimmj.github.io/tags/ansible/",
@@ -51,13 +121,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/libvirt/",
 	"title": "libvirt",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -138,13 +201,6 @@
 	"tags": ["blog", "hugo"],
 	"description": "",
 	"content": "2020 새해에는 몇가지 목표가 있다.\n 꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 jekyll blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.\n특히 지금은 누군가가 만든 블로그 테마를 사용하고 있지만 나중에는 내가 원하는 대로 커스터마이징이 가능하도록 나만의 블로그 테마를 만들고 싶다.\n이를 위해서는 무엇이 필요한지도, 어떤 기술 스택을 쌓아야 할지도 모르지만 일단 도전해보고자 한다.\n"
-},
-{
-	"uri": "http://kimmj.github.io/tags/blog/",
-	"title": "blog",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "http://kimmj.github.io/tags/hugo/",

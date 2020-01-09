@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Category :: Ibiza</title>
+    <title>Install :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1578589415" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/category/">
+  <body class="" data-url="/ci-cd/spinnaker/installation/overview/">
     <nav id="sidebar" class="">
 
 
@@ -166,7 +166,7 @@
   
     
     <li data-nav-id="/ci-cd/" title="CI/CD" class="dd-item 
-        
+        parent
         
         
         ">
@@ -193,7 +193,7 @@
   
     
     <li data-nav-id="/ci-cd/spinnaker/" title="Spinnaker" class="dd-item 
-        
+        parent
         
         
         ">
@@ -220,7 +220,7 @@
   
     
     <li data-nav-id="/ci-cd/spinnaker/installation/" title="Installation" class="dd-item 
-        
+        parent
         
         
         ">
@@ -244,7 +244,7 @@
  
   
     
-      <li data-nav-id="/ci-cd/spinnaker/installation/overview/" title="Install" class="dd-item ">
+      <li data-nav-id="/ci-cd/spinnaker/installation/overview/" title="Install" class="dd-item active">
         <a href="/ci-cd/spinnaker/installation/overview/">
         Install
         
@@ -342,8 +342,8 @@
   
     
     <li data-nav-id="/category/" title="Category" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/category/">
@@ -565,6 +565,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -575,7 +577,25 @@
             
           
           
-            <a href='/'>Ibiza</a> > Category
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/ci-cd/'>CI/CD</a> > <a href='/ci-cd/spinnaker/'>Spinnaker</a> > <a href='/ci-cd/spinnaker/installation/'>Installation</a> > Install
+          
+         
+          
+         
+          
+         
           
          
           
@@ -584,6 +604,17 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview-of-install-spinnaker">Overview of install Spinnaker</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -591,30 +622,64 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Install
+            </h1>
           
 
         
 
 
 
-
-	<h3 id="study">Study</h3>
-<h1 id="my-study">My Study</h1>
-<p>배우고 때때로 익히니 기쁘지 아니한가.</p>
-
-
-
+<h2 id="overview-of-install-spinnaker">Overview of install Spinnaker</h2>
+<p>어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.</p>
+<p>가장 먼저 최소 사양을 확인해보도록 하겠습니다.</p>
+<p>링크 : <a href="https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements">https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements</a></p>
+<p><img src="/images/CI-CD/Spinnaker/spinnaker-system-requirements.png" alt="시스템 최소 사양"></p>
+<ul>
+<li>램 18 GB</li>
+<li>CPU 4코어</li>
+<li>Ubuntu 14.04, 16.04, 18.04</li>
+</ul>
+<p>Spinnaker 자체가 클라우드 환경에만 배포가 가능하기 때문에, 아마도 &ldquo;전체 클라우드를 합하여 저정도면 된다&quot;를 의미하는 것 같습니다.</p>
+<p>설치 방법은 두가지로 나뉩니다.</p>
+<ol>
+<li>테스트를 목적으로 <code>Helm Chart</code>를 통한 설치</li>
+<li>실제로 사용할 목적으로 <code>halyard</code>를 통한 설치</li>
+</ol>
+<p>저는 여기서 2번 <code>halyard</code>를 통한 설치를 해보려고 합니다.</p>
+<p>전체적인 프로세스를 먼저 설명드리자면 다음과 같습니다.</p>
+<ol>
+<li><code>halyard</code> 설치</li>
+<li>Cloud Provider(클라우드 제공자) 선택</li>
+<li>배포 환경 선택</li>
+<li>Storage Service 선택</li>
+<li>배포 및 접속</li>
+<li>config 백업하기</li>
+</ol>
+<p>그리고 저는 다음과 같은 환경에서 테스트를 할 예정입니다.</p>
+<ul>
+<li>Cloud Provider: Kubernetes on-prem (4 VMs)
+<ul>
+<li>1 for master (4GB Mem, 1 CPU)</li>
+<li>3 for worker (each 8GM Mem, 4 CPU)</li>
+</ul>
+</li>
+<li>Environment: Distributed installation on Kubernetes</li>
+<li>Storage Service: Minio</li>
+<li>Deploy and Connect: expose by NodePort</li>
+<li>OS : Ubuntu 18.04.2 Server</li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -713,20 +778,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -742,6 +793,59 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -770,38 +874,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
             
         
                     
@@ -813,7 +885,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -828,9 +899,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -961,3 +1029,4 @@
 
   </body>
 </html>
+

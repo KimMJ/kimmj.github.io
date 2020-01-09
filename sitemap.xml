@@ -13,8 +13,28 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ci-cd/spinnaker/installation/</loc>
+    <lastmod>2020-01-10T01:28:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ci-cd/spinnaker/</loc>
+    <lastmod>2020-01-10T00:58:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ci-cd/</loc>
+    <lastmod>2020-01-10T00:56:33+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/category/</loc>
     <lastmod>2020-01-08T02:09:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ci-cd/spinnaker/tips/</loc>
+    <lastmod>2020-01-10T01:32:07+09:00</lastmod>
   </url>
   
   <url>
@@ -25,6 +45,36 @@
   <url>
     <loc>http://kimmj.github.io/category/ansible/</loc>
     <lastmod>2020-01-08T01:52:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/</loc>
+    <lastmod>2020-01-10T01:33:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</loc>
+    <lastmod>2020-01-10T01:02:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/blog/</loc>
+    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/my-story/importance-of-record/</loc>
+    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/record/</loc>
+    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
   </url>
   
   <url>
@@ -39,11 +89,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/libvirt/</loc>
-    <lastmod>2020-01-08T01:52:47+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-01-08T01:52:47+09:00</lastmod>
   </url>
   
@@ -99,11 +144,6 @@
   
   <url>
     <loc>http://kimmj.github.io/my-story/2020-plan/</loc>
-    <lastmod>2020-01-08T01:51:18+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/blog/</loc>
     <lastmod>2020-01-08T01:51:18+09:00</lastmod>
   </url>
   
