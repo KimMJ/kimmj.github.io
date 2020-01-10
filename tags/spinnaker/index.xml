@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>install on Ibiza</title>
-    <link>http://kimmj.github.io/tags/install/</link>
-    <description>Recent content in install on Ibiza</description>
+    <title>spinnaker on Ibiza</title>
+    <link>http://kimmj.github.io/tags/spinnaker/</link>
+    <description>Recent content in spinnaker on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Jan 2020 01:41:08 +0900</lastBuildDate>
     
-	<atom:link href="http://kimmj.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kimmj.github.io/tags/spinnaker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,18 +23,6 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
  Debian/Ubuntu나 macOS에 직접 설치하기 Docker 사용하기  Spinnaker Docs에서는 실제 Production 환경이라면 직접 설치하는 방법을, 그게 아니라 간단하게 사용하려면 docker를 사용해도 된다고 하고 있습니다.
 그리고 한가지의 옵션이 더 있습니다.
  인터넷이 되지 않는 환경 (프록시나 방화벽 등으로 halyard를 통한 설치가 어려운 경우)  이 글을 작성하고 있는 환경은 인터넷이 잘 되는 환경입니다.</description>
-    </item>
-    
-    <item>
-      <title>How to Edit Boot Parameter During Install</title>
-      <link>http://kimmj.github.io/category/ubuntu/how-to-edit-boot-parameter-during-install/</link>
-      <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/category/ubuntu/how-to-edit-boot-parameter-during-install/</guid>
-      <description>Ubuntu 설치할 때 boot parameter가 필요한 상황이 간혹 발생할 수 있습니다.
-특히 저의 경우, preseed.cfg를 수정하기 위해 인스톨러가 질의하는 것이 preseed.cfg의 어떤것과 대응이 되는지를 보기 위해 DEBCONF_DEBUG=5라는 옵션을 boot parameter로 주어야 했습니다. 이 때 사용할 수 있는 방법을 소개드립니다.
-먼저 평소와 같이 ubuntu를 설치하기 위해 설치 이미지를 삽입합니다. 그 다음에는 언어를 선택하시면, 다음으로 넘어가기 전에 메뉴가 뜹니다.
-이 상태에서 F6을 누르시면 옵션을 선택할 수 있고, 이 때 ESC키를 누르면 boot parameter가 하단에 보일 것입니다.</description>
     </item>
     
   </channel>

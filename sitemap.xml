@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</loc>
+    <lastmod>2020-01-10T01:02:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/my-story/</loc>
     <lastmod>2020-01-08T01:49:46+09:00</lastmod>
   </url>
@@ -10,6 +15,26 @@
   <url>
     <loc>http://kimmj.github.io/</loc>
     <lastmod>2020-01-08T01:00:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/installation/install-halyard/</loc>
+    <lastmod>2020-01-11T01:41:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/category/ubuntu/network/</loc>
+    <lastmod>2020-01-11T01:12:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/english/himwm/season1/</loc>
+    <lastmod>2020-01-11T00:02:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/english/himwm/</loc>
+    <lastmod>2020-01-11T00:02:29+09:00</lastmod>
   </url>
   
   <url>
@@ -38,6 +63,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/english/</loc>
+    <lastmod>2020-01-11T00:02:11+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/category/ci-cd/spinnaker/tips/</loc>
     <lastmod>2020-01-10T01:32:07+09:00</lastmod>
   </url>
@@ -53,6 +83,31 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/halyard/</loc>
+    <lastmod>2020-01-11T01:41:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/install/</loc>
+    <lastmod>2020-01-11T01:41:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/proxy/</loc>
+    <lastmod>2020-01-11T01:41:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/spinnaker/</loc>
+    <lastmod>2020-01-11T01:41:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-01-11T01:41:08+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/category/hugo/hugo-with-html/</loc>
     <lastmod>2020-01-10T02:22:34+09:00</lastmod>
   </url>
@@ -60,11 +115,6 @@
   <url>
     <loc>http://kimmj.github.io/category/ci-cd/spinnaker/tips/pipeline-expressions/</loc>
     <lastmod>2020-01-10T01:33:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</loc>
-    <lastmod>2020-01-10T01:02:39+09:00</lastmod>
   </url>
   
   <url>
@@ -79,11 +129,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/record/</loc>
-    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-01-10T00:47:03+09:00</lastmod>
   </url>
   
@@ -124,11 +169,6 @@
   
   <url>
     <loc>http://kimmj.github.io/category/ubuntu/how-to-edit-boot-parameter-during-install/</loc>
-    <lastmod>2020-01-08T01:52:12+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/install/</loc>
     <lastmod>2020-01-08T01:52:12+09:00</lastmod>
   </url>
   
