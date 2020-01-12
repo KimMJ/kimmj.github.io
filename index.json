@@ -28,6 +28,13 @@
 	"content": "halyard란? halyard는 Spinnaker를 배포할 때 사용하는 CLI 툴입니다.\nhalyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, 설정 추가 및 변경에 사용됩니다.\n설치 방법 선택하기 총 2가지 방법으로 halyard를 설치할 수 있습니다.\n Debian/Ubuntu나 macOS에 직접 설치하기 Docker 사용하기  Spinnaker Docs에서는 실제 Production 환경이라면 직접 설치하는 방법을, 그게 아니라 간단하게 사용하려면 docker를 사용해도 된다고 하고 있습니다.\n그리고 한가지의 옵션이 더 있습니다.\n 인터넷이 되지 않는 환경 (프록시나 방화벽 등으로 halyard를 통한 설치가 어려운 경우)  이 글을 작성하고 있는 환경은 인터넷이 잘 되는 환경입니다. 그리고 두가지 모두 시도해 보도록 하겠습니다.\nDebian/Ubuntu나 macOS에 직접 설치하기 공식 Docs에서 halyard는 다음과 같은 환경에서 동작한다고 말하고 있습니다.\n Ubuntu 14.04, 16.04 or 18.04 (Ubuntu 16.04 requires Spinnaker 1.6.0 or later) Debian 8 or 9 macOS (tested on 10.13 High Sierra only)  이제 직접 설치를 시작해보도록 하겠습니다.\n시작하기 전에, halyard를 설치하기 위해서는 root 계정이 아닌 계정이 필요합니다. 만일 root만 있다면 spinnaker를 위한 계정을 생성해 줍니다.\nadduser spinnaker 위처럼 생성한 계정에 sudoers 권한을 줍니다.\nadduser spinnaker sudo   최신 버전의 halyard 다운로드\nDebian/Ubuntu:\ncurl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh ``\nmacOS:\ncurl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/macos/InstallHalyard.sh ``\n  설치\nsudo bash InstallHalyard.sh ``\n  확인\nhal -v ``\n  . ~/.bashrc를 실행하여 bash completion 활성화\n  여기서 proxy 환경이라면 halyard의 jvm에 proxy 옵션을 추가해주어야 합니다.\nvi /opt/halyard/bin/halyard을 통해 halyard의 jvm 옵션을 추가할 수 있습니다.\nDEFAULT_JVM_OPTS=\u0026#39;\u0026#34;-Djava.security.egd=file:/dev/./urandom\u0026#34; \u0026#34;-Dspring.config.additional-location=/opt/spinnaker/config/\u0026#34; \u0026#34;-Dhttps.proxyHost=\u0026lt;httpsProxyHost\u0026gt; -Dhttps.proxyPort=\u0026lt;httpsPort\u0026gt;\u0026#34; \u0026#34;-Dhttp.proxyHost=\u0026lt;httpProxyHost\u0026gt; -Dhttp.proxyPort=\u0026lt;httpPort\u0026gt;\u0026#34;\u0026#39; 위의 설정에서 다음과 같이 proxy를 추가해줍니다. 그 다음 halyard를 재시동합니다.\nhal shutdown hal config 아랫줄의 hal config는 의도적으로 halyard를 구동시키기 위함입니다.\ndocker로 halyard 사용하기 다음의 명령어는 공식 docs에서 제공하는 명령어입니다.\ndocker run -p 8084:8084 -p 9000:9000 \\  --name halyard --rm \\  -v ~/.hal:/home/spinnaker/.hal \\  -it \\  gcr.io/spinnaker-marketplace/halyard:stable kubernetes로 배포하려 할 경우, kubectl 명령어에서 사용할 kubeconfig 파일이 필요합니다. 이 또한 -v 옵션으로 주어야 합니다. 그리고 그 kubeconfig 파일을 읽도록 설정해야 합니다.\ndocker run -p 8084:8084 -p 9000:9000 \\  --name halyard --rm \\  -v ~/.hal:/home/spinnaker/.hal \\ \t-v ~/.kube:/home/spinnaker/.kube \\ \t-e KUBECONFIG=/home/spinnaker/.kube/config -it \\  gcr.io/spinnaker-marketplace/halyard:stable 사실 5번째 줄의 -e KUBECONFIG=/home/spinnaker/.kube/config은 없어도 default로 들어가있는 설정입니다. 하지만 혹시나 위에서 /home/spinnaker/.kube가 아닌 다른곳을 저장공간으로 둔다면 아래의 설정도 바뀌어야 합니다.\n프록시 환경이라면 다음과 같이 JAVA_OPT를 추가해주어야 합니다.\ndocker run -p 8084:8084 -p 9000:9000 \\  --name halyard -d \\  -v ~/.hal:/home/spinnaker/.hal \\  -v ~/.kube:/home/spinnaker/.kube \\  -e http_proxy=http://\u0026lt;proxy_host\u0026gt;:\u0026lt;proxy_port\u0026gt; \\  -e https_proxy=https://\u0026lt;proxy_host\u0026gt;:\u0026lt;proxy_port\u0026gt; \\  -e JAVA_OPTS=\u0026#34;-Dhttps.proxyHost=\u0026lt;proxy_host\u0026gt; -Dhttps.proxyPort=\u0026lt;proxy_port\u0026gt;\u0026#34; \\  -e KUBECONFIG=/home/spinnaker/.kube/config \\  gcr.io/spinnaker-marketplace/halyard:stable 그래도 안된다면.. 아마도 관리가 엄격한 네트워크를 사용하고 계실 것이라고 예상됩니다. 저 또한 그랬으니까요.\nhalyard는 설정 및 버전등의 정보를 bucket (Google Cloud Storage)로 관리한다고 합니다. 따라서 이곳으로 연결이 되지 않는다면 validation, version list 등의 상황에서 timeout이 날 것입니다.\nSpinnaker에서는 이를 확인하기 위해 gsutil을 사용하여 bucket의 주소인 gs://halconfig에 연결할 수 있는지 확인해보라고 합니다.\n또는 curl을 이용해서도 확인이 가능합니다.\n먼저 gsutil은 google storage 서비스에 접속하는 CLI 툴입니다. Docs에서 설치방법을 확인하여 설치할 수 있습니다.\n설치가 완료되었다면 gsutil로 접속이 가능한지부터 확인합니다.\ngsutil ls gs://halconfig 두번째로 curl을 사용하는 방법입니다.\ncurl storage.googleapis.com/halconfig 결과물들이 나온다면 정상적으로 bucket에는 접속이 가능한 것입니다. hal config 명령어가 성공하지 않지만 bucket에 접속이 가능하다면 좀 더 많은 트러블 슈팅이 필요할 것 같습니다.\n우선 여기까지 해서 bucket에 접속이 불가능하다고 판단이 되면, 인터넷이 없는 환경에서 설치하는 방법을 고려해보아야 합니다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/category/kubernetes/",
+	"title": "Kubernetes",
+	"tags": [],
+	"description": "",
+	"content": "Kubernetes Kubernetes는 deploy, scaling, 그리고 컨테이너화된 애플리케이션의\nmanagement를 자동화 해주는 open source container orchestration engine입니다.\n"
+},
+{
 	"uri": "http://kimmj.github.io/category/hugo/ibiza/font-change/",
 	"title": "Font Change",
 	"tags": ["font", "hugo"],
@@ -124,6 +131,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Ansible Ansible은 자동화를 할 때 사용하는 툴입니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/english/himwm/season1/episode6/",
+	"title": "Episode6",
+	"tags": [],
+	"description": "",
+	"content": "Do they rule? They rule.\nIt's the one night of the year chicks use to unleash their inner ho-bag\ntrot out your new fella\nIt was carve3d in strategic places\nShe could be engaged, or married, or, God forbid, fat\nOh, yeah. Weirdly hor, right?\nWhat are you going as? Oh, like I evend need to ask.\nWhat? She thought it was hilarious\nWhat a sad commentary on our national attention span, that we could forget such a turbulent time in our political history\nIt's an elaborate custume.\nYour ego's writing checks your body can't cash\nHere's the plan, and I crap you not.\nIt's so hard to convey tone.\nTwould think it would be Arby's\nI'm kind of in the zone here.\nOh, for God's sakes.\nLet's bail\nNone of these other costumes even come close to ours.\nI'm also a horny devil.\nI cannot get enough of it.\nScooch.\n"
 },
 {
 	"uri": "http://kimmj.github.io/tags/font/",
