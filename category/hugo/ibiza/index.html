@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>HUGO로 HTML이 되지 않을 때 가능하게 하는 방법 :: Ibiza</title>
+    <title>Ibiza :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1578814165" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/category/hugo/hugo-with-html/">
+  <body class="" data-url="/category/hugo/ibiza/">
     <nav id="sidebar" class="">
 
 
@@ -220,8 +220,8 @@
   
     
     <li data-nav-id="/category/hugo/ibiza/" title="Ibiza" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/category/hugo/ibiza/">
@@ -272,7 +272,7 @@
  
   
     
-      <li data-nav-id="/category/hugo/hugo-with-html/" title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class="dd-item active">
+      <li data-nav-id="/category/hugo/hugo-with-html/" title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class="dd-item ">
         <a href="/category/hugo/hugo-with-html/">
         hugo with html
         
@@ -843,8 +843,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -863,7 +861,7 @@
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/hugo/'>Hugo</a> > HUGO로 HTML이 되지 않을 때 가능하게 하는 방법
+            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/hugo/'>Hugo</a> > Ibiza
           
          
           
@@ -876,13 +874,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents"></nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -890,33 +881,30 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              HUGO로 HTML이 되지 않을 때 가능하게 하는 방법
-            </h1>
           
 
         
 
 
 
-<p><code>Hugo</code>는 markdown을 기본적으로 사용하지만 html을 이용해서 좀 더 다양하게 커스터마이징이 가능한 장점도 가지고 있습니다.</p>
-<p>하지만 저는 처음에 html 코드를 사용하게 되면 <code>&lt;!-- raw HTML omitted --&gt;</code>와 같은 줄로 대치가 되곤 했습니다.
-구글링 결과 이는 <code>Hugo</code>의 버전이 0.60.0으로 되면서부터 기본적으로 disable 시켰기 때문입니다.</p>
-<p>따라서 다음과 같이 조치를 하면 간단하게 해결이 가능합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
-<span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
-</code></pre></div><p>위와 같은 설정을 <code>config.toml</code>에 추가하기만 하면 됩니다.
-추가를 한 뒤 다시 확인해보면 정상적으로 html 코드가 적용된 모습을 볼 수 있습니다.</p>
+
+	<h3 id="hugo">Hugo</h3>
+<h1 id="ibiza">Ibiza</h1>
+<p>Ibiza는 이 블로그를 만드는 프로젝트입니다.</p>
+
+
+
 
 
 <footer class=" footline" >
 	
 </footer>
 
-
+        
+            </div> 
         
         </div> 
         
@@ -1047,6 +1035,20 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -1057,6 +1059,12 @@
                     
                     
 
+                    
+            
+        
+                    
+            
+        
                     
                         
             
@@ -1081,29 +1089,6 @@
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1436,4 +1421,3 @@
 
   </body>
 </html>
-
