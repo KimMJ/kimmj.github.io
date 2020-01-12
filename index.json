@@ -39,14 +39,14 @@
 	"title": "Season1",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "HIMWM Season1 "
 },
 {
 	"uri": "http://kimmj.github.io/english/himwm/",
 	"title": "HIMWM",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "English How I Met Your Mother How I Met Your Mother(HIMYM)은 2005년부터 2014년까지 9시즌을 했던 시트콤입니다.\n영어로 된 스크립트도 많고 한글 자막도 있으며 최근 Netflix에 올라오기도 했습니다.\n저 또한 이 시트콤을 즐겨 보았던 시청자로, 이번 기회에 영어를 공부하는 데 이 프로그램을 사용하여 다시 한번 정주행하기로 했습니다.\nScript : https://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=how-i-met-your-mother\n"
 },
 {
 	"uri": "http://kimmj.github.io/category/hugo/",
@@ -81,14 +81,14 @@
 	"title": "Category",
 	"tags": [],
 	"description": "",
-	"content": "Study My Study 배우고 때때로 익히니 기쁘지 아니한가.\n"
+	"content": "Study My Study 子曰\n學而時習之 不亦說乎\n배우고 때때로 익히니 이 또한 기쁘지 아니한가.\n"
 },
 {
 	"uri": "http://kimmj.github.io/english/",
 	"title": "English",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "English To Learn English\n"
 },
 {
 	"uri": "http://kimmj.github.io/category/ci-cd/spinnaker/tips/",
@@ -145,6 +145,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/english/himwm/season1/episode5/",
+	"title": "Episode5",
+	"tags": [],
+	"description": "",
+	"content": "Did I just have a stroke? 여기서 stroke은 뇌졸증이라고 해석할 수 있습니다. 이를 약간은 의역하자면 내가 뇌졸증에 걸렸나?보단 내 머리가 이상해졌나? 이정도로 생각해보면 될 것 같습니다.\nAll the things you do when you know where your next thousand lays are coming from. 이 말 앞에는 마샬, 릴리가 약혼 후에 더욱 성숙해지고자 북클럽에 가입하고, 와인파티를 한다는 내용이 있습니다. 여기서 바니가 위의 대사를 하는데 이러한 것들(성숙해지고자 하는 행동들)은 where your next thousand lays are coming from을 알때나 하는 행동이라는 뜻입니다.\n여기서 lays라는 표현은 sexual encounters 즉, 성적인 만남의 대상들이라는 의미로 해석됩니다.\n결국 이 문장의 의미는 \u0026ldquo;다음 천번의 관계를 누구랑 할 지 알때나 하는 행동이다\u0026quot;라는 의미가 되고, 그 이유는 마샬과 릴리가 약혼을 했다는 사실을 기반으로 한 이야기가 될 것입니다.\nGrandma, Grandpa, don't wait up wait up이라는 의미는 누군가 집에 오기를 자지 않고 기다린다는 뜻입니다. 영영사전에도 다음과 같이 설명이 되어있습니다.\n to not go to bed at night because you are expecting someone to arrive\n 즉, 윗 문장의 의미는 \u0026ldquo;기다리지 말고 자\u0026quot;라는 뜻이겠네요.\nIt's so stupid and arbitrary, isn't it? arbitrary는 \u0026ldquo;임의적인, 제멋대로인\u0026quot;이라는 뜻입니다.\n따라서 이 의미는 \u0026ldquo;이건 너무 멍청하고 제멋대로야. 그렇치 않아?\u0026ldquo;가 되겠네요\nWe're really starting to click with these guys. click with someone은 어떤 사람과 이제 알아가기 시작했다는 말입니다.\n즉, \u0026ldquo;우리는 이제 진짜 이 사람들이랑 친해지기 시작했어\u0026quot;라는 뜻입니다.\nShould've snuck in with Brian Affleck. snuck은 sneak의 과거, 과거분사형입니다. \u0026ldquo;몰래 가다\u0026quot;라는 뜻이 있습니다.\n즉, \u0026ldquo;Brian Affleck이랑 같이 몰래 들어갔어야죠\u0026quot;라는 의미가 되겠네요.\nI heard that in college you flashed a campus tour group on a dare on a dare라는 표현은 \u0026ldquo;감히\u0026rdquo;, \u0026ldquo;무모하게\u0026rdquo; 이런 의미로 사용됩니다.\nNo! And you know why? Becuase, italics, \u0026ldquo;This night did not happen.\u0026rdquo; italics는 영문에서 보통 강조하는 문장이 있을 때 사용하곤 합니다. 따라서 윗 문장에서는 강조하는 부분 앞에 italics라고 표현했네요.\n\u0026ldquo;안돼! 왠줄 알아? 왜냐면 - 이탤릭체로 - 오늘 밤엔 아무일도 없었으니까\u0026quot;라는 의미로 해석이 됩니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/category/hugo/hugo-with-html/",
@@ -270,7 +277,7 @@
 	"title": "2020 Plan",
 	"tags": ["blog", "hugo"],
 	"description": "",
-	"content": "2020 새해에는 몇가지 목표가 있다.\n 꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 jekyll blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.\n특히 지금은 누군가가 만든 블로그 테마를 사용하고 있지만 나중에는 내가 원하는 대로 커스터마이징이 가능하도록 나만의 블로그 테마를 만들고 싶다.\n이를 위해서는 무엇이 필요한지도, 어떤 기술 스택을 쌓아야 할지도 모르지만 일단 도전해보고자 한다.\n"
+	"content": "2020 새해에는 몇가지 목표가 있다.\n 꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 hugo blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.\n특히 지금은 누군가가 만든 블로그 테마를 사용하고 있지만 나중에는 내가 원하는 대로 커스터마이징이 가능하도록 나만의 블로그 테마를 만들고 싶다.\n이를 위해서는 무엇이 필요한지도, 어떤 기술 스택을 쌓아야 할지도 모르지만 일단 도전해보고자 한다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/tags/hugo/",

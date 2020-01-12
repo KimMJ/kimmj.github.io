@@ -40,6 +40,16 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
     </item>
     
     <item>
+      <title>Episode5</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode5/</link>
+      <pubDate>Sat, 11 Jan 2020 00:03:30 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode5/</guid>
+      <description>Did I just have a stroke? 여기서 stroke은 뇌졸증이라고 해석할 수 있습니다. 이를 약간은 의역하자면 내가 뇌졸증에 걸렸나?보단 내 머리가 이상해졌나? 이정도로 생각해보면 될 것 같습니다.
+All the things you do when you know where your next thousand lays are coming from. 이 말 앞에는 마샬, 릴리가 약혼 후에 더욱 성숙해지고자 북클럽에 가입하고, 와인파티를 한다는 내용이 있습니다. 여기서 바니가 위의 대사를 하는데 이러한 것들(성숙해지고자 하는 행동들)은 where your next thousand lays are coming from을 알때나 하는 행동이라는 뜻입니다.</description>
+    </item>
+    
+    <item>
       <title>HUGO로 HTML이 되지 않을 때 가능하게 하는 방법</title>
       <link>http://kimmj.github.io/category/hugo/hugo-with-html/</link>
       <pubDate>Fri, 10 Jan 2020 02:22:34 +0900</pubDate>
@@ -131,7 +141,7 @@ git clone https://github.com/stackhpc/ansible-role-libvirt-vm 테스트 환경 �
       
       <guid>http://kimmj.github.io/my-story/2020-plan/</guid>
       <description>2020 새해에는 몇가지 목표가 있다.
- 꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 jekyll blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.
+ 꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 hugo blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.
 특히 지금은 누군가가 만든 블로그 테마를 사용하고 있지만 나중에는 내가 원하는 대로 커스터마이징이 가능하도록 나만의 블로그 테마를 만들고 싶다.
 이를 위해서는 무엇이 필요한지도, 어떤 기술 스택을 쌓아야 할지도 모르지만 일단 도전해보고자 한다.</description>
     </item>
