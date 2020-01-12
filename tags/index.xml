@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>font</title>
+      <link>http://kimmj.github.io/tags/font/</link>
+      <pubDate>Sun, 12 Jan 2020 16:28:31 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/font/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://kimmj.github.io/tags/hugo/</link>
+      <pubDate>Sun, 12 Jan 2020 16:28:31 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>halyard</title>
       <link>http://kimmj.github.io/tags/halyard/</link>
       <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
@@ -134,15 +152,6 @@
       <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/sudo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>http://kimmj.github.io/tags/hugo/</link>
-      <pubDate>Wed, 08 Jan 2020 01:51:18 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
