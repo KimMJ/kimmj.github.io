@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Ibiza</title>
+    <link>http://kimmj.github.io/tags/html/</link>
+    <description>Recent content in html on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2020 02:22:34 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HUGO로 HTML이 되지 않을 때 가능하게 하는 방법</title>
+      <link>http://kimmj.github.io/category/hugo/hugo-with-html/</link>
+      <pubDate>Fri, 10 Jan 2020 02:22:34 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/category/hugo/hugo-with-html/</guid>
+      <description>Hugo는 markdown을 기본적으로 사용하지만 html을 이용해서 좀 더 다양하게 커스터마이징이 가능한 장점도 가지고 있습니다.
+하지만 저는 처음에 html 코드를 사용하게 되면 &amp;lt;!-- raw HTML omitted --&amp;gt;와 같은 줄로 대치가 되곤 했습니다. 구글링 결과 이는 Hugo의 버전이 0.60.0으로 되면서부터 기본적으로 disable 시켰기 때문입니다.
+따라서 다음과 같이 조치를 하면 간단하게 해결이 가능합니다.
+[markup.goldmark.renderer] unsafe= true 위와 같은 설정을 config.toml에 추가하기만 하면 됩니다. 추가를 한 뒤 다시 확인해보면 정상적으로 html 코드가 적용된 모습을 볼 수 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

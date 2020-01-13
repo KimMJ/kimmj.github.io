@@ -2,7 +2,7 @@
 {
 	"uri": "http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/",
 	"title": "Overview",
-	"tags": [],
+	"tags": ["install", "spinnaker"],
 	"description": "",
 	"content": "Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.\n가장 먼저 최소 사양을 확인해보도록 하겠습니다.\n링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements\n 램 18 GB CPU 4코어 Ubuntu 14.04, 16.04, 18.04  Spinnaker 자체가 클라우드 환경에만 배포가 가능하기 때문에, 아마도 \u0026ldquo;전체 클라우드를 합하여 저정도면 된다\u0026quot;를 의미하는 것 같습니다.\n설치 방법은 두가지로 나뉩니다.\n 테스트를 목적으로 Helm Chart를 통한 설치 실제로 사용할 목적으로 halyard를 통한 설치  저는 여기서 2번 halyard를 통한 설치를 해보려고 합니다.\n전체적인 프로세스를 먼저 설명드리자면 다음과 같습니다.\n halyard 설치 Cloud Provider(클라우드 제공자) 선택 배포 환경 선택 Storage Service 선택 배포 및 접속 config 백업하기  그리고 저는 다음과 같은 환경에서 테스트를 할 예정입니다.\n Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Environment: Distributed installation on Kubernetes Storage Service: Minio Deploy and Connect: expose by NodePort OS : Ubuntu 18.04.2 Server  "
 },
@@ -133,6 +133,41 @@
 	"content": "Ansible Ansible은 자동화를 할 때 사용하는 툴입니다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/category/ubuntu/change-hostname/",
+	"title": "Change Hostname",
+	"tags": ["hostname", "ubuntu"],
+	"description": "",
+	"content": "hostname을 바꾸는 일은 흔치 않지만 최초 셋업할 때 많이 사용하곤 합니다.\n# hostnamectl set-hostname \u0026lt;host name\u0026gt; hostnamectl set-hostname wonderland 변경 후 터미널을 끄고 재접속을 하면 변경된 사항을 볼 수 있습니다.\nhostname "
+},
+{
+	"uri": "http://kimmj.github.io/tags/hostname/",
+	"title": "hostname",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/ubuntu/",
+	"title": "ubuntu",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/english/himwm/season1/episode7/",
+	"title": "Episode7",
+	"tags": [],
+	"description": "",
+	"content": "Yeah, we do that behind you back.\nYou're messing with me, right?\nSummer Breeze is my guilty-pleasure song.\nWell, by some million-to-one long shot, and I'm not rooting for this, you wind up not getting married this weekend, give me a call\nBrace yourself, dude.\n"
+},
+{
 	"uri": "http://kimmj.github.io/english/himwm/season1/episode6/",
 	"title": "Episode6",
 	"tags": [],
@@ -149,13 +184,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/hugo/",
 	"title": "hugo",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -196,16 +224,30 @@
 	"content": "Did I just have a stroke? 여기서 stroke은 뇌졸증이라고 해석할 수 있습니다. 이를 약간은 의역하자면 내가 뇌졸증에 걸렸나?보단 내 머리가 이상해졌나? 이정도로 생각해보면 될 것 같습니다.\nAll the things you do when you know where your next thousand lays are coming from. 이 말 앞에는 마샬, 릴리가 약혼 후에 더욱 성숙해지고자 북클럽에 가입하고, 와인파티를 한다는 내용이 있습니다. 여기서 바니가 위의 대사를 하는데 이러한 것들(성숙해지고자 하는 행동들)은 where your next thousand lays are coming from을 알때나 하는 행동이라는 뜻입니다.\n여기서 lays라는 표현은 sexual encounters 즉, 성적인 만남의 대상들이라는 의미로 해석됩니다.\n결국 이 문장의 의미는 \u0026ldquo;다음 천번의 관계를 누구랑 할 지 알때나 하는 행동이다\u0026quot;라는 의미가 되고, 그 이유는 마샬과 릴리가 약혼을 했다는 사실을 기반으로 한 이야기가 될 것입니다.\nGrandma, Grandpa, don't wait up wait up이라는 의미는 누군가 집에 오기를 자지 않고 기다린다는 뜻입니다. 영영사전에도 다음과 같이 설명이 되어있습니다.\n to not go to bed at night because you are expecting someone to arrive\n 즉, 윗 문장의 의미는 \u0026ldquo;기다리지 말고 자\u0026quot;라는 뜻이겠네요.\nIt's so stupid and arbitrary, isn't it? arbitrary는 \u0026ldquo;임의적인, 제멋대로인\u0026quot;이라는 뜻입니다.\n따라서 이 의미는 \u0026ldquo;이건 너무 멍청하고 제멋대로야. 그렇치 않아?\u0026ldquo;가 되겠네요\nWe're really starting to click with these guys. click with someone은 어떤 사람과 이제 알아가기 시작했다는 말입니다.\n즉, \u0026ldquo;우리는 이제 진짜 이 사람들이랑 친해지기 시작했어\u0026quot;라는 뜻입니다.\nShould've snuck in with Brian Affleck. snuck은 sneak의 과거, 과거분사형입니다. \u0026ldquo;몰래 가다\u0026quot;라는 뜻이 있습니다.\n즉, \u0026ldquo;Brian Affleck이랑 같이 몰래 들어갔어야죠\u0026quot;라는 의미가 되겠네요.\nI heard that in college you flashed a campus tour group on a dare on a dare라는 표현은 \u0026ldquo;감히\u0026rdquo;, \u0026ldquo;무모하게\u0026rdquo; 이런 의미로 사용됩니다.\nNo! And you know why? Becuase, italics, \u0026ldquo;This night did not happen.\u0026rdquo; italics는 영문에서 보통 강조하는 문장이 있을 때 사용하곤 합니다. 따라서 윗 문장에서는 강조하는 부분 앞에 italics라고 표현했네요.\n\u0026ldquo;안돼! 왠줄 알아? 왜냐면 - 이탤릭체로 - 오늘 밤엔 아무일도 없었으니까\u0026quot;라는 의미로 해석이 됩니다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/tags/html/",
+	"title": "html",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/category/hugo/hugo-with-html/",
 	"title": "HUGO로 HTML이 되지 않을 때 가능하게 하는 방법",
-	"tags": [],
+	"tags": ["hugo", "html"],
 	"description": "",
 	"content": "Hugo는 markdown을 기본적으로 사용하지만 html을 이용해서 좀 더 다양하게 커스터마이징이 가능한 장점도 가지고 있습니다.\n하지만 저는 처음에 html 코드를 사용하게 되면 \u0026lt;!-- raw HTML omitted --\u0026gt;와 같은 줄로 대치가 되곤 했습니다. 구글링 결과 이는 Hugo의 버전이 0.60.0으로 되면서부터 기본적으로 disable 시켰기 때문입니다.\n따라서 다음과 같이 조치를 하면 간단하게 해결이 가능합니다.\n[markup.goldmark.renderer] unsafe= true 위와 같은 설정을 config.toml에 추가하기만 하면 됩니다. 추가를 한 뒤 다시 확인해보면 정상적으로 html 코드가 적용된 모습을 볼 수 있습니다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/tags/pipeline/",
+	"title": "pipeline",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/category/ci-cd/spinnaker/tips/pipeline-expressions/",
 	"title": "Pipeline Expressions",
-	"tags": [],
+	"tags": ["spinnaker", "pipeline"],
 	"description": "",
 	"content": "Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.\n이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.\npipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).\n 위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.\n기본적으로 ${ expression }의 형태를 가지게 됩니다.\n여기서 한가지 기억해 두어야 할 것은 nested가 되지 않는다는 것입니다. 즉, ${ expression1 ${expression2} }가 되지 않습니다.\n언제 pipeline expression을 사용하나요? pipeline expression은 Spinnaker UI로는 해결할 수 없는 문제들을 해결하여줍니다. 예를 들어 특정 stage가 성공했는지의 여부에 따라 stage를 실행할지, 말지 결정하는 방법을 제공해 줍니다. 또는 가장 최근에 deploy된 pod를 알아낸다거나, spinnaker를 통한 canary analysis를 할 때 비교할 두가지 대상을 선택하기 위해 사용할 수도 있습니다.\nSpinnaker는 모든 파이프라인을 JSON 형태로도 관리할 수 있기 때문에, UI에는 없는 값들도 입력할 수 있습니다. 이렇게 좀 더 유연한 방법으로 Spinnaker를 이용하고자 한다면 pipeline expression은 꼭 알아두어야 합니다.\n원하는 값을 어떻게 찾나요? pipeline이 구동되고 나면, Details를 누르고 Source를 눌렀을 때 해당 pipeline의 실행결과가 json형태로 출력됩니다. 이를 VS Code나 다른 편집기를 이용하여, json으로 인식하게 한 뒤, 자동 들여쓰기를 하면 보기 좋게 만들어줍니다.\n이를 통해서 어떤 값을 내가 사용할 지 확인하여 pipeline expression을 작성하면 됩니다.\n내가 작성한 pipeline expression은 어떻게 테스트하나요? 작성한 pipeline expression을 테스트하기 위해 파이프라인을 구동한다는 것은 끔직한 일입니다. Spinnaker는 이를 테스트하기 위해 API endpoint를 제공합니다. 즉, 파이프라인을 다시 구동시키지 않고도 어떤 결과값이 나오는지 확인할 수 있다는 것을 의미합니다.\n테스트 방법은 간단합니다. 다음과 같이 curl을 통해 endpoint로 테스트하면 됩니다.\nPIPELINE_ID=[your_pipeline_id] curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression \\  -H \u0026#34;Content-Type: text/plain\u0026#34; \\  --data \u0026#39;${ #stage(\u0026#34;Deploy\u0026#34;).status.toString() }\u0026#39; 여기서 api.my.spinnaker는 Gate의 Service를 보고 포트를 참조하여 작성하면 됩니다. 기본값은 localhost:8084입니다. 이렇게 하면 Deploy라는 stage가 성공했을 때 다음과 같은 결과를 볼 수 있습니다.\n{\u0026#34;result\u0026#34;: \u0026#34;SUCCEEDED\u0026#34;} Spinnaker가 expression을 통해 결과를 만들어내지 못한다면 다음과 같이 에러와 로그가 발생합니다.\n{ \u0026#34;detail\u0026#34;: { \u0026#34;{ #stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;: [ { \u0026#34;description\u0026#34;: \u0026#34;Failed to evaluate [expression] Expression [{ #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() ] @0: No ending suffix \u0026#39;}\u0026#39; for expression starting at character 0: { #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;, \u0026#34;exceptionType\u0026#34;:\u0026#34;org.springframework.expression.ParseException\u0026#34;, \u0026#34;level\u0026#34;:\u0026#34;ERROR\u0026#34;, \u0026#34;timestamp\u0026#34;:1531254890849 } ] }, \u0026#34;result\u0026#34;:\u0026#34;${#stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34; } Reference Spinnaker Docs: https://www.spinnaker.io/guides/user/pipeline/expressions/\n"
 },
@@ -285,13 +327,6 @@
 	"tags": ["ubuntu", "install", "boot parameter"],
 	"description": "",
 	"content": "Ubuntu 설치할 때 boot parameter가 필요한 상황이 간혹 발생할 수 있습니다.\n특히 저의 경우, preseed.cfg를 수정하기 위해 인스톨러가 질의하는 것이 preseed.cfg의 어떤것과 대응이 되는지를 보기 위해 DEBCONF_DEBUG=5라는 옵션을 boot parameter로 주어야 했습니다. 이 때 사용할 수 있는 방법을 소개드립니다.\n먼저 평소와 같이 ubuntu를 설치하기 위해 설치 이미지를 삽입합니다. 그 다음에는 언어를 선택하시면, 다음으로 넘어가기 전에 메뉴가 뜹니다.\n이 상태에서 F6을 누르시면 옵션을 선택할 수 있고, 이 때 ESC키를 누르면 boot parameter가 하단에 보일 것입니다. 여기서 원하는 boot parameter를 입력하면 됩니다.\n이 때, 위아래 방향키를 누르게 되면 입력했던 내용이 사라지게 됩니다. 따라서 미리 맨 위 install ubuntu에 커서를 올리고 수정하시기 바랍니다.\ninstall 시에 설정으로 넣어버리기 preseed.cfg로 미리 질문에 대한 답을 다 정할 수 있었듯이, boot parameter 또한 미리 설정할 수 있습니다. 해당 파일은 iso 파일을 압축해제 하였을 때, /isolinux/txt.cfg 파일 내에 있습니다.\ngrep -ri \u0026#39;initrd\u0026#39; . 이렇게 검색해 보았을 때 quiet ---이라고 적힌 것들이 있는데, --- 뒤에가 boot parameter로 쓰이는 것들입니다.\nvim으로 /isolinux/txt.cfg 파일을 열고 원하는 설정을 기입하면 됩니다.\n이렇게 원하는 boot parameter를 적었다면, 다시 md5sum을 통해 체크섬을 만들어주어야 합니다. 이에 대한 내용은 앞선 [포스트]({% post_url 2020-01-05-unattended-ubuntu %})에서도 확인할 수 있으니 bakeIsoImage.sh 스크립트를 참조하여 md5sum을 하고 iso 파일을 만들면 됩니다.\n"
-},
-{
-	"uri": "http://kimmj.github.io/tags/ubuntu/",
-	"title": "ubuntu",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "http://kimmj.github.io/category/ubuntu/how-to-use-sudo-without-password/",

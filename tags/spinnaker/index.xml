@@ -12,6 +12,20 @@
     
     
     <item>
+      <title>Overview</title>
+      <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</link>
+      <pubDate>Fri, 10 Jan 2020 01:02:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</guid>
+      <description>Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.
+가장 먼저 최소 사양을 확인해보도록 하겠습니다.
+링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements
+ 램 18 GB CPU 4코어 Ubuntu 14.04, 16.04, 18.04  Spinnaker 자체가 클라우드 환경에만 배포가 가능하기 때문에, 아마도 &amp;ldquo;전체 클라우드를 합하여 저정도면 된다&amp;quot;를 의미하는 것 같습니다.
+설치 방법은 두가지로 나뉩니다.
+ 테스트를 목적으로 Helm Chart를 통한 설치 실제로 사용할 목적으로 halyard를 통한 설치  저는 여기서 2번 halyard를 통한 설치를 해보려고 합니다.</description>
+    </item>
+    
+    <item>
       <title>Install Halyard</title>
       <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/install-halyard/</link>
       <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
@@ -23,6 +37,18 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
  Debian/Ubuntu나 macOS에 직접 설치하기 Docker 사용하기  Spinnaker Docs에서는 실제 Production 환경이라면 직접 설치하는 방법을, 그게 아니라 간단하게 사용하려면 docker를 사용해도 된다고 하고 있습니다.
 그리고 한가지의 옵션이 더 있습니다.
  인터넷이 되지 않는 환경 (프록시나 방화벽 등으로 halyard를 통한 설치가 어려운 경우)  이 글을 작성하고 있는 환경은 인터넷이 잘 되는 환경입니다.</description>
+    </item>
+    
+    <item>
+      <title>Pipeline Expressions</title>
+      <link>http://kimmj.github.io/category/ci-cd/spinnaker/tips/pipeline-expressions/</link>
+      <pubDate>Fri, 10 Jan 2020 01:33:32 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/tips/pipeline-expressions/</guid>
+      <description>Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.
+이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.
+pipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).
+ 위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.</description>
     </item>
     
   </channel>

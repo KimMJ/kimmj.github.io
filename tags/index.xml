@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2020 16:28:31 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 01:00:02 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hostname</title>
+      <link>http://kimmj.github.io/tags/hostname/</link>
+      <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/hostname/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://kimmj.github.io/tags/ubuntu/</link>
+      <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>font</title>
@@ -62,6 +80,24 @@
       <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/spinnaker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>http://kimmj.github.io/tags/html/</link>
+      <pubDate>Fri, 10 Jan 2020 02:22:34 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipeline</title>
+      <link>http://kimmj.github.io/tags/pipeline/</link>
+      <pubDate>Fri, 10 Jan 2020 01:33:32 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/pipeline/</guid>
       <description></description>
     </item>
     
@@ -125,15 +161,6 @@
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/boot-parameter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>http://kimmj.github.io/tags/ubuntu/</link>
-      <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     

@@ -98,6 +98,31 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/category/ubuntu/change-hostname/</loc>
+    <lastmod>2020-01-14T01:00:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/hostname/</loc>
+    <lastmod>2020-01-14T01:00:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-01-14T01:00:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-01-14T01:00:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/english/himwm/season1/episode7/</loc>
+    <lastmod>2020-01-14T00:53:23+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/english/himwm/season1/episode6/</loc>
     <lastmod>2020-01-13T01:27:04+09:00</lastmod>
   </url>
@@ -109,11 +134,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/hugo/</loc>
-    <lastmod>2020-01-12T16:28:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-01-12T16:28:31+09:00</lastmod>
   </url>
   
@@ -143,8 +163,18 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/html/</loc>
+    <lastmod>2020-01-10T02:22:34+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/category/hugo/hugo-with-html/</loc>
     <lastmod>2020-01-10T02:22:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/pipeline/</loc>
+    <lastmod>2020-01-10T01:33:32+09:00</lastmod>
   </url>
   
   <url>
@@ -204,11 +234,6 @@
   
   <url>
     <loc>http://kimmj.github.io/category/ubuntu/how-to-edit-boot-parameter-during-install/</loc>
-    <lastmod>2020-01-08T01:52:12+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
     <lastmod>2020-01-08T01:52:12+09:00</lastmod>
   </url>
   

@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Change Hostname</title>
+      <link>http://kimmj.github.io/category/ubuntu/change-hostname/</link>
+      <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/category/ubuntu/change-hostname/</guid>
+      <description>hostname을 바꾸는 일은 흔치 않지만 최초 셋업할 때 많이 사용하곤 합니다.
+# hostnamectl set-hostname &amp;lt;host name&amp;gt; hostnamectl set-hostname wonderland 변경 후 터미널을 끄고 재접속을 하면 변경된 사항을 볼 수 있습니다.
+hostname </description>
+    </item>
+    
+    <item>
       <title>Unattended Ubuntu</title>
       <link>http://kimmj.github.io/category/ubuntu/unattended-ubuntu/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>

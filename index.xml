@@ -53,6 +53,30 @@ grep -ri &amp;#34;font&amp;#34; 결과가 길게 나오는데요, 여기서 stat
     </item>
     
     <item>
+      <title>Change Hostname</title>
+      <link>http://kimmj.github.io/category/ubuntu/change-hostname/</link>
+      <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/category/ubuntu/change-hostname/</guid>
+      <description>hostname을 바꾸는 일은 흔치 않지만 최초 셋업할 때 많이 사용하곤 합니다.
+# hostnamectl set-hostname &amp;lt;host name&amp;gt; hostnamectl set-hostname wonderland 변경 후 터미널을 끄고 재접속을 하면 변경된 사항을 볼 수 있습니다.
+hostname </description>
+    </item>
+    
+    <item>
+      <title>Episode7</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode7/</link>
+      <pubDate>Tue, 14 Jan 2020 00:53:23 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode7/</guid>
+      <description>Yeah, we do that behind you back.
+You&#39;re messing with me, right?
+Summer Breeze is my guilty-pleasure song.
+Well, by some million-to-one long shot, and I&#39;m not rooting for this, you wind up not getting married this weekend, give me a call
+Brace yourself, dude.</description>
+    </item>
+    
+    <item>
       <title>Episode6</title>
       <link>http://kimmj.github.io/english/himwm/season1/episode6/</link>
       <pubDate>Mon, 13 Jan 2020 01:27:04 +0900</pubDate>
