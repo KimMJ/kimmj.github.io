@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hugo :: Ibiza</title>
+    <title>Install and Setup Kubectl :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1579106785" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/category/hugo/">
+  <body class="" data-url="/category/kubernetes/install/install-and-setup-kubectl/">
     <nav id="sidebar" class="">
 
 
@@ -193,7 +193,7 @@
   
     
     <li data-nav-id="/category/kubernetes/" title="Kubernetes" class="dd-item 
-        
+        parent
         
         
         ">
@@ -220,7 +220,7 @@
   
     
     <li data-nav-id="/category/kubernetes/install/" title="Install" class="dd-item 
-        
+        parent
         
         
         ">
@@ -263,7 +263,7 @@
  
   
     
-      <li data-nav-id="/category/kubernetes/install/install-and-setup-kubectl/" title="Install and Setup Kubectl" class="dd-item ">
+      <li data-nav-id="/category/kubernetes/install/install-and-setup-kubectl/" title="Install and Setup Kubectl" class="dd-item active">
         <a href="/category/kubernetes/install/install-and-setup-kubectl/">
         Install and Setup Kubectl
         
@@ -301,8 +301,8 @@
   
     
     <li data-nav-id="/category/hugo/" title="Hugo" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/category/hugo/">
@@ -1046,6 +1046,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1060,7 +1062,19 @@
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > Hugo
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/kubernetes/'>Kubernetes</a> > <a href='/category/kubernetes/install/'>Install</a> > Install and Setup Kubectl
+          
+         
+          
+         
           
          
           
@@ -1071,36 +1085,96 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux에-kubectl-설치">Linux에 kubectl 설치</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kubernetes">kubernetes</a>
+
+  <a class="tag-link" href="/tags/kubectl">kubectl</a>
+
+  <a class="tag-link" href="/tags/install">install</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Install and Setup Kubectl
+            </h1>
           
 
         
 
 
 
-
-	<h1 id="hugo">Hugo</h1>
-<p>fast static website engine</p>
-
-
-
+<p>시작에 앞서, 공식 docs에서는 <code>kubectl</code> 버전이 minor 버전 하나정도만 차이나도록 하라고 하고 있습니다.
+예를 들어, v1.16.x인 client(worker, master 포함)가 있다면, v1.15.x나 v1.17.x까지만 허용합니다.</p>
+<h3 id="linux에-kubectl-설치">Linux에 <code>kubectl</code> 설치</h3>
+<p><code>curl</code>을 이용하는 방법, <code>snap</code>이나 <code>homebrew</code>를 이용하는 방법, <code>native package management</code>를 이용하는 방법이 있습니다.
+그 중에서 <code>curl</code>을 이용하는 방법을 다루도록 하겠습니다.</p>
+<ol>
+<li>
+<p><code>curl</code>을 통해서 <code>kubectl</code>을 설치합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -LO https://storage.googleapis.com/kubernetes-release/release/<span style="color:#e6db74">`</span>curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt<span style="color:#e6db74">`</span>/bin/linux/amd64/kubectl
+</code></pre></div><p><code>curl</code> 안에 <code>curl</code>을 넣어서 최신 버전의 stable을 가지고오도록 하고있네요.
+이를 응용하면 특정한 버전의 <code>kubectl</code>도 가지고 올 수 있을 것입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -LO https://storage.googleapis.com/kubernetes-release/release/1.16.1/bin/linux/amd64/kubectl
+</code></pre></div><p>위의 명령어는 1.16.1 버전을 설치하는 것입니다.
+이처럼 버전이 들어가는 자리에 원하는 버전을 넣으면, 언제든 원하는 버전의 <code>kubectl</code>을 깔 수 있을 것입니다.</p>
+</li>
+<li>
+<p><code>kubectl</code> 바이너리 파일을 실행 가능하도록 변경합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +x ./kubectl
+</code></pre></div></li>
+<li>
+<p>바이너리 파일을 어디서든 실행할 수 있도록 <code>$PATH</code> 환경변수가 가르키는 위치에 둡니다.
+예를 들어 <code>$PATH</code>가 <code>/usr/local/bin</code>을 포함한다면 그 위치에 <code>kubectl</code>을 위치시킵니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mv ./kubectl /usr/local/bin/kubectl
+</code></pre></div></li>
+<li>
+<p><code>kubectl</code>의 버전을 확인하여 제대로 설치가 되었는지 확인합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl version --client
+</code></pre></div></li>
+<li>
+<p><code>kubectl</code>의 자동완성 기능을 활성화 시킵니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install bash-completion
+</code></pre></div><p><code>bash-completion</code> 프로그램을 다운로드 받습니다.
+그 후 <code>/etc/bash_completion.d/</code> 디렉토리에 bash-completion 설정을 다음의 명령어를 통해 넣습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl completion bash &gt;/etc/bash_completion.d/kubectl
+</code></pre></div><p>이제 <code>shell</code>을 다시 실행시키면 자동완성 기능이 활성화 될 것입니다.</p>
+</li>
+</ol>
+<p>Reference:<br>
+<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a></p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1215,8 +1289,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1233,6 +1305,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1246,21 +1319,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1273,6 +1333,23 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1284,6 +1361,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1299,9 +1378,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1765,3 +1841,4 @@
 
   </body>
 </html>
+

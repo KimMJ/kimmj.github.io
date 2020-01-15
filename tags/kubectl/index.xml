@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kubernetes on Ibiza</title>
-    <link>http://kimmj.github.io/tags/kubernetes/</link>
-    <description>Recent content in kubernetes on Ibiza</description>
+    <title>kubectl on Ibiza</title>
+    <link>http://kimmj.github.io/tags/kubectl/</link>
+    <description>Recent content in kubectl on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Jan 2020 02:26:45 +0900</lastBuildDate>
     
-	<atom:link href="http://kimmj.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kimmj.github.io/tags/kubectl/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Overview</title>
-      <link>http://kimmj.github.io/category/kubernetes/install/overview/</link>
-      <pubDate>Tue, 14 Jan 2020 01:42:53 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/category/kubernetes/install/overview/</guid>
-      <description>저의 vm으로 구성한 클러스터를 설명드리고자 합니다.
- Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.</description>
-    </item>
     
     <item>
       <title>Install and Setup Kubectl</title>

@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jan 2020 01:42:53 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 02:26:45 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>install</title>
       <link>http://kimmj.github.io/tags/install/</link>
-      <pubDate>Tue, 14 Jan 2020 01:42:53 +0900</pubDate>
+      <pubDate>Tue, 14 Jan 2020 02:26:45 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/install/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>kubectl</title>
+      <link>http://kimmj.github.io/tags/kubectl/</link>
+      <pubDate>Tue, 14 Jan 2020 02:26:45 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/kubectl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kubernetes</title>
       <link>http://kimmj.github.io/tags/kubernetes/</link>
-      <pubDate>Tue, 14 Jan 2020 01:42:53 +0900</pubDate>
+      <pubDate>Tue, 14 Jan 2020 02:26:45 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/kubernetes/</guid>
       <description></description>
