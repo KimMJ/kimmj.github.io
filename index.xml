@@ -48,15 +48,16 @@
     </item>
     
     <item>
-      <title>Install and Setup Kubectl</title>
-      <link>http://kimmj.github.io/category/kubernetes/install/install-and-setup-kubectl/</link>
-      <pubDate>Tue, 14 Jan 2020 02:26:45 +0900</pubDate>
+      <title>Install Kubeadm</title>
+      <link>http://kimmj.github.io/category/kubernetes/install/install-kubeadm/</link>
+      <pubDate>Fri, 17 Jan 2020 00:38:41 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/kubernetes/install/install-and-setup-kubectl/</guid>
-      <description>시작에 앞서, 공식 docs에서는 kubectl 버전이 minor 버전 하나정도만 차이나도록 하라고 하고 있습니다. 예를 들어, v1.16.x인 client(worker, master 포함)가 있다면, v1.15.x나 v1.17.x까지만 허용합니다.
-Linux에 kubectl 설치 curl을 이용하는 방법, snap이나 homebrew를 이용하는 방법, native package management를 이용하는 방법이 있습니다. 그 중에서 curl을 이용하는 방법을 다루도록 하겠습니다.
-  curl을 통해서 kubectl을 설치합니다.
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl curl 안에 curl을 넣어서 최신 버전의 stable을 가지고오도록 하고있네요. 이를 응용하면 특정한 버전의 kubectl도 가지고 올 수 있을 것입니다.</description>
+      <guid>http://kimmj.github.io/category/kubernetes/install/install-kubeadm/</guid>
+      <description>kubeadm은 Kubernetes cluster의 설정들을 관리하는 툴입니다.
+Prerequisites 먼저, 몇가지 전제사항이 있습니다.
+  모든 노드의 MAC 주소와 product_uuid가 달라야 합니다. ifconfig -a와 sudo cat /sys/class/dmi/id/product_uuid를 통해 알 수 있습니다.
+  network adapter를 확인합니다. 하나 이상의 network adapter가 있고, Kubernetes component들이 default route로 통신이 불가능하다면 IP route를 설정하여 Kubernetes cluster 주소가 적절한 adapter를 통해 이동할 수 있도록 해주는 것이 좋습니다.
+  iptables를 사용하는지 확인 Ubuntu 19.04 이후버전부터는 nftables라는 것을 사용한다고 합니다.</description>
     </item>
     
     <item>
@@ -97,16 +98,12 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
     </item>
     
     <item>
-      <title>Episode9</title>
-      <link>http://kimmj.github.io/english/himwm/season1/episode9/</link>
-      <pubDate>Wed, 15 Jan 2020 23:58:54 +0900</pubDate>
+      <title>Customizing Control Plane Configuration With Kubeadm</title>
+      <link>http://kimmj.github.io/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</link>
+      <pubDate>Fri, 17 Jan 2020 00:51:13 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/english/himwm/season1/episode9/</guid>
-      <description>Okay, Lily, we&#39;re putting you on salad duty.
-Why are we even talking about this? This is, like, way down the road.
-All is right with the world again.
-Look, I don&#39;t wanna be exactly like my family. And don&#39;t take this the wrong way, but I don&#39;t wanna be exactly like your family, either.
-Just a little joke to lighten up the mood.</description>
+      <guid>http://kimmj.github.io/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -175,6 +172,33 @@ But this girl, she wants the same stuff, and it&#39;s bumming me out.
 But in the meantime, wish me luck.
 May lead to an argument, but we&#39;re settling this.
 Is this a discussion of the degree to which you stabbed me?</description>
+    </item>
+    
+    <item>
+      <title>Episode9</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode9/</link>
+      <pubDate>Wed, 15 Jan 2020 23:58:54 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode9/</guid>
+      <description>Okay, Lily, we&#39;re putting you on salad duty.
+Why are we even talking about this? This is, like, way down the road.
+All is right with the world again.
+Look, I don&#39;t wanna be exactly like my family. And don&#39;t take this the wrong way, but I don&#39;t wanna be exactly like your family, either.
+Just a little joke to lighten up the mood.</description>
+    </item>
+    
+    <item>
+      <title>Episode10</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode10/</link>
+      <pubDate>Fri, 17 Jan 2020 00:06:57 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode10/</guid>
+      <description>Hey, it&#39;s on the hous.
+Ted, as your mentor and spiritual guide, I forbid you from calling her.
+Sleep it off, bro.
+This way, if you pass out in the gutter someone with call me, and I will come get you.
+Why do they call it &amp;lsquo;karaoke,&amp;rsquo; anyhow?
+You&#39;ve moved on. I&#39;ve moved on.</description>
     </item>
     
     <item>

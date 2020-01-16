@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>hostname :: Ibiza</title>
+    <title>Install Kubeadm :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1579191315" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/hostname/">
+  <body class="" data-url="/category/kubernetes/install/install-kubeadm/">
     <nav id="sidebar" class="">
 
 
@@ -166,7 +166,7 @@
   
     
     <li data-nav-id="/category/" title="Category" class="dd-item 
-        
+        parent
         
         
         ">
@@ -193,7 +193,7 @@
   
     
     <li data-nav-id="/category/kubernetes/" title="Kubernetes" class="dd-item 
-        
+        parent
         
         
         ">
@@ -220,7 +220,7 @@
   
     
     <li data-nav-id="/category/kubernetes/install/" title="Install" class="dd-item 
-        
+        parent
         
         
         ">
@@ -263,7 +263,7 @@
  
   
     
-      <li data-nav-id="/category/kubernetes/install/install-kubeadm/" title="Install Kubeadm" class="dd-item ">
+      <li data-nav-id="/category/kubernetes/install/install-kubeadm/" title="Install Kubeadm" class="dd-item active">
         <a href="/category/kubernetes/install/install-kubeadm/">
         Install Kubeadm
         
@@ -1100,7 +1100,19 @@
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/tags/'>Tags</a> > hostname
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/category/'>Category</a> > <a href='/category/kubernetes/'>Kubernetes</a> > <a href='/category/kubernetes/install/'>Install</a> > Install Kubeadm
+          
+         
+          
+         
           
          
           
@@ -1113,7 +1125,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1123,15 +1139,21 @@
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/install">install</a>
+
+  <a class="tag-link" href="/tags/kubeadm">kubeadm</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              hostname
+              Install Kubeadm
             </h1>
           
 
@@ -1139,19 +1161,139 @@
 
 
 
-
-
-
-<ul>
-	
-		<li><a href="/category/ubuntu/change-hostname/">Change Hostname</a></li>
-	
-</ul>
+<p><code>kubeadm</code>은 Kubernetes cluster의 설정들을 관리하는 툴입니다.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>먼저, 몇가지 전제사항이 있습니다.</p>
+<ol>
+<li>
+<p>모든 노드의 MAC 주소와 product_uuid가 달라야 합니다.
+<code>ifconfig -a</code>와 <code>sudo cat /sys/class/dmi/id/product_uuid</code>를 통해 알 수 있습니다.</p>
+</li>
+<li>
+<p>network adapter를 확인합니다.
+하나 이상의 network adapter가 있고, Kubernetes component들이 default route로 통신이 불가능하다면
+IP route를 설정하여 Kubernetes cluster 주소가 적절한 adapter를 통해 이동할 수 있도록 해주는 것이 좋습니다.</p>
+</li>
+<li>
+<p><code>iptables</code>를 사용하는지 확인
+Ubuntu 19.04 이후버전부터는 <code>nftables</code>라는 것을 사용한다고 합니다.
+그러나 이는 <code>kube-proxy</code>와 호환이 잘 안되기 때문에 <code>iptables</code>를 사용해야한다고 하고 있습니다.</p>
+<p>다음과 같이 설정할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+sudo update-alternatives --set arptables /usr/sbin/arptables-legacy
+sudo update-alternatives --set ebtables /usr/sbin/ebtables-legacy
+</code></pre></div></li>
+<li>
+<p>필수 포트 확인</p>
+<p><strong>Control-plane node(s)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Direction</th>
+<th>Port Range</th>
+<th>Purpose</th>
+<th>Used By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP</td>
+<td>Inbound</td>
+<td>6443*</td>
+<td>Kubernetes API server</td>
+<td>All</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Inbound</td>
+<td>2379-2380</td>
+<td>etcd server client API</td>
+<td>kube-apiserver, etcd</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Inbound</td>
+<td>10250</td>
+<td>Kubelet API</td>
+<td>Self, Control plane</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Inbound</td>
+<td>10251</td>
+<td>kube-scheduler</td>
+<td>Self</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Inbound</td>
+<td>10252</td>
+<td>kube-controller-manager</td>
+<td>Self</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Worker node(s)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Direction</th>
+<th>Port Range</th>
+<th>Purpose</th>
+<th>Used By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP</td>
+<td>Inbound</td>
+<td>10250</td>
+<td>Kubelet API</td>
+<td>Self, Control plane</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Inbound</td>
+<td>30000-32767</td>
+<td>NodePort Services**</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<p>여기서 <code>*</code> 표시가 있는 것은 수정이 가능한 사항이라고 합니다. (API server의 port, NodePort Service로 열 수 있는 port의 범위)</p>
+</li>
+<li>
+<p>container runtime 설치
+여기에서는 <code>Docker</code>를 사용할 것입니다.
+<code>Docker</code> 홈페이지에는 script를 통해 최신 버전의 <code>Docker</code>를 다운로드 받는 방법을 제공합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+</code></pre></div></li>
+<li>
+<p><code>kubeadm</code>, <code>kubelet</code>, <code>kubectl</code> 설치
+Kubernetes에 필요한 세가지 툴을 설치하도록 하겠습니다.
+간단하게 설명드리자면 <code>kubeadm</code>은 Kubernetes를 관리하는 툴이라고 생각하면 되고 <code>kubelet</code>은 명령을 이행하는 툴이라고 생각하면 됩니다.
+<code>kubectl</code>은 Kubernetes cluster와 통신하는 툴입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get install -y apt-transport-https curl
+ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+ cat <span style="color:#e6db74">&lt;&lt;EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+</span><span style="color:#e6db74"> deb https://apt.kubernetes.io/ kubernetes-xenial main
+</span><span style="color:#e6db74"> EOF</span>
+ sudo apt-get update
+ sudo apt-get install -y kubelet kubeadm kubectl
+ sudo apt-mark hold kubelet kubeadm kubectl
+</code></pre></div><p>마지막에 <code>apt-mark</code>를 통해 <code>kubelet</code>, <code>kubeadm</code>, <code>kubectl</code>의 버전을 고정시켰습니다.</p>
+</li>
+</ol>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -1251,20 +1393,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1281,6 +1409,23 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
                 
                 
 
@@ -1293,6 +1438,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1310,6 +1458,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1325,6 +1474,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1841,3 +1993,4 @@
 
   </body>
 </html>
+

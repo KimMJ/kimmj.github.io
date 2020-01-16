@@ -11,20 +11,20 @@
     <title>Install Halyard :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1579106785" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1579106785" rel="stylesheet">
-    <link href="/css/hybrid.css?1579106785" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1579106785" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1579106785" rel="stylesheet">
-    <link href="/css/auto-complete.css?1579106785" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1579106785" rel="stylesheet">
-    <link href="/css/theme.css?1579106785" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1579106785" rel="stylesheet">
+    <link href="/css/nucleus.css?1579191315" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1579191315" rel="stylesheet">
+    <link href="/css/hybrid.css?1579191315" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1579191315" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1579191315" rel="stylesheet">
+    <link href="/css/auto-complete.css?1579191315" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1579191315" rel="stylesheet">
+    <link href="/css/theme.css?1579191315" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1579191315" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1579106785" rel="stylesheet">
+      <link href="/css/theme-mine.css?1579191315" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1579106785"></script>
+    <script src="/js/jquery-3.3.1.min.js?1579191315"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1579106785"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1579106785"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1579191315"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1579191315"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1579106785"></script>
+<script type="text/javascript" src="/js/search.js?1579191315"></script>
 
     
   </div>
@@ -263,9 +263,28 @@
  
   
     
-      <li data-nav-id="/category/kubernetes/install/install-and-setup-kubectl/" title="Install and Setup Kubectl" class="dd-item ">
-        <a href="/category/kubernetes/install/install-and-setup-kubectl/">
-        Install and Setup Kubectl
+      <li data-nav-id="/category/kubernetes/install/install-kubeadm/" title="Install Kubeadm" class="dd-item ">
+        <a href="/category/kubernetes/install/install-kubeadm/">
+        Install Kubeadm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/" title="Customizing Control Plane Configuration With Kubeadm" class="dd-item ">
+        <a href="/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/">
+        Customizing Control Plane Configuration With Kubeadm
         
         </a>
     </li>
@@ -880,25 +899,6 @@
  
   
     
-      <li data-nav-id="/english/himwm/season1/episode9/" title="Episode9" class="dd-item ">
-        <a href="/english/himwm/season1/episode9/">
-        Episode9
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
       <li data-nav-id="/english/himwm/season1/episode5/" title="Episode5" class="dd-item ">
         <a href="/english/himwm/season1/episode5/">
         Episode5
@@ -959,6 +959,44 @@
       <li data-nav-id="/english/himwm/season1/episode8/" title="Episode8" class="dd-item ">
         <a href="/english/himwm/season1/episode8/">
         Episode8
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode9/" title="Episode9" class="dd-item ">
+        <a href="/english/himwm/season1/episode9/">
+        Episode9
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode10/" title="Episode10" class="dd-item ">
+        <a href="/english/himwm/season1/episode10/">
+        Episode10
         
         </a>
     </li>
@@ -1193,7 +1231,7 @@
 </ol>
 <p>여기서 proxy 환경이라면 <code>halyard</code>의 jvm에 proxy 옵션을 추가해주어야 합니다.</p>
 <p><code>vi /opt/halyard/bin/halyard</code>을 통해 <code>halyard</code>의 jvm 옵션을 추가할 수 있습니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">DEFAULT_JVM_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#34;-Djava.security.egd=file:/dev/./urandom&#34; &#34;-Dspring.config.additional-location=/opt/spinnaker/config/&#34; &#34;-Dhttps.proxyHost=&lt;httpsProxyHost&gt; -Dhttps.proxyPort=&lt;httpsPort&gt;&#34; &#34;-Dhttp.proxyHost=&lt;httpProxyHost&gt; -Dhttp.proxyPort=&lt;httpPort&gt;&#34;&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">DEFAULT_JVM_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#34;-Djava.security.egd=file:/dev/./urandom&#34; &#34;-Dspring.config.additional-location=/opt/spinnaker/config/&#34; &#34;-Dhttps.proxyHost=&lt;proxyHost&gt; -Dhttps.proxyPort=&lt;proxyPort&gt;&#34; &#34;-Dhttp.proxyHost=&lt;proxyHost&gt; -Dhttp.proxyPort=&lt;proxyPort&gt;&#34;&#39;</span>
 </code></pre></div><p>위의 설정에서 다음과 같이 proxy를 추가해줍니다. 그 다음 <code>halyard</code>를 재시동합니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hal shutdown
 hal config
@@ -1236,8 +1274,9 @@ hal config
 </code></pre></div><p>두번째로 <code>curl</code>을 사용하는 방법입니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl storage.googleapis.com/halconfig
 </code></pre></div><p>결과물들이 나온다면 정상적으로 <code>bucket</code>에는 접속이 가능한 것입니다.
-<code>hal config</code> 명령어가 성공하지 않지만 <code>bucket</code>에 접속이 가능하다면 좀 더 많은 트러블 슈팅이 필요할 것 같습니다.</p>
-<p>우선 여기까지 해서 <code>bucket</code>에 접속이 불가능하다고 판단이 되면, 인터넷이 없는 환경에서 설치하는 방법을 고려해보아야 합니다.</p>
+<code>hal config</code> 명령어가 성공하지 않지만 <code>bucket</code>에 접속이 가능한 케이스는 아직 보지 못했습니다.</p>
+<p>우선 여기까지 해서 <code>bucket</code>에 접속이 불가능하다고 판단이 되면, 인터넷이 없는 환경에서 설치하는 방법을 고려해보아야 합니다.
+또는 googleapis.com url로 proxy에서 사이트가 차단되었는지 확인하고, SSL도 해제할 경우 해결될 수도 있습니다.</p>
 
 
 <footer class=" footline" >
@@ -1417,40 +1456,6 @@ hal config
             
         
                     
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1470,22 +1475,6 @@ hal config
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1494,7 +1483,6 @@ hal config
             
                 
                     
-                    
                 
                 
 
@@ -1509,78 +1497,6 @@ hal config
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1609,6 +1525,145 @@ hal config
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -1629,38 +1684,6 @@ hal config
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1710,22 +1733,6 @@ hal config
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1741,6 +1748,19 @@ hal config
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -1758,10 +1778,30 @@ hal config
 
                     
                     
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
                     
                     
 
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
                     
                         
             
@@ -1788,8 +1828,39 @@ hal config
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1895,19 +1966,19 @@ hal config
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1579106785"></script>
-    <script src="/js/perfect-scrollbar.min.js?1579106785"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1579106785"></script>
-    <script src="/js/jquery.sticky.js?1579106785"></script>
-    <script src="/js/featherlight.min.js?1579106785"></script>
-    <script src="/js/highlight.pack.js?1579106785"></script>
+    <script src="/js/clipboard.min.js?1579191315"></script>
+    <script src="/js/perfect-scrollbar.min.js?1579191315"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1579191315"></script>
+    <script src="/js/jquery.sticky.js?1579191315"></script>
+    <script src="/js/featherlight.min.js?1579191315"></script>
+    <script src="/js/highlight.pack.js?1579191315"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1579106785"></script>
-    <script src="/js/learn.js?1579106785"></script>
-    <script src="/js/hugo-learn.js?1579106785"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1579191315"></script>
+    <script src="/js/learn.js?1579191315"></script>
+    <script src="/js/hugo-learn.js?1579191315"></script>
 
-    <link href="/mermaid/mermaid.css?1579106785" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1579106785"></script>
+    <link href="/mermaid/mermaid.css?1579191315" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1579191315"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
