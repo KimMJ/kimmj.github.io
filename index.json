@@ -7,7 +7,7 @@
 	"content": "저의 vm으로 구성한 클러스터를 설명드리고자 합니다.\n Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.\n"
 },
 {
-	"uri": "http://kimmj.github.io/ci-cd/spinnaker/installation/overview/",
+	"uri": "http://kimmj.github.io/spinnaker/installation/overview/",
 	"title": "Overview",
 	"tags": ["install", "spinnaker"],
 	"description": "",
@@ -42,7 +42,7 @@
 	"content": "kubeadm은 Kubernetes cluster의 설정들을 관리하는 툴입니다.\nPrerequisites 먼저, 몇가지 전제사항이 있습니다.\n  모든 노드의 MAC 주소와 product_uuid가 달라야 합니다. ifconfig -a와 sudo cat /sys/class/dmi/id/product_uuid를 통해 알 수 있습니다.\n  network adapter를 확인합니다. 하나 이상의 network adapter가 있고, Kubernetes component들이 default route로 통신이 불가능하다면 IP route를 설정하여 Kubernetes cluster 주소가 적절한 adapter를 통해 이동할 수 있도록 해주는 것이 좋습니다.\n  iptables를 사용하는지 확인 Ubuntu 19.04 이후버전부터는 nftables라는 것을 사용한다고 합니다. 그러나 이는 kube-proxy와 호환이 잘 안되기 때문에 iptables를 사용해야한다고 하고 있습니다.\n다음과 같이 설정할 수 있습니다.\nsudo update-alternatives --set iptables /usr/sbin/iptables-legacy sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy sudo update-alternatives --set arptables /usr/sbin/arptables-legacy sudo update-alternatives --set ebtables /usr/sbin/ebtables-legacy   필수 포트 확인\nControl-plane node(s)\n   Protocol Direction Port Range Purpose Used By     TCP Inbound 6443* Kubernetes API server All   TCP Inbound 2379-2380 etcd server client API kube-apiserver, etcd   TCP Inbound 10250 Kubelet API Self, Control plane   TCP Inbound 10251 kube-scheduler Self   TCP Inbound 10252 kube-controller-manager Self    Worker node(s)\n   Protocol Direction Port Range Purpose Used By     TCP Inbound 10250 Kubelet API Self, Control plane   TCP Inbound 30000-32767 NodePort Services** All    여기서 * 표시가 있는 것은 수정이 가능한 사항이라고 합니다. (API server의 port, NodePort Service로 열 수 있는 port의 범위)\n  container runtime 설치 여기에서는 Docker를 사용할 것입니다. Docker 홈페이지에는 script를 통해 최신 버전의 Docker를 다운로드 받는 방법을 제공합니다.\ncurl -fsSL https://get.docker.com -o get-docker.sh sudo sh get-docker.sh   kubeadm, kubelet, kubectl 설치 Kubernetes에 필요한 세가지 툴을 설치하도록 하겠습니다. 간단하게 설명드리자면 kubeadm은 Kubernetes를 관리하는 툴이라고 생각하면 되고 kubelet은 명령을 이행하는 툴이라고 생각하면 됩니다. kubectl은 Kubernetes cluster와 통신하는 툴입니다.\nsudo apt-get update \u0026amp;\u0026amp; sudo apt-get install -y apt-transport-https curl curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - cat \u0026lt;\u0026lt;EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list deb https://apt.kubernetes.io/ kubernetes-xenial main EOF sudo apt-get update sudo apt-get install -y kubelet kubeadm kubectl sudo apt-mark hold kubelet kubeadm kubectl 마지막에 apt-mark를 통해 kubelet, kubeadm, kubectl의 버전을 고정시켰습니다.\n  "
 },
 {
-	"uri": "http://kimmj.github.io/ci-cd/spinnaker/installation/install-halyard/",
+	"uri": "http://kimmj.github.io/spinnaker/installation/install-halyard/",
 	"title": "Install Halyard",
 	"tags": ["spinnaker", "install", "halyard", "proxy"],
 	"description": "",
@@ -133,25 +133,18 @@
 	"content": "Hugo fast static website engine\n"
 },
 {
-	"uri": "http://kimmj.github.io/ci-cd/spinnaker/installation/",
+	"uri": "http://kimmj.github.io/spinnaker/installation/",
 	"title": "Installation",
 	"tags": [],
 	"description": "",
 	"content": "Spinnaker Installation spinnaker를 설치해 볼 것입니다.\n쉽지 않았던 여정들을 기록하려고 합니다.\n"
 },
 {
-	"uri": "http://kimmj.github.io/ci-cd/spinnaker/",
+	"uri": "http://kimmj.github.io/spinnaker/",
 	"title": "Spinnaker",
 	"tags": [],
 	"description": "",
 	"content": "CI/CD Spinnaker Spinnaker는 Kubernetes 환경에서 배포 자동화를 위해 만들어진 툴입니다.\n배포하려는 클러스터가 GKE인지, EKS인지, On-Premise 환경인지 상관없이 하나의 툴로 배포하기 위해 만들어졌습니다.\n이 툴 자체가 MSA 구조로 만들어져있습니다.\n"
-},
-{
-	"uri": "http://kimmj.github.io/ci-cd/",
-	"title": "CI/CD",
-	"tags": [],
-	"description": "",
-	"content": "CI/CD CI는 Countinuous Integration, CD는 Countinuous Deploy/Delivery의 약자입니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/ansible/",
@@ -203,7 +196,7 @@
 	"content": "Hey, it's on the hous.\nTed, as your mentor and spiritual guide, I forbid you from calling her.\nSleep it off, bro.\nThis way, if you pass out in the gutter someone with call me, and I will come get you.\nWhy do they call it \u0026lsquo;karaoke,\u0026rsquo; anyhow?\nYou've moved on. I've moved on.\n"
 },
 {
-	"uri": "http://kimmj.github.io/ci-cd/spinnaker/tips/",
+	"uri": "http://kimmj.github.io/spinnaker/tips/",
 	"title": "Tips",
 	"tags": [],
 	"description": "",
@@ -336,7 +329,7 @@
 	"content": ""
 },
 {
-	"uri": "http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/",
+	"uri": "http://kimmj.github.io/spinnaker/tips/pipeline-expressions/",
 	"title": "Pipeline Expressions",
 	"tags": ["spinnaker", "pipeline"],
 	"description": "",

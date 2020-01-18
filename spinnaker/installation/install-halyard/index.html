@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Ibiza Project :: Ibiza</title>
+    <title>Install Halyard :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1579353813" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ibiza/ibiza-project/">
+  <body class="" data-url="/spinnaker/installation/install-halyard/">
     <nav id="sidebar" class="">
 
 
@@ -77,7 +77,7 @@
   
     
     <li data-nav-id="/ibiza/" title="Ibiza" class="dd-item 
-        parent
+        
         
         
         ">
@@ -139,7 +139,7 @@
  
   
     
-      <li data-nav-id="/ibiza/ibiza-project/" title="Ibiza Project" class="dd-item active">
+      <li data-nav-id="/ibiza/ibiza-project/" title="Ibiza Project" class="dd-item ">
         <a href="/ibiza/ibiza-project/">
         Ibiza Project
         
@@ -397,7 +397,7 @@
   
     
     <li data-nav-id="/spinnaker/" title="Spinnaker" class="dd-item 
-        
+        parent
         
         
         ">
@@ -424,7 +424,7 @@
   
     
     <li data-nav-id="/spinnaker/installation/" title="Installation" class="dd-item 
-        
+        parent
         
         
         ">
@@ -467,7 +467,7 @@
  
   
     
-      <li data-nav-id="/spinnaker/installation/install-halyard/" title="Install Halyard" class="dd-item ">
+      <li data-nav-id="/spinnaker/installation/install-halyard/" title="Install Halyard" class="dd-item active">
         <a href="/spinnaker/installation/install-halyard/">
         Install Halyard
         
@@ -1039,7 +1039,13 @@
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/ibiza/'>Ibiza</a> > Ibiza Project
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/spinnaker/'>Spinnaker</a> > <a href='/spinnaker/installation/'>Installation</a> > Install Halyard
+          
+         
           
          
           
@@ -1052,7 +1058,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#halyard란">halyard란?</a></li>
+    <li><a href="#설치-방법-선택하기">설치 방법 선택하기</a>
+      <ul>
+        <li><a href="#debianubuntu나-macos에-직접-설치하기">Debian/Ubuntu나 macOS에 직접 설치하기</a></li>
+        <li><a href="#docker로-halyard-사용하기">docker로 halyard 사용하기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1064,9 +1080,13 @@
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/blog">blog</a>
+  <a class="tag-link" href="/tags/spinnaker">spinnaker</a>
 
-  <a class="tag-link" href="/tags/hugo">hugo</a>
+  <a class="tag-link" href="/tags/install">install</a>
+
+  <a class="tag-link" href="/tags/halyard">halyard</a>
+
+  <a class="tag-link" href="/tags/proxy">proxy</a>
 
 </div>
 
@@ -1076,7 +1096,7 @@
           
             <h1>
               
-              Ibiza Project
+              Install Halyard
             </h1>
           
 
@@ -1084,9 +1104,106 @@
 
 
 
-<p>Ibiza Project는 나만의 블로그을 만들기 위한 프로젝트이다.</p>
-<p>기본적으로 hugo-theme-learn에서 시작하여, 나의 커스텀 파일들을 추가하여 내가 원하는 사이트를 만들 것이다.</p>
-<p>기간 : 2020.4.15 (작성일 기준 + 100일)</p>
+<h2 id="halyard란">halyard란?</h2>
+<p><code>halyard</code>는 Spinnaker를 배포할 때 사용하는 CLI 툴입니다.</p>
+<p><code>halyard</code>는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, 설정 추가 및 변경에 사용됩니다.</p>
+<h2 id="설치-방법-선택하기">설치 방법 선택하기</h2>
+<p>총 2가지 방법으로 <code>halyard</code>를 설치할 수 있습니다.</p>
+<ul>
+<li>Debian/Ubuntu나 macOS에 직접 설치하기</li>
+<li>Docker 사용하기</li>
+</ul>
+<p>Spinnaker Docs에서는 실제 Production 환경이라면 직접 설치하는 방법을, 그게 아니라 간단하게 사용하려면 docker를 사용해도 된다고 하고 있습니다.</p>
+<p>그리고 한가지의 옵션이 더 있습니다.</p>
+<ul>
+<li>인터넷이 되지 않는 환경 (프록시나 방화벽 등으로 <code>halyard</code>를 통한 설치가 어려운 경우)</li>
+</ul>
+<p>이 글을 작성하고 있는 환경은 인터넷이 잘 되는 환경입니다.
+그리고 두가지 모두 시도해 보도록 하겠습니다.</p>
+<h3 id="debianubuntu나-macos에-직접-설치하기">Debian/Ubuntu나 macOS에 직접 설치하기</h3>
+<p>공식 Docs에서 <code>halyard</code>는 다음과 같은 환경에서 동작한다고 말하고 있습니다.</p>
+<ul>
+<li>Ubuntu 14.04, 16.04 or 18.04 (Ubuntu 16.04 requires Spinnaker 1.6.0 or later)</li>
+<li>Debian 8 or 9</li>
+<li>macOS (tested on 10.13 High Sierra only)</li>
+</ul>
+<p>이제 직접 설치를 시작해보도록 하겠습니다.</p>
+<p>시작하기 전에, <code>halyard</code>를 설치하기 위해서는 root 계정이 아닌 계정이 필요합니다. 만일 root만 있다면 spinnaker를 위한 계정을 생성해 줍니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adduser spinnaker
+</code></pre></div><p>위처럼 생성한 계정에 sudoers 권한을 줍니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adduser spinnaker sudo
+</code></pre></div><ol>
+<li>
+<p>최신 버전의 <code>halyard 다운로드</code></p>
+<p>Debian/Ubuntu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh
+</code></pre></div><p>``</p>
+<p>macOS:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/macos/InstallHalyard.sh
+</code></pre></div><p>``</p>
+</li>
+<li>
+<p>설치</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo bash InstallHalyard.sh
+</code></pre></div><p>``</p>
+</li>
+<li>
+<p>확인</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hal -v
+</code></pre></div><p>``</p>
+</li>
+<li>
+<p><code>. ~/.bashrc</code>를 실행하여 bash completion 활성화</p>
+</li>
+</ol>
+<p>여기서 proxy 환경이라면 <code>halyard</code>의 jvm에 proxy 옵션을 추가해주어야 합니다.</p>
+<p><code>vi /opt/halyard/bin/halyard</code>을 통해 <code>halyard</code>의 jvm 옵션을 추가할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">DEFAULT_JVM_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#34;-Djava.security.egd=file:/dev/./urandom&#34; &#34;-Dspring.config.additional-location=/opt/spinnaker/config/&#34; &#34;-Dhttps.proxyHost=&lt;proxyHost&gt; -Dhttps.proxyPort=&lt;proxyPort&gt;&#34; &#34;-Dhttp.proxyHost=&lt;proxyHost&gt; -Dhttp.proxyPort=&lt;proxyPort&gt;&#34;&#39;</span>
+</code></pre></div><p>위의 설정에서 다음과 같이 proxy를 추가해줍니다. 그 다음 <code>halyard</code>를 재시동합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hal shutdown
+hal config
+</code></pre></div><p>아랫줄의 <code>hal config</code>는 의도적으로 <code>halyard</code>를 구동시키기 위함입니다.</p>
+<h3 id="docker로-halyard-사용하기">docker로 <code>halyard</code> 사용하기</h3>
+<p>다음의 명령어는 공식 docs에서 제공하는 명령어입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -p 8084:8084 -p 9000:9000 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --name halyard --rm <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v ~/.hal:/home/spinnaker/.hal <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -it <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    gcr.io/spinnaker-marketplace/halyard:stable
+</code></pre></div><p><code>kubernetes</code>로 배포하려 할 경우, <code>kubectl</code> 명령어에서 사용할 <code>kubeconfig</code> 파일이 필요합니다. 이 또한 <code>-v</code> 옵션으로 주어야 합니다. 그리고 그 kubeconfig 파일을 읽도록 설정해야 합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -p 8084:8084 -p 9000:9000 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --name halyard --rm <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v ~/.hal:/home/spinnaker/.hal <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>		-v ~/.kube:/home/spinnaker/.kube <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>		-e KUBECONFIG<span style="color:#f92672">=</span>/home/spinnaker/.kube/config
+    -it <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    gcr.io/spinnaker-marketplace/halyard:stable
+</code></pre></div><p>사실 5번째 줄의 <code>-e KUBECONFIG=/home/spinnaker/.kube/config</code>은 없어도 default로 들어가있는 설정입니다.
+하지만 혹시나 위에서 <code>/home/spinnaker/.kube</code>가 아닌 다른곳을 저장공간으로 둔다면 아래의 설정도 바뀌어야 합니다.</p>
+<p>프록시 환경이라면 다음과 같이 JAVA_OPT를 추가해주어야 합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -p 8084:8084 -p 9000:9000 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --name halyard -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v ~/.hal:/home/spinnaker/.hal <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v ~/.kube:/home/spinnaker/.kube <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e http_proxy<span style="color:#f92672">=</span>http://&lt;proxy_host&gt;:&lt;proxy_port&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e https_proxy<span style="color:#f92672">=</span>https://&lt;proxy_host&gt;:&lt;proxy_port&gt; <span style="color:#ae81ff">\ </span>   
+    -e JAVA_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-Dhttps.proxyHost=&lt;proxy_host&gt; -Dhttps.proxyPort=&lt;proxy_port&gt;&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e KUBECONFIG<span style="color:#f92672">=</span>/home/spinnaker/.kube/config <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    gcr.io/spinnaker-marketplace/halyard:stable
+</code></pre></div><h4 id="그래도-안된다면">그래도 안된다면..</h4>
+<p>아마도 관리가 엄격한 네트워크를 사용하고 계실 것이라고 예상됩니다. 저 또한 그랬으니까요.</p>
+<p><code>halyard</code>는 설정 및 버전등의 정보를 <code>bucket</code> (Google Cloud Storage)로 관리한다고 합니다. 따라서 이곳으로 연결이 되지 않는다면 validation, version list 등의 상황에서 timeout이 날 것입니다.</p>
+<p>Spinnaker에서는 이를 확인하기 위해 <code>gsutil</code>을 사용하여 <code>bucket</code>의 주소인 <code>gs://halconfig</code>에 연결할 수 있는지 확인해보라고 합니다.</p>
+<p>또는 <code>curl</code>을 이용해서도 확인이 가능합니다.</p>
+<p>먼저 <code>gsutil</code>은 google storage 서비스에 접속하는 CLI 툴입니다. <a href="https://cloud.google.com/storage/docs/gsutil_install?hl=ko#deb">Docs</a>에서 설치방법을 확인하여 설치할 수 있습니다.</p>
+<p>설치가 완료되었다면 gsutil로 접속이 가능한지부터 확인합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gsutil ls gs://halconfig
+</code></pre></div><p>두번째로 <code>curl</code>을 사용하는 방법입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl storage.googleapis.com/halconfig
+</code></pre></div><p>결과물들이 나온다면 정상적으로 <code>bucket</code>에는 접속이 가능한 것입니다.
+<code>hal config</code> 명령어가 성공하지 않지만 <code>bucket</code>에 접속이 가능한 케이스는 아직 보지 못했습니다.</p>
+<p>우선 여기까지 해서 <code>bucket</code>에 접속이 불가능하다고 판단이 되면, 인터넷이 없는 환경에서 설치하는 방법을 고려해보아야 합니다.
+또는 googleapis.com url로 proxy에서 사이트가 차단되었는지 확인하고, SSL도 해제할 경우 해결될 수도 있습니다.</p>
 
 
 <footer class=" footline" >
@@ -1125,6 +1242,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1139,8 +1258,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1169,23 +1301,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1193,9 +1308,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1345,6 +1457,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1360,6 +1473,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1372,6 +1486,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1389,6 +1506,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1407,6 +1525,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
