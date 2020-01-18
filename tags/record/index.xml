@@ -13,10 +13,10 @@
     
     <item>
       <title>Importance of Record</title>
-      <link>http://kimmj.github.io/my-story/importance-of-record/</link>
+      <link>http://kimmj.github.io/ibiza/importance-of-record/</link>
       <pubDate>Fri, 10 Jan 2020 00:47:03 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/my-story/importance-of-record/</guid>
+      <guid>http://kimmj.github.io/ibiza/importance-of-record/</guid>
       <description>기록의 중요성 몇개월 전부터 Spinnaker라는 툴을 가지고 일을 하기 시작했다.
 처음 halyard를 통해 deploy하기까지 꽤나 많은 시간을 소요했던 것으로 기억한다. 집에서 하는게 아니라 회사에서 구축을 해야했기 때문에, 프록시와 관련된 설정들이 너무나도 어려웠다. 특히 spinnaker의 docs가 제대로 되어있는 것도 아니기에, 문제가 하나 발생하면 이를 해결하는 데 너무나도 많은 시간이 걸렸다.
 하지만 나의 최대 실수는 바로 기록하지 않은 것이다.

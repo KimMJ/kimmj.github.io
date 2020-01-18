@@ -13,10 +13,10 @@
     
     <item>
       <title>Install Kubeadm</title>
-      <link>http://kimmj.github.io/category/kubernetes/install/install-kubeadm/</link>
+      <link>http://kimmj.github.io/kubernetes/install/install-kubeadm/</link>
       <pubDate>Fri, 17 Jan 2020 00:38:41 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/kubernetes/install/install-kubeadm/</guid>
+      <guid>http://kimmj.github.io/kubernetes/install/install-kubeadm/</guid>
       <description>kubeadm은 Kubernetes cluster의 설정들을 관리하는 툴입니다.
 Prerequisites 먼저, 몇가지 전제사항이 있습니다.
   모든 노드의 MAC 주소와 product_uuid가 달라야 합니다. ifconfig -a와 sudo cat /sys/class/dmi/id/product_uuid를 통해 알 수 있습니다.
@@ -26,10 +26,10 @@ Prerequisites 먼저, 몇가지 전제사항이 있습니다.
     
     <item>
       <title>Customizing Control Plane Configuration With Kubeadm</title>
-      <link>http://kimmj.github.io/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</link>
+      <link>http://kimmj.github.io/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</link>
       <pubDate>Fri, 17 Jan 2020 00:51:13 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</guid>
+      <guid>http://kimmj.github.io/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</guid>
       <description></description>
     </item>
     

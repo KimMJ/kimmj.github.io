@@ -13,10 +13,10 @@
     
     <item>
       <title>Overview</title>
-      <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</link>
+      <link>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</link>
       <pubDate>Fri, 10 Jan 2020 01:02:39 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</guid>
+      <guid>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</guid>
       <description>Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.
 가장 먼저 최소 사양을 확인해보도록 하겠습니다.
 링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements
@@ -27,10 +27,10 @@
     
     <item>
       <title>Install Halyard</title>
-      <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/install-halyard/</link>
+      <link>http://kimmj.github.io/ci-cd/spinnaker/installation/install-halyard/</link>
       <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/installation/install-halyard/</guid>
+      <guid>http://kimmj.github.io/ci-cd/spinnaker/installation/install-halyard/</guid>
       <description>halyard란? halyard는 Spinnaker를 배포할 때 사용하는 CLI 툴입니다.
 halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, 설정 추가 및 변경에 사용됩니다.
 설치 방법 선택하기 총 2가지 방법으로 halyard를 설치할 수 있습니다.
@@ -41,10 +41,10 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
     
     <item>
       <title>Pipeline Expressions</title>
-      <link>http://kimmj.github.io/category/ci-cd/spinnaker/tips/pipeline-expressions/</link>
+      <link>http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/</link>
       <pubDate>Fri, 10 Jan 2020 01:33:32 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/tips/pipeline-expressions/</guid>
+      <guid>http://kimmj.github.io/ci-cd/spinnaker/tips/pipeline-expressions/</guid>
       <description>Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.
 이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.
 pipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).

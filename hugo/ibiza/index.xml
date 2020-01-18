@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ibiza</title>
+    <link>http://kimmj.github.io/hugo/ibiza/</link>
+    <description>Recent content on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jan 2020 16:26:23 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/hugo/ibiza/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Font Change</title>
+      <link>http://kimmj.github.io/hugo/ibiza/font-change/</link>
+      <pubDate>Sun, 12 Jan 2020 16:28:31 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/hugo/ibiza/font-change/</guid>
+      <description>Ibiza 프로젝트를 진행하는데 폰트가 마음에 들지 않았습니다. 따라서 저는 폰트를 변경하기로 마음먹었습니다.
+먼저, 폰트 설정을 어디서 하는지 알아낼 필요가 있었습니다.
+find . | grep font 결과를 보니, theme 폴더 안에 제가 사용하는 hugo-theme-learn 테마에서 static/fonts/ 폴더에 폰트들을 저장해두고 있었습니다. 그렇다면 어느 파일에서 어떤 폰트를 사용한다고 설정할까요?
+hugo-theme-learn폴더로 이동하여 어디에 사용되는지 확인해보았습니다.
+grep -ri &amp;#34;font&amp;#34; 결과가 길게 나오는데요, 여기서 static/css/theme.css 안에 폰트에 대한 설정을 한 것이 보였습니다. 그 파일을 보니, @font-face라는 설정이 보이네요.</description>
+    </item>
+    
+  </channel>
+</rss>

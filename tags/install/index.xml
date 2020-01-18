@@ -13,20 +13,20 @@
     
     <item>
       <title>Overview</title>
-      <link>http://kimmj.github.io/category/kubernetes/install/overview/</link>
+      <link>http://kimmj.github.io/kubernetes/install/overview/</link>
       <pubDate>Tue, 14 Jan 2020 01:42:53 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/kubernetes/install/overview/</guid>
+      <guid>http://kimmj.github.io/kubernetes/install/overview/</guid>
       <description>저의 vm으로 구성한 클러스터를 설명드리고자 합니다.
  Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.</description>
     </item>
     
     <item>
       <title>Overview</title>
-      <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</link>
+      <link>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</link>
       <pubDate>Fri, 10 Jan 2020 01:02:39 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/installation/overview/</guid>
+      <guid>http://kimmj.github.io/ci-cd/spinnaker/installation/overview/</guid>
       <description>Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.
 가장 먼저 최소 사양을 확인해보도록 하겠습니다.
 링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements
@@ -37,10 +37,10 @@
     
     <item>
       <title>Install Kubeadm</title>
-      <link>http://kimmj.github.io/category/kubernetes/install/install-kubeadm/</link>
+      <link>http://kimmj.github.io/kubernetes/install/install-kubeadm/</link>
       <pubDate>Fri, 17 Jan 2020 00:38:41 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/kubernetes/install/install-kubeadm/</guid>
+      <guid>http://kimmj.github.io/kubernetes/install/install-kubeadm/</guid>
       <description>kubeadm은 Kubernetes cluster의 설정들을 관리하는 툴입니다.
 Prerequisites 먼저, 몇가지 전제사항이 있습니다.
   모든 노드의 MAC 주소와 product_uuid가 달라야 합니다. ifconfig -a와 sudo cat /sys/class/dmi/id/product_uuid를 통해 알 수 있습니다.
@@ -50,10 +50,10 @@ Prerequisites 먼저, 몇가지 전제사항이 있습니다.
     
     <item>
       <title>Install Halyard</title>
-      <link>http://kimmj.github.io/category/ci-cd/spinnaker/installation/install-halyard/</link>
+      <link>http://kimmj.github.io/ci-cd/spinnaker/installation/install-halyard/</link>
       <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/ci-cd/spinnaker/installation/install-halyard/</guid>
+      <guid>http://kimmj.github.io/ci-cd/spinnaker/installation/install-halyard/</guid>
       <description>halyard란? halyard는 Spinnaker를 배포할 때 사용하는 CLI 툴입니다.
 halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, 설정 추가 및 변경에 사용됩니다.
 설치 방법 선택하기 총 2가지 방법으로 halyard를 설치할 수 있습니다.
@@ -64,19 +64,19 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
     
     <item>
       <title>Customizing Control Plane Configuration With Kubeadm</title>
-      <link>http://kimmj.github.io/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</link>
+      <link>http://kimmj.github.io/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</link>
       <pubDate>Fri, 17 Jan 2020 00:51:13 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</guid>
+      <guid>http://kimmj.github.io/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to Edit Boot Parameter During Install</title>
-      <link>http://kimmj.github.io/category/ubuntu/how-to-edit-boot-parameter-during-install/</link>
+      <link>http://kimmj.github.io/ubuntu/how-to-edit-boot-parameter-during-install/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/category/ubuntu/how-to-edit-boot-parameter-during-install/</guid>
+      <guid>http://kimmj.github.io/ubuntu/how-to-edit-boot-parameter-during-install/</guid>
       <description>Ubuntu 설치할 때 boot parameter가 필요한 상황이 간혹 발생할 수 있습니다.
 특히 저의 경우, preseed.cfg를 수정하기 위해 인스톨러가 질의하는 것이 preseed.cfg의 어떤것과 대응이 되는지를 보기 위해 DEBCONF_DEBUG=5라는 옵션을 boot parameter로 주어야 했습니다. 이 때 사용할 수 있는 방법을 소개드립니다.
 먼저 평소와 같이 ubuntu를 설치하기 위해 설치 이미지를 삽입합니다. 그 다음에는 언어를 선택하시면, 다음으로 넘어가기 전에 메뉴가 뜹니다.

@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="description" content="Do Learn">
+<meta name="author" content="Myeongjin Kim">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>Create Vm With Ansible Libvirt :: Ibiza</title>
+
+    
+    <link href="/css/nucleus.css?1579353652" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1579353652" rel="stylesheet">
+    <link href="/css/hybrid.css?1579353652" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1579353652" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1579353652" rel="stylesheet">
+    <link href="/css/auto-complete.css?1579353652" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1579353652" rel="stylesheet">
+    <link href="/css/theme.css?1579353652" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1579353652" rel="stylesheet">
+    
+      <link href="/css/theme-mine.css?1579353652" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1579353652"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/ansible/create-vm-with-ansible-libvirt/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+<img src="https://avatars3.githubusercontent.com/u/6358016?s=460&v=4" style="border-radius: 50%"  width="50%" height="50%"/>
+</div>
+<p style="color: white">My Blog</p>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1579353652"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1579353652"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/kimmj.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1579353652"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ibiza/" title="Ibiza" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ibiza/">
+          Ibiza
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/importance-of-record/" title="Importance of Record" class="dd-item ">
+        <a href="/ibiza/importance-of-record/">
+        Importance of Record
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/2020-plan/" title="2020 Plan" class="dd-item ">
+        <a href="/ibiza/2020-plan/">
+        2020 Plan
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/ibiza-project/" title="Ibiza Project" class="dd-item ">
+        <a href="/ibiza/ibiza-project/">
+        Ibiza Project
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/">
+          Kubernetes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/install/" title="Install" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/install/">
+          Install
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/install/overview/" title="Overview" class="dd-item ">
+        <a href="/kubernetes/install/overview/">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/install/install-kubeadm/" title="Install Kubeadm" class="dd-item ">
+        <a href="/kubernetes/install/install-kubeadm/">
+        Install Kubeadm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/" title="Customizing Control Plane Configuration With Kubeadm" class="dd-item ">
+        <a href="/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/">
+        Customizing Control Plane Configuration With Kubeadm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo/" title="Hugo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hugo/">
+          Hugo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo/ibiza/" title="Ibiza" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hugo/ibiza/">
+          Ibiza
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/ibiza/font-change/" title="Font Change" class="dd-item ">
+        <a href="/hugo/ibiza/font-change/">
+        Font Change
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/hugo-with-html/" title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class="dd-item ">
+        <a href="/hugo/hugo-with-html/">
+        hugo with html
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ci-cd/" title="CI/CD" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ci-cd/">
+          CI/CD
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ci-cd/spinnaker/" title="Spinnaker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ci-cd/spinnaker/">
+          Spinnaker
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ci-cd/spinnaker/installation/" title="Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ci-cd/spinnaker/installation/">
+          Installation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ci-cd/spinnaker/installation/overview/" title="Overview" class="dd-item ">
+        <a href="/ci-cd/spinnaker/installation/overview/">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ci-cd/spinnaker/installation/install-halyard/" title="Install Halyard" class="dd-item ">
+        <a href="/ci-cd/spinnaker/installation/install-halyard/">
+        Install Halyard
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ci-cd/spinnaker/tips/" title="Tips" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ci-cd/spinnaker/tips/">
+          Tips
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ci-cd/spinnaker/tips/pipeline-expressions/" title="Pipeline Expressions" class="dd-item ">
+        <a href="/ci-cd/spinnaker/tips/pipeline-expressions/">
+        Pipeline Expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ansible/" title="Ansible" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/ansible/">
+          Ansible
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ansible/create-vm-with-ansible-libvirt/" title="Create Vm With Ansible Libvirt" class="dd-item active">
+        <a href="/ansible/create-vm-with-ansible-libvirt/">
+        Create Vm With Ansible Libvirt
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/" title="Ubuntu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/">
+          Ubuntu
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/network/" title="Network" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/network/">
+          Network
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/change-hostname/" title="Change Hostname" class="dd-item ">
+        <a href="/ubuntu/change-hostname/">
+        Change Hostname
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/unattended-ubuntu/" title="Unattended Ubuntu" class="dd-item ">
+        <a href="/ubuntu/unattended-ubuntu/">
+        Unattended Ubuntu
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/how-to-edit-boot-parameter-during-install/" title="How to Edit Boot Parameter During Install" class="dd-item ">
+        <a href="/ubuntu/how-to-edit-boot-parameter-during-install/">
+        How to Edit Boot Parameter During Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/how-to-use-sudo-without-password/" title="How to Use Sudo Without Password" class="dd-item ">
+        <a href="/ubuntu/how-to-use-sudo-without-password/">
+        How to Use Sudo Without Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/english/" title="English" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/">
+          English
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/english/himwm/" title="HIMWM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/himwm/">
+          HIMWM
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/english/himwm/season1/" title="Season1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/himwm/season1/">
+          Season1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode5/" title="Episode5" class="dd-item ">
+        <a href="/english/himwm/season1/episode5/">
+        Episode5
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode6/" title="Episode6" class="dd-item ">
+        <a href="/english/himwm/season1/episode6/">
+        Episode6
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode7/" title="Episode7" class="dd-item ">
+        <a href="/english/himwm/season1/episode7/">
+        Episode7
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode8/" title="Episode8" class="dd-item ">
+        <a href="/english/himwm/season1/episode8/">
+        Episode8
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode9/" title="Episode9" class="dd-item ">
+        <a href="/english/himwm/season1/episode9/">
+        Episode9
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode10/" title="Episode10" class="dd-item ">
+        <a href="/english/himwm/season1/episode10/">
+        Episode10
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode11/" title="Episode11" class="dd-item ">
+        <a href="/english/himwm/season1/episode11/">
+        Episode11
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/KimMJ"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://gohugo.io/"><i class='fas fa-bookmark'></i> Hugo Documentation</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://kimmj.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/ansible/'>Ansible</a> > Create Vm With Ansible Libvirt
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ansible-role-libvirt-vm">ansible-role-libvirt-vm</a></li>
+    <li><a href="#테스트-환경">테스트 환경</a></li>
+    <li><a href="#playyaml">play.yaml</a></li>
+    <li><a href="#test">Test</a></li>
+    <li><a href="#확인">확인</a></li>
+    <li><a href="#마치며">마치며</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/ansible">ansible</a>
+
+  <a class="tag-link" href="/tags/libvirt">libvirt</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Create Vm With Ansible Libvirt
+            </h1>
+          
+
+        
+
+
+
+<p>Ansible은 어떠한 프로세스를 자동화 할 때 사용할 수 있는 툴입니다.
+그리고 libvirt는 linux 환경에서 qemu를 이용하여 VM을 생성할 때 사용하는 python 모듈입니다.</p>
+<p>이 두가지를 합하여 Ansible을 통해 VM을 생성하는 방법에 대해 알아보도록 하겠습니다.</p>
+<h2 id="ansible-role-libvirt-vm">ansible-role-libvirt-vm</h2>
+<p>참조 Github : <a href="https://github.com/stackhpc/ansible-role-libvirt-vm">https://github.com/stackhpc/ansible-role-libvirt-vm</a></p>
+<p>위의 Github 프로젝트는 libvirt를 ansible에서 사용할 수 있도록 만든 오픈소스입니다.
+이를 이용하여 ansible-playbook을 통해 VM을 생성해 볼 것입니다.</p>
+<p>이를 로컬에 clone 합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/stackhpc/ansible-role-libvirt-vm
+</code></pre></div><h2 id="테스트-환경">테스트 환경</h2>
+<p>저는 Ubuntu 18.04.3 Desktop을 사용하고 있습니다.
+그리고 설치에 사용될 iso는 제 포스트에서 작성한 적이 있었던 <code>preseed.cfg</code>를 이용한 자동 설치 이미지입니다.
+따라서 이미지를 넣고 부팅만 하면 실행할 수 있습니다.</p>
+<h2 id="playyaml">play.yaml</h2>
+<script src="https://gist.github.com/KimMJ/00c08cf5d11770ac08f17419f1a2fae9.js"></script>
+<p>저는 이러한 <code>play.yaml</code> 파일을 사용하였습니다.</p>
+<p>여기서 <code>cdrom</code>을 사용하였는데, 이미지는 <code>baked-ubuntu.iso</code>를 사용하였습니다.</p>
+<p>또한 장비들에 대한 설정을 xml로 추가적으로 하고싶어서 <code>xml_file</code>을 설정해 주었습니다.</p>
+<p><code>xml_file</code>또한 업로드 해두었습니다.</p>
+<script src="https://gist.github.com/KimMJ/0e74dea0e988b9072d26628fa69f0ee1.js"></script>
+<p>네트워크는 설정을 빼놓을 경우 설치중에 확인창이 발생하여 기본적으로 NAT를 사용하도록 하였습니다.
+이는 필요에 따라 변경을 해야 합니다.
+또한 <code>enable_vnc</code>의 경우 virt-manager를 통해 상황의 경과를 확인하고 싶어서 추가하였습니다.</p>
+<p>위의 파일들을 workspace에 두시면 됩니다.</p>
+<h2 id="test">Test</h2>
+<p>이렇게까지 한 뒤 <code>play.yaml</code>이 있는 위치에서 시작합니다.</p>
+<p>그러면 <code>ansible-playbook</code>은 <code>ansible-role-libvirt-vm</code>이라는 role을 해당 위치에서 검색하고, 실행이 될 것입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ansible-playbook play.yaml
+</code></pre></div><p>실행 중 <code>sudo</code> 권한이 필요하다고 할 수도 있습니다. 이럴 경우 <code>sudo su</code>로 잠시 로그인 후 <code>exit</code>로 빠져나오시면 에러가 발생하지 않습니다.</p>
+<h2 id="확인">확인</h2>
+<p><code>virt-manager</code>를 통해 GUI 환경에서 실제로 잘 되고 있는지 확인할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virt-manager
+</code></pre></div><p><code>preseed.cfg</code>를 사용한 이미지라면 30초 후 설치 언어가 자동으로 영어로 설정이 되면서 계속해서 설치가 진행될 것입니다.</p>
+<h2 id="마치며">마치며</h2>
+<p>vm을 생성하는 일이 잦다면, 이 또한 굉장히 귀찮은 일이 아닐 수 없습니다.
+소규모가 아닌 대규모로의 확장성을 생각한다면 당연히 자동화를 하는 것이 올바른 접근이라고 생각합니다.</p>
+<p>VM 설치 자동화의 방법이 여러가지가 있을 것이고 이 방법 또한 그 여러가지 방법 중 하나입니다.</p>
+<p>더 좋은, 더 편한 방법이 있다면 알려주시면 감사하겠습니다.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1579353652"></script>
+    <script src="/js/perfect-scrollbar.min.js?1579353652"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1579353652"></script>
+    <script src="/js/jquery.sticky.js?1579353652"></script>
+    <script src="/js/featherlight.min.js?1579353652"></script>
+    <script src="/js/highlight.pack.js?1579353652"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1579353652"></script>
+    <script src="/js/learn.js?1579353652"></script>
+    <script src="/js/hugo-learn.js?1579353652"></script>
+
+    <link href="/mermaid/mermaid.css?1579353652" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1579353652"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
