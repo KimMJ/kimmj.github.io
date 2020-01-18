@@ -1,10 +1,10 @@
 [
 {
-	"uri": "http://kimmj.github.io/kubernetes/install/overview/",
+	"uri": "http://kimmj.github.io/kubernetes/installation/overview/",
 	"title": "Overview",
 	"tags": ["kubernetes", "install", "overview"],
 	"description": "",
-	"content": "저의 vm으로 구성한 클러스터를 설명드리고자 합니다.\n Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.\n"
+	"content": "저의 vm으로 구성한 클러스터를 설명드리고자 합니다.\n Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 2 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/spinnaker/installation/overview/",
@@ -35,11 +35,11 @@
 	"content": "Ibiza "
 },
 {
-	"uri": "http://kimmj.github.io/kubernetes/install/install-kubeadm/",
+	"uri": "http://kimmj.github.io/kubernetes/installation/install-kubeadm/",
 	"title": "Install Kubeadm",
 	"tags": ["install", "kubeadm"],
 	"description": "",
-	"content": "kubeadm은 Kubernetes cluster의 설정들을 관리하는 툴입니다.\nPrerequisites 먼저, 몇가지 전제사항이 있습니다.\n  모든 노드의 MAC 주소와 product_uuid가 달라야 합니다. ifconfig -a와 sudo cat /sys/class/dmi/id/product_uuid를 통해 알 수 있습니다.\n  network adapter를 확인합니다. 하나 이상의 network adapter가 있고, Kubernetes component들이 default route로 통신이 불가능하다면 IP route를 설정하여 Kubernetes cluster 주소가 적절한 adapter를 통해 이동할 수 있도록 해주는 것이 좋습니다.\n  iptables를 사용하는지 확인 Ubuntu 19.04 이후버전부터는 nftables라는 것을 사용한다고 합니다. 그러나 이는 kube-proxy와 호환이 잘 안되기 때문에 iptables를 사용해야한다고 하고 있습니다.\n다음과 같이 설정할 수 있습니다.\nsudo update-alternatives --set iptables /usr/sbin/iptables-legacy sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy sudo update-alternatives --set arptables /usr/sbin/arptables-legacy sudo update-alternatives --set ebtables /usr/sbin/ebtables-legacy   필수 포트 확인\nControl-plane node(s)\n   Protocol Direction Port Range Purpose Used By     TCP Inbound 6443* Kubernetes API server All   TCP Inbound 2379-2380 etcd server client API kube-apiserver, etcd   TCP Inbound 10250 Kubelet API Self, Control plane   TCP Inbound 10251 kube-scheduler Self   TCP Inbound 10252 kube-controller-manager Self    Worker node(s)\n   Protocol Direction Port Range Purpose Used By     TCP Inbound 10250 Kubelet API Self, Control plane   TCP Inbound 30000-32767 NodePort Services** All    여기서 * 표시가 있는 것은 수정이 가능한 사항이라고 합니다. (API server의 port, NodePort Service로 열 수 있는 port의 범위)\n  container runtime 설치 여기에서는 Docker를 사용할 것입니다. Docker 홈페이지에는 script를 통해 최신 버전의 Docker를 다운로드 받는 방법을 제공합니다.\ncurl -fsSL https://get.docker.com -o get-docker.sh sudo sh get-docker.sh   kubeadm, kubelet, kubectl 설치 Kubernetes에 필요한 세가지 툴을 설치하도록 하겠습니다. 간단하게 설명드리자면 kubeadm은 Kubernetes를 관리하는 툴이라고 생각하면 되고 kubelet은 명령을 이행하는 툴이라고 생각하면 됩니다. kubectl은 Kubernetes cluster와 통신하는 툴입니다.\nsudo apt-get update \u0026amp;\u0026amp; sudo apt-get install -y apt-transport-https curl curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - cat \u0026lt;\u0026lt;EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list deb https://apt.kubernetes.io/ kubernetes-xenial main EOF sudo apt-get update sudo apt-get install -y kubelet kubeadm kubectl sudo apt-mark hold kubelet kubeadm kubectl 마지막에 apt-mark를 통해 kubelet, kubeadm, kubectl의 버전을 고정시켰습니다.\n  "
+	"content": "kubeadm은 Kubernetes cluster의 설정들을 관리하는 툴입니다.\nPrerequisites 먼저, 몇가지 전제사항이 있습니다.\n  모든 노드의 MAC 주소와 product_uuid가 달라야 합니다. ifconfig -a와 sudo cat /sys/class/dmi/id/product_uuid를 통해 알 수 있습니다.\n  network adapter를 확인합니다. 하나 이상의 network adapter가 있고, Kubernetes component들이 default route로 통신이 불가능하다면 IP route를 설정하여 Kubernetes cluster 주소가 적절한 adapter를 통해 이동할 수 있도록 해주는 것이 좋습니다.\n  iptables를 사용하는지 확인 Ubuntu 19.04 이후버전부터는 nftables라는 것을 사용한다고 합니다. 그러나 이는 kube-proxy와 호환이 잘 안되기 때문에 iptables를 사용해야한다고 하고 있습니다.\n다음과 같이 설정할 수 있습니다.\nsudo update-alternatives --set iptables /usr/sbin/iptables-legacy sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy sudo update-alternatives --set arptables /usr/sbin/arptables-legacy sudo update-alternatives --set ebtables /usr/sbin/ebtables-legacy   필수 포트 확인\nControl-plane node(s)\n   Protocol Direction Port Range Purpose Used By     TCP Inbound 6443* Kubernetes API server All   TCP Inbound 2379-2380 etcd server client API kube-apiserver, etcd   TCP Inbound 10250 Kubelet API Self, Control plane   TCP Inbound 10251 kube-scheduler Self   TCP Inbound 10252 kube-controller-manager Self    Worker node(s)\n   Protocol Direction Port Range Purpose Used By     TCP Inbound 10250 Kubelet API Self, Control plane   TCP Inbound 30000-32767 NodePort Services** All    여기서 * 표시가 있는 것은 수정이 가능한 사항이라고 합니다. (API server의 port, NodePort Service로 열 수 있는 port의 범위)\n  container runtime 설치 여기에서는 Docker를 사용할 것입니다. Docker 홈페이지에는 script를 통해 최신 버전의 Docker를 다운로드 받는 방법을 제공합니다.\ncurl -fsSL https://get.docker.com -o get-docker.sh sudo sh get-docker.sh   kubeadm, kubelet, kubectl 설치 Kubernetes에 필요한 세가지 툴을 설치하도록 하겠습니다. 간단하게 설명드리자면 kubeadm은 Kubernetes를 관리하는 툴이라고 생각하면 되고 kubelet은 명령을 이행하는 툴이라고 생각하면 됩니다. kubectl은 Kubernetes cluster와 통신하는 툴입니다.\nsudo apt-get update \u0026amp;\u0026amp; sudo apt-get install -y apt-transport-https curl curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - cat \u0026lt;\u0026lt;EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list deb https://apt.kubernetes.io/ kubernetes-xenial main EOF sudo apt-get update sudo apt-get install -y kubelet kubeadm kubectl sudo apt-mark hold kubelet kubeadm kubectl 마지막에 apt-mark를 통해 kubelet, kubeadm, kubectl의 버전을 고정시켰습니다.\n  이렇게 kubelet, kubeadm, kubectl을 설치하였으면 마지막으로 swap 영역을 제거할 것입니다. Kubernetes는 swap 영역이 없는 것이 필수 항목입니다. 따라서 다음의 명령어로 swap 영역을 삭제합니다.\nsudo swapoff -a 이는 현재 세션에서만 동작하고 재부팅시 해제됩니다. 따라서 /etc/fstab을 열고 swap 부분을 주석처리합니다.\n#/swapfile none swap sw 0 0 Reference https://kubernetes.io/docs/tasks/administer-cluster/network-policy-provider/calico-network-policy/\nhttps://kubernetes.io/docs/concepts/cluster-administration/networking/\nhttps://docs.projectcalico.org/v3.11/getting-started/kubernetes/\nhttps://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/\n"
 },
 {
 	"uri": "http://kimmj.github.io/spinnaker/installation/install-halyard/",
@@ -56,6 +56,13 @@
 	"content": "2020 새해에는 몇가지 목표가 있다.\n 꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 hugo blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.\n특히 지금은 누군가가 만든 블로그 테마를 사용하고 있지만 나중에는 내가 원하는 대로 커스터마이징이 가능하도록 나만의 블로그 테마를 만들고 싶다.\n이를 위해서는 무엇이 필요한지도, 어떤 기술 스택을 쌓아야 할지도 모르지만 일단 도전해보고자 한다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/spinnaker/installation/choose-cloud-providers/",
+	"title": "Choose Cloud Providers",
+	"tags": ["install", "spinnaker"],
+	"description": "",
+	"content": "Spinnaker를 배포할 환경을 설정해 주어야 합니다. 여기에서는 제가 구축한 local kubernetes cluster를 사용할 것입니다.\n먼저 2가지가 필요합니다.\n kubeconfig 파일 kubeconfig 파일은 일반적으로 ~$HOME/.kube/config 파일을 의미합니다. 저는 local kubernetes cluster로 이동하여 해당 파일을 halyard를 위한 vm으로 복사하였습니다. kubectl CLI 툴  이제 hal config 명령어를 통해 kubernetes cluster를 추가합니다.\nhal config provider kubernetes enable CONTEXT=$(kubectl config current-context) hal config provider kubernetes account add wonderland \\  --provider-version v2 \\  --context $CONTEXT hal config features edit --artifacts true "
+},
+{
 	"uri": "http://kimmj.github.io/ibiza/ibiza-project/",
 	"title": "Ibiza Project",
 	"tags": ["blog", "hugo"],
@@ -63,14 +70,28 @@
 	"content": "Ibiza Project는 나만의 블로그을 만들기 위한 프로젝트이다.\n기본적으로 hugo-theme-learn에서 시작하여, 나의 커스텀 파일들을 추가하여 내가 원하는 사이트를 만들 것이다.\n기간 : 2020.4.15 (작성일 기준 + 100일)\n"
 },
 {
-	"uri": "http://kimmj.github.io/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/",
-	"title": "Customizing Control Plane Configuration With Kubeadm",
-	"tags": ["install", "kubeadm", "kubernetes"],
+	"uri": "http://kimmj.github.io/spinnaker/installation/choose-your-environment/",
+	"title": "Choose Your Environment",
+	"tags": ["install", "spinnaker"],
 	"description": "",
-	"content": ""
+	"content": "Spinnaker를 배포하는 방법에는 3가지가 있습니다. Kubernetes 환경에 배포하기, local debian으로 배포하기, local git으로 배포하기가 있습니다.\n여기에서는 Kubernetes 환경에 배포하기를 진행할 것입니다.\nACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACCOUNT 위와같이 설정하면 됩니다. ACCOUNT는 kubernetes cluster를 추가할 때 사용했던 이름을 사용하면 됩니다.\n"
 },
 {
-	"uri": "http://kimmj.github.io/kubernetes/install/",
+	"uri": "http://kimmj.github.io/spinnaker/installation/choose-a-storage-service/",
+	"title": "Choose a Storage Service",
+	"tags": ["install", "spinnaker", "minio"],
+	"description": "",
+	"content": "Spinnaker들의 데이터를 저장할 공간입니다.\n여러가지 옵션들이 있지만, 저는 local로 운용할 수 있는 minio를 통해 데이터를 저장해 볼 것입니다.\nminio를 docker-compose를 통해 쉽게 배포하도록 할 것입니다. 먼저, docker-compose를 설치합니다.\nsudo curl -L \u0026#34;https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)\u0026#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose 그 뒤 minio의 docker-compose.yaml을 만듭니다.\nversion: '3.7' services: minio: image: minio/minio:RELEASE.2020-01-16T22-40-29Z volumes: - ./data:/data ports: - \u0026quot;9000:9000\u0026quot; environment: MINIO_ACCESS_KEY: minio MINIO_SECRET_KEY: minio123 command: server /data healthcheck: test: [\u0026quot;CMD\u0026quot;, \u0026quot;curl\u0026quot;, \u0026quot;-f\u0026quot;, \u0026quot;http://localhost:9000/minio/health/live\u0026quot;] interval: 30s timeout: 20s retries: 3 docker-compose를 통해서 deamon으로 실행합니다.\ndocker-compose up -d 이제 halyard와 연동을 하도록 합니다.\n먼저, ~/.hal/default/profiles/front50-local.yml 파일을 다음과 같이 생성합니다.\nspinnaker: s3: versioning: false 그 다음 다음의 명령어로 연동을 합니다.\nENDPOINT=http://10.0.2.4:9000 MINIO_ACCESS_KEY=minio MINIO_SECRET_KEY=minio123 echo $MINIO_SECRET_KEY | hal config storage s3 edit --endpoint $ENDPOINT \\  --access-key-id $MINIO_ACCESS_KEY \\  --secret-access-key hal config storage edit --type s3 "
+},
+{
+	"uri": "http://kimmj.github.io/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/",
+	"title": "Create a Single Control Plane Cluster With Kubeadm",
+	"tags": ["kubeadm", "instll"],
+	"description": "",
+	"content": "이 문서에서는 Master 노드 한대로 클러스터를 구성하는 방법에 대해 알아보도록 하겠습니다.\n먼저, 파드 네트워크에 사용할 add-on을 선정합니다. 그런뒤 kubeadm init을 할 때 필요로 하는 사항이 있는지 확인해야 합니다.\n저는 Calico를 사용할 것입니다. Calico는 kubeadm init에서 --pod-network-cidr=192.168.0.0/16을 해주거나, 나중에 calico.yml 파일에서 적절하게 수정해주어야 한다고 합니다. 저는 Pod Network에 사용될 IP 대역을 10.1.0.0/16 대역을 사용하고자 합니다. 그러기 위해 kubeadm init을 --pod-network-cidr=10.1.0.0/16 옵션을 통해 실행할 것입니다.\nkubeadm init --pod-network-cidr=10.1.0.0/16 몇분 후 설치가 완료될 것입니다. 그러면 아래에 kubeadm join 이라면서 어떻게 다른 node들을 join 시키는지 설명이 되어 있습니다.\n클러스터를 사용하려면 다음과 같은 명령어를 통해서 kubectl에서 접근이 가능하도록 해야합니다.\nmkdir -p $HOME/.kube sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config sudo chown $(id -u):$(id -g) $HOME/.kube/config 그 다음엔 각 worker node로 접속하여 설치시 나왔던 kubeadm join 명령어를 복사하여 입력합니다. 그런 뒤 master node로 접속하여 kubectl get nodes를 입력하고 결과를 확인합니다. 성공했을 경우 node들이 보일 것입니다.\n이제 calico를 설치하도록 합니다.\ncurl -o calico.yaml https://docs.projectcalico.org/v3.8/manifests/calico.yaml 이후 calico.yaml에서 CALICO_IPV4POOL_CIDR 부분을 수정해줍니다.\n- name: CALICO_IPV4POOL_CIDR value: \u0026#34;10.1.0.0/16\u0026#34; Reference https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/\n"
+},
+{
+	"uri": "http://kimmj.github.io/kubernetes/installation/",
 	"title": "Install",
 	"tags": [],
 	"description": "",
@@ -161,6 +182,13 @@
 	"content": "Ubuntu Ubuntu에서 배운 것들을 기록하는 공간입니다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/spinnaker/installation/deploy-and-connect/",
+	"title": "Deploy and Connect",
+	"tags": ["spinnaker", "install"],
+	"description": "",
+	"content": "드디어 마지막 절차입니다.\n먼저 어떤 버전을 설치할지 확인후 설정합니다.\nhal version list 작성 기준으로 최신 버전이 1.17.6이므로 이를 설정합니다.\nhal config version edit --version 1.17.6 halyard를 NodePort로 노출시키기 위해 api와 ui에 base url을 부여합니다.\nhal config security ui edit --override-base-url http://192.168.8.22:30100 hal config security api edit --override-base-url http://192.168.8.22:30200 이제 본격적으로 deploy를 하도록 합니다.\nhal deploy apply 그 후 Spinnaker를 NodePort로 서비스합니다.\nkubectl patch svc spin-deck -n spinnaker --type='json' -p '[{\u0026quot;op\u0026quot;:\u0026quot;replace\u0026quot;,\u0026quot;path\u0026quot;:\u0026quot;/spec/type\u0026quot;,\u0026quot;value\u0026quot;:\u0026quot;NodePort\u0026quot;}]' kubectl patch svc spin-gate -n spinnaker --type='json' -p '[{\u0026quot;op\u0026quot;:\u0026quot;replace\u0026quot;,\u0026quot;path\u0026quot;:\u0026quot;/spec/type\u0026quot;,\u0026quot;value\u0026quot;:\u0026quot;NodePort\u0026quot;}]' kubectl patch svc spin-deck -n spinnaker --type='json' -p '[{\u0026quot;op\u0026quot;:\u0026quot;replace\u0026quot;,\u0026quot;path\u0026quot;:\u0026quot;/spec/ports/0/nodePort\u0026quot;,\u0026quot;value\u0026quot;: 30100}]' kubectl patch svc spin-gate -n spinnaker --type='json' -p '[{\u0026quot;op\u0026quot;:\u0026quot;replace\u0026quot;,\u0026quot;path\u0026quot;:\u0026quot;/spec/ports/0/nodePort\u0026quot;,\u0026quot;value\u0026quot;: 30200}]' 이제 Spinnaker로 접속하여 확인합니다. url은 http://:30100 입니다.\n"
+},
+{
 	"uri": "http://kimmj.github.io/english/himwm/season1/episode6/",
 	"title": "Episode6",
 	"tags": [],
@@ -217,6 +245,20 @@
 	"content": "English To Learn English\n"
 },
 {
+	"uri": "http://kimmj.github.io/tags/install/",
+	"title": "install",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/spinnaker/",
+	"title": "spinnaker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/tags/",
 	"title": "Tags",
 	"tags": [],
@@ -224,8 +266,15 @@
 	"content": ""
 },
 {
-	"uri": "http://kimmj.github.io/tags/install/",
-	"title": "install",
+	"uri": "http://kimmj.github.io/tags/minio/",
+	"title": "minio",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/instll/",
+	"title": "instll",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -296,13 +345,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/proxy/",
 	"title": "proxy",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/spinnaker/",
-	"title": "spinnaker",
 	"tags": [],
 	"description": "",
 	"content": ""

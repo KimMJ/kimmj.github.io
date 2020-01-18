@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jan 2020 19:44:05 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 01:20:12 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,43 @@
     <item>
       <title>install</title>
       <link>http://kimmj.github.io/tags/install/</link>
-      <pubDate>Fri, 17 Jan 2020 00:51:13 +0900</pubDate>
+      <pubDate>Sun, 19 Jan 2020 01:20:12 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/install/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>spinnaker</title>
+      <link>http://kimmj.github.io/tags/spinnaker/</link>
+      <pubDate>Sun, 19 Jan 2020 01:20:12 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/spinnaker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>minio</title>
+      <link>http://kimmj.github.io/tags/minio/</link>
+      <pubDate>Sun, 19 Jan 2020 00:46:44 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/minio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>instll</title>
+      <link>http://kimmj.github.io/tags/instll/</link>
+      <pubDate>Sat, 18 Jan 2020 22:27:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/instll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kubeadm</title>
       <link>http://kimmj.github.io/tags/kubeadm/</link>
-      <pubDate>Fri, 17 Jan 2020 00:51:13 +0900</pubDate>
+      <pubDate>Sat, 18 Jan 2020 22:27:39 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/kubeadm/</guid>
       <description></description>
@@ -32,7 +59,7 @@
     <item>
       <title>kubernetes</title>
       <link>http://kimmj.github.io/tags/kubernetes/</link>
-      <pubDate>Fri, 17 Jan 2020 00:51:13 +0900</pubDate>
+      <pubDate>Tue, 14 Jan 2020 01:42:53 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/kubernetes/</guid>
       <description></description>
@@ -98,15 +125,6 @@
       <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/proxy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spinnaker</title>
-      <link>http://kimmj.github.io/tags/spinnaker/</link>
-      <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/spinnaker/</guid>
       <description></description>
     </item>
     

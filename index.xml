@@ -13,12 +13,12 @@
     
     <item>
       <title>Overview</title>
-      <link>http://kimmj.github.io/kubernetes/install/overview/</link>
+      <link>http://kimmj.github.io/kubernetes/installation/overview/</link>
       <pubDate>Tue, 14 Jan 2020 01:42:53 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/kubernetes/install/overview/</guid>
+      <guid>http://kimmj.github.io/kubernetes/installation/overview/</guid>
       <description>저의 vm으로 구성한 클러스터를 설명드리고자 합니다.
- Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.</description>
+ Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 2 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.</description>
     </item>
     
     <item>
@@ -49,10 +49,10 @@
     
     <item>
       <title>Install Kubeadm</title>
-      <link>http://kimmj.github.io/kubernetes/install/install-kubeadm/</link>
+      <link>http://kimmj.github.io/kubernetes/installation/install-kubeadm/</link>
       <pubDate>Fri, 17 Jan 2020 00:38:41 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/kubernetes/install/install-kubeadm/</guid>
+      <guid>http://kimmj.github.io/kubernetes/installation/install-kubeadm/</guid>
       <description>kubeadm은 Kubernetes cluster의 설정들을 관리하는 툴입니다.
 Prerequisites 먼저, 몇가지 전제사항이 있습니다.
   모든 노드의 MAC 주소와 product_uuid가 달라야 합니다. ifconfig -a와 sudo cat /sys/class/dmi/id/product_uuid를 통해 알 수 있습니다.
@@ -87,6 +87,18 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
     </item>
     
     <item>
+      <title>Choose Cloud Providers</title>
+      <link>http://kimmj.github.io/spinnaker/installation/choose-cloud-providers/</link>
+      <pubDate>Sun, 19 Jan 2020 00:32:21 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/choose-cloud-providers/</guid>
+      <description>Spinnaker를 배포할 환경을 설정해 주어야 합니다. 여기에서는 제가 구축한 local kubernetes cluster를 사용할 것입니다.
+먼저 2가지가 필요합니다.
+ kubeconfig 파일 kubeconfig 파일은 일반적으로 ~$HOME/.kube/config 파일을 의미합니다. 저는 local kubernetes cluster로 이동하여 해당 파일을 halyard를 위한 vm으로 복사하였습니다. kubectl CLI 툴  이제 hal config 명령어를 통해 kubernetes cluster를 추가합니다.
+hal config provider kubernetes enable CONTEXT=$(kubectl config current-context) hal config provider kubernetes account add wonderland \  --provider-version v2 \  --context $CONTEXT hal config features edit --artifacts true </description>
+    </item>
+    
+    <item>
       <title>Ibiza Project</title>
       <link>http://kimmj.github.io/ibiza/ibiza-project/</link>
       <pubDate>Wed, 08 Jan 2020 01:50:49 +0900</pubDate>
@@ -98,12 +110,39 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
     </item>
     
     <item>
-      <title>Customizing Control Plane Configuration With Kubeadm</title>
-      <link>http://kimmj.github.io/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</link>
-      <pubDate>Fri, 17 Jan 2020 00:51:13 +0900</pubDate>
+      <title>Choose Your Environment</title>
+      <link>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</link>
+      <pubDate>Sun, 19 Jan 2020 00:42:56 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/kubernetes/install/customizing-control-plane-configuration-with-kubeadm/</guid>
-      <description></description>
+      <guid>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</guid>
+      <description>Spinnaker를 배포하는 방법에는 3가지가 있습니다. Kubernetes 환경에 배포하기, local debian으로 배포하기, local git으로 배포하기가 있습니다.
+여기에서는 Kubernetes 환경에 배포하기를 진행할 것입니다.
+ACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACCOUNT 위와같이 설정하면 됩니다. ACCOUNT는 kubernetes cluster를 추가할 때 사용했던 이름을 사용하면 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>Choose a Storage Service</title>
+      <link>http://kimmj.github.io/spinnaker/installation/choose-a-storage-service/</link>
+      <pubDate>Sun, 19 Jan 2020 00:46:44 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/choose-a-storage-service/</guid>
+      <description>Spinnaker들의 데이터를 저장할 공간입니다.
+여러가지 옵션들이 있지만, 저는 local로 운용할 수 있는 minio를 통해 데이터를 저장해 볼 것입니다.
+minio를 docker-compose를 통해 쉽게 배포하도록 할 것입니다. 먼저, docker-compose를 설치합니다.
+sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose 그 뒤 minio의 docker-compose.yaml을 만듭니다.
+version: &#39;3.7&#39; services: minio: image: minio/minio:RELEASE.2020-01-16T22-40-29Z volumes: - ./data:/data ports: - &amp;quot;9000:9000&amp;quot; environment: MINIO_ACCESS_KEY: minio MINIO_SECRET_KEY: minio123 command: server /data healthcheck: test: [&amp;quot;CMD&amp;quot;, &amp;quot;curl&amp;quot;, &amp;quot;-f&amp;quot;, &amp;quot;http://localhost:9000/minio/health/live&amp;quot;] interval: 30s timeout: 20s retries: 3 docker-compose를 통해서 deamon으로 실행합니다.</description>
+    </item>
+    
+    <item>
+      <title>Create a Single Control Plane Cluster With Kubeadm</title>
+      <link>http://kimmj.github.io/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/</link>
+      <pubDate>Sat, 18 Jan 2020 22:27:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/</guid>
+      <description>이 문서에서는 Master 노드 한대로 클러스터를 구성하는 방법에 대해 알아보도록 하겠습니다.
+먼저, 파드 네트워크에 사용할 add-on을 선정합니다. 그런뒤 kubeadm init을 할 때 필요로 하는 사항이 있는지 확인해야 합니다.
+저는 Calico를 사용할 것입니다. Calico는 kubeadm init에서 --pod-network-cidr=192.168.0.0/16을 해주거나, 나중에 calico.yml 파일에서 적절하게 수정해주어야 한다고 합니다. 저는 Pod Network에 사용될 IP 대역을 10.1.0.0/16 대역을 사용하고자 합니다. 그러기 위해 kubeadm init을 --pod-network-cidr=10.1.0.0/16 옵션을 통해 실행할 것입니다.
+kubeadm init --pod-network-cidr=10.1.0.0/16 몇분 후 설치가 완료될 것입니다.</description>
     </item>
     
     <item>
@@ -127,6 +166,21 @@ grep -ri &amp;#34;font&amp;#34; 결과가 길게 나오는데요, 여기서 stat
       <guid>http://kimmj.github.io/english/himwm/season1/episode5/</guid>
       <description>Did I just have a stroke? 여기서 stroke은 뇌졸증이라고 해석할 수 있습니다. 이를 약간은 의역하자면 내가 뇌졸증에 걸렸나?보단 내 머리가 이상해졌나? 이정도로 생각해보면 될 것 같습니다.
 All the things you do when you know where your next thousand lays are coming from. 이 말 앞에는 마샬, 릴리가 약혼 후에 더욱 성숙해지고자 북클럽에 가입하고, 와인파티를 한다는 내용이 있습니다. 여기서 바니가 위의 대사를 하는데 이러한 것들(성숙해지고자 하는 행동들)은 where your next thousand lays are coming from을 알때나 하는 행동이라는 뜻입니다.</description>
+    </item>
+    
+    <item>
+      <title>Deploy and Connect</title>
+      <link>http://kimmj.github.io/spinnaker/installation/deploy-and-connect/</link>
+      <pubDate>Sun, 19 Jan 2020 01:20:12 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/deploy-and-connect/</guid>
+      <description>드디어 마지막 절차입니다.
+먼저 어떤 버전을 설치할지 확인후 설정합니다.
+hal version list 작성 기준으로 최신 버전이 1.17.6이므로 이를 설정합니다.
+hal config version edit --version 1.17.6 halyard를 NodePort로 노출시키기 위해 api와 ui에 base url을 부여합니다.
+hal config security ui edit --override-base-url http://192.168.8.22:30100 hal config security api edit --override-base-url http://192.168.8.22:30200 이제 본격적으로 deploy를 하도록 합니다.
+hal deploy apply 그 후 Spinnaker를 NodePort로 서비스합니다.
+kubectl patch svc spin-deck -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/type&amp;quot;,&amp;quot;value&amp;quot;:&amp;quot;NodePort&amp;quot;}]&#39; kubectl patch svc spin-gate -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/type&amp;quot;,&amp;quot;value&amp;quot;:&amp;quot;NodePort&amp;quot;}]&#39; kubectl patch svc spin-deck -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/ports/0/nodePort&amp;quot;,&amp;quot;value&amp;quot;: 30100}]&#39; kubectl patch svc spin-gate -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/ports/0/nodePort&amp;quot;,&amp;quot;value&amp;quot;: 30200}]&#39; 이제 Spinnaker로 접속하여 확인합니다.</description>
     </item>
     
     <item>

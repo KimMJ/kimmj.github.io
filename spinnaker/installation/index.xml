@@ -39,5 +39,56 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
  인터넷이 되지 않는 환경 (프록시나 방화벽 등으로 halyard를 통한 설치가 어려운 경우)  이 글을 작성하고 있는 환경은 인터넷이 잘 되는 환경입니다.</description>
     </item>
     
+    <item>
+      <title>Choose Cloud Providers</title>
+      <link>http://kimmj.github.io/spinnaker/installation/choose-cloud-providers/</link>
+      <pubDate>Sun, 19 Jan 2020 00:32:21 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/choose-cloud-providers/</guid>
+      <description>Spinnaker를 배포할 환경을 설정해 주어야 합니다. 여기에서는 제가 구축한 local kubernetes cluster를 사용할 것입니다.
+먼저 2가지가 필요합니다.
+ kubeconfig 파일 kubeconfig 파일은 일반적으로 ~$HOME/.kube/config 파일을 의미합니다. 저는 local kubernetes cluster로 이동하여 해당 파일을 halyard를 위한 vm으로 복사하였습니다. kubectl CLI 툴  이제 hal config 명령어를 통해 kubernetes cluster를 추가합니다.
+hal config provider kubernetes enable CONTEXT=$(kubectl config current-context) hal config provider kubernetes account add wonderland \  --provider-version v2 \  --context $CONTEXT hal config features edit --artifacts true </description>
+    </item>
+    
+    <item>
+      <title>Choose Your Environment</title>
+      <link>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</link>
+      <pubDate>Sun, 19 Jan 2020 00:42:56 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</guid>
+      <description>Spinnaker를 배포하는 방법에는 3가지가 있습니다. Kubernetes 환경에 배포하기, local debian으로 배포하기, local git으로 배포하기가 있습니다.
+여기에서는 Kubernetes 환경에 배포하기를 진행할 것입니다.
+ACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACCOUNT 위와같이 설정하면 됩니다. ACCOUNT는 kubernetes cluster를 추가할 때 사용했던 이름을 사용하면 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>Choose a Storage Service</title>
+      <link>http://kimmj.github.io/spinnaker/installation/choose-a-storage-service/</link>
+      <pubDate>Sun, 19 Jan 2020 00:46:44 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/choose-a-storage-service/</guid>
+      <description>Spinnaker들의 데이터를 저장할 공간입니다.
+여러가지 옵션들이 있지만, 저는 local로 운용할 수 있는 minio를 통해 데이터를 저장해 볼 것입니다.
+minio를 docker-compose를 통해 쉽게 배포하도록 할 것입니다. 먼저, docker-compose를 설치합니다.
+sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose 그 뒤 minio의 docker-compose.yaml을 만듭니다.
+version: &#39;3.7&#39; services: minio: image: minio/minio:RELEASE.2020-01-16T22-40-29Z volumes: - ./data:/data ports: - &amp;quot;9000:9000&amp;quot; environment: MINIO_ACCESS_KEY: minio MINIO_SECRET_KEY: minio123 command: server /data healthcheck: test: [&amp;quot;CMD&amp;quot;, &amp;quot;curl&amp;quot;, &amp;quot;-f&amp;quot;, &amp;quot;http://localhost:9000/minio/health/live&amp;quot;] interval: 30s timeout: 20s retries: 3 docker-compose를 통해서 deamon으로 실행합니다.</description>
+    </item>
+    
+    <item>
+      <title>Deploy and Connect</title>
+      <link>http://kimmj.github.io/spinnaker/installation/deploy-and-connect/</link>
+      <pubDate>Sun, 19 Jan 2020 01:20:12 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/deploy-and-connect/</guid>
+      <description>드디어 마지막 절차입니다.
+먼저 어떤 버전을 설치할지 확인후 설정합니다.
+hal version list 작성 기준으로 최신 버전이 1.17.6이므로 이를 설정합니다.
+hal config version edit --version 1.17.6 halyard를 NodePort로 노출시키기 위해 api와 ui에 base url을 부여합니다.
+hal config security ui edit --override-base-url http://192.168.8.22:30100 hal config security api edit --override-base-url http://192.168.8.22:30200 이제 본격적으로 deploy를 하도록 합니다.
+hal deploy apply 그 후 Spinnaker를 NodePort로 서비스합니다.
+kubectl patch svc spin-deck -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/type&amp;quot;,&amp;quot;value&amp;quot;:&amp;quot;NodePort&amp;quot;}]&#39; kubectl patch svc spin-gate -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/type&amp;quot;,&amp;quot;value&amp;quot;:&amp;quot;NodePort&amp;quot;}]&#39; kubectl patch svc spin-deck -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/ports/0/nodePort&amp;quot;,&amp;quot;value&amp;quot;: 30100}]&#39; kubectl patch svc spin-gate -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/ports/0/nodePort&amp;quot;,&amp;quot;value&amp;quot;: 30200}]&#39; 이제 Spinnaker로 접속하여 확인합니다.</description>
+    </item>
+    
   </channel>
 </rss>
