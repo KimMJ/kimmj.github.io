@@ -6,7 +6,7 @@
     <description>Recent content in install on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jan 2020 01:20:12 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jan 2020 01:16:52 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
     
@@ -110,7 +110,18 @@ hal version list 작성 기준으로 최신 버전이 1.17.6이므로 이를 설
 hal config version edit --version 1.17.6 halyard를 NodePort로 노출시키기 위해 api와 ui에 base url을 부여합니다.
 hal config security ui edit --override-base-url http://192.168.8.22:30100 hal config security api edit --override-base-url http://192.168.8.22:30200 이제 본격적으로 deploy를 하도록 합니다.
 hal deploy apply 그 후 Spinnaker를 NodePort로 서비스합니다.
-kubectl patch svc spin-deck -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/type&amp;quot;,&amp;quot;value&amp;quot;:&amp;quot;NodePort&amp;quot;}]&#39; kubectl patch svc spin-gate -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/type&amp;quot;,&amp;quot;value&amp;quot;:&amp;quot;NodePort&amp;quot;}]&#39; kubectl patch svc spin-deck -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/ports/0/nodePort&amp;quot;,&amp;quot;value&amp;quot;: 30100}]&#39; kubectl patch svc spin-gate -n spinnaker --type=&#39;json&#39; -p &#39;[{&amp;quot;op&amp;quot;:&amp;quot;replace&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/spec/ports/0/nodePort&amp;quot;,&amp;quot;value&amp;quot;: 30200}]&#39; 이제 Spinnaker로 접속하여 확인합니다.</description>
+kubectl patch svc spin-deck -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#39;[{&amp;#34;op&amp;#34;:&amp;#34;replace&amp;#34;,&amp;#34;path&amp;#34;:&amp;#34;/spec/type&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;NodePort&amp;#34;}]&amp;#39; kubectl patch svc spin-gate -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#39;[{&amp;#34;op&amp;#34;:&amp;#34;replace&amp;#34;,&amp;#34;path&amp;#34;:&amp;#34;/spec/type&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;NodePort&amp;#34;}]&amp;#39; kubectl patch svc spin-deck -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#39;[{&amp;#34;op&amp;#34;:&amp;#34;replace&amp;#34;,&amp;#34;path&amp;#34;:&amp;#34;/spec/ports/0/nodePort&amp;#34;,&amp;#34;value&amp;#34;: 30100}]&amp;#39; kubectl patch svc spin-gate -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#39;[{&amp;#34;op&amp;#34;:&amp;#34;replace&amp;#34;,&amp;#34;path&amp;#34;:&amp;#34;/spec/ports/0/nodePort&amp;#34;,&amp;#34;value&amp;#34;: 30200}]&amp;#39; 이제 Spinnaker로 접속하여 확인합니다.</description>
+    </item>
+    
+    <item>
+      <title>Install in Air Gaped Environment</title>
+      <link>http://kimmj.github.io/spinnaker/installation/install-in-air-gaped-environment/</link>
+      <pubDate>Mon, 20 Jan 2020 01:16:52 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/installation/install-in-air-gaped-environment/</guid>
+      <description>이번에는 인터넷이 되지 않는 환경에서 어떻게 Spinnaker를 설치하는지에 대해 알아보도록 하겠습니다.
+먼저 halyard에서 언제 인터넷과 통신하는지를 대강 추려보도록 하겠습니다.
+ Spinnaker의 version.yaml을 불러와서 최신의 halyard 버전과 최신 Spinnaker의 버전들을 보여줍니다.  gs://halconfig/version.yml   설치하고자 하는 Spinnaker의 버전을 선택하면, 그에 따른 배포에 필요한 yaml들을 불러옵니다.  gs://halconfig/bom/VERSION.yml gs://halconfig/MICRO_SERVICE/TAG.yml   deploy를 하기 위해 Google Cloud Repository에서 이미지를 가지고 옵니다.  gcr.io/spinnaker-marketplace/SERVICE   마지막으로 dependency가 있는 몇가지 서비스를 Google Cloud Repository에서 가지고옵니다.</description>
     </item>
     
     <item>
