@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/spinnaker/installation/</loc>
+    <lastmod>2020-01-10T01:28:34+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/overview/</loc>
     <lastmod>2020-01-10T01:02:39+09:00</lastmod>
   </url>
@@ -55,6 +60,16 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/spinnaker/canaryanalysis/</loc>
+    <lastmod>2020-01-21T01:41:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</loc>
+    <lastmod>2020-01-21T01:08:00+09:00</lastmod>
   </url>
   
   <url>
@@ -110,11 +125,6 @@
   <url>
     <loc>http://kimmj.github.io/hugo/</loc>
     <lastmod>2020-01-10T02:21:23+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/spinnaker/installation/</loc>
-    <lastmod>2020-01-10T01:28:34+09:00</lastmod>
   </url>
   
   <url>
@@ -183,8 +193,33 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/english/himwm/season1/episode13/</loc>
+    <lastmod>2020-01-21T00:17:34+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/english/</loc>
     <lastmod>2020-01-11T00:02:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/canary/</loc>
+    <lastmod>2020-01-21T01:08:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/canary-update/</loc>
+    <lastmod>2020-01-21T01:08:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/spinnaker/</loc>
+    <lastmod>2020-01-21T01:08:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-01-21T01:08:00+09:00</lastmod>
   </url>
   
   <url>
@@ -194,16 +229,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/install/</loc>
-    <lastmod>2020-01-20T01:16:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/spinnaker/</loc>
-    <lastmod>2020-01-20T01:16:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-01-20T01:16:52+09:00</lastmod>
   </url>
   
