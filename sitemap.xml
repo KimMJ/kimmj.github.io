@@ -58,8 +58,23 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ibiza/holiday-plans/</loc>
+    <lastmod>2020-01-22T00:34:37+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/prometheus/federation/</loc>
+    <lastmod>2020-01-21T23:34:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/prometheus/</loc>
+    <lastmod>2020-01-21T23:34:15+09:00</lastmod>
   </url>
   
   <url>
@@ -198,8 +213,33 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/english/himwm/season1/episode14/</loc>
+    <lastmod>2020-01-21T23:25:30+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/english/</loc>
     <lastmod>2020-01-11T00:02:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/holiday/</loc>
+    <lastmod>2020-01-22T00:34:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-01-22T00:34:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/federation/</loc>
+    <lastmod>2020-01-21T23:34:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/prometheus/</loc>
+    <lastmod>2020-01-21T23:34:44+09:00</lastmod>
   </url>
   
   <url>
@@ -214,11 +254,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/spinnaker/</loc>
-    <lastmod>2020-01-21T01:08:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-01-21T01:08:00+09:00</lastmod>
   </url>
   

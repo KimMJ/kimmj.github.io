@@ -110,6 +110,16 @@ hal config provider kubernetes enable CONTEXT=$(kubectl config current-context) 
     </item>
     
     <item>
+      <title>Holiday Plans</title>
+      <link>http://kimmj.github.io/ibiza/holiday-plans/</link>
+      <pubDate>Wed, 22 Jan 2020 00:34:37 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ibiza/holiday-plans/</guid>
+      <description>설 연휴 계획 date : 2020-01-22T00:34:37+09:00
+ 연돈 가보기 블로그에 댓글기능 추가하기 블로그 레이아웃 구성  왼쪽 사이드바를 더 넓게. 오른쪽 여백 생성하여 가운데 정렬이 되도록 배경 설정?   연휴에도 할일 다 하기  </description>
+    </item>
+    
+    <item>
       <title>Choose Your Environment</title>
       <link>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</link>
       <pubDate>Sun, 19 Jan 2020 00:42:56 +0900</pubDate>
@@ -118,6 +128,17 @@ hal config provider kubernetes enable CONTEXT=$(kubectl config current-context) 
       <description>Spinnaker를 배포하는 방법에는 3가지가 있습니다. Kubernetes 환경에 배포하기, local debian으로 배포하기, local git으로 배포하기가 있습니다.
 여기에서는 Kubernetes 환경에 배포하기를 진행할 것입니다.
 ACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACCOUNT 위와같이 설정하면 됩니다. ACCOUNT는 kubernetes cluster를 추가할 때 사용했던 이름을 사용하면 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>Federation</title>
+      <link>http://kimmj.github.io/prometheus/federation/</link>
+      <pubDate>Tue, 21 Jan 2020 23:34:44 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/prometheus/federation/</guid>
+      <description>What is Federation? 영어 의미 그대로는 &amp;ldquo;연합&amp;quot;이라는 뜻입니다. 즉, Prometheus의 Federation은 여러개의 Prometheus에서 Metric을 가져와 계층구조를 만드는 것을 의미합니다.
+위의 그림에서 너무나도 잘 표현이 되어 있습니다. 그림에서 보시면 상위에 있는 Prometheus에서 하위의 Dev, Staging, Production쪽으로 화살표가 간 것을 볼 수 있습니다. 이는 아래에 있는 Prometheus가 http(s)://&amp;lt;url&amp;gt;/federation으로 보여주는 Metric들을 위쪽에 있는 Prometheus에서 scrape하기 때문입니다.
+저의 상황을 설명해드리고 지나가도록 하겠습니다. 저는 Kubernetes Cluster가 Dev(Canary), Staging, Production과 비슷하게 3개 있었습니다. 여기서 Spinnaker를 통해 Dev에 새로운 이미지들을 배포할 것이고, 이에 대한 Metric을 Canary Analysis를 통해 분석하여 Dev로 배포된 이미지가 이전 Staging의 이미지와 어떻게 다른지 등을 점수화하여 Staging 서버에 배포를 할지 말지 결정하도록 해야하는 상황이었습니다.</description>
     </item>
     
     <item>
@@ -315,6 +336,18 @@ Did you see how fired up she was?</description>
 Like just now, when I saw you doing the Chicken Dance out there, I&#39;m not gonna lie to you, big time thunderbolt.
 Robin, care to chime in with anything?
 You know, there&#39;s one little flaw in our plan.</description>
+    </item>
+    
+    <item>
+      <title>Episode14</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode14/</link>
+      <pubDate>Tue, 21 Jan 2020 23:25:30 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode14/</guid>
+      <description>Awkward conversations with middle-aged couples trying to stave off divorce.
+That snuck up on me.
+I mean, the whole point was not to rush into this.
+Honey, Ted has been going out of his mind waiting for this.</description>
     </item>
     
     <item>

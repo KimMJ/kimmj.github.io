@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>federation on Ibiza</title>
+    <link>http://kimmj.github.io/tags/federation/</link>
+    <description>Recent content in federation on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jan 2020 23:34:44 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/federation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Federation</title>
+      <link>http://kimmj.github.io/prometheus/federation/</link>
+      <pubDate>Tue, 21 Jan 2020 23:34:44 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/prometheus/federation/</guid>
+      <description>What is Federation? 영어 의미 그대로는 &amp;ldquo;연합&amp;quot;이라는 뜻입니다. 즉, Prometheus의 Federation은 여러개의 Prometheus에서 Metric을 가져와 계층구조를 만드는 것을 의미합니다.
+위의 그림에서 너무나도 잘 표현이 되어 있습니다. 그림에서 보시면 상위에 있는 Prometheus에서 하위의 Dev, Staging, Production쪽으로 화살표가 간 것을 볼 수 있습니다. 이는 아래에 있는 Prometheus가 http(s)://&amp;lt;url&amp;gt;/federation으로 보여주는 Metric들을 위쪽에 있는 Prometheus에서 scrape하기 때문입니다.
+저의 상황을 설명해드리고 지나가도록 하겠습니다. 저는 Kubernetes Cluster가 Dev(Canary), Staging, Production과 비슷하게 3개 있었습니다. 여기서 Spinnaker를 통해 Dev에 새로운 이미지들을 배포할 것이고, 이에 대한 Metric을 Canary Analysis를 통해 분석하여 Dev로 배포된 이미지가 이전 Staging의 이미지와 어떻게 다른지 등을 점수화하여 Staging 서버에 배포를 할지 말지 결정하도록 해야하는 상황이었습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
