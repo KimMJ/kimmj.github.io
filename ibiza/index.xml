@@ -47,13 +47,13 @@
     </item>
     
     <item>
-      <title>Holiday Plans</title>
-      <link>http://kimmj.github.io/ibiza/holiday-plans/</link>
+      <title>2020 New Year Holiday Plans</title>
+      <link>http://kimmj.github.io/ibiza/2020-new-year-holiday-plans/</link>
       <pubDate>Wed, 22 Jan 2020 00:34:37 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/ibiza/holiday-plans/</guid>
+      <guid>http://kimmj.github.io/ibiza/2020-new-year-holiday-plans/</guid>
       <description>설 연휴 계획 date : 2020-01-22T00:34:37+09:00
- 연돈 가보기 블로그에 댓글기능 추가하기 블로그 레이아웃 구성  왼쪽 사이드바를 더 넓게. 오른쪽 여백 생성하여 가운데 정렬이 되도록 배경 설정?   연휴에도 할일 다 하기  </description>
+ 연돈 가보기 블로그에 댓글기능 추가하기 블로그 레이아웃 구성  왼쪽 사이드바를 더 넓게. 오른쪽 여백 생성하여 가운데 정렬이 되도록 배경 설정? 폴더 구분지을 prefix 추가 active 상태인 폴더는 다른 prefix로 임시 변경   연휴에도 할일 다 하기 Kubernetes localization 확인하기  </description>
     </item>
     
   </channel>

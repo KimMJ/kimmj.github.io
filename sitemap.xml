@@ -58,13 +58,23 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ibiza/holiday-plans/</loc>
+    <loc>http://kimmj.github.io/ibiza/2020-new-year-holiday-plans/</loc>
     <lastmod>2020-01-22T00:34:37+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/tools/tmux/</loc>
+    <lastmod>2020-01-23T21:04:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/tools/</loc>
+    <lastmod>2020-01-23T21:04:04+09:00</lastmod>
   </url>
   
   <url>
@@ -223,12 +233,22 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/holiday/</loc>
-    <lastmod>2020-01-22T00:34:37+09:00</lastmod>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-01-23T21:04:29+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/</loc>
+    <loc>http://kimmj.github.io/tags/tmux/</loc>
+    <lastmod>2020-01-23T21:04:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-01-23T21:04:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/holiday/</loc>
     <lastmod>2020-01-22T00:34:37+09:00</lastmod>
   </url>
   
@@ -299,11 +319,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/hostname/</loc>
-    <lastmod>2020-01-14T01:00:02+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
     <lastmod>2020-01-14T01:00:02+09:00</lastmod>
   </url>
   
