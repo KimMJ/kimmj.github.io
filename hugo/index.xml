@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Hugo에 Comment 추가하기 (Utterance)</title>
+      <link>http://kimmj.github.io/hugo/insert-comment/</link>
+      <pubDate>Fri, 24 Jan 2020 20:56:47 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/hugo/insert-comment/</guid>
+      <description>댓글 서비스 선택 블로그를 운영하는데 관심을 가지기 시작하면서, 기본적으로 jekyll이나 hugo에는 댓글 기능이 없다는 것을 알게 되었습니다. static site를 만드는데 사실 댓글을 지원한다는게 이상한 상황이긴 하지요. 그래도 서드파티의 지원을 받으면 댓글 기능이 가능해집니다. 여러 블로그들을 탐방하며 git page 기능을 사용하는 블로그들에도 댓글이 있는것을 항상 봐왔으니까요.
+따라서 댓글을 어떻게 사용하는지 검색해보게 되었습니다. 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.
+저는 이 hugo 기반 블로그를 만드는 데 큰 도움을 준 https://ryan-han.</description>
+    </item>
+    
+    <item>
       <title>HUGO로 HTML이 되지 않을 때 가능하게 하는 방법</title>
       <link>http://kimmj.github.io/hugo/hugo-with-html/</link>
       <pubDate>Fri, 10 Jan 2020 02:22:34 +0900</pubDate>

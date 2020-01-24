@@ -68,6 +68,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/hugo/insert-comment/</loc>
+    <lastmod>2020-01-24T20:56:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ubuntu/tools/tmux/</loc>
     <lastmod>2020-01-23T21:04:29+09:00</lastmod>
   </url>
@@ -233,8 +238,18 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/hugo/</loc>
+    <lastmod>2020-01-24T20:56:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/</loc>
-    <lastmod>2020-01-23T21:04:29+09:00</lastmod>
+    <lastmod>2020-01-24T20:56:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/utterance/</loc>
+    <lastmod>2020-01-24T20:56:47+09:00</lastmod>
   </url>
   
   <url>
@@ -324,11 +339,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/font/</loc>
-    <lastmod>2020-01-12T16:28:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/hugo/</loc>
     <lastmod>2020-01-12T16:28:31+09:00</lastmod>
   </url>
   

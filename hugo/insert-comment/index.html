@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Ibiza :: Ibiza</title>
+    <title>Hugo에 Comment 추가하기 (Utterance) :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1579867972" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hugo/ibiza/">
+  <body class="" data-url="/hugo/insert-comment/">
     <nav id="sidebar" class="">
 
 
@@ -388,7 +388,7 @@
  
   
     
-      <li data-nav-id="/hugo/insert-comment/" title="Hugo에 Comment 추가하기 (Utterance)" class="dd-item ">
+      <li data-nav-id="/hugo/insert-comment/" title="Hugo에 Comment 추가하기 (Utterance)" class="dd-item active">
         <a href="/hugo/insert-comment/">
         Hugo에 Comment 추가하기 (Utterance)
         
@@ -408,8 +408,8 @@
   
     
     <li data-nav-id="/hugo/ibiza/" title="Ibiza" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/hugo/ibiza/">
@@ -1375,6 +1375,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1389,7 +1391,7 @@
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/hugo/'>Hugo</a> > Ibiza
+            <a href='/'>Ibiza</a> > <a href='/hugo/'>Hugo</a> > Hugo에 Comment 추가하기 (Utterance)
           
          
           
@@ -1400,37 +1402,95 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#댓글-서비스-선택">댓글 서비스 선택</a></li>
+    <li><a href="#적용-방법">적용 방법</a></li>
+    <li><a href="#후기">후기</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/hugo">hugo</a>
+
+  <a class="tag-link" href="/tags/utterance">utterance</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Hugo에 Comment 추가하기 (Utterance)
+            </h1>
           
 
         
 
 
 
-
-	<h3 id="hugo">Hugo</h3>
-<h1 id="ibiza">Ibiza</h1>
-<p>Ibiza는 이 블로그를 만드는 프로젝트입니다.</p>
-
-
-
+<h2 id="댓글-서비스-선택">댓글 서비스 선택</h2>
+<p>블로그를 운영하는데 관심을 가지기 시작하면서, 기본적으로 jekyll이나 hugo에는 댓글 기능이 없다는 것을 알게 되었습니다.
+static site를 만드는데 사실 댓글을 지원한다는게 이상한 상황이긴 하지요.
+그래도 서드파티의 지원을 받으면 댓글 기능이 가능해집니다.
+여러 블로그들을 탐방하며 git page 기능을 사용하는 블로그들에도 댓글이 있는것을 항상 봐왔으니까요.</p>
+<p>따라서 댓글을 어떻게 사용하는지 검색해보게 되었습니다.
+대표적인 것이 <code>Disqus</code> 입니다.
+실제로 많은 사이트들이 <code>Disqus</code>를 기반으로 댓글 기능을 사용합니다.</p>
+<p>저는 이 hugo 기반 블로그를 만드는 데 큰 도움을 준 <a href="https://ryan-han.com/post/etc/creating_static_blog/">https://ryan-han.com/post/etc/creating_static_blog/</a>를 보고 <code>Utterance</code>에 대해 접하게 되었으며
+개발자에게는 너무나도 친숙한 깃허브 기반이라는 점이 끌려서 이 서비스를 선택하게 되었습니다.</p>
+<h2 id="적용-방법">적용 방법</h2>
+<p>적용하는 방법은 너무나도 쉽습니다.</p>
+<ol start="0">
+<li>미리 댓글을 위한 레파지토리를 생각해둡니다(기존에 있는 레파지토리 혹은 댓글만을 위한 레파지토리).
+저는 사이트를 렌더링해주는 <code>kimmj.github.io</code> 레파지토리로 선택하였습니다.</li>
+<li><a href="https://utteranc.es/">https://utteranc.es/</a>에 접속합니다.</li>
+<li>중간쯤에 보이는 <code>utterances app</code> 하이퍼링크를 클릭합니다.</li>
+<li>해당 앱을 적절한 레파지토리에 설치합니다.</li>
+<li>설치한 레파지토리를 1번에서 접속한 사이트에 양식에 맞게 기입합니다.</li>
+<li><code>Blog Post ↔️ Issue Mapping</code> 섹션에서 적절한 것을 선택합니다. 저는 default 옵션을 사용했습니다.</li>
+<li><code>Issue Label</code>은 댓글로 생성된 이슈에 label을 달지, 단다면 어떤 label을 달지 선택하는 것입니다.
+저는 comment로 작성했습니다.</li>
+<li><code>Theme</code>을 선택합니다. 저는 default 옵션을 사용했습니다.</li>
+<li>하단에 생성된 코드를 복사합니다.</li>
+<li>hugo에서 댓글이 보이게 될 위치에 8번에서 복사한 코드를 붙여넣습니다.
+저의 경우 <code>custom-fotter.html</code>이라는 파일에 붙여넣기 했습니다.</li>
+<li>사이트에 제대로 뜨는지 확인합니다.</li>
+</ol>
+<h2 id="후기">후기</h2>
+<p>이렇게 hugo에 댓글 기능을 추가하였습니다.
+생각보다 너무나도 간단했네요.
+이 댓글 기능을 하자고 생각하고 나서 적용까지 5분정도 걸렸던 것 같습니다.
+댓글도 너무나 친숙한 레이아웃이라 정감이 가는 것 같네요.</p>
+<h4 id="reference">Reference</h4>
+<ul>
+<li><a href="https://github.com/Integerous/TIL/blob/master/ETC/Hugo%2BGithub_Page.md">https://github.com/Integerous/TIL/blob/master/ETC/Hugo%2BGithub_Page.md</a></li>
+<li><a href="https://utteranc.es/">https://utteranc.es/</a></li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1675,8 +1735,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1694,6 +1752,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1707,9 +1767,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2369,3 +2426,4 @@
 </script>
   </body>
 </html>
+
