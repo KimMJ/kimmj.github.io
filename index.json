@@ -1,5 +1,33 @@
 [
 {
+	"uri": "http://kimmj.github.io/ubuntu/tools/",
+	"title": "Tools",
+	"tags": [],
+	"description": "",
+	"content": "Ubuntu Tools "
+},
+{
+	"uri": "http://kimmj.github.io/prometheus/",
+	"title": "Prometheus",
+	"tags": [],
+	"description": "",
+	"content": "Prometheus "
+},
+{
+	"uri": "http://kimmj.github.io/spinnaker/canaryanalysis/",
+	"title": "CanaryAnalysis",
+	"tags": [],
+	"description": "",
+	"content": "Spinnaker Canary Analysis Canary Analysis는 Spinnaker에서 자동으로 분석을 통해 새로운 버전에 문제가 없는지 확인해주는 pipeline입니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/kubernetes/installation/",
+	"title": "Install",
+	"tags": [],
+	"description": "",
+	"content": "Kubernetes Install Install Kubernetes on bare-metal\n"
+},
+{
 	"uri": "http://kimmj.github.io/kubernetes/installation/overview/",
 	"title": "Overview",
 	"tags": ["kubernetes", "install", "overview"],
@@ -7,11 +35,46 @@
 	"content": "저의 vm으로 구성한 클러스터를 설명드리고자 합니다.\n Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 2 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Kubernetes 1.17.0 Storage Class: Ceph OS: Ubuntu 18.04.2 Server Internal Network: VirtualBox Host-Only Ethernet Adapter (192.168.x.0/24) External Network: Bridge to adapter (192.168.y.0/24)  한번에 쳐야하는 명령어가 많기 때문에, tmux를 사용해서 여러개의 pane을 생성하고 각각에 대해 ssh로 접속하였습니다.\n"
 },
 {
-	"uri": "http://kimmj.github.io/spinnaker/installation/",
-	"title": "Installation",
+	"uri": "http://kimmj.github.io/kubernetes/",
+	"title": "Kubernetes",
 	"tags": [],
 	"description": "",
-	"content": "Spinnaker Installation spinnaker를 설치해 볼 것입니다.\n쉽지 않았던 여정들을 기록하려고 합니다.\n"
+	"content": "Kubernetes Kubernetes는 deploy, scaling, 그리고 컨테이너화된 애플리케이션의\nmanagement를 자동화 해주는 open source container orchestration engine입니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/hugo/ibiza/",
+	"title": "Ibiza",
+	"tags": [],
+	"description": "",
+	"content": "Hugo Ibiza Ibiza는 이 블로그를 만드는 프로젝트입니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/ubuntu/network/",
+	"title": "Network",
+	"tags": [],
+	"description": "",
+	"content": "Ubuntu Network "
+},
+{
+	"uri": "http://kimmj.github.io/english/himwm/season1/",
+	"title": "Season1",
+	"tags": [],
+	"description": "",
+	"content": "HIMWM Season1 "
+},
+{
+	"uri": "http://kimmj.github.io/english/himwm/",
+	"title": "HIMWM",
+	"tags": [],
+	"description": "",
+	"content": "English How I Met Your Mother How I Met Your Mother(HIMYM)은 2005년부터 2014년까지 9시즌을 했던 시트콤입니다.\n영어로 된 스크립트도 많고 한글 자막도 있으며 최근 Netflix에 올라오기도 했습니다.\n저 또한 이 시트콤을 즐겨 보았던 시청자로, 이번 기회에 영어를 공부하는 데 이 프로그램을 사용하여 다시 한번 정주행하기로 했습니다.\nScript : https://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=how-i-met-your-mother\n"
+},
+{
+	"uri": "http://kimmj.github.io/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": "Hugo fast static website engine\n"
 },
 {
 	"uri": "http://kimmj.github.io/spinnaker/installation/overview/",
@@ -21,6 +84,13 @@
 	"content": "Overview of install Spinnaker 어떻게 Spinnaker를 설치 및 배포하는지 알아보도록 하겠습니다.\n가장 먼저 최소 사양을 확인해보도록 하겠습니다.\n링크 : https://www.spinnaker.io/guides/developer/getting-set-up/#system-requirements\n 램 18 GB CPU 4코어 Ubuntu 14.04, 16.04, 18.04  Spinnaker 자체가 클라우드 환경에만 배포가 가능하기 때문에, 아마도 \u0026ldquo;전체 클라우드를 합하여 저정도면 된다\u0026quot;를 의미하는 것 같습니다.\n설치 방법은 두가지로 나뉩니다.\n 테스트를 목적으로 Helm Chart를 통한 설치 실제로 사용할 목적으로 halyard를 통한 설치  저는 여기서 2번 halyard를 통한 설치를 해보려고 합니다.\n전체적인 프로세스를 먼저 설명드리자면 다음과 같습니다.\n halyard 설치 Cloud Provider(클라우드 제공자) 선택 배포 환경 선택 Storage Service 선택 배포 및 접속 config 백업하기  그리고 저는 다음과 같은 환경에서 테스트를 할 예정입니다.\n Cloud Provider: Kubernetes on-prem (4 VMs)  1 for master (4GB Mem, 1 CPU) 3 for worker (each 8GM Mem, 4 CPU)   Environment: Distributed installation on Kubernetes Storage Service: Minio Deploy and Connect: expose by NodePort OS : Ubuntu 18.04.2 Server  "
 },
 {
+	"uri": "http://kimmj.github.io/spinnaker/",
+	"title": "Spinnaker",
+	"tags": [],
+	"description": "",
+	"content": "CI/CD Spinnaker Spinnaker는 Kubernetes 환경에서 배포 자동화를 위해 만들어진 툴입니다.\n배포하려는 클러스터가 GKE인지, EKS인지, On-Premise 환경인지 상관없이 하나의 툴로 배포하기 위해 만들어졌습니다.\n이 툴 자체가 MSA 구조로 만들어져있습니다.\n"
+},
+{
 	"uri": "http://kimmj.github.io/ibiza/importance-of-record/",
 	"title": "Importance of Record",
 	"tags": ["record", "blog"],
@@ -28,11 +98,18 @@
 	"content": "기록의 중요성 몇개월 전부터 Spinnaker라는 툴을 가지고 일을 하기 시작했다.\n처음 halyard를 통해 deploy하기까지 꽤나 많은 시간을 소요했던 것으로 기억한다. 집에서 하는게 아니라 회사에서 구축을 해야했기 때문에, 프록시와 관련된 설정들이 너무나도 어려웠다. 특히 spinnaker의 docs가 제대로 되어있는 것도 아니기에, 문제가 하나 발생하면 이를 해결하는 데 너무나도 많은 시간이 걸렸다.\n하지만 나의 최대 실수는 바로 기록하지 않은 것이다.\n그렇게 많은 노력끝에 약 한달만에 첫 deploy를 할 수 있었는데, 이 때 했던 설정을 \u0026ldquo;나중에 정리해야지\u0026quot;라는 안일한 생각으로 지금까지 정리를 안하고 있었다.\n요즘들어 회사에서 spinnaker를 사용할 일이 잦아지고, 다른 시료에도 deploy하게되는 일이 많아졌는데 내가 기록을 해놓지 않음으로 인해서 많은 차질이 생기고 있다. 당장만 해도 deploy 자체를 할 수 없으며, 내가 예전에 해 두었던 pipeline 설정들이 다 날아가버려서 지금 복구하는 데 한숨만 나올 뿐이다.\n그 많은 정보들을 정리해두었다면, 로그를 남겨두었다면 이런 일은 발생하지 않았을수도 있다.\n오늘 난 기록의 중요성을 다시 한번 깨달았고, 차곡차곡 이 블로그에 쌓아두기로 마음먹었다. 하루에 하나씩 쓴다는 것은 어려운 일일지 모르지만, 그래도 최대한 자주 기록을 함으로써, 나의 성장에도 도움이 되고 다른 사람들의 암흑같은 여정에 한줄기 빛이 될 수 있으면 좋겠다.\n"
 },
 {
-	"uri": "http://kimmj.github.io/ibiza/",
-	"title": "Ibiza",
+	"uri": "http://kimmj.github.io/ansible/",
+	"title": "Ansible",
 	"tags": [],
 	"description": "",
-	"content": "Ibiza 子曰\n學而時習之 不亦說乎\n배우고 때때로 익히니 이 또한 기쁘지 아니한가.\n"
+	"content": "Ansible Ansible은 자동화를 할 때 사용하는 툴입니다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/ubuntu/",
+	"title": "Ubuntu",
+	"tags": [],
+	"description": "",
+	"content": "Ubuntu Ubuntu에서 배운 것들을 기록하는 공간입니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/",
@@ -95,7 +172,7 @@
 	"title": "Hugo에 Comment 추가하기 (Utterance)",
 	"tags": ["hugo", "utterance"],
 	"description": "",
-	"content": "댓글 서비스 선택 블로그를 운영하는데 관심을 가지기 시작하면서, 기본적으로 jekyll이나 hugo에는 댓글 기능이 없다는 것을 알게 되었습니다. static site를 만드는데 사실 댓글을 지원한다는게 이상한 상황이긴 하지요. 그래도 서드파티의 지원을 받으면 댓글 기능이 가능해집니다. 여러 블로그들을 탐방하며 git page 기능을 사용하는 블로그들에도 댓글이 있는것을 항상 봐왔으니까요.\n따라서 댓글을 어떻게 사용하는지 검색해보게 되었습니다. 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.\n저는 이 hugo 기반 블로그를 만드는 데 큰 도움을 준 https://ryan-han.com/post/etc/creating_static_blog/를 보고 Utterance에 대해 접하게 되었으며 개발자에게는 너무나도 친숙한 깃허브 기반이라는 점이 끌려서 이 서비스를 선택하게 되었습니다.\n적용 방법 적용하는 방법은 너무나도 쉽습니다.\n미리 댓글을 위한 레파지토리를 생각해둡니다(기존에 있는 레파지토리 혹은 댓글만을 위한 레파지토리). 저는 사이트를 렌더링해주는 kimmj.github.io 레파지토리로 선택하였습니다. https://utteranc.es/에 접속합니다. 중간쯤에 보이는 utterances app 하이퍼링크를 클릭합니다. 해당 앱을 적절한 레파지토리에 설치합니다. 설치한 레파지토리를 1번에서 접속한 사이트에 양식에 맞게 기입합니다. Blog Post ↔️ Issue Mapping 섹션에서 적절한 것을 선택합니다. 저는 default 옵션을 사용했습니다. Issue Label은 댓글로 생성된 이슈에 label을 달지, 단다면 어떤 label을 달지 선택하는 것입니다. 저는 comment로 작성했습니다. Theme을 선택합니다. 저는 default 옵션을 사용했습니다. 하단에 생성된 코드를 복사합니다. hugo에서 댓글이 보이게 될 위치에 8번에서 복사한 코드를 붙여넣습니다. 저의 경우 custom-fotter.html이라는 파일에 붙여넣기 했습니다. 사이트에 제대로 뜨는지 확인합니다.  후기 이렇게 hugo에 댓글 기능을 추가하였습니다. 생각보다 너무나도 간단했네요. 이 댓글 기능을 하자고 생각하고 나서 적용까지 5분정도 걸렸던 것 같습니다. 댓글도 너무나 친숙한 레이아웃이라 정감이 가는 것 같네요.\nReference  https://github.com/Integerous/TIL/blob/master/ETC/Hugo%2BGithub_Page.md https://utteranc.es/  "
+	"content": "댓글 서비스 선택 블로그를 운영하는데 관심을 가지기 시작하면서, 기본적으로 jekyll이나 hugo에는 댓글 기능이 없다는 것을 알게 되었습니다. static site를 만드는데 사실 댓글을 지원한다는게 이상한 상황이긴 하지요. 그래도 서드파티의 지원을 받으면 댓글 기능이 가능해집니다. 여러 블로그들을 탐방하며 git page 기능을 사용하는 블로그들에도 댓글이 있는것을 항상 봐왔으니까요.\n따라서 댓글을 어떻게 사용하는지 검색해보게 되었습니다. 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.\n저는 이 hugo 기반 블로그를 만드는 데 큰 도움을 준 https://ryan-han.com/post/etc/creating_static_blog/를 보고 Utterance에 대해 접하게 되었으며 개발자에게는 너무나도 친숙한 깃허브 기반이라는 점이 끌려서 이 서비스를 선택하게 되었습니다.\n적용 방법 적용하는 방법은 너무나도 쉽습니다.\n미리 댓글을 위한 레파지토리를 생각해둡니다(기존에 있는 레파지토리 혹은 댓글만을 위한 레파지토리). 저는 사이트를 렌더링해주는 kimmj.github.io 레파지토리로 선택하였습니다. https://utteranc.es/에 접속합니다. 중간쯤에 보이는 utterances app 하이퍼링크를 클릭합니다. 해당 앱을 적절한 레파지토리에 설치합니다. 설치한 레파지토리를 1번에서 접속한 사이트에 양식에 맞게 기입합니다. Blog Post ↔️ Issue Mapping 섹션에서 적절한 것을 선택합니다. 저는 default 옵션을 사용했습니다. Issue Label은 댓글로 생성된 이슈에 label을 달지, 단다면 어떤 label을 달지 선택하는 것입니다. 저는 comment로 작성했습니다. Theme을 선택합니다. 저는 default 옵션을 사용했습니다. 하단에 생성된 코드를 복사합니다. hugo에서 댓글이 보이게 될 위치에 8번에서 복사한 코드를 붙여넣습니다. 저의 경우 custom-comment.html이라는 파일에 붙여넣기 했습니다. 사이트에 제대로 뜨는지 확인합니다.  후기 이렇게 hugo에 댓글 기능을 추가하였습니다. 생각보다 너무나도 간단했네요. 이 댓글 기능을 하자고 생각하고 나서 적용까지 5분정도 걸렸던 것 같습니다. 댓글도 너무나 친숙한 레이아웃이라 정감이 가는 것 같네요.\nReference  https://github.com/Integerous/TIL/blob/master/ETC/Hugo%2BGithub_Page.md https://utteranc.es/  "
 },
 {
 	"uri": "http://kimmj.github.io/ubuntu/tools/tmux/",
@@ -105,32 +182,11 @@
 	"content": "tmux란? tmux는 하나의 화면에서 여러개의 터미널을 키고싶을 때 사용하는 프로그램으로, ubuntu를 설치하면 기본적으로 설치되는 프로그램입니다.\n다음과 같은 구조를 가집니다.\ntmux ├── session │ ├── windows │ │ ├── pane │ │ └── pane │ └── windows │ ├── pane │ └── pane └── session ├── windows │ ├── pane │ └── pane └── windows ├── pane └── pane session 사용법 먼저 가장 큰 단위인 session을 다루는 방법부터 시작해보도록 하겠습니다.\nsession 생성 tmux 위처럼 tmux를 생성할 수 있습니다. 이 경우 tmux session의 이름은 0부터 차례로 증가하는 숫자로 정의됩니다.\n여기에 session의 이름을 사용자가 정의할 수도 있습니다.\ntmux new -s \u0026lt;my-session\u0026gt; 이렇게 이름을 지어놓으면 용도에 따른 session을 구분할 때 좋습니다.\nsession에 접속하기 이번에는 이미 생성된 session에 접속하는 방법입니다.\ntmux a tmux a -t \u0026lt;my-session\u0026gt; tmux attach tmux attach -t \u0026lt;my-session\u0026gt; -t 옵션을 줘서 이름을 지정할 수도 있고, (임의로 생성된 숫자 또한 마찬가지입니다.) 옵션없이 실행할 경우 가장 최근 열린 session으로 접속합니다.\nsession 확인하기 session어떤 것들이 있는지 보려면 ls를 이용하면 됩니다.\ntmux ls 또는 이미 session에 들어간 상태에서, session들의 리스트를 봄과 동시에 미리보기 화면으로 어떤 작업중이었는지도 볼 수 있습니다.\n[prefix] s 여기서 [prefix]는 일반적으로 Ctrl+b를 의미하며, 사용자에 의해 변경될 수 있습니다.\nsession에서 빠져나오기 session을 빠져나오는 방법에는 두가지가 있습니다.\n 완전히 session을 로그아웃하여 session 삭제하기 session이 계속 돌아가는 상태에서 빠져나오기  1번의 경우는 모든 pane에서 log out을 하면 되므로 생략하도록 하겠습니다. 두번째 session이 계속 돌아가는 상태에서 빠져나오는 방법은 다음과 같습니다.\n[prefix] d session 죽이기 tmux 바깥에서 session을 없애려면 들어가서 로그아웃을 통해 끄는 방법도 있을테지만, kill-session이라는 명령어를 통해서도 session을 없앨 수 있습니다.\ntmux kill-session -t \u0026lt;my-session\u0026gt; session 이름 바꾸기 session에 들어가 있는 상태에서 현재 session의 이름을 변경할 수 있습니다.\n[prefix] $ 그러면 상태표시줄에서 session의 이름을 정해줄 수 있습니다.\nwindows 사용법 windows는 session내의 tab과 같은 존재입니다. session은 큰 사용 목적으로 묶어준다면 windows는 그에따라 tab으로 관리할 필요가 있을 때 사용하면 좋습니다. 물론 session과 pane만 가지고 사용해도 되지만, 그보다 더 유연하게 하려한다면 windows도 알아두는 것이 좋습니다.\nwindows의 생성 windows를 관리하고자 한다면, 우선 session에 들어가 있는 상태여야 합니다.\n[prefix] c 위처럼 windows를 생성하고 나면 아래 tmux 상태표시줄에 0:bash- 1:bash*와 같은 형태로 windows가 추가됨을 볼 수 있습니다. 여기서 *는 현재 사용중인 windows를 의미합니다.\nwindows 움직이기 먼저 기본적으로 앞, 뒤로 움직이는 방법입니다.\n[prefix] n # next window [prefix] p # previous window session에서 미리보기를 사용하여 순회했던 것처럼, windows도 list들을 미리보기형식으로 순회할 수 있습니다.\n[prefix] w windows 이름 변경하기 특정 window에 들어가있는 상태에서 해당 window의 이름을 변경할 수 있습니다.\n[prefix] , windows 죽이기 현재 window를 죽이려면 로그아웃을 하는 방법도 있지만, 강제로 죽이는 방법도 존재합니다.\n[prefix] \u0026amp; panes 다루기 pane이란 tmux의 화면을 분할하는 단위입니다. tmux를 사용하는 가장 큰 이유라고 볼 수 있습니다.\npane 분할하기 [prefix] % # vertical split [prefix] \u0026#34; # horizontal split 위와같은 방법으로 pane을 생성할 수 있습니다.\npane 이동하기 먼저 기본적으로 방향키를 이용하여 움직일 수 있습니다.\n[prefix] \u0026lt;방향키\u0026gt; 일정시간이 지나면 pane내에서의 방향키 입력으로 전환되어 pane을 움직일 수 없으므로 빠르게 움직여줍니다.\npane 위치 바꾸기 pane들을 rotate하는 방법입니다.\n[prefix] ctrl+o # 시계방향으로 회전 [prefix] alt+o # 반시계방향으로 회전 또는 하나를 이동할 수도 있습니다.\n[prefix] { # move the current pane left [prefix] } # move the current pane right pane 크게 보기 pane을 여러개 쓰다가 하나만 크게 보고싶은 경우가 있을 수 있습니다.\n[prefix] z 돌아가는 방법 또한 같은 명령어를 통해 할 수 있습니다.\n[prefix] z pane을 새로운 window로 분할하기 특정 텍스트를 마우스로 복사하거나 여러가지 상황에서 새로운 window로 분할하는 것이 편한 경우가 있습니다.\n[prefix] ! 모든 pane에서 동시에 입력하기 tmux를 통해서 여러개의 서버에 ssh 접속을 한 뒤, 동시에 같은 입력을 하게 할 수도 있습니다.\n[prefix] :set synchronize-panes yes (on) [prefix] :set synchronize-panes no (off) Tips tmux에는 기본 내장된 layout이 있습니다. 이를 통해서 pane들을 resize하지 않고 기본 형식에 맞게 쉽게 변경이 가능합니다. 그 중 가장 자주 사용할 수 있는 것은 다음 두가지입니다.\n[prefix] alt+1 # 수직 [prefix] alt+2 # 수평 Reference  https://gist.github.com/MohamedAlaa/2961058 https://gist.github.com/andreyvit/2921703  "
 },
 {
-	"uri": "http://kimmj.github.io/ubuntu/tools/",
-	"title": "Tools",
-	"tags": [],
-	"description": "",
-	"content": "Ubuntu Tools "
-},
-{
 	"uri": "http://kimmj.github.io/prometheus/federation/",
 	"title": "Federation",
 	"tags": ["prometheus", "federation"],
 	"description": "",
 	"content": "What is Federation? 영어 의미 그대로는 \u0026ldquo;연합\u0026quot;이라는 뜻입니다. 즉, Prometheus의 Federation은 여러개의 Prometheus에서 Metric을 가져와 계층구조를 만드는 것을 의미합니다.\n위의 그림에서 너무나도 잘 표현이 되어 있습니다. 그림에서 보시면 상위에 있는 Prometheus에서 하위의 Dev, Staging, Production쪽으로 화살표가 간 것을 볼 수 있습니다. 이는 아래에 있는 Prometheus가 http(s)://\u0026lt;url\u0026gt;/federation으로 보여주는 Metric들을 위쪽에 있는 Prometheus에서 scrape하기 때문입니다.\n저의 상황을 설명해드리고 지나가도록 하겠습니다. 저는 Kubernetes Cluster가 Dev(Canary), Staging, Production과 비슷하게 3개 있었습니다. 여기서 Spinnaker를 통해 Dev에 새로운 이미지들을 배포할 것이고, 이에 대한 Metric을 Canary Analysis를 통해 분석하여 Dev로 배포된 이미지가 이전 Staging의 이미지와 어떻게 다른지 등을 점수화하여 Staging 서버에 배포를 할지 말지 결정하도록 해야하는 상황이었습니다.\n이 때, Spinnaker의 설정상 Prometheus를 연동하고 나서 Canary Config를 설정할 때 하나의 Prometheus만 바라보도록 할 수 있었습니다. 따라서 여러대의 Promethus의 Metric을 비교하기 위해서는 여러대의 Prometheus가 가지고 있는 Metric을 상위개념의 Prometheus가 scrape하도록 해야했습니다. 어떻게 해야하는지 검색해본 결과 Federation이라는 기능이 있는 것을 알게 되었습니다.\nHow to configure Prometheus Federation Prerequisites 우선 여러대의 Prometheus가 필요합니다. 그리고 이를 하나로 모아줄 또 다른 Prometheus가 필요합니다.\n저의 경우 docker-compose를 통해 Prometheus를 구동하여 다른 서버의 Prometheus Metric을 가져오도록 설정하였습니다. Install에 관해서는 다른 문서를 참고해 주시기 바랍니다.\nConfiguring federation 다음은 공식 사이트에 나온 federation의 구성입니다.\nscrape_configs: - job_name: \u0026#39;federate\u0026#39; scrape_interval: 15s honor_labels: true metrics_path: \u0026#39;/federate\u0026#39; params: \u0026#39;match[]\u0026#39;: - \u0026#39;{job=\u0026#34;prometheus\u0026#34;}\u0026#39; - \u0026#39;{__name__=~\u0026#34;job:.*\u0026#34;}\u0026#39; static_configs: - targets: - \u0026#39;source-prometheus-1:9090\u0026#39; - \u0026#39;source-prometheus-2:9090\u0026#39; - \u0026#39;source-prometheus-3:9090\u0026#39; job_name job_name은 static_configs[0].targets에 적힌 Prometheus Metric에 어떤 job=\u0026quot;\u0026lt;job_name\u0026gt;\u0026quot;을 줄지 결정하는 것입니다. 이를 통해 저는 Canary, Stage 서버를 구분하였습니다.\nscrape_interval 얼마나 자주 Metric을 긁어올 지 결정하는 것입니다.\nmetrics_path 어떤 path에서 Metric을 가져오는지 설정합니다. 보통의 경우 federation으로 설정하면 됩니다.\nparams 실제로 \u0026lt;PrometheusUrl\u0026gt;/federation으로 접속해보면 아무것도 뜨지 않습니다. /federation은 param로 매칭이 되는 결과만 리턴하며, 없을 경우 아무것도 리턴하지 않습니다. 따라서 이는 필수 필드이고, 원하는 job만 가져오게 하거나 {job=~\u0026quot;.+\u0026quot;}와 같은 방법으로 모든 Metric을 가져오게도 할 수 있습니다.\nstatic_configs 어떤 Prometheus에서 Metric을 가져올지 결정하는 것입니다.\nValidation 위와같이 설정을 한 뒤, Prometheus에 접속하여 Targets에 들어가 봅니다. 리스트에 설정한 job_name들이 떠있고, UP인 상태로 있으면 정상적으로 구성이 된 것입니다.\nReference https://prometheus.io/docs/prometheus/latest/federation/\n"
-},
-{
-	"uri": "http://kimmj.github.io/prometheus/",
-	"title": "Prometheus",
-	"tags": [],
-	"description": "",
-	"content": "Prometheus "
-},
-{
-	"uri": "http://kimmj.github.io/spinnaker/canaryanalysis/",
-	"title": "CanaryAnalysis",
-	"tags": [],
-	"description": "",
-	"content": "Spinnaker Canary Analysis Canary Analysis는 Spinnaker에서 자동으로 분석을 통해 새로운 버전에 문제가 없는지 확인해주는 pipeline입니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/",
@@ -154,39 +210,11 @@
 	"content": "이 문서에서는 Master 노드 한대로 클러스터를 구성하는 방법에 대해 알아보도록 하겠습니다.\n먼저, 파드 네트워크에 사용할 add-on을 선정합니다. 그런뒤 kubeadm init을 할 때 필요로 하는 사항이 있는지 확인해야 합니다.\n저는 Calico를 사용할 것입니다. Calico는 kubeadm init에서 --pod-network-cidr=192.168.0.0/16을 해주거나, 나중에 calico.yml 파일에서 적절하게 수정해주어야 한다고 합니다. 저는 Pod Network에 사용될 IP 대역을 10.1.0.0/16 대역을 사용하고자 합니다. 그러기 위해 kubeadm init을 --pod-network-cidr=10.1.0.0/16 옵션을 통해 실행할 것입니다.\nkubeadm init --pod-network-cidr=10.1.0.0/16 몇분 후 설치가 완료될 것입니다. 그러면 아래에 kubeadm join 이라면서 어떻게 다른 node들을 join 시키는지 설명이 되어 있습니다.\n클러스터를 사용하려면 다음과 같은 명령어를 통해서 kubectl에서 접근이 가능하도록 해야합니다.\nmkdir -p $HOME/.kube sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config sudo chown $(id -u):$(id -g) $HOME/.kube/config 그 다음엔 각 worker node로 접속하여 설치시 나왔던 kubeadm join 명령어를 복사하여 입력합니다. 그런 뒤 master node로 접속하여 kubectl get nodes를 입력하고 결과를 확인합니다. 성공했을 경우 node들이 보일 것입니다.\n이제 calico를 설치하도록 합니다.\ncurl -o calico.yaml https://docs.projectcalico.org/v3.8/manifests/calico.yaml 이후 calico.yaml에서 CALICO_IPV4POOL_CIDR 부분을 수정해줍니다.\n- name: CALICO_IPV4POOL_CIDR value: \u0026#34;10.1.0.0/16\u0026#34; Reference https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/\n"
 },
 {
-	"uri": "http://kimmj.github.io/kubernetes/installation/",
-	"title": "Install",
-	"tags": [],
-	"description": "",
-	"content": "Kubernetes Install Install Kubernetes on bare-metal\n"
-},
-{
-	"uri": "http://kimmj.github.io/kubernetes/",
-	"title": "Kubernetes",
-	"tags": [],
-	"description": "",
-	"content": "Kubernetes Kubernetes는 deploy, scaling, 그리고 컨테이너화된 애플리케이션의\nmanagement를 자동화 해주는 open source container orchestration engine입니다.\n"
-},
-{
 	"uri": "http://kimmj.github.io/hugo/ibiza/font-change/",
 	"title": "Font Change",
 	"tags": ["font", "hugo"],
 	"description": "",
 	"content": "Ibiza 프로젝트를 진행하는데 폰트가 마음에 들지 않았습니다. 따라서 저는 폰트를 변경하기로 마음먹었습니다.\n먼저, 폰트 설정을 어디서 하는지 알아낼 필요가 있었습니다.\nfind . | grep font 결과를 보니, theme 폴더 안에 제가 사용하는 hugo-theme-learn 테마에서 static/fonts/ 폴더에 폰트들을 저장해두고 있었습니다. 그렇다면 어느 파일에서 어떤 폰트를 사용한다고 설정할까요?\nhugo-theme-learn폴더로 이동하여 어디에 사용되는지 확인해보았습니다.\ngrep -ri \u0026#34;font\u0026#34; 결과가 길게 나오는데요, 여기서 static/css/theme.css 안에 폰트에 대한 설정을 한 것이 보였습니다. 그 파일을 보니, @font-face라는 설정이 보이네요. 여기서 Work Sans라는 폰트를 불러오고 있었습니다.\n이 폰트를 Noto Sans CJK KR이라는 폰트로 바꾸려고 합니다. 따라서 먼저 폰트를 다운로드 받아야 합니다.\n다운로드 페이지 : https://www.google.com/get/noto/#sans-kore\n여기에서 다운로드 버튼을 눌러 폰트를 다운받습니다.\ncurl -o noto-mono.zip https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKkr-hinted.zip 이를 my-custom-theme 폴더 내의 static/fonts 폴더 안에다가 압축해제할 것입니다.\nmv noto-mono.zip mj-custom-theme/static/fonts unzip noto-mono.zip rm noto-mono.zip README 그러고나서 font-face 설정을 바꾸어 보도록 하겠습니다. 처음에는 이 설정으로 폰트가 정말 바뀌는지 확인해보기 위해 현재 사용중인 폰트의 url 부분을 Noto Mono 폰트로 변경해보았습니다.\n@font-face { font-family: \u0026#39;Work Sans\u0026#39;; font-style: normal; font-weight: 500; src: url(\u0026#34;../fonts/NotoSansMonoCJKkr-Bold.otf?#iefix\u0026#34;) format(\u0026#34;embedded-opentype\u0026#34;), url(\u0026#34;../fonts/NotoSansMonoCJKkr-Bold.otf\u0026#34;) format(\u0026#34;woff\u0026#34;), url(\u0026#34;../fonts/Work_Sans_500.woff2\u0026#34;) format(\u0026#34;woff2\u0026#34;), url(\u0026#34;../fonts/Work_Sans_500.svg#WorkSans\u0026#34;) format(\u0026#34;svg\u0026#34;), url(\u0026#34;../fonts/Work_Sans_500.ttf\u0026#34;) format(\u0026#34;truetype\u0026#34;); } 하지만 예상과 다르게 변경되지 않았습니다. 확인해보니 이는 font-weight이라는 설정때문이었습니다. body에 대한 font-weight은 300으로 설정이 되어있었고, 따라서 제가 설정한 폰트가 아닌 font-weight: 300인 폰트를 선택하게 된 것입니다.\n다시한번 body쪽의 font-weight을 500으로 바꾸어 실험해보았습니다.\nbody { font-family: \u0026#34;Work Sans\u0026#34;, \u0026#34;Helvetica\u0026#34;, \u0026#34;Tahoma\u0026#34;, \u0026#34;Geneva\u0026#34;, \u0026#34;Arial\u0026#34;, sans-serif; font-weight: 500; line-height: 1.6; font-size: 18px !important; } 그러자 제가 원하는 폰트로 변경이 된 것을 확인하였습니다. 다시 위로 돌아가서 @font-face 설정을 저의 폰트 이름으로 변경하고 제가 원래 하려던 폰트로 변경하였습니다. font-weight: 300으로 다시 돌려놓았고, 새로운 폰트를 font-weight: 300으로 주었습니다.\n@font-face { font-family: \u0026#39;Noto Mono Sans CJK KR \u0026#39;; font-style: normal; font-weight: 300; src: url(\u0026#34;../fonts/NotoSansMonoCJKkr-Regular.eot?#iefix\u0026#34;) format(\u0026#34;embedded-opentype\u0026#34;), url(\u0026#34;../fonts/NotoSansMonoCJKkr-Regular.woff\u0026#34;) format(\u0026#34;woff\u0026#34;), url(\u0026#34;../fonts/NotoSansMonoCJKkr-Regular.woff2\u0026#34;) format(\u0026#34;woff2\u0026#34;), url(\u0026#34;../fonts/NotoSansMonoCJKkr-Regular.svg#NotoSansMonoCJKkr\u0026#34;) format(\u0026#34;svg\u0026#34;), url(\u0026#34;../fonts/NotoSansMonoCJKkr-Regular.ttf\u0026#34;) format(\u0026#34;truetype\u0026#34;); } 여기서 보시면 format 속성들이 많은 것을 볼 수 있습니다. 이는 브라우저별로 지원하는, 지원하지 않는 폰트들에 대해서 처리를 해주기 위한 것입니다. 저는 폰트를 다운로드 받았을 때 otf 포멧밖에 없었습니다. 따라서 다른 포멧들로 변경해 줄 필요가 있었습니다.\nfont converter : https://onlinefontconverter.com/\n위 사이트에서 제가 필요한 eot, woff, woff2, svg, ttf 파일들로 변환후 저장했습니다.\n이제 body의 css에서 font-family 맨 앞에 앞서 정의한 폰트를 지정해줍니다.\nbody { font-family: \u0026#34;Noto Sans Mono CJK KR\u0026#34;, \u0026#34;Work Sans\u0026#34;, \u0026#34;Helvetica\u0026#34;, \u0026#34;Tahoma\u0026#34;, \u0026#34;Geneva\u0026#34;, \u0026#34;Arial\u0026#34;, sans-serif; font-weight: 300; line-height: 1.6; font-size: 18px !important; } 확인해보니 제대로 적용이 되었네요.\nbefore font change after font change Reference  https://wit.nts-corp.com/2017/02/13/4258 https://aboooks.tistory.com/153 https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=ko  "
-},
-{
-	"uri": "http://kimmj.github.io/hugo/ibiza/",
-	"title": "Ibiza",
-	"tags": [],
-	"description": "",
-	"content": "Hugo Ibiza Ibiza는 이 블로그를 만드는 프로젝트입니다.\n"
-},
-{
-	"uri": "http://kimmj.github.io/ubuntu/network/",
-	"title": "Network",
-	"tags": [],
-	"description": "",
-	"content": "Ubuntu Network "
 },
 {
 	"uri": "http://kimmj.github.io/english/himwm/season1/episode5/",
@@ -196,46 +224,11 @@
 	"content": "Did I just have a stroke? 여기서 stroke은 뇌졸증이라고 해석할 수 있습니다. 이를 약간은 의역하자면 내가 뇌졸증에 걸렸나?보단 내 머리가 이상해졌나? 이정도로 생각해보면 될 것 같습니다.\nAll the things you do when you know where your next thousand lays are coming from. 이 말 앞에는 마샬, 릴리가 약혼 후에 더욱 성숙해지고자 북클럽에 가입하고, 와인파티를 한다는 내용이 있습니다. 여기서 바니가 위의 대사를 하는데 이러한 것들(성숙해지고자 하는 행동들)은 where your next thousand lays are coming from을 알때나 하는 행동이라는 뜻입니다.\n여기서 lays라는 표현은 sexual encounters 즉, 성적인 만남의 대상들이라는 의미로 해석됩니다.\n결국 이 문장의 의미는 \u0026ldquo;다음 천번의 관계를 누구랑 할 지 알때나 하는 행동이다\u0026quot;라는 의미가 되고, 그 이유는 마샬과 릴리가 약혼을 했다는 사실을 기반으로 한 이야기가 될 것입니다.\nGrandma, Grandpa, don't wait up wait up이라는 의미는 누군가 집에 오기를 자지 않고 기다린다는 뜻입니다. 영영사전에도 다음과 같이 설명이 되어있습니다.\n to not go to bed at night because you are expecting someone to arrive\n 즉, 윗 문장의 의미는 \u0026ldquo;기다리지 말고 자\u0026quot;라는 뜻이겠네요.\nIt's so stupid and arbitrary, isn't it? arbitrary는 \u0026ldquo;임의적인, 제멋대로인\u0026quot;이라는 뜻입니다.\n따라서 이 의미는 \u0026ldquo;이건 너무 멍청하고 제멋대로야. 그렇치 않아?\u0026ldquo;가 되겠네요\nWe're really starting to click with these guys. click with someone은 어떤 사람과 이제 알아가기 시작했다는 말입니다.\n즉, \u0026ldquo;우리는 이제 진짜 이 사람들이랑 친해지기 시작했어\u0026quot;라는 뜻입니다.\nShould've snuck in with Brian Affleck. snuck은 sneak의 과거, 과거분사형입니다. \u0026ldquo;몰래 가다\u0026quot;라는 뜻이 있습니다.\n즉, \u0026ldquo;Brian Affleck이랑 같이 몰래 들어갔어야죠\u0026quot;라는 의미가 되겠네요.\nI heard that in college you flashed a campus tour group on a dare on a dare라는 표현은 \u0026ldquo;감히\u0026rdquo;, \u0026ldquo;무모하게\u0026rdquo; 이런 의미로 사용됩니다.\nNo! And you know why? Becuase, italics, \u0026ldquo;This night did not happen.\u0026rdquo; italics는 영문에서 보통 강조하는 문장이 있을 때 사용하곤 합니다. 따라서 윗 문장에서는 강조하는 부분 앞에 italics라고 표현했네요.\n\u0026ldquo;안돼! 왠줄 알아? 왜냐면 - 이탤릭체로 - 오늘 밤엔 아무일도 없었으니까\u0026quot;라는 의미로 해석이 됩니다.\n"
 },
 {
-	"uri": "http://kimmj.github.io/english/himwm/season1/",
-	"title": "Season1",
+	"uri": "http://kimmj.github.io/english/",
+	"title": "English",
 	"tags": [],
 	"description": "",
-	"content": "HIMWM Season1 "
-},
-{
-	"uri": "http://kimmj.github.io/english/himwm/",
-	"title": "HIMWM",
-	"tags": [],
-	"description": "",
-	"content": "English How I Met Your Mother How I Met Your Mother(HIMYM)은 2005년부터 2014년까지 9시즌을 했던 시트콤입니다.\n영어로 된 스크립트도 많고 한글 자막도 있으며 최근 Netflix에 올라오기도 했습니다.\n저 또한 이 시트콤을 즐겨 보았던 시청자로, 이번 기회에 영어를 공부하는 데 이 프로그램을 사용하여 다시 한번 정주행하기로 했습니다.\nScript : https://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=how-i-met-your-mother\n"
-},
-{
-	"uri": "http://kimmj.github.io/hugo/",
-	"title": "Hugo",
-	"tags": [],
-	"description": "",
-	"content": "Hugo fast static website engine\n"
-},
-{
-	"uri": "http://kimmj.github.io/spinnaker/",
-	"title": "Spinnaker",
-	"tags": [],
-	"description": "",
-	"content": "CI/CD Spinnaker Spinnaker는 Kubernetes 환경에서 배포 자동화를 위해 만들어진 툴입니다.\n배포하려는 클러스터가 GKE인지, EKS인지, On-Premise 환경인지 상관없이 하나의 툴로 배포하기 위해 만들어졌습니다.\n이 툴 자체가 MSA 구조로 만들어져있습니다.\n"
-},
-{
-	"uri": "http://kimmj.github.io/ansible/",
-	"title": "Ansible",
-	"tags": [],
-	"description": "",
-	"content": "Ansible Ansible은 자동화를 할 때 사용하는 툴입니다.\n"
-},
-{
-	"uri": "http://kimmj.github.io/ubuntu/",
-	"title": "Ubuntu",
-	"tags": [],
-	"description": "",
-	"content": "Ubuntu Ubuntu에서 배운 것들을 기록하는 공간입니다.\n"
+	"content": "English "
 },
 {
 	"uri": "http://kimmj.github.io/spinnaker/installation/deploy-and-connect/",
@@ -320,13 +313,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Awkward conversations with middle-aged couples trying to stave off divorce.\nThat snuck up on me.\nI mean, the whole point was not to rush into this.\nHoney, Ted has been going out of his mind waiting for this.\n"
-},
-{
-	"uri": "http://kimmj.github.io/english/",
-	"title": "English",
-	"tags": [],
-	"description": "",
-	"content": "English "
 },
 {
 	"uri": "http://kimmj.github.io/tags/hugo/",
@@ -518,6 +504,13 @@
 	"content": "Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.\n이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.\npipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).\n 위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.\n기본적으로 ${ expression }의 형태를 가지게 됩니다.\n여기서 한가지 기억해 두어야 할 것은 nested가 되지 않는다는 것입니다. 즉, ${ expression1 ${expression2} }가 되지 않습니다.\n언제 pipeline expression을 사용하나요? pipeline expression은 Spinnaker UI로는 해결할 수 없는 문제들을 해결하여줍니다. 예를 들어 특정 stage가 성공했는지의 여부에 따라 stage를 실행할지, 말지 결정하는 방법을 제공해 줍니다. 또는 가장 최근에 deploy된 pod를 알아낸다거나, spinnaker를 통한 canary analysis를 할 때 비교할 두가지 대상을 선택하기 위해 사용할 수도 있습니다.\nSpinnaker는 모든 파이프라인을 JSON 형태로도 관리할 수 있기 때문에, UI에는 없는 값들도 입력할 수 있습니다. 이렇게 좀 더 유연한 방법으로 Spinnaker를 이용하고자 한다면 pipeline expression은 꼭 알아두어야 합니다.\n원하는 값을 어떻게 찾나요? pipeline이 구동되고 나면, Details를 누르고 Source를 눌렀을 때 해당 pipeline의 실행결과가 json형태로 출력됩니다. 이를 VS Code나 다른 편집기를 이용하여, json으로 인식하게 한 뒤, 자동 들여쓰기를 하면 보기 좋게 만들어줍니다.\n이를 통해서 어떤 값을 내가 사용할 지 확인하여 pipeline expression을 작성하면 됩니다.\n내가 작성한 pipeline expression은 어떻게 테스트하나요? 작성한 pipeline expression을 테스트하기 위해 파이프라인을 구동한다는 것은 끔직한 일입니다. Spinnaker는 이를 테스트하기 위해 API endpoint를 제공합니다. 즉, 파이프라인을 다시 구동시키지 않고도 어떤 결과값이 나오는지 확인할 수 있다는 것을 의미합니다.\n테스트 방법은 간단합니다. 다음과 같이 curl을 통해 endpoint로 테스트하면 됩니다.\nPIPELINE_ID=[your_pipeline_id] curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression \\  -H \u0026#34;Content-Type: text/plain\u0026#34; \\  --data \u0026#39;${ #stage(\u0026#34;Deploy\u0026#34;).status.toString() }\u0026#39; 여기서 api.my.spinnaker는 Gate의 Service를 보고 포트를 참조하여 작성하면 됩니다. 기본값은 localhost:8084입니다. 이렇게 하면 Deploy라는 stage가 성공했을 때 다음과 같은 결과를 볼 수 있습니다.\n{\u0026#34;result\u0026#34;: \u0026#34;SUCCEEDED\u0026#34;} Spinnaker가 expression을 통해 결과를 만들어내지 못한다면 다음과 같이 에러와 로그가 발생합니다.\n{ \u0026#34;detail\u0026#34;: { \u0026#34;{ #stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;: [ { \u0026#34;description\u0026#34;: \u0026#34;Failed to evaluate [expression] Expression [{ #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() ] @0: No ending suffix \u0026#39;}\u0026#39; for expression starting at character 0: { #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;, \u0026#34;exceptionType\u0026#34;:\u0026#34;org.springframework.expression.ParseException\u0026#34;, \u0026#34;level\u0026#34;:\u0026#34;ERROR\u0026#34;, \u0026#34;timestamp\u0026#34;:1531254890849 } ] }, \u0026#34;result\u0026#34;:\u0026#34;${#stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34; } Reference Spinnaker Docs: https://www.spinnaker.io/guides/user/pipeline/expressions/\n"
 },
 {
+	"uri": "http://kimmj.github.io/spinnaker/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": "Spinnaker Installation spinnaker를 설치해 볼 것입니다.\n쉽지 않았던 여정들을 기록하려고 합니다.\n"
+},
+{
 	"uri": "http://kimmj.github.io/tags/blog/",
 	"title": "blog",
 	"tags": [],
@@ -607,6 +600,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/ibiza/",
+	"title": "Ibiza",
+	"tags": [],
+	"description": "",
+	"content": "Ibiza 子曰\n學而時習之 不亦說乎\n배우고 때때로 익히니 이 또한 기쁘지 아니한가.\n"
 },
 {
 	"uri": "http://kimmj.github.io/categories/",
