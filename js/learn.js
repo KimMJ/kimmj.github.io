@@ -347,6 +347,17 @@ jQuery(document).ready(function() {
         $(document).ready($.proxy(anchorScrolls, 'init'));
     })(window.document, window.history, window.location);
     
+    $(".active").children("a").children("i").each(function() {
+        $(this).removeClass("fa-angle-right");
+        $(this).addClass("fa-angle-down");
+    })
+
+    $(".active").parents("li").children("a").children("i").each(function() {
+        $(this).removeClass("fa-angle-right");
+        $(this).addClass("fa-angle-down");
+    }
+    )
+
 });
 
 jQuery(window).on('load', function() {
@@ -377,15 +388,7 @@ jQuery(window).on('load', function() {
 
     $(".highlightable").highlight(sessionStorage.getItem('search-value'), { element: 'mark' });
 
-    $(".active").find("i").each(function() {
-        $(this).removeClass("fa-angle-right");
-        $(this).addClass("fa-angle-down");
-    })
 
-    $(".active").parents("li").find("i").each(function() {
-        $(this).removeClass("fa-angle-right");
-        $(this).addClass("fa-angle-down");
-    })
 
     if ($(".padding.highlightable div#chapter").length) {
         $("#utterance").hide();

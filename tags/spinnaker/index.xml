@@ -63,17 +63,6 @@ ACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACC
     </item>
     
     <item>
-      <title>Canary Analysis</title>
-      <link>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</link>
-      <pubDate>Tue, 21 Jan 2020 01:08:00 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</guid>
-      <description>Spinnaker Canary Analysis Spinnaker에는 Canary Analysis라는 자동 분석 도구가 있습니다. Kayenta라는 micro service를 사용하는데, 이를 통해 자동으로 canary deploy가 괜찮은 버전인지를 확인해 줍니다.
-그러나 이 툴은 Spinnaker에서 사용하기에 여간 어려운 것이 아닙니다. 제일 먼저 봉착하는 난관은 바로 &amp;ldquo;어떻게 Canary Analysis를 활성화 하는가?&amp;ldquo;입니다.
-이곳에 방법이 나와있지만, 사실 저도 엄청 많이 헤멨습니다. 저는 bare-metal 환경에서 Kubernetes cluster를 구축하였었고, aws나 azure, gcp는 사용하지 못하는 상황었습니다. (물론 지금도 집에서 VM으로 로컬에 구성하였지만, cloud platform은 언제나 과금때문에 꺼려지게 됩니다.</description>
-    </item>
-    
-    <item>
       <title>Choose a Storage Service</title>
       <link>http://kimmj.github.io/spinnaker/installation/choose-a-storage-service/</link>
       <pubDate>Sun, 19 Jan 2020 00:46:44 +0900</pubDate>
@@ -110,6 +99,17 @@ kubectl patch svc spin-deck -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#
       <description>이번에는 인터넷이 되지 않는 환경에서 어떻게 Spinnaker를 설치하는지에 대해 알아보도록 하겠습니다.
 먼저 halyard에서 언제 인터넷과 통신하는지를 대강 추려보도록 하겠습니다.
  Spinnaker의 version.yaml을 불러와서 최신의 halyard 버전과 최신 Spinnaker의 버전들을 보여줍니다.  gs://halconfig/version.yml   설치하고자 하는 Spinnaker의 버전을 선택하면, 그에 따른 배포에 필요한 yaml들을 불러옵니다.  gs://halconfig/bom/VERSION.yml gs://halconfig/MICRO_SERVICE/TAG.yml   deploy를 하기 위해 Google Cloud Repository에서 이미지를 가지고 옵니다.  gcr.io/spinnaker-marketplace/SERVICE   마지막으로 dependency가 있는 몇가지 서비스를 Google Cloud Repository에서 가지고옵니다.</description>
+    </item>
+    
+    <item>
+      <title>Canary Analysis</title>
+      <link>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</link>
+      <pubDate>Tue, 21 Jan 2020 01:08:00 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</guid>
+      <description>Spinnaker Canary Analysis Spinnaker에는 Canary Analysis라는 자동 분석 도구가 있습니다. Kayenta라는 micro service를 사용하는데, 이를 통해 자동으로 canary deploy가 괜찮은 버전인지를 확인해 줍니다.
+그러나 이 툴은 Spinnaker에서 사용하기에 여간 어려운 것이 아닙니다. 제일 먼저 봉착하는 난관은 바로 &amp;ldquo;어떻게 Canary Analysis를 활성화 하는가?&amp;ldquo;입니다.
+이곳에 방법이 나와있지만, 사실 저도 엄청 많이 헤멨습니다. 저는 bare-metal 환경에서 Kubernetes cluster를 구축하였었고, aws나 azure, gcp는 사용하지 못하는 상황었습니다. (물론 지금도 집에서 VM으로 로컬에 구성하였지만, cloud platform은 언제나 과금때문에 꺼려지게 됩니다.</description>
     </item>
     
     <item>

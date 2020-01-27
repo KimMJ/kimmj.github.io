@@ -99,6 +99,18 @@ hal config provider kubernetes enable CONTEXT=$(kubectl config current-context) 
     </item>
     
     <item>
+      <title>Create a Single Control Plane Cluster With Kubeadm</title>
+      <link>http://kimmj.github.io/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/</link>
+      <pubDate>Sat, 18 Jan 2020 22:27:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/</guid>
+      <description>이 문서에서는 Master 노드 한대로 클러스터를 구성하는 방법에 대해 알아보도록 하겠습니다.
+먼저, 파드 네트워크에 사용할 add-on을 선정합니다. 그런뒤 kubeadm init을 할 때 필요로 하는 사항이 있는지 확인해야 합니다.
+저는 Calico를 사용할 것입니다. Calico는 kubeadm init에서 --pod-network-cidr=192.168.0.0/16을 해주거나, 나중에 calico.yml 파일에서 적절하게 수정해주어야 한다고 합니다. 저는 Pod Network에 사용될 IP 대역을 10.1.0.0/16 대역을 사용하고자 합니다. 그러기 위해 kubeadm init을 --pod-network-cidr=10.1.0.0/16 옵션을 통해 실행할 것입니다.
+kubeadm init --pod-network-cidr=10.1.0.0/16 몇분 후 설치가 완료될 것입니다.</description>
+    </item>
+    
+    <item>
       <title>Ibiza Project</title>
       <link>http://kimmj.github.io/ibiza/ibiza-project/</link>
       <pubDate>Wed, 08 Jan 2020 01:50:49 +0900</pubDate>
@@ -131,51 +143,6 @@ ACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACC
     </item>
     
     <item>
-      <title>Hugo에 Comment 추가하기 (Utterance)</title>
-      <link>http://kimmj.github.io/hugo/insert-comment/</link>
-      <pubDate>Fri, 24 Jan 2020 20:56:47 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/hugo/insert-comment/</guid>
-      <description>댓글 서비스 선택 블로그를 운영하는데 관심을 가지기 시작하면서, 기본적으로 jekyll이나 hugo에는 댓글 기능이 없다는 것을 알게 되었습니다. static site를 만드는데 사실 댓글을 지원한다는게 이상한 상황이긴 하지요. 그래도 서드파티의 지원을 받으면 댓글 기능이 가능해집니다. 여러 블로그들을 탐방하며 git page 기능을 사용하는 블로그들에도 댓글이 있는것을 항상 봐왔으니까요.
-따라서 댓글을 어떻게 사용하는지 검색해보게 되었습니다. 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.
-저는 이 hugo 기반 블로그를 만드는 데 큰 도움을 준 https://ryan-han.</description>
-    </item>
-    
-    <item>
-      <title>Tmux</title>
-      <link>http://kimmj.github.io/ubuntu/tools/tmux/</link>
-      <pubDate>Thu, 23 Jan 2020 21:04:29 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/ubuntu/tools/tmux/</guid>
-      <description>tmux란? tmux는 하나의 화면에서 여러개의 터미널을 키고싶을 때 사용하는 프로그램으로, ubuntu를 설치하면 기본적으로 설치되는 프로그램입니다.
-다음과 같은 구조를 가집니다.
-tmux ├── session │ ├── windows │ │ ├── pane │ │ └── pane │ └── windows │ ├── pane │ └── pane └── session ├── windows │ ├── pane │ └── pane └── windows ├── pane └── pane session 사용법 먼저 가장 큰 단위인 session을 다루는 방법부터 시작해보도록 하겠습니다.
-session 생성 tmux 위처럼 tmux를 생성할 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>Federation</title>
-      <link>http://kimmj.github.io/prometheus/federation/</link>
-      <pubDate>Tue, 21 Jan 2020 23:34:44 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/prometheus/federation/</guid>
-      <description>What is Federation? 영어 의미 그대로는 &amp;ldquo;연합&amp;quot;이라는 뜻입니다. 즉, Prometheus의 Federation은 여러개의 Prometheus에서 Metric을 가져와 계층구조를 만드는 것을 의미합니다.
-위의 그림에서 너무나도 잘 표현이 되어 있습니다. 그림에서 보시면 상위에 있는 Prometheus에서 하위의 Dev, Staging, Production쪽으로 화살표가 간 것을 볼 수 있습니다. 이는 아래에 있는 Prometheus가 http(s)://&amp;lt;url&amp;gt;/federation으로 보여주는 Metric들을 위쪽에 있는 Prometheus에서 scrape하기 때문입니다.
-저의 상황을 설명해드리고 지나가도록 하겠습니다. 저는 Kubernetes Cluster가 Dev(Canary), Staging, Production과 비슷하게 3개 있었습니다. 여기서 Spinnaker를 통해 Dev에 새로운 이미지들을 배포할 것이고, 이에 대한 Metric을 Canary Analysis를 통해 분석하여 Dev로 배포된 이미지가 이전 Staging의 이미지와 어떻게 다른지 등을 점수화하여 Staging 서버에 배포를 할지 말지 결정하도록 해야하는 상황이었습니다.</description>
-    </item>
-    
-    <item>
-      <title>Canary Analysis</title>
-      <link>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</link>
-      <pubDate>Tue, 21 Jan 2020 01:08:00 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</guid>
-      <description>Spinnaker Canary Analysis Spinnaker에는 Canary Analysis라는 자동 분석 도구가 있습니다. Kayenta라는 micro service를 사용하는데, 이를 통해 자동으로 canary deploy가 괜찮은 버전인지를 확인해 줍니다.
-그러나 이 툴은 Spinnaker에서 사용하기에 여간 어려운 것이 아닙니다. 제일 먼저 봉착하는 난관은 바로 &amp;ldquo;어떻게 Canary Analysis를 활성화 하는가?&amp;ldquo;입니다.
-이곳에 방법이 나와있지만, 사실 저도 엄청 많이 헤멨습니다. 저는 bare-metal 환경에서 Kubernetes cluster를 구축하였었고, aws나 azure, gcp는 사용하지 못하는 상황었습니다. (물론 지금도 집에서 VM으로 로컬에 구성하였지만, cloud platform은 언제나 과금때문에 꺼려지게 됩니다.</description>
-    </item>
-    
-    <item>
       <title>Choose a Storage Service</title>
       <link>http://kimmj.github.io/spinnaker/installation/choose-a-storage-service/</link>
       <pubDate>Sun, 19 Jan 2020 00:46:44 +0900</pubDate>
@@ -186,31 +153,6 @@ session 생성 tmux 위처럼 tmux를 생성할 수 있습니다.</description>
 minio를 docker-compose를 통해 쉽게 배포하도록 할 것입니다. 먼저, docker-compose를 설치합니다.
 sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose 그 뒤 minio의 docker-compose.yaml을 만듭니다.
 version: &#39;3.7&#39; services: minio: image: minio/minio:RELEASE.2020-01-16T22-40-29Z volumes: - ./data:/data ports: - &amp;quot;9000:9000&amp;quot; environment: MINIO_ACCESS_KEY: minio MINIO_SECRET_KEY: minio123 command: server /data healthcheck: test: [&amp;quot;CMD&amp;quot;, &amp;quot;curl&amp;quot;, &amp;quot;-f&amp;quot;, &amp;quot;http://localhost:9000/minio/health/live&amp;quot;] interval: 30s timeout: 20s retries: 3 docker-compose를 통해서 deamon으로 실행합니다.</description>
-    </item>
-    
-    <item>
-      <title>Create a Single Control Plane Cluster With Kubeadm</title>
-      <link>http://kimmj.github.io/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/</link>
-      <pubDate>Sat, 18 Jan 2020 22:27:39 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/</guid>
-      <description>이 문서에서는 Master 노드 한대로 클러스터를 구성하는 방법에 대해 알아보도록 하겠습니다.
-먼저, 파드 네트워크에 사용할 add-on을 선정합니다. 그런뒤 kubeadm init을 할 때 필요로 하는 사항이 있는지 확인해야 합니다.
-저는 Calico를 사용할 것입니다. Calico는 kubeadm init에서 --pod-network-cidr=192.168.0.0/16을 해주거나, 나중에 calico.yml 파일에서 적절하게 수정해주어야 한다고 합니다. 저는 Pod Network에 사용될 IP 대역을 10.1.0.0/16 대역을 사용하고자 합니다. 그러기 위해 kubeadm init을 --pod-network-cidr=10.1.0.0/16 옵션을 통해 실행할 것입니다.
-kubeadm init --pod-network-cidr=10.1.0.0/16 몇분 후 설치가 완료될 것입니다.</description>
-    </item>
-    
-    <item>
-      <title>Font Change</title>
-      <link>http://kimmj.github.io/hugo/ibiza/font-change/</link>
-      <pubDate>Sun, 12 Jan 2020 16:28:31 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/hugo/ibiza/font-change/</guid>
-      <description>Ibiza 프로젝트를 진행하는데 폰트가 마음에 들지 않았습니다. 따라서 저는 폰트를 변경하기로 마음먹었습니다.
-먼저, 폰트 설정을 어디서 하는지 알아낼 필요가 있었습니다.
-find . | grep font 결과를 보니, theme 폴더 안에 제가 사용하는 hugo-theme-learn 테마에서 static/fonts/ 폴더에 폰트들을 저장해두고 있었습니다. 그렇다면 어느 파일에서 어떤 폰트를 사용한다고 설정할까요?
-hugo-theme-learn폴더로 이동하여 어디에 사용되는지 확인해보았습니다.
-grep -ri &amp;#34;font&amp;#34; 결과가 길게 나오는데요, 여기서 static/css/theme.css 안에 폰트에 대한 설정을 한 것이 보였습니다. 그 파일을 보니, @font-face라는 설정이 보이네요.</description>
     </item>
     
     <item>
@@ -308,6 +250,51 @@ Just a little joke to lighten up the mood.</description>
     </item>
     
     <item>
+      <title>Hugo에 Comment 추가하기 (Utterance)</title>
+      <link>http://kimmj.github.io/hugo/insert-comment/</link>
+      <pubDate>Fri, 24 Jan 2020 20:56:47 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/hugo/insert-comment/</guid>
+      <description>댓글 서비스 선택 블로그를 운영하는데 관심을 가지기 시작하면서, 기본적으로 jekyll이나 hugo에는 댓글 기능이 없다는 것을 알게 되었습니다. static site를 만드는데 사실 댓글을 지원한다는게 이상한 상황이긴 하지요. 그래도 서드파티의 지원을 받으면 댓글 기능이 가능해집니다. 여러 블로그들을 탐방하며 git page 기능을 사용하는 블로그들에도 댓글이 있는것을 항상 봐왔으니까요.
+따라서 댓글을 어떻게 사용하는지 검색해보게 되었습니다. 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.
+저는 이 hugo 기반 블로그를 만드는 데 큰 도움을 준 https://ryan-han.</description>
+    </item>
+    
+    <item>
+      <title>Tmux</title>
+      <link>http://kimmj.github.io/ubuntu/tools/tmux/</link>
+      <pubDate>Thu, 23 Jan 2020 21:04:29 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/tools/tmux/</guid>
+      <description>tmux란? tmux는 하나의 화면에서 여러개의 터미널을 키고싶을 때 사용하는 프로그램으로, ubuntu를 설치하면 기본적으로 설치되는 프로그램입니다.
+다음과 같은 구조를 가집니다.
+tmux ├── session │ ├── windows │ │ ├── pane │ │ └── pane │ └── windows │ ├── pane │ └── pane └── session ├── windows │ ├── pane │ └── pane └── windows ├── pane └── pane session 사용법 먼저 가장 큰 단위인 session을 다루는 방법부터 시작해보도록 하겠습니다.
+session 생성 tmux 위처럼 tmux를 생성할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Federation</title>
+      <link>http://kimmj.github.io/prometheus/federation/</link>
+      <pubDate>Tue, 21 Jan 2020 23:34:44 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/prometheus/federation/</guid>
+      <description>What is Federation? 영어 의미 그대로는 &amp;ldquo;연합&amp;quot;이라는 뜻입니다. 즉, Prometheus의 Federation은 여러개의 Prometheus에서 Metric을 가져와 계층구조를 만드는 것을 의미합니다.
+위의 그림에서 너무나도 잘 표현이 되어 있습니다. 그림에서 보시면 상위에 있는 Prometheus에서 하위의 Dev, Staging, Production쪽으로 화살표가 간 것을 볼 수 있습니다. 이는 아래에 있는 Prometheus가 http(s)://&amp;lt;url&amp;gt;/federation으로 보여주는 Metric들을 위쪽에 있는 Prometheus에서 scrape하기 때문입니다.
+저의 상황을 설명해드리고 지나가도록 하겠습니다. 저는 Kubernetes Cluster가 Dev(Canary), Staging, Production과 비슷하게 3개 있었습니다. 여기서 Spinnaker를 통해 Dev에 새로운 이미지들을 배포할 것이고, 이에 대한 Metric을 Canary Analysis를 통해 분석하여 Dev로 배포된 이미지가 이전 Staging의 이미지와 어떻게 다른지 등을 점수화하여 Staging 서버에 배포를 할지 말지 결정하도록 해야하는 상황이었습니다.</description>
+    </item>
+    
+    <item>
+      <title>Canary Analysis</title>
+      <link>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</link>
+      <pubDate>Tue, 21 Jan 2020 01:08:00 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/spinnaker/canaryanalysis/canary-analysis/</guid>
+      <description>Spinnaker Canary Analysis Spinnaker에는 Canary Analysis라는 자동 분석 도구가 있습니다. Kayenta라는 micro service를 사용하는데, 이를 통해 자동으로 canary deploy가 괜찮은 버전인지를 확인해 줍니다.
+그러나 이 툴은 Spinnaker에서 사용하기에 여간 어려운 것이 아닙니다. 제일 먼저 봉착하는 난관은 바로 &amp;ldquo;어떻게 Canary Analysis를 활성화 하는가?&amp;ldquo;입니다.
+이곳에 방법이 나와있지만, 사실 저도 엄청 많이 헤멨습니다. 저는 bare-metal 환경에서 Kubernetes cluster를 구축하였었고, aws나 azure, gcp는 사용하지 못하는 상황었습니다. (물론 지금도 집에서 VM으로 로컬에 구성하였지만, cloud platform은 언제나 과금때문에 꺼려지게 됩니다.</description>
+    </item>
+    
+    <item>
       <title>Episode10</title>
       <link>http://kimmj.github.io/english/himwm/season1/episode10/</link>
       <pubDate>Fri, 17 Jan 2020 00:06:57 +0900</pubDate>
@@ -322,58 +309,6 @@ You&#39;ve moved on. I&#39;ve moved on.</description>
     </item>
     
     <item>
-      <title>Episode11</title>
-      <link>http://kimmj.github.io/english/himwm/season1/episode11/</link>
-      <pubDate>Sat, 18 Jan 2020 19:44:05 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himwm/season1/episode11/</guid>
-      <description>She seems like she might be into me.
-I&#39;ve moved up in the world.
-Oh, well, my word.
-Can we swing by the aprtment so I can change?
-Ted, Derek stood me up.
-What are the odds?
-Oh, nuts.
-Give it a rest, Ted.</description>
-    </item>
-    
-    <item>
-      <title>Episode12</title>
-      <link>http://kimmj.github.io/english/himwm/season1/episode12/</link>
-      <pubDate>Mon, 20 Jan 2020 01:13:47 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himwm/season1/episode12/</guid>
-      <description>We never really clicked.
-Tehy were buried in a shallow grave.
-I&#39;m just saying that it&#39;s my wedding, too, and I should have a say in it.
-Did you see how fired up she was?</description>
-    </item>
-    
-    <item>
-      <title>Episode13</title>
-      <link>http://kimmj.github.io/english/himwm/season1/episode13/</link>
-      <pubDate>Tue, 21 Jan 2020 00:17:34 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himwm/season1/episode13/</guid>
-      <description>It was her big break.
-Like just now, when I saw you doing the Chicken Dance out there, I&#39;m not gonna lie to you, big time thunderbolt.
-Robin, care to chime in with anything?
-You know, there&#39;s one little flaw in our plan.</description>
-    </item>
-    
-    <item>
-      <title>Episode14</title>
-      <link>http://kimmj.github.io/english/himwm/season1/episode14/</link>
-      <pubDate>Tue, 21 Jan 2020 23:25:30 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himwm/season1/episode14/</guid>
-      <description>Awkward conversations with middle-aged couples trying to stave off divorce.
-That snuck up on me.
-I mean, the whole point was not to rush into this.
-Honey, Ted has been going out of his mind waiting for this.</description>
-    </item>
-    
-    <item>
       <title>Change Hostname</title>
       <link>http://kimmj.github.io/ubuntu/change-hostname/</link>
       <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>
@@ -382,6 +317,19 @@ Honey, Ted has been going out of his mind waiting for this.</description>
       <description>hostname을 바꾸는 일은 흔치 않지만 최초 셋업할 때 많이 사용하곤 합니다.
 # hostnamectl set-hostname &amp;lt;host name&amp;gt; hostnamectl set-hostname wonderland 변경 후 터미널을 끄고 재접속을 하면 변경된 사항을 볼 수 있습니다.
 hostname </description>
+    </item>
+    
+    <item>
+      <title>Font Change</title>
+      <link>http://kimmj.github.io/hugo/ibiza/font-change/</link>
+      <pubDate>Sun, 12 Jan 2020 16:28:31 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/hugo/ibiza/font-change/</guid>
+      <description>Ibiza 프로젝트를 진행하는데 폰트가 마음에 들지 않았습니다. 따라서 저는 폰트를 변경하기로 마음먹었습니다.
+먼저, 폰트 설정을 어디서 하는지 알아낼 필요가 있었습니다.
+find . | grep font 결과를 보니, theme 폴더 안에 제가 사용하는 hugo-theme-learn 테마에서 static/fonts/ 폴더에 폰트들을 저장해두고 있었습니다. 그렇다면 어느 파일에서 어떤 폰트를 사용한다고 설정할까요?
+hugo-theme-learn폴더로 이동하여 어디에 사용되는지 확인해보았습니다.
+grep -ri &amp;#34;font&amp;#34; 결과가 길게 나오는데요, 여기서 static/css/theme.css 안에 폰트에 대한 설정을 한 것이 보였습니다. 그 파일을 보니, @font-face라는 설정이 보이네요.</description>
     </item>
     
     <item>
@@ -455,6 +403,58 @@ git clone https://github.com/stackhpc/ansible-role-libvirt-vm 테스트 환경 �
  즉, 직접 이 파일을 수정해서 sudo 권한을 주지 말고, /etc/sudoers.d/ 폴더 내에 파일을 추가하라는 의미입니다.
 이 곳에는 /etc/sudoers와 마찬가지로 계정에 대한 설정을 추가할 수 있습니다. 그리고 /etc/sudoers에서는 &amp;ldquo;NOPASSWD&amp;quot;라는 옵션을 주어 password없이 타 계정의 권한을 가지게 만들 수 있습니다.
 이 두가지를 종합하여 내 linux 계정이 sudo 명령어를 입력할 때, 즉 root 권한을 가지게 될 때 password를 입력하지 않도록 설정할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Episode11</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode11/</link>
+      <pubDate>Sat, 18 Jan 2020 19:44:05 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode11/</guid>
+      <description>She seems like she might be into me.
+I&#39;ve moved up in the world.
+Oh, well, my word.
+Can we swing by the aprtment so I can change?
+Ted, Derek stood me up.
+What are the odds?
+Oh, nuts.
+Give it a rest, Ted.</description>
+    </item>
+    
+    <item>
+      <title>Episode12</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode12/</link>
+      <pubDate>Mon, 20 Jan 2020 01:13:47 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode12/</guid>
+      <description>We never really clicked.
+Tehy were buried in a shallow grave.
+I&#39;m just saying that it&#39;s my wedding, too, and I should have a say in it.
+Did you see how fired up she was?</description>
+    </item>
+    
+    <item>
+      <title>Episode13</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode13/</link>
+      <pubDate>Tue, 21 Jan 2020 00:17:34 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode13/</guid>
+      <description>It was her big break.
+Like just now, when I saw you doing the Chicken Dance out there, I&#39;m not gonna lie to you, big time thunderbolt.
+Robin, care to chime in with anything?
+You know, there&#39;s one little flaw in our plan.</description>
+    </item>
+    
+    <item>
+      <title>Episode14</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode14/</link>
+      <pubDate>Tue, 21 Jan 2020 23:25:30 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode14/</guid>
+      <description>Awkward conversations with middle-aged couples trying to stave off divorce.
+That snuck up on me.
+I mean, the whole point was not to rush into this.
+Honey, Ted has been going out of his mind waiting for this.</description>
     </item>
     
   </channel>

@@ -187,9 +187,9 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     background-color: #322A38;
     position: fixed;
     top: 0;
-    width: 300px;
+    width: 400px;
     bottom: 0;
-    left: 0;
+    left: 0px;
     font-weight: 400;
     font-size: 15px;
 }
@@ -272,7 +272,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #sidebar ul.topics ul ul {
     padding-bottom: 0;
 }
-#sidebar ul.topics li.parent ul, #sidebar ul.topics > li.active ul {
+#sidebar ul.topics li.parent > ul {
     display: block;
 }
 #sidebar ul.topics > li > a {
@@ -334,7 +334,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #body {
     position: relative;
-    margin-left: 300px;
+    margin-left: 400px;
+    margin-right: 200px;
     min-height: 100%;
 }
 #body img, #body .video-container {
@@ -1028,16 +1029,16 @@ td {
 }
 @media only all and (max-width: 59.938em) {
     #sidebar {
-        width: 230px;
+        width: 300px;
     }
     #body {
-        margin-left: 230px;
+        margin-left: 300px;
     }
 }
 @media only all and (max-width: 47.938em) {
     #sidebar {
-        width: 230px;
-        left: -230px;
+        width: 300px;
+        left: -300px;
     }
     #body {
         margin-left: 0;
@@ -1050,7 +1051,7 @@ td {
         left: 0;
     }
     .sidebar-hidden #body {
-        margin-left: 230px;
+        margin-left: 300px;
         overflow: hidden;
     }
     .sidebar-hidden #overlay {
