@@ -347,16 +347,13 @@ jQuery(document).ready(function() {
         $(document).ready($.proxy(anchorScrolls, 'init'));
     })(window.document, window.history, window.location);
     
-    $(".active").children("a").children("i").each(function() {
-        $(this).removeClass("fa-angle-right");
-        $(this).addClass("fa-angle-down");
+    $(".active").children("a").children("i.fa-angle-right").each(function() {
+        $(this).css("transform", "rotate(90deg)")
     })
 
-    $(".active").parents("li").children("a").children("i").each(function() {
-        $(this).removeClass("fa-angle-right");
-        $(this).addClass("fa-angle-down");
-    }
-    )
+    $(".active").parents("li").children("a").children("i.fa-angle-right").each(function() {
+        $(this).css("transform", "rotate(90deg)")
+    })
 
 });
 
