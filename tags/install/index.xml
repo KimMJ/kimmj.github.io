@@ -6,10 +6,23 @@
     <description>Recent content in install on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2020 01:16:52 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 18:00:24 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install Prometheus</title>
+      <link>http://kimmj.github.io/prometheus/install/</link>
+      <pubDate>Thu, 30 Jan 2020 18:00:24 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/prometheus/install/</guid>
+      <description>Prometheus Prometheus는 opensource monitoring system입니다. 음악을 하는 사람들이 많이 이용하는 사이트인 SoundCloud에서 개발된 오픈소스입니다.
+PromQL이라는 Query문을 사용하여 metric을 수집할 수 있습니다. 자세한 내용은 나중에 따로 포스트를 작성하도록 하겠습니다.
+이 문서에서는 docker-compose를 통해 간단하게 prometheus를 설치해볼 것입니다. 또한 prometheus와 뗄레야 뗄 수 없는 단짝 Grafana도 함께 설치할 것입니다.
+Prometheus의 설치 제가 docker-compose를 선호하는 이유는 너무나도 간단하게, dependency가 있는 어플리케이션을 설치할 수 있기 때문입니다. 아래에 예시에서도 잘 드러나있습니다.
+저는 monitoring/ 폴더 아래에 docker-compose.</description>
+    </item>
     
     <item>
       <title>Overview</title>

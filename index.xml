@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Install Prometheus</title>
+      <link>http://kimmj.github.io/prometheus/install/</link>
+      <pubDate>Thu, 30 Jan 2020 18:00:24 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/prometheus/install/</guid>
+      <description>Prometheus Prometheus는 opensource monitoring system입니다. 음악을 하는 사람들이 많이 이용하는 사이트인 SoundCloud에서 개발된 오픈소스입니다.
+PromQL이라는 Query문을 사용하여 metric을 수집할 수 있습니다. 자세한 내용은 나중에 따로 포스트를 작성하도록 하겠습니다.
+이 문서에서는 docker-compose를 통해 간단하게 prometheus를 설치해볼 것입니다. 또한 prometheus와 뗄레야 뗄 수 없는 단짝 Grafana도 함께 설치할 것입니다.
+Prometheus의 설치 제가 docker-compose를 선호하는 이유는 너무나도 간단하게, dependency가 있는 어플리케이션을 설치할 수 있기 때문입니다. 아래에 예시에서도 잘 드러나있습니다.
+저는 monitoring/ 폴더 아래에 docker-compose.</description>
+    </item>
+    
+    <item>
       <title>Overview</title>
       <link>http://kimmj.github.io/kubernetes/installation/overview/</link>
       <pubDate>Tue, 14 Jan 2020 01:42:53 +0900</pubDate>
@@ -257,6 +270,17 @@ Just a little joke to lighten up the mood.</description>
     </item>
     
     <item>
+      <title>Controllers</title>
+      <link>http://kimmj.github.io/kubernetes/concepts/controllers/</link>
+      <pubDate>Thu, 30 Jan 2020 18:26:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/concepts/controllers/</guid>
+      <description>Contents 이 포스트에서는 Kubernetes의 Controller들에 대해서 알아보도록 하겠습니다. 가장 작은 단위인 Container부터, 상위 개념인 Deployment, StatefulSet까지 다루어 보도록 하겠습니다.
+ Containers Pods ReplicaSets Deployments StatefulSets  Monolithic vs. Microservice 우선 Monolithic과 Microservice에 대해서 짚고 넘어가도록 하겠습니다.
+Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.</description>
+    </item>
+    
+    <item>
       <title>Hugo에 Comment 추가하기 (Utterance)</title>
       <link>http://kimmj.github.io/hugo/insert-comment/</link>
       <pubDate>Fri, 24 Jan 2020 20:56:47 +0900</pubDate>
@@ -285,7 +309,7 @@ session 생성 tmux 위처럼 tmux를 생성할 수 있습니다.</description>
       <pubDate>Tue, 21 Jan 2020 23:34:44 +0900</pubDate>
       
       <guid>http://kimmj.github.io/prometheus/federation/</guid>
-      <description>What is Federation? 영어 의미 그대로는 &amp;ldquo;연합&amp;quot;이라는 뜻입니다. 즉, Prometheus의 Federation은 여러개의 Prometheus에서 Metric을 가져와 계층구조를 만드는 것을 의미합니다.
+      <description>What is Federation 영어 의미 그대로는 &amp;ldquo;연합&amp;quot;이라는 뜻입니다. 즉, Prometheus의 Federation은 여러개의 Prometheus에서 Metric을 가져와 계층구조를 만드는 것을 의미합니다.
 위의 그림에서 너무나도 잘 표현이 되어 있습니다. 그림에서 보시면 상위에 있는 Prometheus에서 하위의 Dev, Staging, Production쪽으로 화살표가 간 것을 볼 수 있습니다. 이는 아래에 있는 Prometheus가 http(s)://&amp;lt;url&amp;gt;/federation으로 보여주는 Metric들을 위쪽에 있는 Prometheus에서 scrape하기 때문입니다.
 저의 상황을 설명해드리고 지나가도록 하겠습니다. 저는 Kubernetes Cluster가 Dev(Canary), Staging, Production과 비슷하게 3개 있었습니다. 여기서 Spinnaker를 통해 Dev에 새로운 이미지들을 배포할 것이고, 이에 대한 Metric을 Canary Analysis를 통해 분석하여 Dev로 배포된 이미지가 이전 Staging의 이미지와 어떻게 다른지 등을 점수화하여 Staging 서버에 배포를 할지 말지 결정하도록 해야하는 상황이었습니다.</description>
     </item>
@@ -494,6 +518,18 @@ We bust on each other.
 It&#39;s a date.
 Where does she get off?
 Stop being sarcastic.</description>
+    </item>
+    
+    <item>
+      <title>Episode17</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode17/</link>
+      <pubDate>Thu, 30 Jan 2020 23:49:27 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode17/</guid>
+      <description>Marshall, sidebar.
+Try to keep up.
+Not even Old Reliable.
+Break a leg.</description>
     </item>
     
   </channel>

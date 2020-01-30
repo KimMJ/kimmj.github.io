@@ -1,0 +1,2668 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="description" content="Do Learn">
+<meta name="author" content="Myeongjin Kim">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>Install Prometheus :: Ibiza</title>
+
+    
+    <link href="/css/nucleus.css?1580405530" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1580405530" rel="stylesheet">
+    <link href="/css/hybrid.css?1580405530" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1580405530" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1580405530" rel="stylesheet">
+    <link href="/css/auto-complete.css?1580405530" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1580405530" rel="stylesheet">
+    <link href="/css/theme.css?1580405530" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1580405530" rel="stylesheet">
+    
+      <link href="/css/theme-mine.css?1580405530" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1580405530"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/prometheus/install/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+<img src="https://avatars3.githubusercontent.com/u/6358016?s=460&v=4" style="border-radius: 50%"  width="50%" height="50%"/>
+</div>
+<p style="color: white">Ibiza</p>
+<p style="color: white">꾸준하게, 오랫동안, 열심히</p>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1580405530"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1580405530"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/kimmj.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1580405530"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ibiza/" title="Ibiza" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ibiza/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ibiza
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/importance-of-record/" title="Importance of Record" class="dd-item ">
+        <a href="/ibiza/importance-of-record/">
+        <i class='fas fa-minus'></i>&nbsp;Importance of Record
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/2020-plan/" title="2020 Plan" class="dd-item ">
+        <a href="/ibiza/2020-plan/">
+        <i class='fas fa-minus'></i>&nbsp;2020 Plan
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/ibiza-project/" title="Ibiza Project" class="dd-item ">
+        <a href="/ibiza/ibiza-project/">
+        <i class='fas fa-minus'></i>&nbsp;Ibiza Project
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/2020-new-year-holiday-plans/" title="2020 New Year Holiday Plans" class="dd-item ">
+        <a href="/ibiza/2020-new-year-holiday-plans/">
+        <i class='fas fa-minus'></i>&nbsp;2020 New Year Holiday Plans
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/prometheus/" title="Prometheus" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/prometheus/">
+          <i class='fas fa-angle-right'></i>&nbsp;Prometheus
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/prometheus/install/" title="Install Prometheus" class="dd-item active">
+        <a href="/prometheus/install/">
+        <i class='fas fa-minus'></i>&nbsp;Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/prometheus/federation/" title="Federation" class="dd-item ">
+        <a href="/prometheus/federation/">
+        <i class='fas fa-minus'></i>&nbsp;Federation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/">
+          <i class='fas fa-angle-right'></i>&nbsp;Kubernetes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/installation/" title="Install" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/installation/">
+          <i class='fas fa-angle-right'></i>&nbsp;Install
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/installation/overview/" title="Overview" class="dd-item ">
+        <a href="/kubernetes/installation/overview/">
+        <i class='fas fa-minus'></i>&nbsp;Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/installation/install-kubeadm/" title="Install Kubeadm" class="dd-item ">
+        <a href="/kubernetes/installation/install-kubeadm/">
+        <i class='fas fa-minus'></i>&nbsp;Install Kubeadm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/" title="Create a Single Control Plane Cluster With Kubeadm" class="dd-item ">
+        <a href="/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/">
+        <i class='fas fa-minus'></i>&nbsp;Create a Single Control Plane Cluster With Kubeadm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/concepts/" title="Concepts" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/concepts/">
+          <i class='fas fa-angle-right'></i>&nbsp;Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/concepts/controllers/" title="Controllers" class="dd-item ">
+        <a href="/kubernetes/concepts/controllers/">
+        <i class='fas fa-minus'></i>&nbsp;Controllers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo/" title="Hugo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hugo/">
+          <i class='fas fa-angle-right'></i>&nbsp;Hugo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo/ibiza/" title="Ibiza" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hugo/ibiza/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ibiza
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/ibiza/font-change/" title="Font Change" class="dd-item ">
+        <a href="/hugo/ibiza/font-change/">
+        <i class='fas fa-minus'></i>&nbsp;Font Change
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/insert-comment/" title="Hugo에 Comment 추가하기 (Utterance)" class="dd-item ">
+        <a href="/hugo/insert-comment/">
+        <i class='fas fa-minus'></i>&nbsp;Hugo에 Comment 추가하기 (Utterance)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/hugo-with-html/" title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class="dd-item ">
+        <a href="/hugo/hugo-with-html/">
+        <i class='fas fa-minus'></i>&nbsp;hugo with html
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/" title="Spinnaker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/">
+          <i class='fas fa-angle-right'></i>&nbsp;Spinnaker
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/installation/" title="Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/installation/">
+          <i class='fas fa-angle-right'></i>&nbsp;Installation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/overview/" title="Overview" class="dd-item ">
+        <a href="/spinnaker/installation/overview/">
+        <i class='fas fa-minus'></i>&nbsp;Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/install-halyard/" title="Install Halyard" class="dd-item ">
+        <a href="/spinnaker/installation/install-halyard/">
+        <i class='fas fa-minus'></i>&nbsp;Install Halyard
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/choose-cloud-providers/" title="Choose Cloud Providers" class="dd-item ">
+        <a href="/spinnaker/installation/choose-cloud-providers/">
+        <i class='fas fa-minus'></i>&nbsp;Choose Cloud Providers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/choose-your-environment/" title="Choose Your Environment" class="dd-item ">
+        <a href="/spinnaker/installation/choose-your-environment/">
+        <i class='fas fa-minus'></i>&nbsp;Choose Your Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/choose-a-storage-service/" title="Choose a Storage Service" class="dd-item ">
+        <a href="/spinnaker/installation/choose-a-storage-service/">
+        <i class='fas fa-minus'></i>&nbsp;Choose a Storage Service
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/deploy-and-connect/" title="Deploy and Connect" class="dd-item ">
+        <a href="/spinnaker/installation/deploy-and-connect/">
+        <i class='fas fa-minus'></i>&nbsp;Deploy and Connect
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/install-in-air-gaped-environment/" title="Install in Air Gaped Environment" class="dd-item ">
+        <a href="/spinnaker/installation/install-in-air-gaped-environment/">
+        <i class='fas fa-minus'></i>&nbsp;Install in Air Gaped Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/canaryanalysis/" title="CanaryAnalysis" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/canaryanalysis/">
+          <i class='fas fa-angle-right'></i>&nbsp;CanaryAnalysis
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/canaryanalysis/canary-analysis/" title="Canary Analysis" class="dd-item ">
+        <a href="/spinnaker/canaryanalysis/canary-analysis/">
+        <i class='fas fa-minus'></i>&nbsp;Canary Analysis
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/tips/" title="Tips" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/tips/">
+          <i class='fas fa-angle-right'></i>&nbsp;Tips
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/tips/pipeline-expressions/" title="Pipeline Expressions" class="dd-item ">
+        <a href="/spinnaker/tips/pipeline-expressions/">
+        <i class='fas fa-minus'></i>&nbsp;Pipeline Expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ansible/" title="Ansible" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ansible/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ansible
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ansible/create-vm-with-ansible-libvirt/" title="Create Vm With Ansible Libvirt" class="dd-item ">
+        <a href="/ansible/create-vm-with-ansible-libvirt/">
+        <i class='fas fa-minus'></i>&nbsp;Create Vm With Ansible Libvirt
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/" title="Ubuntu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ubuntu
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/tools/" title="Tools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/tools/">
+          <i class='fas fa-angle-right'></i>&nbsp;Tools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/tools/tmux/" title="Tmux" class="dd-item ">
+        <a href="/ubuntu/tools/tmux/">
+        <i class='fas fa-minus'></i>&nbsp;Tmux
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/network/" title="Network" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/network/">
+          <i class='fas fa-angle-right'></i>&nbsp;Network
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/change-hostname/" title="Change Hostname" class="dd-item ">
+        <a href="/ubuntu/change-hostname/">
+        <i class='fas fa-minus'></i>&nbsp;Change Hostname
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/unattended-ubuntu/" title="Unattended Ubuntu" class="dd-item ">
+        <a href="/ubuntu/unattended-ubuntu/">
+        <i class='fas fa-minus'></i>&nbsp;Unattended Ubuntu
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/how-to-edit-boot-parameter-during-install/" title="How to Edit Boot Parameter During Install" class="dd-item ">
+        <a href="/ubuntu/how-to-edit-boot-parameter-during-install/">
+        <i class='fas fa-minus'></i>&nbsp;How to Edit Boot Parameter During Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/how-to-use-sudo-without-password/" title="How to Use Sudo Without Password" class="dd-item ">
+        <a href="/ubuntu/how-to-use-sudo-without-password/">
+        <i class='fas fa-minus'></i>&nbsp;How to Use Sudo Without Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/english/" title="English" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/">
+          <i class='fas fa-angle-right'></i>&nbsp;English
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/english/himwm/" title="HIMWM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/himwm/">
+          <i class='fas fa-angle-right'></i>&nbsp;HIMWM
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/english/himwm/season1/" title="Season1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/himwm/season1/">
+          <i class='fas fa-angle-right'></i>&nbsp;Season1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode5/" title="Episode5" class="dd-item ">
+        <a href="/english/himwm/season1/episode5/">
+        <i class='fas fa-minus'></i>&nbsp;Episode5
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode6/" title="Episode6" class="dd-item ">
+        <a href="/english/himwm/season1/episode6/">
+        <i class='fas fa-minus'></i>&nbsp;Episode6
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode7/" title="Episode7" class="dd-item ">
+        <a href="/english/himwm/season1/episode7/">
+        <i class='fas fa-minus'></i>&nbsp;Episode7
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode8/" title="Episode8" class="dd-item ">
+        <a href="/english/himwm/season1/episode8/">
+        <i class='fas fa-minus'></i>&nbsp;Episode8
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode9/" title="Episode9" class="dd-item ">
+        <a href="/english/himwm/season1/episode9/">
+        <i class='fas fa-minus'></i>&nbsp;Episode9
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode10/" title="Episode10" class="dd-item ">
+        <a href="/english/himwm/season1/episode10/">
+        <i class='fas fa-minus'></i>&nbsp;Episode10
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode11/" title="Episode11" class="dd-item ">
+        <a href="/english/himwm/season1/episode11/">
+        <i class='fas fa-minus'></i>&nbsp;Episode11
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode12/" title="Episode12" class="dd-item ">
+        <a href="/english/himwm/season1/episode12/">
+        <i class='fas fa-minus'></i>&nbsp;Episode12
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode13/" title="Episode13" class="dd-item ">
+        <a href="/english/himwm/season1/episode13/">
+        <i class='fas fa-minus'></i>&nbsp;Episode13
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode14/" title="Episode14" class="dd-item ">
+        <a href="/english/himwm/season1/episode14/">
+        <i class='fas fa-minus'></i>&nbsp;Episode14
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode15/" title="Episode15" class="dd-item ">
+        <a href="/english/himwm/season1/episode15/">
+        <i class='fas fa-minus'></i>&nbsp;Episode15
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode16/" title="Episode16" class="dd-item ">
+        <a href="/english/himwm/season1/episode16/">
+        <i class='fas fa-minus'></i>&nbsp;Episode16
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode17/" title="Episode17" class="dd-item ">
+        <a href="/english/himwm/season1/episode17/">
+        <i class='fas fa-minus'></i>&nbsp;Episode17
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/KimMJ"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://gohugo.io/"><i class='fas fa-bookmark'></i> Hugo Documentation</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://learn.netlify.com/en/"><i class='fas fa-bookmark'></i> Hugo Theme Learn</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://kimmj.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/prometheus/'>Prometheus</a> > Install Prometheus
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prometheus">Prometheus</a></li>
+    <li><a href="#prometheus의-설치">Prometheus의 설치</a></li>
+    <li><a href="#설정">설정</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/install">install</a>
+
+  <a class="tag-link" href="/tags/prometheus">prometheus</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Install Prometheus
+            </h1>
+          
+
+        
+
+
+
+<h2 id="prometheus">Prometheus</h2>
+<p><a href="https://prometheus.io/">Prometheus</a>는 opensource monitoring system입니다.
+음악을 하는 사람들이 많이 이용하는 사이트인 SoundCloud에서 개발된 오픈소스입니다.</p>
+<p><code>PromQL</code>이라는 Query문을 사용하여 metric을 수집할 수 있습니다.
+자세한 내용은 나중에 따로 포스트를 작성하도록 하겠습니다.</p>
+<p>이 문서에서는 docker-compose를 통해 간단하게 prometheus를 설치해볼 것입니다.
+또한 prometheus와 뗄레야 뗄 수 없는 단짝 Grafana도 함께 설치할 것입니다.</p>
+<h2 id="prometheus의-설치">Prometheus의 설치</h2>
+<p>제가 docker-compose를 선호하는 이유는 너무나도 간단하게, dependency가 있는 어플리케이션을 설치할 수 있기 때문입니다.
+아래에 예시에서도 잘 드러나있습니다.</p>
+<p>저는 <code>monitoring/</code> 폴더 아래에 <code>docker-compose.yaml</code>이라는 이름으로 파일을 생성했습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version: <span style="color:#e6db74">&#39;3&#39;</span>
+
+networks:
+  back-tier:
+
+services:
+  prometheus:
+    image: prom/prometheus
+    restart: unless-stopped
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - <span style="color:#e6db74">&#34;9090:9090&#34;</span>
+    networks:
+      - back-tier
+  grafana:
+    image: grafana/grafana:<span style="color:#ae81ff">6.5</span><span style="color:#ae81ff">.3</span>
+    ports:
+      - <span style="color:#ae81ff">9080</span>:<span style="color:#ae81ff">3000</span>
+    user: <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#75715e"># $(id -u) https://community.grafana.com/t/new-docker-install-with-persistent-storage-permission-problem/10896/5</span>
+    depends_on:
+      - prometheus
+    volumes:
+    - ./grafana/provisioning/:/etc/grafana/provisioning/
+    - ./grafana_data:/var/lib/grafana
+    networks:
+      - back-tier
+</code></pre></div><p>위의 예시에서 <code>services.grafana.user=&quot;0&quot;</code>으로 설정이 되어있는 것이 보이실 것입니다.
+이 부분을 <code>$(id -u)</code>의 결과값으로 변경하시면 됩니다.
+관련된 내용은 옆에 <a href="https://community.grafana.com/t/new-docker-install-with-persistent-storage-permission-problem/10896/5">주석</a>에서도 확인이 가능합니다.</p>
+<p>이렇게 하고난 뒤, 설치하는 방법은 너무나도 간단합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd monitoring
+docker-compose up -d
+</code></pre></div><p>잠시 내리고 싶을땐 다음과 같이 하면 됩니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker-compose down
+</code></pre></div><p>설정상, Prometheus는 9090 포트를 통해서 expose 되어있습니다.
+또한 Grafana는 9080 포트를 사용하고 있습니다.
+Grafana의 기본 ID/PW는 <code>admin/admin</code>입니다.</p>
+<h2 id="설정">설정</h2>
+<p>Prometheus를 사용하기 위해서는 <code>prometheus.yml</code>이라는 파일을 관리해주어야 합니다.
+이곳에서 어느 서비스의 metric을 가지고 올지 설정할 수 있습니다.</p>
+<p>해당 파일은 <code>docker-compose.yaml</code>을 참조해 보았을 때, <code>monitoring/config/prometheus.yml</code>을 수정하면 된다는 것을 알 수 있습니다.
+수정 후에는 <code>docker-compose down</code>을 통해 잠시 내렸다가 <code>docker-compose up -d</code>를 통해 올리면 수정사항이 반영됩니다.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        <div id="utterance">    
+    <script src="https://utteranc.es/client.js"
+            repo="kimmj/kimmj.github.io"
+            issue-term="pathname"
+            label="comments"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1580405530"></script>
+    <script src="/js/perfect-scrollbar.min.js?1580405530"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1580405530"></script>
+    <script src="/js/jquery.sticky.js?1580405530"></script>
+    <script src="/js/featherlight.min.js?1580405530"></script>
+    <script src="/js/highlight.pack.js?1580405530"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1580405530"></script>
+    <script src="/js/learn.js?1580405530"></script>
+    <script src="/js/hugo-learn.js?1580405530"></script>
+
+    <link href="/mermaid/mermaid.css?1580405530" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1580405530"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

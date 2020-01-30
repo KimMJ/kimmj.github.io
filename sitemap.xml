@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kimmj.github.io/prometheus/install/</loc>
+    <lastmod>2020-01-30T18:00:24+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/kubernetes/installation/</loc>
     <lastmod>2020-01-14T01:43:16+09:00</lastmod>
   </url>
@@ -75,6 +80,11 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/kubernetes/concepts/</loc>
+    <lastmod>2020-01-30T18:22:20+09:00</lastmod>
   </url>
   
   <url>
@@ -178,6 +188,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/kubernetes/concepts/controllers/</loc>
+    <lastmod>2020-01-30T18:26:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/hugo/insert-comment/</loc>
     <lastmod>2020-01-24T20:56:47+09:00</lastmod>
   </url>
@@ -278,17 +293,42 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/english/himwm/season1/episode17/</loc>
+    <lastmod>2020-01-30T23:49:27+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/english/</loc>
     <lastmod>2020-01-11T00:02:11+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/hugo/</loc>
-    <lastmod>2020-01-24T20:56:47+09:00</lastmod>
+    <loc>http://kimmj.github.io/tags/concepts/</loc>
+    <lastmod>2020-01-30T18:26:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-01-30T18:26:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-01-30T18:26:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/install/</loc>
+    <lastmod>2020-01-30T18:00:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/prometheus/</loc>
+    <lastmod>2020-01-30T18:00:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/hugo/</loc>
     <lastmod>2020-01-24T20:56:47+09:00</lastmod>
   </url>
   
@@ -318,11 +358,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/prometheus/</loc>
-    <lastmod>2020-01-21T23:34:44+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/canary/</loc>
     <lastmod>2020-01-21T01:08:00+09:00</lastmod>
   </url>
@@ -343,11 +378,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/install/</loc>
-    <lastmod>2020-01-20T01:16:52+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/minio/</loc>
     <lastmod>2020-01-19T00:46:44+09:00</lastmod>
   </url>
@@ -360,11 +390,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/kubeadm/</loc>
     <lastmod>2020-01-18T22:27:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
-    <lastmod>2020-01-14T01:42:53+09:00</lastmod>
   </url>
   
   <url>
