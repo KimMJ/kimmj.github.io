@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jan 2020 18:26:04 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 19:56:45 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>css</title>
+      <link>http://kimmj.github.io/tags/css/</link>
+      <pubDate>Sat, 01 Feb 2020 19:56:45 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/css/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>concepts</title>
