@@ -83,6 +83,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/cicd/</loc>
+    <lastmod>2020-02-03T14:05:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/css/</loc>
     <lastmod>2020-02-01T19:56:33+09:00</lastmod>
   </url>
@@ -195,6 +200,11 @@
   <url>
     <loc>http://kimmj.github.io/english/himwm/season1/episode9/</loc>
     <lastmod>2020-01-15T23:58:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/kubernetes/concepts/pods/</loc>
+    <lastmod>2020-02-03T14:03:50+09:00</lastmod>
   </url>
   
   <url>
@@ -323,8 +333,28 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/english/himwm/season1/episode21/</loc>
+    <lastmod>2020-02-04T00:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/english/</loc>
     <lastmod>2020-01-11T00:02:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-02-03T14:03:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/pod/</loc>
+    <lastmod>2020-02-03T14:03:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-02-03T14:03:50+09:00</lastmod>
   </url>
   
   <url>
@@ -333,17 +363,7 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/</loc>
-    <lastmod>2020-02-01T19:56:45+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/concepts/</loc>
-    <lastmod>2020-01-30T18:26:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
     <lastmod>2020-01-30T18:26:04+09:00</lastmod>
   </url>
   

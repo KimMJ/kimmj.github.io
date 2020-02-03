@@ -112,6 +112,13 @@
 	"content": "Spinnaker를 배포하는 방법에는 3가지가 있습니다. Kubernetes 환경에 배포하기, local debian으로 배포하기, local git으로 배포하기가 있습니다.\n여기에서는 Kubernetes 환경에 배포하기를 진행할 것입니다.\nACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACCOUNT 위와같이 설정하면 됩니다. ACCOUNT는 kubernetes cluster를 추가할 때 사용했던 이름을 사용하면 됩니다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/cicd/",
+	"title": "CICD",
+	"tags": [],
+	"description": "",
+	"content": "CICD "
+},
+{
 	"uri": "http://kimmj.github.io/css/",
 	"title": "CSS",
 	"tags": [],
@@ -123,7 +130,7 @@
 	"title": "Controllers Overview",
 	"tags": ["kubernetes", "concepts"],
 	"description": "",
-	"content": "Contents 이 포스트에서는 Kubernetes의 Controller들에 대해서 알아보도록 하겠습니다. 가장 작은 단위인 Container부터, 상위 개념인 Deployment, StatefulSet까지 다루어 보도록 하겠습니다.\n Containers Pods ReplicaSets Deployments StatefulSets  Monolithic vs. Microservice 우선 Monolithic과 Microservice에 대해서 짚고 넘어가도록 하겠습니다.\nMonolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.\n반면 Microservice는 하나의 큰 어플리케이션을 여러 조각으로 쪼갠 것을 의미합니다. 각 조각(microservice)는 자신의 역할이 있고, 이를 잘 수행하면 됩니다. 전체적인 관점에서 보면 어플리케이션은 microservice들간의 통신으로 행해진다고 보면 될 것 같습니다.\nMonolithic에 비해 Microservice는 몇가지 장점들이 있습니다.\n scale-out이 용이합니다.\nMonolithic에 비해 microservice의 단위는 작기 때문에 scale-out 하는데 시간도 오래 걸리지 않고, 간단합니다. 빠른 배포가 가능합니다.\nMonolithic에서는 사이즈가 커질수록 빌드하는 시간이 점점 길어진다고 설명했었습니다. 이는 곧 요즘처럼 트렌드라던지 상황이 급변하는 상황에서 약점이 될 수 밖에 없습니다. 반면 Microservice는 작은 조각이기 때문에 빌드하는 시간이 Monolithic에 비해 뛰어날 수밖에 없습니다. 그리고 이를 배포하는 시간도 매우 줄어들게 되죠. 문제가 발생하였을 때 영향이 적습니다.\n쉽게 우리가 가장 잘 알고있는 게임중 하나인 LoL을 가지고 설명해 보도록 하겠습니다. 만약 LoL을 플레이하고 싶은데, 상점에 에러가 있어서 이용하지 못한다면 어떻게 되나요? LoL이 Monolithic이었다면 게임 플레이가 막혀서 엄청난 원성을 샀을 것입니다. 하지만 LoL또한 Microservice이기 때문에 문제가 발생한 곳만 이용하지 못할 뿐, 나머지 서비스는 정상적으로 이용이 가능합니다. 따라서 복구하기도, 운영하기도 훨씬 쉽습니다.  이렇게 보면 무조건 Microservice만 해야하는 것처럼 보이기도 합니다. 하지만 세상일이 모두 그렇듯 여기에도 정답은 없습니다. 자신이 개발하고자 하는 어플리케이션의 특성을 잘 파악해서 한가지를 선택하고 개발하는 것이 좋은 방향이 될 것 같습니다.\nConatiners 이제 본격적인 설명으로 넘어가보도록 하겠습니다.\nDocker를 사용해 보았다면 container도 친숙한 개념이 될 것 같습니다. container는 VirtualBox처럼 가상화를 하지만, OS까지 가상화하는 것이 아니라 host OS 위에서 커널을 공유하는 방식으로 가상화를 합니다. 어려운 말일수도 있지만 간단하게 말하자면 VirtualBox같은 hypervisor에 의한 가상화보다 훨씬 가벼운 방법으로 가상화를 할 수 있다고 생각하시면 됩니다. 여기서 가볍다는 의미는 빠르게 생성/삭제할 수 있고 용량도 작다는 의미입니다.\nKubernetes는 이런 Docker와 같은 container engine을 기반으로 동작합니다. 그리고 각 container는 어플리케이션 내에서 자신의 역할을 수행하는 것들입니다. Docker를 통해 컨테이너를 동작시키는 것처럼, Kubernetes도 컨테이너를 Docker같은 container engine의 힘을 빌려 동작시킵니다.\nPods Pod는 Kubernetes에서 어플리케이션을 관리하는 단위입니다.\n하나의 Pod는 여러개의 Container로 구성될 수 있습니다. 즉, 너무나 밀접하게 동작하고 있는 여러 Container를 하나의 Pod로 묶어 함께 관리하는 것입니다.\n이 때, 하나의 Pod 내에 존재하는 모든 Container들은 서로 localhost를 통해 통신할 수 있습니다.\nKubernetes에서 Pod는 언제 죽어도 이상하지 않은 것으로 취급됩니다. 동시에 언제 생성되어도 이상하지 않은 것, 어디에 떠있어도 이상하지 않은 것이죠. 그 만큼 어플리케이션 개발자는 Pod를 구성할 때 하나의 Pod가 장애가 나는 경우에도 어플리케이션이 제대로 동작할 수 있도록 만들어야 합니다. 언제 없어졌다가 생성될지 모르니까요.\nReplicaSet ReplicaSet은 Pod를 생성해주는 녀석입니다.\n단일 Pod를 그냥 생성해도 되지만 그렇게 할 경우 Kubernetes가 주는 여러 이점들, 예를 들어 auto healing, auto scaling, rolling update 등을 이용하지 못합니다. 때문에 Pod를 관리해주는 Controller가 필요하게 되는데 이것이 ReplicaSet입니다.\nReplicaSet은 자신이 관리해야하는 Pod의 template을 가지고 있습니다. 그리고 주기적으로 Kubernetes를 주시하며 내가 가지고 있는 template에 대한 Pod가 원하는 숫자만큼 잘 있는지 확인합니다. 부족하다면 Pod를 더 생성하고 너무 많으면 Pod를 삭제합니다.\nReplicaSet은 Pod를 label을 기준으로 관리합니다. 자신이 가지고 있는 matchLabels와 일치하는 Pod들이 자신과 관련된 Pod라고 인식하는 것이죠. 따라서 label을 운영중에 바꾸는 일은 웬만해선 피해야 합니다. 고아가 발생하여 어느 누구도 관리해주지 않는 Pod가 남게 될 수 있기 때문입니다.\n또한 ReplicaSet은 자신이 생성한 파드들을 \u0026lt;ReplicaSet의 이름\u0026gt;-\u0026lt;hash 값\u0026gt;으로 생성합니다. 따라서 Pod의 이름만 보고도 어떤 ReplicaSet이 생성했는지 알 수 있게되죠.\nDeployments 위에서는 ReplicaSet에 대해서 이야기해 보았습니다. Deployments는 ReplicaSet보다 상위 개념의 Controller입니다.\n만약 Pod의 template을 수정하는 경우가 생긴다면 어떻게 해야 할까요? 예를 들어 cpu 할당량을 바꾼다던지, image를 다른 이미지로 변경한다던지 하는 경우가 발생한다면요. ReplicaSet만 존재한다면 이런 상황에서 새로운 template을 가지고 ReplicaSet을 생성하고, 기존의 ReplicaSet을 삭제하거나 replicas: 0으로 변경하여 ReplicaSet만 남아있고 실제 Pod는 없도록 해야합니다.\n그렇다면 새로 만든 template에 오류가 있어서 이전 버전으로 돌아가고 싶다면 어떻게 해야할까요? 이전에 작성했던 ReplicaSet의 replicas를 늘리고, 현재 올라가있던 ReplicaSet의 replicas를 줄이면 될 것 입니다. 하지만 이는 일일이 기억해야하는 크나큰 단점이 있겠죠.\n때문에 ReplicaSet을 관리해주는 Deployment가 필요합니다. Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도록 만듭니다. 그리고 자신이 관리하는 ReplicaSet의 labels를 자신의 matchLabels로 일치시켜 구분합니다.\n그렇다면 Pod의 template이 변경되는 상황엔 이번에는 어떻게 적용이 될까요?\nDeployment는 새로운 ReplicaSet을 생성하고, 기존 ReplicaSet의 replicas를 0으로 줄입니다. 그러면서 자신이 생성했던 ReplicaSet들을 revision으로 관리하죠. 이렇게 되면 사용자는 kubectl 명령어만 가지고 이전 template을 가진 Pod로 변경할 수 있습니다.\n또한 Deployments가 ReplicaSet을 생성할 때는 \u0026lt;Deployment의 이름\u0026gt;-\u0026lt;hash 값\u0026gt;으로 생성합니다. 위에서 ReplicaSet도 Pod를 생성할 때 \u0026lt;ReplicaSet의 이름\u0026gt;-\u0026lt;hash 값\u0026gt;이라고 설명했었습니다. 따라서 Deployments에 의해 만들어진 Pod들은 \u0026lt;Deployment의 이름\u0026gt;-\u0026lt;ReplicaSet에 대한 hash 값\u0026gt;-\u0026lt;Pod에 대한 hash 값\u0026gt;과 같은 형태를 띄게 됩니다.\nStatefulSets StatefulSet은 좀 특이한 녀석입니다.\nPod는 어디에 떠있어도 이상하지 않은 것이라고 언급했었습니다. 그런데 StatefulSet은 그렇지 않습니다. 이름에 걸맞게 이전의 상태를 그대로 보존하고 있어야 합니다. 따라서 여러 제약사항들이 생기기도 합니다.\n여기에서는 Pod와의 관계만 알아보고 넘어가도록 하겠습니다.\nStatefulSets는 Deployments와는 다르게 ReplicaSet을 생성하지 않습니다. 대신 자신이 직접 Pod를 생성합니다. 이 때 Pod의 label 속성을 자신의 matchLabels과 일치시켜 자신이 관리하고 있는 Pod를 구분합니다.\n또한 이름도 hash값을 사용하지 않고 0부터 시작하는 숫자를 사용합니다. 즉, \u0026lt;StatefulSets의 이름\u0026gt;-\u0026lt;0부터 오름차순\u0026gt;의 이름을 가지는 Pod를 생성합니다.\n만약 생성해야하는 Pod의 template에 변화가 있다면 어떻게 해야할까요?\nStatefulSets는 Deployments와 다르게 변경할 수 있는 부분에 제약이 있습니다. 이 경우 절대 StatefulSet을 update할 수 없습니다. 따라서 기존 StatefulSet을 삭제하고 다시 kubectl apply와 같은 명령어로 새로운 template을 가지고 생성해야합니다.\nRollback에도 제약사항이 있습니다.\nRollback시 StatefulSet은 Pod가 완전히 Ready상태가 되길 기다립니다. 그런데 만약 StatefulSet이 생성한 Pod가 ImagePullbackOff같은 에러에 빠지게 된다면, 또는 영원히 rediness probe에 의해 Ready 상태가 되지 않는다면 StatefulSet의 rollback은 멈춰버립니다. 이는 Known Issue로 수동으로 해당 Pod를 삭제하는 방법밖에 없습니다.\n따라서 웬만하면 설계를 할 때 StatefulSet을 지양하는 것이 Kubernetes의 Design에 더욱 맞는 방향일 것입니다.\n마치며.. 이렇게 Container, Pods, ReplicaSets, Deployments, StatefulSets의 관계를 중심으로 알아보는 시간을 가졌습니다. 혹시나 잘못된 부분이 있다면 언제든지 댓글 또는 메일로 알려주시면 감사하겠습니다.\n"
+	"content": "Contents 이 포스트에서는 Kubernetes의 Controller들에 대해서 알아보도록 하겠습니다. 가장 작은 단위인 Container부터, 상위 개념인 Deployment, StatefulSet까지 다루어 보도록 하겠습니다.\n Containers Pods ReplicaSets Deployments StatefulSets  Monolithic vs. Microservice 우선 Monolithic과 Microservice에 대해서 짚고 넘어가도록 하겠습니다.\nMonolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.\n반면 Microservice는 하나의 큰 어플리케이션을 여러 조각으로 쪼갠 것을 의미합니다. 각 조각(microservice)는 자신의 역할이 있고, 이를 잘 수행하면 됩니다. 전체적인 관점에서 보면 어플리케이션은 microservice들간의 통신으로 행해진다고 보면 될 것 같습니다.\nMonolithic에 비해 Microservice는 몇가지 장점들이 있습니다.\n scale-out이 용이합니다.\nMonolithic에 비해 microservice의 단위는 작기 때문에 scale-out 하는데 시간도 오래 걸리지 않고, 간단합니다. 빠른 배포가 가능합니다.\nMonolithic에서는 사이즈가 커질수록 빌드하는 시간이 점점 길어진다고 설명했었습니다. 이는 곧 요즘처럼 트렌드라던지 상황이 급변하는 상황에서 약점이 될 수 밖에 없습니다. 반면 Microservice는 작은 조각이기 때문에 빌드하는 시간이 Monolithic에 비해 뛰어날 수밖에 없습니다. 그리고 이를 배포하는 시간도 매우 줄어들게 되죠. 문제가 발생하였을 때 영향이 적습니다.\n쉽게 우리가 가장 잘 알고있는 게임중 하나인 LoL을 가지고 설명해 보도록 하겠습니다. 만약 LoL을 플레이하고 싶은데, 상점에 에러가 있어서 이용하지 못한다면 어떻게 되나요? LoL이 Monolithic이었다면 게임 플레이가 막혀서 엄청난 원성을 샀을 것입니다. 하지만 LoL또한 Microservice이기 때문에 문제가 발생한 곳만 이용하지 못할 뿐, 나머지 서비스는 정상적으로 이용이 가능합니다. 따라서 복구하기도, 운영하기도 훨씬 쉽습니다.  이렇게 보면 무조건 Microservice만 해야하는 것처럼 보이기도 합니다. 하지만 세상일이 모두 그렇듯 여기에도 정답은 없습니다. 자신이 개발하고자 하는 어플리케이션의 특성을 잘 파악해서 한가지를 선택하고 개발하는 것이 좋은 방향이 될 것 같습니다.\nConatiners 이제 본격적인 설명으로 넘어가보도록 하겠습니다.\nDocker를 사용해 보았다면 container도 친숙한 개념이 될 것 같습니다. container는 VirtualBox처럼 가상화를 하지만, OS까지 가상화하는 것이 아니라 host OS 위에서 커널을 공유하는 방식으로 가상화를 합니다. 어려운 말일수도 있지만 간단하게 말하자면 VirtualBox같은 hypervisor에 의한 가상화보다 훨씬 가벼운 방법으로 가상화를 할 수 있다고 생각하시면 됩니다. 여기서 가볍다는 의미는 빠르게 생성/삭제할 수 있고 용량도 작다는 의미입니다.\nKubernetes는 이런 Docker와 같은 container runtime 기반으로 동작합니다. 그리고 각 container는 어플리케이션 내에서 자신의 역할을 수행하는 것들입니다. Docker를 통해 컨테이너를 동작시키는 것처럼, Kubernetes도 컨테이너를 Docker같은 container runtime의 힘을 빌려 동작시킵니다.\nPods Pod는 Kubernetes에서 어플리케이션을 관리하는 단위입니다.\n하나의 Pod는 여러개의 Container로 구성될 수 있습니다. 즉, 너무나 밀접하게 동작하고 있는 여러 Container를 하나의 Pod로 묶어 함께 관리하는 것입니다.\n이 때, 하나의 Pod 내에 존재하는 모든 Container들은 서로 localhost를 통해 통신할 수 있습니다.\nKubernetes에서 Pod는 언제 죽어도 이상하지 않은 것으로 취급됩니다. 동시에 언제 생성되어도 이상하지 않은 것, 어디에 떠있어도 이상하지 않은 것이죠. 그 만큼 어플리케이션 개발자는 Pod를 구성할 때 하나의 Pod가 장애가 나는 경우에도 어플리케이션이 제대로 동작할 수 있도록 만들어야 합니다. 언제 없어졌다가 생성될지 모르니까요.\nReplicaSet ReplicaSet은 Pod를 생성해주는 녀석입니다.\n단일 Pod를 그냥 생성해도 되지만 그렇게 할 경우 Kubernetes가 주는 여러 이점들, 예를 들어 auto healing, auto scaling, rolling update 등을 이용하지 못합니다. 때문에 Pod를 관리해주는 Controller가 필요하게 되는데 이것이 ReplicaSet입니다.\nReplicaSet은 자신이 관리해야하는 Pod의 template을 가지고 있습니다. 그리고 주기적으로 Kubernetes를 주시하며 내가 가지고 있는 template에 대한 Pod가 원하는 숫자만큼 잘 있는지 확인합니다. 부족하다면 Pod를 더 생성하고 너무 많으면 Pod를 삭제합니다.\nReplicaSet은 Pod를 label을 기준으로 관리합니다. 자신이 가지고 있는 matchLabels와 일치하는 Pod들이 자신과 관련된 Pod라고 인식하는 것이죠. 따라서 label을 운영중에 바꾸는 일은 웬만해선 피해야 합니다. 고아가 발생하여 어느 누구도 관리해주지 않는 Pod가 남게 될 수 있기 때문입니다.\n또한 ReplicaSet은 자신이 생성한 파드들을 \u0026lt;ReplicaSet의 이름\u0026gt;-\u0026lt;hash 값\u0026gt;으로 생성합니다. 따라서 Pod의 이름만 보고도 어떤 ReplicaSet이 생성했는지 알 수 있게되죠.\nDeployments 위에서는 ReplicaSet에 대해서 이야기해 보았습니다. Deployments는 ReplicaSet보다 상위 개념의 Controller입니다.\n만약 Pod의 template을 수정하는 경우가 생긴다면 어떻게 해야 할까요? 예를 들어 cpu 할당량을 바꾼다던지, image를 다른 이미지로 변경한다던지 하는 경우가 발생한다면요. ReplicaSet만 존재한다면 이런 상황에서 새로운 template을 가지고 ReplicaSet을 생성하고, 기존의 ReplicaSet을 삭제하거나 replicas: 0으로 변경하여 ReplicaSet만 남아있고 실제 Pod는 없도록 해야합니다.\n그렇다면 새로 만든 template에 오류가 있어서 이전 버전으로 돌아가고 싶다면 어떻게 해야할까요? 이전에 작성했던 ReplicaSet의 replicas를 늘리고, 현재 올라가있던 ReplicaSet의 replicas를 줄이면 될 것 입니다. 하지만 이는 일일이 기억해야하는 크나큰 단점이 있겠죠.\n때문에 ReplicaSet을 관리해주는 Deployment가 필요합니다. Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도록 만듭니다. 그리고 자신이 관리하는 ReplicaSet의 labels를 자신의 matchLabels로 일치시켜 구분합니다.\n그렇다면 Pod의 template이 변경되는 상황엔 이번에는 어떻게 적용이 될까요?\nDeployment는 새로운 ReplicaSet을 생성하고, 기존 ReplicaSet의 replicas를 0으로 줄입니다. 그러면서 자신이 생성했던 ReplicaSet들을 revision으로 관리하죠. 이렇게 되면 사용자는 kubectl 명령어만 가지고 이전 template을 가진 Pod로 변경할 수 있습니다.\n또한 Deployments가 ReplicaSet을 생성할 때는 \u0026lt;Deployment의 이름\u0026gt;-\u0026lt;hash 값\u0026gt;으로 생성합니다. 위에서 ReplicaSet도 Pod를 생성할 때 \u0026lt;ReplicaSet의 이름\u0026gt;-\u0026lt;hash 값\u0026gt;이라고 설명했었습니다. 따라서 Deployments에 의해 만들어진 Pod들은 \u0026lt;Deployment의 이름\u0026gt;-\u0026lt;ReplicaSet에 대한 hash 값\u0026gt;-\u0026lt;Pod에 대한 hash 값\u0026gt;과 같은 형태를 띄게 됩니다.\nStatefulSets StatefulSet은 좀 특이한 녀석입니다.\nPod는 어디에 떠있어도 이상하지 않은 것이라고 언급했었습니다. 그런데 StatefulSet은 그렇지 않습니다. 이름에 걸맞게 이전의 상태를 그대로 보존하고 있어야 합니다. 따라서 여러 제약사항들이 생기기도 합니다.\n여기에서는 Pod와의 관계만 알아보고 넘어가도록 하겠습니다.\nStatefulSets는 Deployments와는 다르게 ReplicaSet을 생성하지 않습니다. 대신 자신이 직접 Pod를 생성합니다. 이 때 Pod의 label 속성을 자신의 matchLabels과 일치시켜 자신이 관리하고 있는 Pod를 구분합니다.\n또한 이름도 hash값을 사용하지 않고 0부터 시작하는 숫자를 사용합니다. 즉, \u0026lt;StatefulSets의 이름\u0026gt;-\u0026lt;0부터 오름차순\u0026gt;의 이름을 가지는 Pod를 생성합니다.\n만약 생성해야하는 Pod의 template에 변화가 있다면 어떻게 해야할까요?\nStatefulSets는 Deployments와 다르게 변경할 수 있는 부분에 제약이 있습니다. 이 경우 절대 StatefulSet을 update할 수 없습니다. 따라서 기존 StatefulSet을 삭제하고 다시 kubectl apply와 같은 명령어로 새로운 template을 가지고 생성해야합니다.\nRollback에도 제약사항이 있습니다.\nRollback시 StatefulSet은 Pod가 완전히 Ready상태가 되길 기다립니다. 그런데 만약 StatefulSet이 생성한 Pod가 ImagePullbackOff같은 에러에 빠지게 된다면, 또는 영원히 rediness probe에 의해 Ready 상태가 되지 않는다면 StatefulSet의 rollback은 멈춰버립니다. 이는 Known Issue로 수동으로 해당 Pod를 삭제하는 방법밖에 없습니다.\n따라서 웬만하면 설계를 할 때 StatefulSet을 지양하는 것이 Kubernetes의 Design에 더욱 맞는 방향일 것입니다.\n마치며.. 이렇게 Container, Pods, ReplicaSets, Deployments, StatefulSets의 관계를 중심으로 알아보는 시간을 가졌습니다. 혹시나 잘못된 부분이 있다면 언제든지 댓글 또는 메일로 알려주시면 감사하겠습니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/kubernetes/concepts/",
@@ -271,6 +278,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Okay, Lily, we're putting you on salad duty.\nWhy are we even talking about this? This is, like, way down the road.\nAll is right with the world again.\nLook, I don't wanna be exactly like my family. And don't take this the wrong way, but I don't wanna be exactly like your family, either.\nJust a little joke to lighten up the mood.\n"
+},
+{
+	"uri": "http://kimmj.github.io/kubernetes/concepts/pods/",
+	"title": "Pods",
+	"tags": ["kubernetes", "pod"],
+	"description": "",
+	"content": "Pod\nPod는 Kubernetes에서 가장 작은 배포 오브젝트. 최소 관리 단위. 클러스터에서 실행중인 프로세스를 의미 어플리케이션 콘테이너, 스토리지 리소스, 유일한 network ip, 컨테이너가 어떻게 실행할지를 캡슐화\n각각의 파드는 주어진 어플리케이션에서 단일 인스턴스를 수행한다. -\u0026gt; 어플리케이션을 수직확장하고 싶다면 각 인스턴스에 대해 여러 파드를 생성하면 된다.\n파드는 서비스에서 서로 연관성이 높은 프로세스를 지원하기 위해 디자인되었다. 컨테이너는 리소스와 의존성들을 공유하고, 서로 통신하며, 언제/어떻게 종료하는지에 대해 조정한다.\n파드 내에 여러 컨테이너를 두는 것은 컨테이너가 정말 강하게 결합될 때 이다.\ninit container로 app container가 시작하기 전의 동작을 할 수 있다. 파드 내의 컨테이너는 Networking과 Storage를 공유한다.\nNetworking 각 파드 단위로 네트워크 IP 주소를 할당받는다. 그 내부의 컨테이너는 localhost로 통신하게 되고 외부와의 통신을 위해선 공유중인 네트워크 리소스를 어떻게 분배할 지 합의 및 조정해야한다. (port)\nStorage 파드는 공유하는 저장공간을 volumes로 지정한다. 하나의 컨테이너만 재시동되는 경우에도 데이터를 보존할 수 있다.\n파드는 하나만 생성하지 말 것.\n파드의 재시작과 컨테이너의 재시작을 헷갈려하면 안된다. 파드 자체만으로는 동작하지 않고, 오히려 컨테이너가 동작하는 환경이라고 보면 된다. 삭제 전까지는 유지 되는.\n파드는 컨테이너 전에 VM에서 하나의 VM에 실행하는 것들처럼 하나의 논리적 호스트에서 컨테이너들을 실행하는 개념이다.\n파드 내의 컨테이너들은 IP주소와 port space를 공유한다. 그리고 localhost로 통신한다. + SystemV semaphore, POSIX shared memory로 통신 가능 다른 파드에 있는 컨테이너와는 IP 주소로 통신\nVolumes도 공유 가능\n파드는 컨테이너처럼 임시적인 자원이기 때문에 삭제시 reschedule이 아닌 새로운 동일한 spec의 파드를 생성한다. (새로운 UID로)\nvolume도 파드가 삭제되면 삭제된다.\n각각의 파드는 보통 하나의 어플리케이션의 여러 인스턴스를 담당하지 않는다.\n왜 하나의 컨테이너에서 여러 프로그램을 돌리지 않는가?\n 투명성 쓰기 쉬움 소프트웨어 의존성 제거 효율성  privileged 플래그로 LINUX단의 조작을 할 수 있다.\nPod Lifecycle Pod의 status 필드는 PodStatus의 phase 필드이다.\nPod의 phase는 간단하게 Pod가 위치한 lifecycle의 상위 개념에서의 요약이다.\nphase 의 value들\n Pending : Pod가 kubernetes 시스템에 의해 받아들여졌지만 하나 이상의 container image가 생성되지 않은 상태. Running : Pod가 node에 바운드되고 모든 container들이 생성되었다. 최소한 하나의 container가 실행 중이거나 시작 또는 재시작 중이다. Succeeded : 모든 container가 성공적으로 종료되었고, 재시작되지 않는다. Failed : 모든 container가 정료되었고, 최소 하나의 container가 failure 상태이다. Unknown : 어떤 이유로 인해 Pod의 state를 얻어낼 수 없다. 보통 파드의 호스트와 통신이 안되는 문제.  Container probe\nkubelet이 container에 대해 수행하는 진단. container에서 구현된 Handler를 호출함.\n ExecAction: 컨테이너 내부에서 지정된 명령어를 실행한다. 종료 코드가 0이면 성공. TCPSocketAction: Container의 IP 주소에서 특정 port에 대해 TCP를 확인한다. port가 열려있으면 성공. HTTPGetAction: HTTP Get 요청을 한다. 200\u0026lt;= status code \u0026gt; 400일 경우 성공.  3가지 probe들\n livenessProbe: container가 실행 중인지 나타냄. liveness probe가 실패하면 kubelet은 container를 죽이고, 이 컨테이너는 restart policy를 실행한다. redinessProbe: container가 service requests를 받을 준비가 되었는지 나타냄. readiness probe가 실패할 경우 endpoint controller는 Pod의 IP 주소를 Pod와 매칭되는 Service들의 endpoints에서 삭제한다. initial delay 이전의 default 값은 Failure이다. startupProbe: container 내부의 application이 시작되었는지를 나타냄. 다른 probe들은 startup probe가 성공할 때까지 비활성화 상태.  livenessProbe를 사용해야하는 상황\ncontainer가 crash되었을 때 실행하는 process가 이미 있다면 사실 livenessProbe는 사용하지 않아도 됨. 만약 container에 문제가 있을 때 이를 재시작하고 싶으면 livenessProbe를 지정하고 restartPolicy를 설정한다.\nreadinessProbe를 사용해야하는 상황\nprobe가 성공했을 때에만 트래픽을 흘리고 싶은 경우 사용. 단순하게 삭제할 때 트래픽이 안흐르게 하고 싶은 경우에는 사용하지 않아도 알아서 됨.\nstartupProbe를 사용해야하는 상황\n컨테이너가 initialDelaySeconds + failureThreshold × periodSeconds 이후에 시작될 경우 사용해야함.\nRestart policy\nAlways, OnFailure, Never. default는 Always. restartPolicy는 Pod 내의 모든 container에 적용된다. restartPolicy는 exponential back-off delay로 재시작된다. 성공적으로 실행되고 나서 10분이 지나면 초기화된다.\nPod lifetime\n일반적으로 Pod는 사람 또는 컨트롤러가 명백하게 이를 지우지 않는 이상 유지된다. control plane은 파드의 총 개수가 지정된 threshold를 초과하면 종료된 파드들(Succeeded 또는 Failed)를 삭제한다.\n컨트롤러는 3가지 타입이 있다.\n Job은 batch computations처럼 종료될것으로 예상되는 Pod이다. ReplicationController, ReplicaSet, Deployment는 종료되지 않을 것으로 예상되는 Pod이다. DaemonSet은 머신마다 하나씩 동작해야하는 Pod이다.  "
 },
 {
 	"uri": "http://kimmj.github.io/css/greater-than-sign/",
@@ -448,6 +462,13 @@
 	"content": "All tuckered out.\nMan, you really have snapped.\nThat's the spirit.\nOh, Robin, are you tearing up?\nWell, look, if you absolutely must bring Ted, it's not like I'm going to claw my own eyes out if he comes.\n"
 },
 {
+	"uri": "http://kimmj.github.io/english/himwm/season1/episode21/",
+	"title": "Episode21",
+	"tags": [],
+	"description": "",
+	"content": "This is the high point of my day.\nDuck!\nBut Executive Mischief Consultant Marshall Eriksen reporting for duty.\nI just got in the zone and\u0026hellip;\nI was having second thoughts.\nCan't a brother go apple picking without getting the third degree?\nYou just made my night.\n"
+},
+{
 	"uri": "http://kimmj.github.io/english/",
 	"title": "English",
 	"tags": [],
@@ -455,8 +476,15 @@
 	"content": "English "
 },
 {
-	"uri": "http://kimmj.github.io/tags/css/",
-	"title": "css",
+	"uri": "http://kimmj.github.io/tags/kubernetes/",
+	"title": "kubernetes",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/pod/",
+	"title": "pod",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -469,15 +497,15 @@
 	"content": ""
 },
 {
-	"uri": "http://kimmj.github.io/tags/concepts/",
-	"title": "concepts",
+	"uri": "http://kimmj.github.io/tags/css/",
+	"title": "css",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://kimmj.github.io/tags/kubernetes/",
-	"title": "kubernetes",
+	"uri": "http://kimmj.github.io/tags/concepts/",
+	"title": "concepts",
 	"tags": [],
 	"description": "",
 	"content": ""

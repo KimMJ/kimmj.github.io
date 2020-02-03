@@ -22,5 +22,18 @@
 Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.</description>
     </item>
     
+    <item>
+      <title>Pods</title>
+      <link>http://kimmj.github.io/kubernetes/concepts/pods/</link>
+      <pubDate>Mon, 03 Feb 2020 14:03:50 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/concepts/pods/</guid>
+      <description>Pod
+Pod는 Kubernetes에서 가장 작은 배포 오브젝트. 최소 관리 단위. 클러스터에서 실행중인 프로세스를 의미 어플리케이션 콘테이너, 스토리지 리소스, 유일한 network ip, 컨테이너가 어떻게 실행할지를 캡슐화
+각각의 파드는 주어진 어플리케이션에서 단일 인스턴스를 수행한다. -&amp;gt; 어플리케이션을 수직확장하고 싶다면 각 인스턴스에 대해 여러 파드를 생성하면 된다.
+파드는 서비스에서 서로 연관성이 높은 프로세스를 지원하기 위해 디자인되었다. 컨테이너는 리소스와 의존성들을 공유하고, 서로 통신하며, 언제/어떻게 종료하는지에 대해 조정한다.
+파드 내에 여러 컨테이너를 두는 것은 컨테이너가 정말 강하게 결합될 때 이다.</description>
+    </item>
+    
   </channel>
 </rss>

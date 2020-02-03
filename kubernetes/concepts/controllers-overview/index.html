@@ -11,20 +11,20 @@
     <title>Controllers Overview :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1580705804" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1580705804" rel="stylesheet">
-    <link href="/css/hybrid.css?1580705804" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1580705804" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1580705804" rel="stylesheet">
-    <link href="/css/auto-complete.css?1580705804" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1580705804" rel="stylesheet">
-    <link href="/css/theme.css?1580705804" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1580705804" rel="stylesheet">
+    <link href="/css/nucleus.css?1580749283" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1580749283" rel="stylesheet">
+    <link href="/css/hybrid.css?1580749283" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1580749283" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1580749283" rel="stylesheet">
+    <link href="/css/auto-complete.css?1580749283" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1580749283" rel="stylesheet">
+    <link href="/css/theme.css?1580749283" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1580749283" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1580705804" rel="stylesheet">
+      <link href="/css/theme-mine.css?1580749283" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1580705804"></script>
+    <script src="/js/jquery-3.3.1.min.js?1580749283"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1580705804"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1580705804"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1580749283"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1580749283"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1580705804"></script>
+<script type="text/javascript" src="/js/search.js?1580749283"></script>
 
     
   </div>
@@ -173,6 +173,28 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cicd/" title="CICD" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cicd/">
+          <i class='fas fa-angle-right'></i>&nbsp;CICD
+          
+      </a>
+      
               
     </li>
   
@@ -452,6 +474,25 @@
       <li data-nav-id="/kubernetes/concepts/controllers-overview/" title="Controllers Overview" class="dd-item active">
         <a href="/kubernetes/concepts/controllers-overview/">
         <i class='fas fa-minus'></i>&nbsp;Controllers Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/concepts/pods/" title="Pods" class="dd-item ">
+        <a href="/kubernetes/concepts/pods/">
+        <i class='fas fa-minus'></i>&nbsp;Pods
         
         </a>
     </li>
@@ -1530,6 +1571,25 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himwm/season1/episode21/" title="Episode21" class="dd-item ">
+        <a href="/english/himwm/season1/episode21/">
+        <i class='fas fa-minus'></i>&nbsp;Episode21
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1734,9 +1794,9 @@ LoL이 Monolithic이었다면 게임 플레이가 막혀서 엄청난 원성을 
 container는 VirtualBox처럼 가상화를 하지만, OS까지 가상화하는 것이 아니라 host OS 위에서 커널을 공유하는 방식으로 가상화를 합니다.
 어려운 말일수도 있지만 간단하게 말하자면 VirtualBox같은 hypervisor에 의한 가상화보다 훨씬 가벼운 방법으로 가상화를 할 수 있다고 생각하시면 됩니다.
 여기서 가볍다는 의미는 빠르게 생성/삭제할 수 있고 용량도 작다는 의미입니다.</p>
-<p>Kubernetes는 이런 Docker와 같은 container engine을 기반으로 동작합니다.
+<p>Kubernetes는 이런 Docker와 같은 container runtime 기반으로 동작합니다.
 그리고 각 container는 어플리케이션 내에서 자신의 역할을 수행하는 것들입니다.
-Docker를 통해 컨테이너를 동작시키는 것처럼, Kubernetes도 컨테이너를 Docker같은 container engine의 힘을 빌려 동작시킵니다.</p>
+Docker를 통해 컨테이너를 동작시키는 것처럼, Kubernetes도 컨테이너를 Docker같은 container runtime의 힘을 빌려 동작시킵니다.</p>
 <h2 id="pods">Pods</h2>
 <p>Pod는 Kubernetes에서 어플리케이션을 관리하는 단위입니다.</p>
 <p>하나의 Pod는 여러개의 Container로 구성될 수 있습니다.
@@ -1939,418 +1999,6 @@ Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도�
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2415,25 +2063,6 @@ Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도�
             
         
                     
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -2458,6 +2087,145 @@ Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도�
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -2496,6 +2264,101 @@ Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도�
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -2593,10 +2456,94 @@ Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도�
 
                     
                     
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
                     
                     
 
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
                         
             
@@ -2625,6 +2572,167 @@ Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도�
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2906,19 +3014,19 @@ Deployment는 ReplicaSet을 생성하고 이 ReplicaSet이 Pods를 생성하도�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1580705804"></script>
-    <script src="/js/perfect-scrollbar.min.js?1580705804"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1580705804"></script>
-    <script src="/js/jquery.sticky.js?1580705804"></script>
-    <script src="/js/featherlight.min.js?1580705804"></script>
-    <script src="/js/highlight.pack.js?1580705804"></script>
+    <script src="/js/clipboard.min.js?1580749283"></script>
+    <script src="/js/perfect-scrollbar.min.js?1580749283"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1580749283"></script>
+    <script src="/js/jquery.sticky.js?1580749283"></script>
+    <script src="/js/featherlight.min.js?1580749283"></script>
+    <script src="/js/highlight.pack.js?1580749283"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1580705804"></script>
-    <script src="/js/learn.js?1580705804"></script>
-    <script src="/js/hugo-learn.js?1580705804"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1580749283"></script>
+    <script src="/js/learn.js?1580749283"></script>
+    <script src="/js/hugo-learn.js?1580749283"></script>
 
-    <link href="/mermaid/mermaid.css?1580705804" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1580705804"></script>
+    <link href="/mermaid/mermaid.css?1580749283" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1580749283"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

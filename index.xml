@@ -281,6 +281,19 @@ Just a little joke to lighten up the mood.</description>
     </item>
     
     <item>
+      <title>Pods</title>
+      <link>http://kimmj.github.io/kubernetes/concepts/pods/</link>
+      <pubDate>Mon, 03 Feb 2020 14:03:50 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/concepts/pods/</guid>
+      <description>Pod
+Pod는 Kubernetes에서 가장 작은 배포 오브젝트. 최소 관리 단위. 클러스터에서 실행중인 프로세스를 의미 어플리케이션 콘테이너, 스토리지 리소스, 유일한 network ip, 컨테이너가 어떻게 실행할지를 캡슐화
+각각의 파드는 주어진 어플리케이션에서 단일 인스턴스를 수행한다. -&amp;gt; 어플리케이션을 수직확장하고 싶다면 각 인스턴스에 대해 여러 파드를 생성하면 된다.
+파드는 서비스에서 서로 연관성이 높은 프로세스를 지원하기 위해 디자인되었다. 컨테이너는 리소스와 의존성들을 공유하고, 서로 통신하며, 언제/어떻게 종료하는지에 대해 조정한다.
+파드 내에 여러 컨테이너를 두는 것은 컨테이너가 정말 강하게 결합될 때 이다.</description>
+    </item>
+    
+    <item>
       <title>Greater Than Sign</title>
       <link>http://kimmj.github.io/css/greater-than-sign/</link>
       <pubDate>Sat, 01 Feb 2020 19:56:45 +0900</pubDate>
@@ -579,6 +592,21 @@ Man, you really have snapped.
 That&#39;s the spirit.
 Oh, Robin, are you tearing up?
 Well, look, if you absolutely must bring Ted, it&#39;s not like I&#39;m going to claw my own eyes out if he comes.</description>
+    </item>
+    
+    <item>
+      <title>Episode21</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode21/</link>
+      <pubDate>Tue, 04 Feb 2020 00:12:34 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode21/</guid>
+      <description>This is the high point of my day.
+Duck!
+But Executive Mischief Consultant Marshall Eriksen reporting for duty.
+I just got in the zone and&amp;hellip;
+I was having second thoughts.
+Can&#39;t a brother go apple picking without getting the third degree?
+You just made my night.</description>
     </item>
     
   </channel>
