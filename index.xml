@@ -61,6 +61,18 @@ Prometheus의 설치 제가 docker-compose를 선호하는 이유는 너무나�
     </item>
     
     <item>
+      <title>Getting Started With_Ansible</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with_ansible/</link>
+      <pubDate>Wed, 05 Feb 2020 01:41:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with_ansible/</guid>
+      <description>Ansible and Infrastructure Management On snowflakes1 and shell scripts 보통은 SSH를 통해서 접속하여 필요한 작업을 하고 접속을 종료한다. 이 때, 어떤 것들은 기록되고 어떤 것들은 기록되지 않는다. 결국 관리자가 똑같은 작업을 여러 서버에 해야하는 책임소지가 있다.
+서버가 동작 중일 때 몇가지 변경사항이 생기고 적용할 방법이 쉽다면 문제가 되진 않을 것이다. 그러나 불행하게도 대부분은 그렇지 않다.
+이 때 기존과 똑같은 서버를 만드려고 한다면 정말 많은, 쓸데없는 시간을 소비하게 된다.
+shell script로 보완을 하려고 하지만, 모든 edge case를 커버하기란 어려운게 현실이다.</description>
+    </item>
+    
+    <item>
       <title>Install Kubeadm</title>
       <link>http://kimmj.github.io/kubernetes/installation/install-kubeadm/</link>
       <pubDate>Fri, 17 Jan 2020 00:38:41 +0900</pubDate>
@@ -278,6 +290,16 @@ Why are we even talking about this? This is, like, way down the road.
 All is right with the world again.
 Look, I don&#39;t wanna be exactly like my family. And don&#39;t take this the wrong way, but I don&#39;t wanna be exactly like your family, either.
 Just a little joke to lighten up the mood.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Strategy</title>
+      <link>http://kimmj.github.io/cicd/deploy-strategy/</link>
+      <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/cicd/deploy-strategy/</guid>
+      <description>Deploy Strategy 실제 시스템을 운용할 때 중요하게 여겨지는 것 중 하나가 downtime을 없애는 것이다. 새로운 업데이트가 있을 때마다 해당 인스턴스가 동작하지 않는다면, 자주 업데이트 하는 것이 어려워질 수 있습니다. 따라서 deploy strategy를 가지고 어떻게 downtime을 줄이는지 알아보도록 하겠습니다.
+Canary canary deploy는 트래픽 비율을 바꾸어가며 배포하는 전략입니다. 이해하기 편하도록 Kubernetes 환경이라고 생각해 보도록 하겠습니다. (또는 LoadBalancer가 있어서 부하를 분산하고 있다고 생각하면 좋을 것 같습니다.) 이 때 업데이트된 버전을 따로 올리고 트래픽을 old:new = 100:0으로 줍니다.</description>
     </item>
     
     <item>
@@ -607,6 +629,19 @@ I just got in the zone and&amp;hellip;
 I was having second thoughts.
 Can&#39;t a brother go apple picking without getting the third degree?
 You just made my night.</description>
+    </item>
+    
+    <item>
+      <title>Episode22</title>
+      <link>http://kimmj.github.io/english/himwm/season1/episode22/</link>
+      <pubDate>Wed, 05 Feb 2020 01:18:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/english/himwm/season1/episode22/</guid>
+      <description>Don&#39;t piss off the universe.
+It&#39;s gonna rain cats and dogs, folks.
+But how are you ever gonna top that?
+I will always treasure it.
+My camping trip got rained out.</description>
     </item>
     
   </channel>

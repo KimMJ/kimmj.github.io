@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with_ansible/</loc>
+    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/kubernetes/installation/install-kubeadm/</loc>
     <lastmod>2020-01-17T00:38:41+09:00</lastmod>
   </url>
@@ -80,6 +85,11 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/</loc>
+    <lastmod>2020-02-05T01:17:27+09:00</lastmod>
   </url>
   
   <url>
@@ -200,6 +210,11 @@
   <url>
     <loc>http://kimmj.github.io/english/himwm/season1/episode9/</loc>
     <lastmod>2020-01-15T23:58:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/cicd/deploy-strategy/</loc>
+    <lastmod>2020-02-03T14:09:25+09:00</lastmod>
   </url>
   
   <url>
@@ -338,8 +353,53 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/english/himwm/season1/episode22/</loc>
+    <lastmod>2020-02-05T01:18:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/english/</loc>
     <lastmod>2020-01-11T00:02:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible/</loc>
+    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
+    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/blue-green/</loc>
+    <lastmod>2020-02-03T14:09:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/canary/</loc>
+    <lastmod>2020-02-03T14:09:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/cicd/</loc>
+    <lastmod>2020-02-03T14:09:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/deploy/</loc>
+    <lastmod>2020-02-03T14:09:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/roll-out/</loc>
+    <lastmod>2020-02-03T14:09:25+09:00</lastmod>
   </url>
   
   <url>
@@ -349,11 +409,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/pod/</loc>
-    <lastmod>2020-02-03T14:03:50+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-02-03T14:03:50+09:00</lastmod>
   </url>
   
@@ -405,11 +460,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/federation/</loc>
     <lastmod>2020-01-21T23:34:44+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/canary/</loc>
-    <lastmod>2020-01-21T01:08:00+09:00</lastmod>
   </url>
   
   <url>
@@ -485,11 +535,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/record/</loc>
     <lastmod>2020-01-10T00:47:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-01-08T01:52:47+09:00</lastmod>
   </url>
   
   <url>

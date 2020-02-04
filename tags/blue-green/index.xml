@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blue-green on Ibiza</title>
+    <link>http://kimmj.github.io/tags/blue-green/</link>
+    <description>Recent content in blue-green on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Feb 2020 14:09:25 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/blue-green/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploy Strategy</title>
+      <link>http://kimmj.github.io/cicd/deploy-strategy/</link>
+      <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/cicd/deploy-strategy/</guid>
+      <description>Deploy Strategy 실제 시스템을 운용할 때 중요하게 여겨지는 것 중 하나가 downtime을 없애는 것이다. 새로운 업데이트가 있을 때마다 해당 인스턴스가 동작하지 않는다면, 자주 업데이트 하는 것이 어려워질 수 있습니다. 따라서 deploy strategy를 가지고 어떻게 downtime을 줄이는지 알아보도록 하겠습니다.
+Canary canary deploy는 트래픽 비율을 바꾸어가며 배포하는 전략입니다. 이해하기 편하도록 Kubernetes 환경이라고 생각해 보도록 하겠습니다. (또는 LoadBalancer가 있어서 부하를 분산하고 있다고 생각하면 좋을 것 같습니다.) 이 때 업데이트된 버전을 따로 올리고 트래픽을 old:new = 100:0으로 줍니다.</description>
+    </item>
+    
+  </channel>
+</rss>

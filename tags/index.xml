@@ -6,10 +6,73 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2020 14:03:50 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 01:41:13 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ansible</title>
+      <link>http://kimmj.github.io/tags/ansible/</link>
+      <pubDate>Wed, 05 Feb 2020 01:41:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-for-devops</title>
+      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
+      <pubDate>Wed, 05 Feb 2020 01:41:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blue-green</title>
+      <link>http://kimmj.github.io/tags/blue-green/</link>
+      <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/blue-green/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>canary</title>
+      <link>http://kimmj.github.io/tags/canary/</link>
+      <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/canary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cicd</title>
+      <link>http://kimmj.github.io/tags/cicd/</link>
+      <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/cicd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deploy</title>
+      <link>http://kimmj.github.io/tags/deploy/</link>
+      <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/deploy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>roll-out</title>
+      <link>http://kimmj.github.io/tags/roll-out/</link>
+      <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/roll-out/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>kubernetes</title>
@@ -116,15 +179,6 @@
       <pubDate>Tue, 21 Jan 2020 23:34:44 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/federation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>canary</title>
-      <link>http://kimmj.github.io/tags/canary/</link>
-      <pubDate>Tue, 21 Jan 2020 01:08:00 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/canary/</guid>
       <description></description>
     </item>
     
@@ -260,15 +314,6 @@
       <pubDate>Fri, 10 Jan 2020 00:47:03 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/record/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible</title>
-      <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Wed, 08 Jan 2020 01:52:47 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible/</guid>
       <description></description>
     </item>
     
