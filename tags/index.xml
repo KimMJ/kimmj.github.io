@@ -6,15 +6,33 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Feb 2020 01:41:13 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 20:06:17 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>IaC</title>
+      <link>http://kimmj.github.io/tags/iac/</link>
+      <pubDate>Sun, 09 Feb 2020 20:06:17 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/iac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infrastructure-as-code</title>
+      <link>http://kimmj.github.io/tags/infrastructure-as-code/</link>
+      <pubDate>Sun, 09 Feb 2020 20:06:17 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/infrastructure-as-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ansible</title>
       <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Wed, 05 Feb 2020 01:41:13 +0900</pubDate>
+      <pubDate>Thu, 06 Feb 2020 13:21:42 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/ansible/</guid>
       <description></description>
@@ -23,7 +41,7 @@
     <item>
       <title>ansible-for-devops</title>
       <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
-      <pubDate>Wed, 05 Feb 2020 01:41:13 +0900</pubDate>
+      <pubDate>Thu, 06 Feb 2020 13:21:42 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
       <description></description>

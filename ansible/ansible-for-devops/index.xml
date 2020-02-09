@@ -12,15 +12,38 @@
     
     
     <item>
-      <title>Getting Started With_Ansible</title>
-      <link>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with_ansible/</link>
+      <title>Chapter 1 - Getting Started With Ansible</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with-ansible/</link>
       <pubDate>Wed, 05 Feb 2020 01:41:13 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with_ansible/</guid>
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with-ansible/</guid>
       <description>Ansible and Infrastructure Management On snowflakes1 and shell scripts 보통은 SSH를 통해서 접속하여 필요한 작업을 하고 접속을 종료한다. 이 때, 어떤 것들은 기록되고 어떤 것들은 기록되지 않는다. 결국 관리자가 똑같은 작업을 여러 서버에 해야하는 책임소지가 있다.
 서버가 동작 중일 때 몇가지 변경사항이 생기고 적용할 방법이 쉽다면 문제가 되진 않을 것이다. 그러나 불행하게도 대부분은 그렇지 않다.
 이 때 기존과 똑같은 서버를 만드려고 한다면 정말 많은, 쓸데없는 시간을 소비하게 된다.
 shell script로 보완을 하려고 하지만, 모든 edge case를 커버하기란 어려운게 현실이다.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2 - Local Infrastructure Development: Ansible and Vagrant</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/</link>
+      <pubDate>Wed, 05 Feb 2020 15:09:00 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/</guid>
+      <description>Prototyping and testing with local virtual machines Ansible은 remote, local 가리지 않고 연결할 수 있는 서버면 모두 잘 동작한다. 일반적으로 테스트를 할 때, Ansible Playbook 개발 속도를 빠르게 하기 위해 로컬로 테스트한다. 로컬로 하는 것이 실제 환경에서 테스트하는 것보다 훨씬 안전하다.
+최근 트렌드는 단연 TDD이다. 따라서 Infrastructure에도 테스트는 필요하다.
+소프트웨어에 대한 변경사항은 수동 또는 자동적으로 이루어진다. 이러한 것들이 Ansible과 다른 개발, configuration management 툴과 함께 구현되어 테스트를 할 수 있도록 구현되어있다.</description>
+    </item>
+    
+    <item>
+      <title>Ad Hoc Commands</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/ad-hoc-commands/</link>
+      <pubDate>Thu, 06 Feb 2020 13:21:42 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/ad-hoc-commands/</guid>
+      <description>지난 챕터에서는 Vagrant와 간단한 Ansible playbook으로 local infrastructure를 테스트해보았다. 이번에는 간단한 Ansible ad-hoc command를 사용하여 하나의 명령어로 다수의 remote server에 명령을 보낼 것이다.
+나중 챕터에서는 playbook에 대해 자세히 알아볼 것이지만, 지금은 어떻게 Ansible이 하나 이상의 서버에 대해 ad-hoc command로 빠르게 공통적인 일을 수행하는지, 데이터를 가져오는지에 대해 알아볼 것이다.
+Conducting an orchestra 각 개인 administrator가 관리하는 서버의 수는 수년간 급격하게 증가했다. 특히 virtualization과 cloud application의 발전은 표준처럼 되었다.
+어느 때든 system administrator는 여러가지 업무가 있다.</description>
     </item>
     
   </channel>

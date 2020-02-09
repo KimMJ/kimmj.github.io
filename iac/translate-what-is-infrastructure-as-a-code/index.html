@@ -1,0 +1,3545 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="description" content="Do Learn">
+<meta name="author" content="Myeongjin Kim">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>[번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials :: Ibiza</title>
+
+    
+    <link href="/css/nucleus.css?1581251375" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581251375" rel="stylesheet">
+    <link href="/css/hybrid.css?1581251375" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581251375" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581251375" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581251375" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581251375" rel="stylesheet">
+    <link href="/css/theme.css?1581251375" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581251375" rel="stylesheet">
+    
+      <link href="/css/theme-mine.css?1581251375" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1581251375"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/iac/translate-what-is-infrastructure-as-a-code/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+<img src="https://avatars3.githubusercontent.com/u/6358016?s=460&v=4" style="border-radius: 50%"  width="50%" height="50%"/>
+</div>
+<p style="color: white">Ibiza</p>
+<p style="color: white">꾸준하게, 오랫동안, 열심히</p>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1581251375"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1581251375"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/kimmj.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1581251375"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ibiza/" title="Ibiza" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ibiza/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ibiza
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/importance-of-record/" title="Importance of Record" class="dd-item ">
+        <a href="/ibiza/importance-of-record/">
+        <i class='fas fa-minus'></i>&nbsp;Importance of Record
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/2020-plan/" title="2020 Plan" class="dd-item ">
+        <a href="/ibiza/2020-plan/">
+        <i class='fas fa-minus'></i>&nbsp;2020 Plan
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/ibiza-project/" title="Ibiza Project" class="dd-item ">
+        <a href="/ibiza/ibiza-project/">
+        <i class='fas fa-minus'></i>&nbsp;Ibiza Project
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ibiza/2020-new-year-holiday-plans/" title="2020 New Year Holiday Plans" class="dd-item ">
+        <a href="/ibiza/2020-new-year-holiday-plans/">
+        <i class='fas fa-minus'></i>&nbsp;2020 New Year Holiday Plans
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/iac/" title="IaC" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/iac/">
+          <i class='fas fa-angle-right'></i>&nbsp;IaC
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/iac/translate-what-is-infrastructure-as-a-code/" title="[번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials" class="dd-item active">
+        <a href="/iac/translate-what-is-infrastructure-as-a-code/">
+        <i class='fas fa-minus'></i>&nbsp;[Translate] What Is Infrastructure as a Code
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cicd/" title="CICD" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cicd/">
+          <i class='fas fa-angle-right'></i>&nbsp;CICD
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cicd/deploy-strategy/" title="Deploy Strategy" class="dd-item ">
+        <a href="/cicd/deploy-strategy/">
+        <i class='fas fa-minus'></i>&nbsp;Deploy Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/css/" title="CSS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/css/">
+          <i class='fas fa-angle-right'></i>&nbsp;CSS
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/css/greater-than-sign/" title="Greater Than Sign" class="dd-item ">
+        <a href="/css/greater-than-sign/">
+        <i class='fas fa-minus'></i>&nbsp;Greater Than Sign
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/prometheus/" title="Prometheus" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/prometheus/">
+          <i class='fas fa-angle-right'></i>&nbsp;Prometheus
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/prometheus/install/" title="Install Prometheus" class="dd-item ">
+        <a href="/prometheus/install/">
+        <i class='fas fa-minus'></i>&nbsp;Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/prometheus/federation/" title="Federation" class="dd-item ">
+        <a href="/prometheus/federation/">
+        <i class='fas fa-minus'></i>&nbsp;Federation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/">
+          <i class='fas fa-angle-right'></i>&nbsp;Kubernetes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/installation/" title="Install" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/installation/">
+          <i class='fas fa-angle-right'></i>&nbsp;Install
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/installation/overview/" title="Overview" class="dd-item ">
+        <a href="/kubernetes/installation/overview/">
+        <i class='fas fa-minus'></i>&nbsp;Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/installation/install-kubeadm/" title="Install Kubeadm" class="dd-item ">
+        <a href="/kubernetes/installation/install-kubeadm/">
+        <i class='fas fa-minus'></i>&nbsp;Install Kubeadm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/" title="Create a Single Control Plane Cluster With Kubeadm" class="dd-item ">
+        <a href="/kubernetes/installation/create-a-single-control-plane-cluster-with-kubeadm/">
+        <i class='fas fa-minus'></i>&nbsp;Create a Single Control Plane Cluster With Kubeadm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/concepts/" title="Concepts" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/concepts/">
+          <i class='fas fa-angle-right'></i>&nbsp;Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/concepts/controllers-overview/" title="Controllers Overview" class="dd-item ">
+        <a href="/kubernetes/concepts/controllers-overview/">
+        <i class='fas fa-minus'></i>&nbsp;Controllers Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/concepts/pods/" title="Pods" class="dd-item ">
+        <a href="/kubernetes/concepts/pods/">
+        <i class='fas fa-minus'></i>&nbsp;Pods
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo/" title="Hugo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hugo/">
+          <i class='fas fa-angle-right'></i>&nbsp;Hugo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo/ibiza/" title="Ibiza" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hugo/ibiza/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ibiza
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/ibiza/font-change/" title="Font Change" class="dd-item ">
+        <a href="/hugo/ibiza/font-change/">
+        <i class='fas fa-minus'></i>&nbsp;Font Change
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/insert-comment/" title="Hugo에 Comment 추가하기 (Utterance)" class="dd-item ">
+        <a href="/hugo/insert-comment/">
+        <i class='fas fa-minus'></i>&nbsp;Hugo에 Comment 추가하기 (Utterance)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/hugo-with-html/" title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class="dd-item ">
+        <a href="/hugo/hugo-with-html/">
+        <i class='fas fa-minus'></i>&nbsp;hugo with html
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/" title="Spinnaker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/">
+          <i class='fas fa-angle-right'></i>&nbsp;Spinnaker
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/installation/" title="Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/installation/">
+          <i class='fas fa-angle-right'></i>&nbsp;Installation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/overview/" title="Overview" class="dd-item ">
+        <a href="/spinnaker/installation/overview/">
+        <i class='fas fa-minus'></i>&nbsp;Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/install-halyard/" title="Install Halyard" class="dd-item ">
+        <a href="/spinnaker/installation/install-halyard/">
+        <i class='fas fa-minus'></i>&nbsp;Install Halyard
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/choose-cloud-providers/" title="Choose Cloud Providers" class="dd-item ">
+        <a href="/spinnaker/installation/choose-cloud-providers/">
+        <i class='fas fa-minus'></i>&nbsp;Choose Cloud Providers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/choose-your-environment/" title="Choose Your Environment" class="dd-item ">
+        <a href="/spinnaker/installation/choose-your-environment/">
+        <i class='fas fa-minus'></i>&nbsp;Choose Your Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/choose-a-storage-service/" title="Choose a Storage Service" class="dd-item ">
+        <a href="/spinnaker/installation/choose-a-storage-service/">
+        <i class='fas fa-minus'></i>&nbsp;Choose a Storage Service
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/deploy-and-connect/" title="Deploy and Connect" class="dd-item ">
+        <a href="/spinnaker/installation/deploy-and-connect/">
+        <i class='fas fa-minus'></i>&nbsp;Deploy and Connect
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/installation/install-in-air-gaped-environment/" title="Install in Air Gaped Environment" class="dd-item ">
+        <a href="/spinnaker/installation/install-in-air-gaped-environment/">
+        <i class='fas fa-minus'></i>&nbsp;Install in Air Gaped Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/canaryanalysis/" title="CanaryAnalysis" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/canaryanalysis/">
+          <i class='fas fa-angle-right'></i>&nbsp;CanaryAnalysis
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/canaryanalysis/canary-analysis/" title="Canary Analysis" class="dd-item ">
+        <a href="/spinnaker/canaryanalysis/canary-analysis/">
+        <i class='fas fa-minus'></i>&nbsp;Canary Analysis
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/spinnaker/tips/" title="Tips" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/spinnaker/tips/">
+          <i class='fas fa-angle-right'></i>&nbsp;Tips
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/spinnaker/tips/pipeline-expressions/" title="Pipeline Expressions" class="dd-item ">
+        <a href="/spinnaker/tips/pipeline-expressions/">
+        <i class='fas fa-minus'></i>&nbsp;Pipeline Expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ansible/" title="Ansible" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ansible/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ansible
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ansible/ansible-for-devops/" title="Ansible for DevOps" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ansible/ansible-for-devops/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ansible for DevOps
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ansible/ansible-for-devops/getting-started-with-ansible/" title="Chapter 1 - Getting Started With Ansible" class="dd-item ">
+        <a href="/ansible/ansible-for-devops/getting-started-with-ansible/">
+        <i class='fas fa-minus'></i>&nbsp;Getting Started With Ansible
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/" title="Chapter 2 - Local Infrastructure Development: Ansible and Vagrant" class="dd-item ">
+        <a href="/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/">
+        <i class='fas fa-minus'></i>&nbsp;Local Infrastructure Development: Ansible and Vagrant
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ansible/ansible-for-devops/ad-hoc-commands/" title="Ad Hoc Commands" class="dd-item ">
+        <a href="/ansible/ansible-for-devops/ad-hoc-commands/">
+        <i class='fas fa-minus'></i>&nbsp;Ad Hoc Commands
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ansible/create-vm-with-ansible-libvirt/" title="Create Vm With Ansible Libvirt" class="dd-item ">
+        <a href="/ansible/create-vm-with-ansible-libvirt/">
+        <i class='fas fa-minus'></i>&nbsp;Create Vm With Ansible Libvirt
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/" title="Ubuntu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/">
+          <i class='fas fa-angle-right'></i>&nbsp;Ubuntu
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/tools/" title="Tools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/tools/">
+          <i class='fas fa-angle-right'></i>&nbsp;Tools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/tools/tmux/" title="Tmux" class="dd-item ">
+        <a href="/ubuntu/tools/tmux/">
+        <i class='fas fa-minus'></i>&nbsp;Tmux
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/ubuntu/network/" title="Network" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ubuntu/network/">
+          <i class='fas fa-angle-right'></i>&nbsp;Network
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/change-hostname/" title="Change Hostname" class="dd-item ">
+        <a href="/ubuntu/change-hostname/">
+        <i class='fas fa-minus'></i>&nbsp;Change Hostname
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/unattended-ubuntu/" title="Unattended Ubuntu" class="dd-item ">
+        <a href="/ubuntu/unattended-ubuntu/">
+        <i class='fas fa-minus'></i>&nbsp;Unattended Ubuntu
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/how-to-edit-boot-parameter-during-install/" title="How to Edit Boot Parameter During Install" class="dd-item ">
+        <a href="/ubuntu/how-to-edit-boot-parameter-during-install/">
+        <i class='fas fa-minus'></i>&nbsp;How to Edit Boot Parameter During Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/how-to-use-sudo-without-password/" title="How to Use Sudo Without Password" class="dd-item ">
+        <a href="/ubuntu/how-to-use-sudo-without-password/">
+        <i class='fas fa-minus'></i>&nbsp;How to Use Sudo Without Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/english/" title="English" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/">
+          <i class='fas fa-angle-right'></i>&nbsp;English
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/english/himym/" title="HIMWM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/himym/">
+          <i class='fas fa-angle-right'></i>&nbsp;HIMWM
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/english/himym/season1/" title="Season1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/himym/season1/">
+          <i class='fas fa-angle-right'></i>&nbsp;Season1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode1/" title="Episode1" class="dd-item ">
+        <a href="/english/himym/season1/episode1/">
+        <i class='fas fa-minus'></i>&nbsp;Episode1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode5/" title="Episode5" class="dd-item ">
+        <a href="/english/himym/season1/episode5/">
+        <i class='fas fa-minus'></i>&nbsp;Episode5
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode6/" title="Episode6" class="dd-item ">
+        <a href="/english/himym/season1/episode6/">
+        <i class='fas fa-minus'></i>&nbsp;Episode6
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode7/" title="Episode7" class="dd-item ">
+        <a href="/english/himym/season1/episode7/">
+        <i class='fas fa-minus'></i>&nbsp;Episode7
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode8/" title="Episode8" class="dd-item ">
+        <a href="/english/himym/season1/episode8/">
+        <i class='fas fa-minus'></i>&nbsp;Episode8
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode9/" title="Episode9" class="dd-item ">
+        <a href="/english/himym/season1/episode9/">
+        <i class='fas fa-minus'></i>&nbsp;Episode9
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode10/" title="Episode10" class="dd-item ">
+        <a href="/english/himym/season1/episode10/">
+        <i class='fas fa-minus'></i>&nbsp;Episode10
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode11/" title="Episode11" class="dd-item ">
+        <a href="/english/himym/season1/episode11/">
+        <i class='fas fa-minus'></i>&nbsp;Episode11
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode12/" title="Episode12" class="dd-item ">
+        <a href="/english/himym/season1/episode12/">
+        <i class='fas fa-minus'></i>&nbsp;Episode12
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode13/" title="Episode13" class="dd-item ">
+        <a href="/english/himym/season1/episode13/">
+        <i class='fas fa-minus'></i>&nbsp;Episode13
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode14/" title="Episode14" class="dd-item ">
+        <a href="/english/himym/season1/episode14/">
+        <i class='fas fa-minus'></i>&nbsp;Episode14
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode15/" title="Episode15" class="dd-item ">
+        <a href="/english/himym/season1/episode15/">
+        <i class='fas fa-minus'></i>&nbsp;Episode15
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode16/" title="Episode16" class="dd-item ">
+        <a href="/english/himym/season1/episode16/">
+        <i class='fas fa-minus'></i>&nbsp;Episode16
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode17/" title="Episode17" class="dd-item ">
+        <a href="/english/himym/season1/episode17/">
+        <i class='fas fa-minus'></i>&nbsp;Episode17
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode18/" title="Episode18" class="dd-item ">
+        <a href="/english/himym/season1/episode18/">
+        <i class='fas fa-minus'></i>&nbsp;Episode18
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode19/" title="Episode19" class="dd-item ">
+        <a href="/english/himym/season1/episode19/">
+        <i class='fas fa-minus'></i>&nbsp;Episode19
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode20/" title="Episode20" class="dd-item ">
+        <a href="/english/himym/season1/episode20/">
+        <i class='fas fa-minus'></i>&nbsp;Episode20
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode21/" title="Episode21" class="dd-item ">
+        <a href="/english/himym/season1/episode21/">
+        <i class='fas fa-minus'></i>&nbsp;Episode21
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season1/episode22/" title="Episode22" class="dd-item ">
+        <a href="/english/himym/season1/episode22/">
+        <i class='fas fa-minus'></i>&nbsp;Episode22
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/english/himym/season2/" title="Season2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/english/himym/season2/">
+          <i class='fas fa-angle-right'></i>&nbsp;Season2
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season2/episode01/" title="Episode01" class="dd-item ">
+        <a href="/english/himym/season2/episode01/">
+        <i class='fas fa-minus'></i>&nbsp;Episode01
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/english/himym/season2/episode03/" title="Episode03" class="dd-item ">
+        <a href="/english/himym/season2/episode03/">
+        <i class='fas fa-minus'></i>&nbsp;Episode03
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/KimMJ"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://gohugo.io/"><i class='fas fa-bookmark'></i> Hugo Documentation</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://learn.netlify.com/en/"><i class='fas fa-bookmark'></i> Hugo Theme Learn</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://kimmj.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/iac/'>IaC</a> > [번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#defining-infrastructure-as-code">Defining Infrastructure as Code</a></li>
+    <li><a href="#what-problem-does-iac-solve">What Problem Does IaC Solve?</a>
+      <ul>
+        <li><a href="#the-pain-of-managing-it-infrastructure">The Pain of Managing IT Infrastructure</a></li>
+      </ul>
+    </li>
+    <li><a href="#cloud-computing-a-cure">Cloud Computing: A Cure?</a></li>
+    <li><a href="#infrastructure-as-code-the-missing-piece-of-the-puzzle">Infrastructure as Code: The Missing Piece of the Puzzle</a></li>
+    <li><a href="#infrastructure-as-code-benefits">Infrastructure as Code Benefits</a>
+      <ul>
+        <li><a href="#speed">Speed</a></li>
+        <li><a href="#consistency">Consistency</a></li>
+        <li><a href="#accountability">Accountability</a></li>
+        <li><a href="#more-efficiency-during-the-whole-software-development-cycle">More Efficiency During the Whole Software Development Cycle</a></li>
+        <li><a href="#lower-cost">Lower Cost</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-does-iac-work">How Does IaC Work?</a></li>
+    <li><a href="#learn-some-best-practices">Learn Some Best Practices</a></li>
+    <li><a href="#resources-at-your-disposal">Resources At Your Disposal</a></li>
+    <li><a href="#infrastructure-as-code-saves-you-time-and-money">Infrastructure as Code Saves You Time and Money</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/iac">IaC</a>
+
+  <a class="tag-link" href="/tags/infrastructure-as-code">infrastructure-as-code</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              [번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials
+            </h1>
+          
+
+        
+
+
+
+<p>link: <a href="https://stackify.com/what-is-infrastructure-as-code-how-it-works-best-practices-tutorials/">https://stackify.com/what-is-infrastructure-as-code-how-it-works-best-practices-tutorials/</a></p>
+<p>과거에 IT infrastructure를 관리하는 것은 힘든 일이었다.
+시스템 관리자는 수동으로 관리하고 어플리케이션을 구동시키기 위해 모든 하드웨어와 소프트웨어를 설정해야 했다.</p>
+<p>하지만 최근 몇년간 급격하게 상황들이 바뀌었다.
+cloud computing같은 트렌드가 디자인, 개발, IT infrastructure의 유지를 하는 방법을 혁명화하고 발전시켰다.</p>
+<p>이러한 트렌드의 핵심 요소는 <code>infrastructure as code</code>이다.
+여기에 대해 이야기 해보도록 하겠다.</p>
+<h2 id="defining-infrastructure-as-code">Defining Infrastructure as Code</h2>
+<p>infrastructure를 코드로 정의하는 것부터 시작해보도록 하자.
+이것이 무엇을 의미하는지, 어떤 문제들을 해결하는지 배우게 될 것이다.</p>
+<p>Wikipedia에서 IaC는 다음과 같이 정의되어 있다.</p>
+<blockquote>
+<p>Infrastructure as code is the process of managing and provisioning computer data centers through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools.</p>
+</blockquote>
+<blockquote>
+<p>Infrastructure as code는 물리적인 하드웨어 설정이나 상호작용을 하는 설정 툴을 이용하는 것이 아닌, 기계가 읽을 수 있는 파일로 정의하여 computer data center들을 관리하고 프로비저닝하는 프로세스이다.</p>
+</blockquote>
+<p>이 정의는 나쁘지 않지만 약간 너무 장황하게 설명했다.
+더 간단하게 해보자.</p>
+<blockquote>
+<p>Infrastructure as code (IaC)는 IT infrastructure를 설정 파일로 관리한다는 의미이다.</p>
+</blockquote>
+<p>다음 질문은 이렇게 될 것이다.
+&ldquo;왜 그걸 쓰고싶어 하나요?&rdquo;</p>
+<h2 id="what-problem-does-iac-solve">What Problem Does IaC Solve?</h2>
+<p>&ldquo;what&quot;에 대해 생각하기 전에 &ldquo;why&quot;에 먼저 집중해보자.
+왜 IaC가 필요한가?
+이것이 어떤 문제를 풀어주는가?</p>
+<h3 id="the-pain-of-managing-it-infrastructure">The Pain of Managing IT Infrastructure</h3>
+<p>역사적으로 IT infrastructure를 관리하는 것은 수동 프로세스였다.
+사람들은 물리적으로 서버를 위치시키고 이를 설정했다.
+머신이 OS와 어플리케이션이 원하는 설정으로 되었을 때에, 어플리케이션을 배포할 수 있게 된다.
+당연하게도 수동 프로세스는 자주 문제를 일으킨다.</p>
+<p>첫번째 큰 문제는 <strong>비용</strong>이다.
+네트워크 엔지니어에서부터 하드웨어 관리 기술자까지 많은 전문가를 고용해서 프로세스의 각 단계를 수행시키도록 해야한다.
+이런 모든 사람에게 돈을 지불해야 하면서 또한 관리되어야 한다.
+이는 관리 오버헤드를 야기하고 기업 내의 소통의 복잡성을 증대시킨다.
+결과적으로? 돈이 사라진다.
+또한 우린 아직 비용을 더 많이 늘리는 데이터센터를 관리하는 것과 빌딩에 대한 이야기를 하지 않았다.</p>
+<p>그 다음 문제는 <strong>확장성</strong>과 <strong>가용성</strong>이다.
+하지만 결국 모든 것은 속도 문제다.
+수동으로 설정하는 것은 너무 느리고, 어플리케이션의 접속은 스파이크를 치고 있는 동안 시스템 관리자는 부하를 관리하기 위해 필사적으로 서버를 세팅할 것이다.
+이는 가용성에도 무조건 영향을 미친다.
+기업이 백업 서버나 심지어 데이터 센터가 없다면 어플리케이션은 장기간동안 이용불가능해질 것이다.</p>
+<p>마지막으로 가장 중요한 문제는 inconsistency이다.
+몇몇 사람들이 수동으로 설정을 배포한다면, 균열은 생길수밖에 없다.</p>
+<h2 id="cloud-computing-a-cure">Cloud Computing: A Cure?</h2>
+<p>Cloud computing은 방금 읽었던 고통들을 완화시켜준다.
+이는 데이터센터를 구축하고 유지보수하는 것과 그 비용으로부터 자유롭게 해준다.</p>
+<p>그러나 Cloud computing은 만병통치약과는 거리가 멀다.
+이것이 infrastructure를 빠르게 셋업하는데에는 도움을 주겠지만 (그래서 고가용성이나 확장성의 문제는 해결해 준다) 이는 inconsistency 이슈를 해결하지는 못한다.
+설정을 수행하는 사람이 한명보다 많다면, 불균형이 생길 수 있다.</p>
+<h2 id="infrastructure-as-code-the-missing-piece-of-the-puzzle">Infrastructure as Code: The Missing Piece of the Puzzle</h2>
+<p>IaC 정의를 다시 한번 봐보자.</p>
+<blockquote>
+<p>Infrastructure as code (IaC)는 IT infrastructure를 설정 파일로 관리한다는 의미이다.</p>
+</blockquote>
+<p>정의에서 가져온 핵심은 바로 다음과 같다.
+IaC 이전에 IT 사람들은 infrastructure에 대해 수동으로 설정을 바꾸어야 했다.
+아마 스크립트를 쓰거나 몇몇 작업은 자동화를 시켰겠지만, 그냥 그 정도였다.
+IaC를 통해 infrastructure의 설정은 코드 파일의 형태를 띄게 되었다.
+이는 단순한 텍스트이지만 수정하고 복사하고 분배하는 것이 쉽다.
+당신은 다른 소스코드 파일들처럼 source control로 이를 관리할 수 있고 또 그래야 한다.</p>
+<h2 id="infrastructure-as-code-benefits">Infrastructure as Code Benefits</h2>
+<p>이제까지 수동으로 infrastructure를 관리하는 것의 문제점들을 알아 보았다.
+우리는 여기서 어떻게 cloud computing이 이런 몇가지 문제점을 해결해 주는지, 또 어떤것들은 해결해주지 않는지 알아보았다.
+그리고 우리는 IaC가 퍼즐의 마지막 조각이라고 말하며 이 논의를 마쳤다.</p>
+<p>이제 우리는 IaC solution을 사용할 때의 이점에 대해서 알아볼 것이다.</p>
+<h3 id="speed">Speed</h3>
+<p>IaC의 가장 중요한 이점은 스피드이다.
+Infrastructure as Code는 script를 실행시켜 빠르게 완전한 infrastructure를 셋업할 수 있게 해준다.
+이를 개발환경과 production 환경부터 staging, QA 등등까지 모든 환경에 대해서 할 수 있다.
+IaC는 전체 소프트웨어 개발 라이프사이클을 효과적으로 만들어준다.</p>
+<h3 id="consistency">Consistency</h3>
+<p>수동 프로세스는 실수를 불어일으키고 시간이 걸린다.
+사람은 실수할 수 있다.
+우리의 기억은 잘못될 수 있다.
+소통은 어렵고 우리는 일반적으로 소통을 어려워한다.
+여기서 읽었던 것 처럼 수동으로 인프라를 관리하는 것은 얼마나 열심히 하던지 간에 불균형을 일으키게 된다.
+IaC는 믿을 수 있는 하나의 소스코드로 이 설정 파일을 관리하여 이를 해결해준다.
+이런 방식으로 동일한 설정이 어떤 불균형도 없이 계속해서 배포됨을 보장한다.</p>
+<h3 id="accountability">Accountability</h3>
+<p>이는 빠르고 쉬운 것이다.
+IaC 설정 파일을 소스 코드 파일처럼 버전화 할 수 있기 때문에 설정들의 변경사항을 추적할 수 있다.
+누가 이를 했고 언제 했는지 추측할 필요가 없다.</p>
+<h3 id="more-efficiency-during-the-whole-software-development-cycle">More Efficiency During the Whole Software Development Cycle</h3>
+<p>infrastrucutre as code를 적용하면 infrastructure 아키텍쳐를 어려 단계로 배포할 수 있다.
+이는 전체 소프트웨어 개발 라이프 사이클을 더욱 효율적으로 해주어 팀의 생산성을 더 끌어올릴 수 있다.</p>
+<p>프로그래머들이 IaC를 사용하여 sandbox 환경을 생성하여 독립된 공간에서 안전하게 개발할 수 있게 할 수 있다.
+같은 방식으로 테스트를 돌리기 위해 production 환경을 복사해야 하는 QA 전문가들도 사용할 수 있다.
+결과적으로 배포 시에 infrastructure as code는 하나의 단계가 될 것이다.</p>
+<h3 id="lower-cost">Lower Cost</h3>
+<p>IaC의 주된 장점 중 하나는 의심할 여지 없이 인프라 관리의 비용이 줄어든다는 것이다.
+IaC를 통해 cloud computing을 하면 극적으로 비용을 줄일 수 있다.
+이는 하드웨어에 많은 시간을 사용하지 않아도 됨을 의미하고 이를 관리할 사람을 고용하지 않아도 되며 저장할 물리적인 장소를 만들거나 대여하지 않아도 됨을 의미한다.
+하지만 IaC는 기회비용이라 부르는 다른 미묘한 방식으로 비용을 더 줄여준다.</p>
+<p>보았듯이 똑똑하고, 높은 급료를 받는 전문가가 자동화 할 수 있는 작업을 수행하는 것은 돈 낭비이다.
+이제 모든 포커스는 기업에 더 가치있는 일에 맞춰져야 한다.
+그리고 자동화 전략을 사용하면 편하다.
+이를 사용하여 수동적이고 느리고 에러가 나기 쉬운 작업을 수행하는 것으로부터 엔지니어들을 해방시켜주고 더 중요한 일에 집중할 수 있게 한다.</p>
+<h2 id="how-does-iac-work">How Does IaC Work?</h2>
+<p>IaC 툴은 어떻게 작동하는지가 굉장히 다양하지만 이를 일반적으로 두가지 종류로 나눠볼 수 있다.
+하나는 imperative approach를 따르는 것이고 다른 하나는 declarative approach를 따르는 것이다.
+이 위의 카테고리를 프로그래밍 언어 패러다임과 엮을 수 있다면 완벽하다.</p>
+<p>imperative approach는 순서를 제공하는 것이다.
+이는 명령어나 지시사항의 순서를 정의하여 인프라가 최종적인 결과를 가지게 하는 것이다.</p>
+<p>declarative approach는 완하는 결과를 정의하는 것이다.
+명백하게 원하는 결과로 가는 단계들의 순서를 정의하지 않고, 어떻게 최종 결과가 보여야 하는지만 정의한다.</p>
+<h2 id="learn-some-best-practices">Learn Some Best Practices</h2>
+<p>이제 IaC 전략의 모범사례를 확인해 볼 것이다.</p>
+<ul>
+<li>코드가 하나의 믿을 수 있는 소스로부터 나온다.
+명시적으로 모든 인프라 설정을 설정 파일 안에 작성해야 한다.
+설정 파일은 인프라 관리 문제에 대해서 단 하나의 관리포인트이다.</li>
+<li>모든 설정 파일에 대해 Version Control을 하라.
+이는 말할 필요도 없겠지만, 모든 코드는 source control이 되어야 한다.</li>
+<li>인프라 스펙에 대한 약간의 문서화만 필요하다.
+이 포인트는 첫번째의 논리적인 결과이다.
+설정 파일이 단일 소스이므로, 문서화가 필요하지 않다.
+외부 문서는 실제 설정과 싱크가 잘 안맞을 수 있지만 설정 파일은 그럴 이유가 없다.</li>
+<li>설정을 테스트하고 모니터한다. IaC는 코드로 모든 코드와 같이 테스트될 수 있다.
+따라서 가능하면 테스트해라.
+IaC에 대한 테스트와 모니터링을 하여 production에 어플리케이션을 배포하기 전에 서버에 문제가 있는지 확인할 수 있다.</li>
+</ul>
+<h2 id="resources-at-your-disposal">Resources At Your Disposal</h2>
+<p>다음은 IaC를 배우기 좋은 유용한 리소스들이다.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Infrastructure_as_code">Wikipedia’s definition</a></li>
+<li><a href="https://www.edureka.co/blog/chef-tutorial/">Edureka’s Chef tutorial</a></li>
+<li><a href="https://www.ibexlabs.com/top-7-infrastructure-as-code-tools/">Ibexlabs’s.The Top 7 Infrastructure As Code Tools For Automation</a></li>
+<li><a href="https://technologyadvice.com/blog/information-technology/puppet-vs-chef/">TechnologyAdvice’s Puppet vs. Chef: Comparing Configuration Management Tools</a></li>
+</ul>
+<h2 id="infrastructure-as-code-saves-you-time-and-money">Infrastructure as Code Saves You Time and Money</h2>
+<p>IaC는 DevOps 움직임의 중요한 부분이다.
+cloud computing이 많은 수동 IT 고나리의 문제점을 해결하는 데 첫 번째 단계라고 본다면 IaC는 다음의 논리적인 단계가 될 것이다.
+이는 cloud computing의 모든 가능성을 열어주고 개발자와 다른 전문가들로부터 수동적이고 에러가 발생하기 쉬운 업무를 없애준다.
+또한 소프트웨어 개발 라이프사이클의 효율성을 늘리고 비용을 절감한다.
+IaC와 함께 Retrace같은 툴을 쓰는것도 좋다.
+Retrace는 코드 레벨의 Application Performance Manager 솔루션으로 전체 개발 라이프사이클에서 어플리케이션의 퍼포먼스를 관리하고 모니터하게 할 수 있다.
+에러 추적이나 로그 관리, 어플리케이션 메트릭과 같은 또한 많은 다른 기능들을 가지고 있다.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        <div id="utterance">    
+    <script src="https://utteranc.es/client.js"
+            repo="kimmj/kimmj.github.io"
+            issue-term="pathname"
+            label="comments"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1581251375"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581251375"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581251375"></script>
+    <script src="/js/jquery.sticky.js?1581251375"></script>
+    <script src="/js/featherlight.min.js?1581251375"></script>
+    <script src="/js/highlight.pack.js?1581251375"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581251375"></script>
+    <script src="/js/learn.js?1581251375"></script>
+    <script src="/js/hugo-learn.js?1581251375"></script>
+
+    <link href="/mermaid/mermaid.css?1581251375" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581251375"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

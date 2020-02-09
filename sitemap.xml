@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kimmj.github.io/english/himym/season2/episode01/</loc>
+    <lastmod>2020-02-06T02:49:21+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/english/himym/season1/episode1/</loc>
+    <lastmod>2020-02-05T12:28:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/prometheus/install/</loc>
     <lastmod>2020-01-30T18:00:24+09:00</lastmod>
   </url>
@@ -15,6 +25,11 @@
   <url>
     <loc>http://kimmj.github.io/kubernetes/installation/overview/</loc>
     <lastmod>2020-01-14T01:42:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/english/himym/season1/</loc>
+    <lastmod>2020-01-11T00:02:57+09:00</lastmod>
   </url>
   
   <url>
@@ -43,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with_ansible/</loc>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with-ansible/</loc>
     <lastmod>2020-02-05T01:41:13+09:00</lastmod>
   </url>
   
@@ -58,8 +73,23 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/english/himym/</loc>
+    <lastmod>2020-01-11T00:02:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ibiza/2020-plan/</loc>
     <lastmod>2020-01-08T01:51:18+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/english/himym/season2/episode03/</loc>
+    <lastmod>2020-02-08T22:50:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/</loc>
+    <lastmod>2020-02-05T15:09:00+09:00</lastmod>
   </url>
   
   <url>
@@ -78,6 +108,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/ad-hoc-commands/</loc>
+    <lastmod>2020-02-06T13:21:42+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ibiza/2020-new-year-holiday-plans/</loc>
     <lastmod>2020-01-22T00:34:37+09:00</lastmod>
   </url>
@@ -85,6 +120,16 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/iac/</loc>
+    <lastmod>2020-02-09T20:05:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/english/himym/season2/</loc>
+    <lastmod>2020-02-06T02:48:07+09:00</lastmod>
   </url>
   
   <url>
@@ -148,18 +193,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode5/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode5/</loc>
     <lastmod>2020-01-11T00:03:30+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/</loc>
-    <lastmod>2020-01-11T00:02:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himwm/</loc>
-    <lastmod>2020-01-11T00:02:29+09:00</lastmod>
   </url>
   
   <url>
@@ -188,7 +223,7 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode6/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode6/</loc>
     <lastmod>2020-01-13T01:27:04+09:00</lastmod>
   </url>
   
@@ -198,18 +233,23 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode7/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode7/</loc>
     <lastmod>2020-01-14T00:53:23+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode8/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode8/</loc>
     <lastmod>2020-01-15T01:41:53+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode9/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode9/</loc>
     <lastmod>2020-01-15T23:58:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/iac/translate-what-is-infrastructure-as-a-code/</loc>
+    <lastmod>2020-02-09T20:06:17+09:00</lastmod>
   </url>
   
   <url>
@@ -248,7 +288,7 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode10/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode10/</loc>
     <lastmod>2020-01-17T00:06:57+09:00</lastmod>
   </url>
   
@@ -298,62 +338,62 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode11/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode11/</loc>
     <lastmod>2020-01-18T19:44:05+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode12/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode12/</loc>
     <lastmod>2020-01-20T01:13:47+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode13/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode13/</loc>
     <lastmod>2020-01-21T00:17:34+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode14/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode14/</loc>
     <lastmod>2020-01-21T23:25:30+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode15/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode15/</loc>
     <lastmod>2020-01-29T01:33:51+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode16/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode16/</loc>
     <lastmod>2020-01-30T00:14:51+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode17/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode17/</loc>
     <lastmod>2020-01-30T23:49:27+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode18/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode18/</loc>
     <lastmod>2020-02-01T00:05:55+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode19/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode19/</loc>
     <lastmod>2020-02-02T00:41:41+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode20/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode20/</loc>
     <lastmod>2020-02-03T01:46:43+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode21/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode21/</loc>
     <lastmod>2020-02-04T00:12:34+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himwm/season1/episode22/</loc>
+    <loc>http://kimmj.github.io/english/himym/season1/episode22/</loc>
     <lastmod>2020-02-05T01:18:04+09:00</lastmod>
   </url>
   
@@ -363,18 +403,28 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+    <loc>http://kimmj.github.io/tags/iac/</loc>
+    <lastmod>2020-02-09T20:06:17+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+    <loc>http://kimmj.github.io/tags/infrastructure-as-code/</loc>
+    <lastmod>2020-02-09T20:06:17+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/</loc>
-    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+    <lastmod>2020-02-09T20:06:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible/</loc>
+    <lastmod>2020-02-06T13:21:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
+    <lastmod>2020-02-06T13:21:42+09:00</lastmod>
   </url>
   
   <url>

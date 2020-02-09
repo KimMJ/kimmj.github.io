@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IaC on Ibiza</title>
+    <link>http://kimmj.github.io/tags/iac/</link>
+    <description>Recent content in IaC on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Feb 2020 20:06:17 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/iac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials</title>
+      <link>http://kimmj.github.io/iac/translate-what-is-infrastructure-as-a-code/</link>
+      <pubDate>Sun, 09 Feb 2020 20:06:17 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/iac/translate-what-is-infrastructure-as-a-code/</guid>
+      <description>link: https://stackify.com/what-is-infrastructure-as-code-how-it-works-best-practices-tutorials/
+과거에 IT infrastructure를 관리하는 것은 힘든 일이었다. 시스템 관리자는 수동으로 관리하고 어플리케이션을 구동시키기 위해 모든 하드웨어와 소프트웨어를 설정해야 했다.
+하지만 최근 몇년간 급격하게 상황들이 바뀌었다. cloud computing같은 트렌드가 디자인, 개발, IT infrastructure의 유지를 하는 방법을 혁명화하고 발전시켰다.
+이러한 트렌드의 핵심 요소는 infrastructure as code이다. 여기에 대해 이야기 해보도록 하겠다.
+Defining Infrastructure as Code infrastructure를 코드로 정의하는 것부터 시작해보도록 하자. 이것이 무엇을 의미하는지, 어떤 문제들을 해결하는지 배우게 될 것이다.</description>
+    </item>
+    
+  </channel>
+</rss>
