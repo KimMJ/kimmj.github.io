@@ -12,6 +12,33 @@
     
     
     <item>
+      <title>SSH Tunneling 사용법</title>
+      <link>http://kimmj.github.io/ubuntu/ssh-tunneling/</link>
+      <pubDate>Thu, 13 Feb 2020 21:16:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/ssh-tunneling/</guid>
+      <description>-D 옵션으로 socks proxy 사용하기 A라는 서버에서 B라는 서버에 있는 서비스를 보려고 합니다. 이 때, 해당 웹 어플리케이션은 B에서만 연결된 특정 IP로 통신을 하고 있고, 이 때문에 A에서 어플케이션이 제대로 동작하지 않는 상황입니다.
+이 때 사용할 수 있는 것이 -D 옵션입니다.
+예시
+ssh -D 12345 user@server.com 해당 세션이 꺼져있지 않은 상태에서 A 서버에서 웹 브라우저가 localhost:12345를 프록시로 사용하도록 하면 해당 웹 어플리케이션이 제대로 동작합니다.
+만약 windows라면 다음과 같이 진행하면 socks proxy를 사용하도록 할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Gateway를 이용하여 SSH 접속하기</title>
+      <link>http://kimmj.github.io/ubuntu/ssh-with-jump/</link>
+      <pubDate>Wed, 12 Feb 2020 22:08:16 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/ssh-with-jump/</guid>
+      <description>ssh cli 이용하는 방법 -J 옵션을 이용한다.
+ssh user@server -J user2@server2 두개 이상의 경우 ,로 구분한다.
+예: user2@server2로 접속 후 user3@server3로 접속한 뒤 user@server로 접속해야 할 경우
+ssh user@server -J user2@server2,user3@server3 이 상황에서 ssh-copy-id를 이용해 패스워드를 입력하지 않고 이동하려면
+localuser@localhost $ ssh-copy-id user2@server2 localuser@localhost $ ssh user2@server2 user2@server2 $ ssh-copy-id user3@server3 user2@server2 $ ssh user3@server3 user3@server3 $ ssh-copy-id user@server 이후 ssh를 통해 진입하면 패스워드 없이 접속 가능.
+만약 port가 필요한 경우 server:port 형태로 입력</description>
+    </item>
+    
+    <item>
       <title>Change Hostname</title>
       <link>http://kimmj.github.io/ubuntu/change-hostname/</link>
       <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>

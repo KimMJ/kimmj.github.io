@@ -6,10 +6,82 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Feb 2020 20:06:17 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2020 21:16:02 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>tunneling</title>
+      <link>http://kimmj.github.io/tags/tunneling/</link>
+      <pubDate>Thu, 13 Feb 2020 21:16:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/tunneling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://kimmj.github.io/tags/ubuntu/</link>
+      <pubDate>Thu, 13 Feb 2020 21:16:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible</title>
+      <link>http://kimmj.github.io/tags/ansible/</link>
+      <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-playbooks</title>
+      <link>http://kimmj.github.io/tags/ansible-playbooks/</link>
+      <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible-playbooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://kimmj.github.io/tags/linux/</link>
+      <pubDate>Wed, 12 Feb 2020 22:08:16 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>http://kimmj.github.io/tags/ssh/</link>
+      <pubDate>Wed, 12 Feb 2020 22:08:16 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>install</title>
+      <link>http://kimmj.github.io/tags/install/</link>
+      <pubDate>Tue, 11 Feb 2020 17:20:41 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jenkins</title>
+      <link>http://kimmj.github.io/tags/jenkins/</link>
+      <pubDate>Tue, 11 Feb 2020 17:20:41 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>IaC</title>
@@ -26,15 +98,6 @@
       <pubDate>Sun, 09 Feb 2020 20:06:17 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/infrastructure-as-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible</title>
-      <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Thu, 06 Feb 2020 13:21:42 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible/</guid>
       <description></description>
     </item>
     
@@ -129,15 +192,6 @@
     </item>
     
     <item>
-      <title>install</title>
-      <link>http://kimmj.github.io/tags/install/</link>
-      <pubDate>Thu, 30 Jan 2020 18:00:24 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/install/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>prometheus</title>
       <link>http://kimmj.github.io/tags/prometheus/</link>
       <pubDate>Thu, 30 Jan 2020 18:00:24 +0900</pubDate>
@@ -170,15 +224,6 @@
       <pubDate>Thu, 23 Jan 2020 21:04:29 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/tmux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>http://kimmj.github.io/tags/ubuntu/</link>
-      <pubDate>Thu, 23 Jan 2020 21:04:29 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     

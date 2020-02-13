@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ansible-playbooks on Ibiza</title>
+    <link>http://kimmj.github.io/tags/ansible-playbooks/</link>
+    <description>Recent content in ansible-playbooks on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Feb 2020 20:59:01 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/ansible-playbooks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ansible Playbooks</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/ansible-playbooks/</link>
+      <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/ansible-playbooks/</guid>
+      <description>Power plays 다른 여느 configuration management solution처럼 Ansible은 configuration file을 설명하는데 메타포를 사용한다. 이를 playbooks라고 부르고 여기에는 특정한 서버나 특정 서버 그룹에서 실행되는 tasks(Ansible의 용어에서는 play)의 리스트가 있다. 미식 축구에서 팀은 게임에서 이기기 위해 사전 정의된 playbook을 플레이의 기반으로 실행하고 따른다. Ansible에서 우리는 playbook(서버가 특정한 configuration state로 가기 위해 실행해야 하는 스텝들의 리스트)을 작성하고 서버 위에서 play되도록 할 것이다.
+Playbook은 configuration을 정의하는 상황에서는 자주 쓰이고 사람이 읽을 수 있는 간단한 문법을 가진 YAML로 작성되어있다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Jenkins Install</title>
+      <link>http://kimmj.github.io/jenkins/install/</link>
+      <pubDate>Tue, 11 Feb 2020 17:20:41 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/jenkins/install/</guid>
+      <description>Download docker-compose.yaml 링크를 참조하여 docker-compose.yml을 다운로드 받습니다.
+curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-jenkins/master/docker-compose.yml &amp;gt; docker-compose.yml 현재 yaml은 다음과 같은 구성입니다.
+version: &amp;#39;2&amp;#39; services: jenkins: image: &amp;#39;bitnami/jenkins:2&amp;#39; ports: - &amp;#39;80:8080&amp;#39; - &amp;#39;443:8443&amp;#39; - &amp;#39;50000:50000&amp;#39; volumes: - &amp;#39;jenkins_data:/bitnami&amp;#39; volumes: jenkins_data: driver: local 여기서 몇가지 설정을 추가해주도록 합니다.
+version: &amp;#39;2&amp;#39; services: jenkins: image: &amp;#39;bitnami/jenkins:2&amp;#39; ports: - &amp;#39;38080:8080&amp;#39; - &amp;#39;38443:8443&amp;#39; - &amp;#39;50000:50000&amp;#39; volumes: - &amp;#39;jenkins_data:/bitnami&amp;#39; volumes: jenkins_data: driver: local driver_opts: type: none device: $PWD/jenkins_data o: bind jenkins_data는 jenkins가 사용할 데이터들입니다.</description>
+    </item>
+    
+    <item>
       <title>Episode01</title>
       <link>http://kimmj.github.io/english/himym/season2/episode01/</link>
       <pubDate>Thu, 06 Feb 2020 02:49:21 +0900</pubDate>
@@ -237,6 +249,16 @@ ACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACC
     </item>
     
     <item>
+      <title>Ansible Playbooks</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/ansible-playbooks/</link>
+      <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/ansible-playbooks/</guid>
+      <description>Power plays 다른 여느 configuration management solution처럼 Ansible은 configuration file을 설명하는데 메타포를 사용한다. 이를 playbooks라고 부르고 여기에는 특정한 서버나 특정 서버 그룹에서 실행되는 tasks(Ansible의 용어에서는 play)의 리스트가 있다. 미식 축구에서 팀은 게임에서 이기기 위해 사전 정의된 playbook을 플레이의 기반으로 실행하고 따른다. Ansible에서 우리는 playbook(서버가 특정한 configuration state로 가기 위해 실행해야 하는 스텝들의 리스트)을 작성하고 서버 위에서 play되도록 할 것이다.
+Playbook은 configuration을 정의하는 상황에서는 자주 쓰이고 사람이 읽을 수 있는 간단한 문법을 가진 YAML로 작성되어있다.</description>
+    </item>
+    
+    <item>
       <title>Controllers Overview</title>
       <link>http://kimmj.github.io/kubernetes/concepts/controllers-overview/</link>
       <pubDate>Thu, 30 Jan 2020 18:26:04 +0900</pubDate>
@@ -352,6 +374,33 @@ Why are we even talking about this? This is, like, way down the road.
 All is right with the world again.
 Look, I don&#39;t wanna be exactly like my family. And don&#39;t take this the wrong way, but I don&#39;t wanna be exactly like your family, either.
 Just a little joke to lighten up the mood.</description>
+    </item>
+    
+    <item>
+      <title>SSH Tunneling 사용법</title>
+      <link>http://kimmj.github.io/ubuntu/ssh-tunneling/</link>
+      <pubDate>Thu, 13 Feb 2020 21:16:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/ssh-tunneling/</guid>
+      <description>-D 옵션으로 socks proxy 사용하기 A라는 서버에서 B라는 서버에 있는 서비스를 보려고 합니다. 이 때, 해당 웹 어플리케이션은 B에서만 연결된 특정 IP로 통신을 하고 있고, 이 때문에 A에서 어플케이션이 제대로 동작하지 않는 상황입니다.
+이 때 사용할 수 있는 것이 -D 옵션입니다.
+예시
+ssh -D 12345 user@server.com 해당 세션이 꺼져있지 않은 상태에서 A 서버에서 웹 브라우저가 localhost:12345를 프록시로 사용하도록 하면 해당 웹 어플리케이션이 제대로 동작합니다.
+만약 windows라면 다음과 같이 진행하면 socks proxy를 사용하도록 할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Gateway를 이용하여 SSH 접속하기</title>
+      <link>http://kimmj.github.io/ubuntu/ssh-with-jump/</link>
+      <pubDate>Wed, 12 Feb 2020 22:08:16 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/ssh-with-jump/</guid>
+      <description>ssh cli 이용하는 방법 -J 옵션을 이용한다.
+ssh user@server -J user2@server2 두개 이상의 경우 ,로 구분한다.
+예: user2@server2로 접속 후 user3@server3로 접속한 뒤 user@server로 접속해야 할 경우
+ssh user@server -J user2@server2,user3@server3 이 상황에서 ssh-copy-id를 이용해 패스워드를 입력하지 않고 이동하려면
+localuser@localhost $ ssh-copy-id user2@server2 localuser@localhost $ ssh user2@server2 user2@server2 $ ssh-copy-id user3@server3 user2@server2 $ ssh user3@server3 user3@server3 $ ssh-copy-id user@server 이후 ssh를 통해 진입하면 패스워드 없이 접속 가능.
+만약 port가 필요한 경우 server:port 형태로 입력</description>
     </item>
     
     <item>

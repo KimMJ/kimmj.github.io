@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kimmj.github.io/jenkins/install/</loc>
+    <lastmod>2020-02-11T17:20:41+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/english/himym/season2/episode01/</loc>
     <lastmod>2020-02-06T02:49:21+09:00</lastmod>
   </url>
@@ -120,6 +125,16 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/ansible-playbooks/</loc>
+    <lastmod>2020-02-13T20:59:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/jenkins/</loc>
+    <lastmod>2020-02-11T17:20:30+09:00</lastmod>
   </url>
   
   <url>
@@ -245,6 +260,16 @@
   <url>
     <loc>http://kimmj.github.io/english/himym/season1/episode9/</loc>
     <lastmod>2020-01-15T23:58:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/ssh-tunneling/</loc>
+    <lastmod>2020-02-13T21:16:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/ssh-with-jump/</loc>
+    <lastmod>2020-02-12T22:08:16+09:00</lastmod>
   </url>
   
   <url>
@@ -403,6 +428,51 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-02-13T21:16:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/tunneling/</loc>
+    <lastmod>2020-02-13T21:16:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-02-13T21:16:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible/</loc>
+    <lastmod>2020-02-13T20:59:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible-playbooks/</loc>
+    <lastmod>2020-02-13T20:59:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/linux/</loc>
+    <lastmod>2020-02-12T22:08:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ssh/</loc>
+    <lastmod>2020-02-12T22:08:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/install/</loc>
+    <lastmod>2020-02-11T17:20:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/jenkins/</loc>
+    <lastmod>2020-02-11T17:20:41+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/iac/</loc>
     <lastmod>2020-02-09T20:06:17+09:00</lastmod>
   </url>
@@ -410,16 +480,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/infrastructure-as-code/</loc>
     <lastmod>2020-02-09T20:06:17+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
-    <lastmod>2020-02-09T20:06:17+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-02-06T13:21:42+09:00</lastmod>
   </url>
   
   <url>
@@ -473,11 +533,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/install/</loc>
-    <lastmod>2020-01-30T18:00:24+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/prometheus/</loc>
     <lastmod>2020-01-30T18:00:24+09:00</lastmod>
   </url>
@@ -494,11 +549,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/tmux/</loc>
-    <lastmod>2020-01-23T21:04:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
     <lastmod>2020-01-23T21:04:29+09:00</lastmod>
   </url>
   
