@@ -8,23 +8,23 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>2020 New Year Holiday Plans :: Ibiza</title>
+    <title>password 없이 ssh 접속하기 :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1581862191" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1581862191" rel="stylesheet">
-    <link href="/css/hybrid.css?1581862191" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1581862191" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1581862191" rel="stylesheet">
-    <link href="/css/auto-complete.css?1581862191" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1581862191" rel="stylesheet">
-    <link href="/css/theme.css?1581862191" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1581862191" rel="stylesheet">
+    <link href="/css/nucleus.css?1581862208" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581862208" rel="stylesheet">
+    <link href="/css/hybrid.css?1581862208" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581862208" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581862208" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581862208" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581862208" rel="stylesheet">
+    <link href="/css/theme.css?1581862208" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581862208" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1581862191" rel="stylesheet">
+      <link href="/css/theme-mine.css?1581862208" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1581862191"></script>
+    <script src="/js/jquery-3.3.1.min.js?1581862208"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ibiza/2020-new-year-holiday-plans/">
+  <body class="" data-url="/ubuntu/ssh-without-password/">
     <nav id="sidebar" class="">
 
 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1581862191"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1581862191"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1581862208"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1581862208"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1581862191"></script>
+<script type="text/javascript" src="/js/search.js?1581862208"></script>
 
     
   </div>
@@ -78,7 +78,7 @@
   
     
     <li data-nav-id="/ibiza/" title="Ibiza" class="dd-item 
-        parent
+        
         
         
         ">
@@ -159,7 +159,7 @@
  
   
     
-      <li data-nav-id="/ibiza/2020-new-year-holiday-plans/" title="2020 New Year Holiday Plans" class="dd-item active">
+      <li data-nav-id="/ibiza/2020-new-year-holiday-plans/" title="2020 New Year Holiday Plans" class="dd-item ">
         <a href="/ibiza/2020-new-year-holiday-plans/">
         <i class='fas fa-minus'></i>&nbsp;2020 New Year Holiday Plans
         
@@ -1252,7 +1252,7 @@
   
     
     <li data-nav-id="/ubuntu/" title="Ubuntu" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1355,7 +1355,7 @@
  
   
     
-      <li data-nav-id="/ubuntu/ssh-without-password/" title="password 없이 ssh 접속하기" class="dd-item ">
+      <li data-nav-id="/ubuntu/ssh-without-password/" title="password 없이 ssh 접속하기" class="dd-item active">
         <a href="/ubuntu/ssh-without-password/">
         <i class='fas fa-minus'></i>&nbsp;password 없이 ssh 접속하기
         
@@ -2098,7 +2098,7 @@
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/ibiza/'>Ibiza</a> > 2020 New Year Holiday Plans
+            <a href='/'>Ibiza</a> > <a href='/ubuntu/'>Ubuntu</a> > password 없이 ssh 접속하기
           
          
           
@@ -2113,7 +2113,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#설-연휴-계획">설 연휴 계획</a></li>
+    <li><a href="#ssh-keygen">ssh-keygen을 통한 ssh key 생성</a></li>
+    <li><a href="#ssh-copy-id를-통한-public-key-복사">ssh-copy-id를 통한 public key 복사</a></li>
   </ul>
 </nav>
     </div>
@@ -2127,7 +2128,9 @@
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/holiday">holiday</a>
+  <a class="tag-link" href="/tags/ssh">ssh</a>
+
+  <a class="tag-link" href="/tags/passwordless">passwordless</a>
 
 </div>
 
@@ -2137,7 +2140,7 @@
           
             <h1>
               
-              2020 New Year Holiday Plans
+              password 없이 ssh 접속하기
             </h1>
           
 
@@ -2145,32 +2148,30 @@
 
 
 
-<h2 id="설-연휴-계획">설 연휴 계획</h2>
-<p>date : 2020-01-22T00:34:37+09:00</p>
-<p><del>- [ ] 연돈 가보기</del></p>
-<ul>
-<li>
-<p><input checked="" disabled="" type="checkbox">블로그에 댓글기능 추가하기</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox">블로그 레이아웃 구성</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox">왼쪽 사이드바를 더 넓게.</li>
-</ul>
-<p><del>- [ ] 오른쪽 여백 생성하여 가운데 정렬이 되도록</del></p>
-<p><del>- [ ] 배경 설정?</del></p>
-<ul>
-<li><input checked="" disabled="" type="checkbox">폴더 구분지을 prefix 추가</li>
-<li><input checked="" disabled="" type="checkbox">active 상태인 폴더는 다른 prefix로 임시 변경</li>
-</ul>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox">연휴에도 할일 다 하기</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox">Kubernetes localization 확인하기</p>
-</li>
-</ul>
+<p>자주 접속하는 서버에 패스워드를 항상 입력하는 것은 귀찮은 일이 될 것입니다.</p>
+<p>여기에서는 ssh key를 생성하고, 이를 이용하여 인증을 해 password를 입력하지 않는 방법을 알아볼 것입니다.</p>
+<h2 id="ssh-keygen">ssh-keygen을 통한 ssh key 생성</h2>
+<p><code>ssh</code> 접속을 할 때 password를 입력했던 것처럼, 항상 <code>ssh</code> 접속을 위해서는 인증을 위한 key가 필요합니다.</p>
+<p>인증에 사용할 키를 <code>ssh-keygen</code>으로 생성하는 방법은 다음과 같습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span>
+</code></pre></div><p><code>-t</code>는 <code>rsa</code> 알고리즘을 통해 key를 생성하겠다는 의미이며, <code>-b</code>는 key의 사이즈를 정해주는 것입니다.</p>
+<p>다른 알고리즘들과 다른 옵션들은 <a href="https://www.ssh.com/ssh/keygen">https://www.ssh.com/ssh/keygen</a>에서 더 확인할 수 있습니다.</p>
+<p>이제 <code>ssh</code> 인증을 위한 public key를 생성하였습니다.</p>
+<h2 id="ssh-copy-id를-통한-public-key-복사">ssh-copy-id를 통한 public key 복사</h2>
+<p><a href="#ssh-keygen">위</a>에서 생성한 public key를 접속하고자 하는 서버에 복사를 하면, 서버에 접속할 때 서버는 해당 파일을 참조하여 인증을 시도할 것입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id user@server
+</code></pre></div><p>이 때 최초 1회만 패스워드를 입력하면 됩니다.
+그 뒤 다시한번 로그인을 시도해보면 패스워드 없이 로그인에 성공할 것입니다.</p>
+<!-- ## ssh jump host를 사용할 때 password 없이 접속하는 방법
+
+예를 들어, 다음과 같은 명령어를 통해 A 서버에서 B 서버를 경유하여 D 서버에 접속한다고 가정해 보겠습니다.
+
+```bash
+ssh user-d@host-d -J user-b@host-b,user-c@host-c
+```
+
+이럴 경우,  --><blockquote>
+</blockquote>
 
 
 <footer class=" footline" >
@@ -2217,20 +2218,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -2241,9 +2228,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2282,6 +2266,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2301,9 +2300,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3017,6 +3013,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3031,6 +3028,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3055,22 +3055,6 @@
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -3095,6 +3079,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -3609,19 +3613,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1581862191"></script>
-    <script src="/js/perfect-scrollbar.min.js?1581862191"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1581862191"></script>
-    <script src="/js/jquery.sticky.js?1581862191"></script>
-    <script src="/js/featherlight.min.js?1581862191"></script>
-    <script src="/js/highlight.pack.js?1581862191"></script>
+    <script src="/js/clipboard.min.js?1581862208"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581862208"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581862208"></script>
+    <script src="/js/jquery.sticky.js?1581862208"></script>
+    <script src="/js/featherlight.min.js?1581862208"></script>
+    <script src="/js/highlight.pack.js?1581862208"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1581862191"></script>
-    <script src="/js/learn.js?1581862191"></script>
-    <script src="/js/hugo-learn.js?1581862191"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581862208"></script>
+    <script src="/js/learn.js?1581862208"></script>
+    <script src="/js/hugo-learn.js?1581862208"></script>
 
-    <link href="/mermaid/mermaid.css?1581862191" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1581862191"></script>
+    <link href="/mermaid/mermaid.css?1581862208" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581862208"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

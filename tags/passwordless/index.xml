@@ -6,10 +6,23 @@
     <description>Recent content in passwordless on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 01:51:54 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 15:48:57 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/passwordless/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>password 없이 ssh 접속하기</title>
+      <link>http://kimmj.github.io/ubuntu/ssh-without-password/</link>
+      <pubDate>Sat, 15 Feb 2020 15:48:57 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/ssh-without-password/</guid>
+      <description>자주 접속하는 서버에 패스워드를 항상 입력하는 것은 귀찮은 일이 될 것입니다.
+여기에서는 ssh key를 생성하고, 이를 이용하여 인증을 해 password를 입력하지 않는 방법을 알아볼 것입니다.
+ssh-keygen을 통한 ssh key 생성 ssh 접속을 할 때 password를 입력했던 것처럼, 항상 ssh 접속을 위해서는 인증을 위한 key가 필요합니다.
+인증에 사용할 키를 ssh-keygen으로 생성하는 방법은 다음과 같습니다.
+ssh-keygen -t rsa -b 4096 -t는 rsa 알고리즘을 통해 key를 생성하겠다는 의미이며, -b는 key의 사이즈를 정해주는 것입니다.</description>
+    </item>
     
     <item>
       <title>How to Use Sudo Without Password</title>

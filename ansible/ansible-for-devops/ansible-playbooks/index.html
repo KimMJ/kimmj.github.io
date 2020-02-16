@@ -11,20 +11,20 @@
     <title>Ansible Playbooks :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1581597153" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1581597153" rel="stylesheet">
-    <link href="/css/hybrid.css?1581597153" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1581597153" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1581597153" rel="stylesheet">
-    <link href="/css/auto-complete.css?1581597153" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1581597153" rel="stylesheet">
-    <link href="/css/theme.css?1581597153" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1581597153" rel="stylesheet">
+    <link href="/css/nucleus.css?1581862191" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581862191" rel="stylesheet">
+    <link href="/css/hybrid.css?1581862191" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581862191" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581862191" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581862191" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581862191" rel="stylesheet">
+    <link href="/css/theme.css?1581862191" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581862191" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1581597153" rel="stylesheet">
+      <link href="/css/theme-mine.css?1581862191" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1581597153"></script>
+    <script src="/js/jquery-3.3.1.min.js?1581862191"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1581597153"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1581597153"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1581862191"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1581862191"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1581597153"></script>
+<script type="text/javascript" src="/js/search.js?1581862191"></script>
 
     
   </div>
@@ -1355,6 +1355,25 @@
  
   
     
+      <li data-nav-id="/ubuntu/ssh-without-password/" title="password 없이 ssh 접속하기" class="dd-item ">
+        <a href="/ubuntu/ssh-without-password/">
+        <i class='fas fa-minus'></i>&nbsp;password 없이 ssh 접속하기
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/ubuntu/ssh-tunneling/" title="SSH Tunneling 사용법" class="dd-item ">
         <a href="/ubuntu/ssh-tunneling/">
         <i class='fas fa-minus'></i>&nbsp;SSH Tunneling 사용법
@@ -2100,11 +2119,15 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#power-plays">Power plays</a>
+    <li><a href="#power-plays">Power plays</a></li>
+    <li><a href="#running-playbooks-with-ansible-playbook">Running Playbooks with ansible-playbook</a>
       <ul>
-        <li></li>
+        <li><a href="#limiting-playbooks-to-particular-hosts-and-groups">Limiting playbooks to particular hosts and groups</a></li>
+        <li><a href="#setting-user-and-sudo-options-with-ansible-playbook">Setting user and sudo options with ansible-playbook</a></li>
+        <li><a href="#other-options-for-ansible-playbook">Other options for ansible-playbook</a></li>
       </ul>
     </li>
+    <li><a href="#real-world-playbook-centos-nodejs-app-service">Real-world playbook: CentOS Node.js app service</a></li>
   </ul>
 </nav>
     </div>
@@ -2161,7 +2184,178 @@ chkconfig httpd on
 </code></pre></div><p>shell script를 실행하려면(이 경우에 파일 이름은 <code>shell-script.sh</code>이다), command line에서 직접 호출하면 된다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># (From the same directory in which the shell script resides)</span>
 $ ./shell-script.sh
-</code></pre></div><h4 id="ansible-playboook">Ansible Playboook</h4>
+</code></pre></div><p><strong>Ansible Playboook</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- hosts: all
+  tasks:
+  - name: Install Apache.
+    command: yum install --quiet -y httpd httpd-devel
+  - name: Copy configuration files.
+    command: <span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">     </span><span style="color:#e6db74"> </span><span style="color:#e6db74">cp /path/to/config/httpd.conf /etc/httpd/conf/httpd.conf</span>
+  - command: <span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">     </span><span style="color:#e6db74"> </span><span style="color:#e6db74">cp /path/to/config/httpd-vhosts.conf /etc/httpd/conf/httpd-vhosts.conf</span>
+  - name: Start Apache and configure it to run at boot.
+    command: service httpd start
+  - command: chkconfig httpd on
+</code></pre></div><p><code>Ansible</code> Playbook을 실행하려면(이 경우 파일 이름은 <code>playbook.yml</code>이다), <code>ansible-playbook</code> 명령어로 호출할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># (From the same sirectory in which the playbook resides)</span>
+$ ansible-playbook playbook.yml
+</code></pre></div><p><code>Ansible</code>은 표준 shell command를 작성할 수 있고(수 십년간 사용해왔던 명령어들) 시간만 있다면 playbook을 사용하도록 빠르게 바꿀 수 있고 <code>Ansible</code>의 유용한 기능의 장점을 사용하여 configuration을 rebuild할 수 있어 강력한 툴이다.</p>
+<p>위의 playbook에서 <code>Ansible</code>의 <code>command</code> module을 사용하여 standard shell commands를 실행시켰다.
+또한 우리는 각 play에 <code>name</code>을 부여하여 playbook을 실행했을 때 play가 사람이 읽을 수 있는 결과를 스크린 또는 로그에 띄울 수 있도록 한다.
+command module은 다른 트릭들을 가지고 있지만 지금 우리는 shell script가 <code>Ansible</code> playbook으로 귀찮은 작업 없이 바로 변환이 가능하고 확신한다.</p>
+
+<div class="notices note" ><p><code>&gt;</code>는 <code>command:</code> module 바로 뒤에 와서 YAML이 &ldquo;자동으로 다음의 indented line을 하나의 긴 string으로 줄바꿈은 스페이스로 분리하며 변환&quot;하도록 해준다.
+이는 어떤 케이스에선 readability를 향상시키는데 도움을 준다.
+유효한 YAML 문법을 통해 configuration을 설명하는 방법에는 많은 것들이 있고 이런 방법들은 나중에 Appendix B - YAML Conventions and Best Practices 섹션에서 깊게 다루어 볼 것이다.<br>
+이 책은 세가지 task-formatting 테크딕들을 살펴볼 것이다.
+하나 또는 두개의 간단한 parameter가 있는 task는 <code>Ansible</code>의 shorthand syntax가 사용될 것이다(예: <code>yum: name=apache2 state=installed</code>).
+더 긴 command 입력이 필요한 <code>command</code>나 <code>shell</code>의 대부분의 경우에는 위에서 언급한 <code>&gt;</code> 테크닉을 사용할 것이다.
+여러 parameter가 필요한 task들은 YAML object notation이 사용된다.
+이는 각 줄의 key와 variable을 대치할때 사용된다.</p>
+</div>
+
+<p>위의 playbook이 정확히 shell script와 같은 동작을 하지만 이를 <code>Ansible</code>의 built-in modules로 어려운 일을 해결할 수 있다.</p>
+<p><strong>Revised Ansible Playbook - Now with idempotence!</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- hosts: all
+  sudo: yes
+  tasks:
+  - name: Install Apache.
+    yum: name={{ item }} state=present
+    with_items:
+    - httpd
+    - httpd-devel
+  - name: Copy configuration files.
+    copy:
+      src: <span style="color:#e6db74">&#34;{{ item.src }}&#34;</span>
+      dest: <span style="color:#e6db74">&#34;{{ item.dest }}&#34;</span>
+      owner: root
+      group: root
+      mode: <span style="color:#ae81ff">0644</span>
+    with_items:
+    - {
+        src: <span style="color:#e6db74">&#34;/path/to/config/httpd.conf&#34;</span>,
+        dest: <span style="color:#e6db74">&#34;/etc/httpd/conf/httpd.conf&#34;</span>
+    }
+    - {
+        src: <span style="color:#e6db74">&#34;/path/to/config/httpd-vhosts.conf&#34;</span>,
+        dest: <span style="color:#e6db74">&#34;/etc/httpd/conf/httpd-vhosts.conf&#34;</span>
+    }
+  - name: Make sure Apache is started and configure it to run at boot.
+    service: name=httpd state=started enabled=yes
+</code></pre></div><p>이제 뭔가 되어가고 있다.
+이제 이 playbook을 차근차근 밟아보자.</p>
+<ol>
+<li>처음에 <code>---</code>는 이 문서를 YAML syntax를 가지고 사용했다고 표시한 것이다.
+마치 HTML의 맨 위에 <code>&lt;html&gt;</code>을 쓰는것 또는 PHP code block 제일 위에 <code>&lt;?php</code>를 넣는것과 같다.</li>
+<li>둘째 줄의 <code>- hosts: all</code>은 첫(이 경우는 유일하게) <code>play</code>를 정의한 것이고 <code>Ansible</code>이 알고있는 <code>all</code> hosts에서 play를 실행하도록 한다.</li>
+<li>셋째 줄에서 <code>sudo: yes</code>는 <code>Ansible</code>이 모든 명령어를 <code>sudo</code>를 통해 실행하도록 하고 따라서 모든 명령어는 root 유저로 실행될 것이다.</li>
+<li>네번째 줄에서 <code>tasks:</code>는 <code>Ansible</code>이 다음의 task 목록들을 이 playbook의 일부로 실행하도록 하는 것이다.</li>
+<li>첫번째 task는 <code>name: Install Apache...</code>로 시작하고 name은 서버에서 어떤 동작을 하는 module은 아니다.
+그냥 사람이 읽을 수 있는 description을 제공한다.
+<code>Install Apache</code>를 보는 것은 <code>yum name=httpd state=installed</code>를 보는 것보다 상대적으로 더 연관성이 있어 보인다.
+그러나 name 줄을 완전히 지워버버려 아무 문제도 발생하지 않는다.
+<ul>
+<li><code>yum</code> module을 사용하여 Apache를 설치하였다.
+<code>yum -y install httpd httpd-devel</code>을 사용하는 것 대신 <code>Ansible</code>에게 정확히 우리가 원하는 상태가 뭔지 알려주었다.
+<code>Ansible</code>은 <code>items</code> 배열에서 우리가 넣은 값들을 가져올 것이다.
+(<code>{{ variable }}</code>는 <code>Ansible</code> playbook의 variable을 참조한다)
+우리는 <code>yum</code>이 <code>state=present</code>를 통해 우리가 정의한 패키지가 설치되어있다고 확신할 수 있지만 <code>state=latest</code>로 하면 최신 버전이 깔려있도록 할 수도 있고 <code>state=absent</code>를 하면 패키지가 설치되지 않은 상태가 되도록 할 수도 있다.</li>
+<li><code>Ansible</code>은 <code>with_items</code>를 이용하여 간단한 리스트를 tasks에 주입할 수 있다.
+item의 list를 하단에 정의하면 각 라인은 play에 하나씩 전달될 것이다.
+이 경우에 각 아이템은 <code>{{ item }}</code> variable로 대체되었다.</li>
+</ul>
+</li>
+<li>두번째 task는 다시 사람이 읽을 수 있는 name을 설정하는 것으로 시작한다.
+(원한다면 지울 수 있다.)
+<ul>
+<li>우리는 <code>copy</code> module을 사용하여 파일을 source(우리의 local workstation)에서 destination(관리중인 서버)로 복사할 것이다.
+소유권과 권한(<code>owner</code>, <code>group</code>, <code>mode</code>)을 포함한 file metadata같은 더 많은 variable들을 전달할 수도 있다.</li>
+<li>이 경우 변수 치환을 위해 multiple elements를 사용한 배열을 쓸 것이다.
+이 때 <code>{ var1: value, var2: value }</code> 문법을 사용하여 각 variable에 대한 element를 정의할 수 있다.
+(원하는 만큼 variable을 정의할 수 있고 또는 nested level로 variable을 정의할 수 있다.)
+play에서 variable을 언급하면 item의 variable에는 <code>.</code>을 통해 접근할 수 있고 따라서 <code>{{ item.var1 }}</code>을 통해 첫번째 variable에 접근할 수 있다.
+우리의 예시에서 <code>item.src</code>는 각 item의 src에 접근하는 것이다.</li>
+</ul>
+</li>
+<li>세번째 task는 사람이 읽을 수 있는 포멧으로 정의된 이름을 사용한다.
+<ul>
+<li>우리는 <code>service</code> module을 사용하여 특정 service의 원하는 상태를 기술할 것이다.
+이 경우에는 Apache의 http daemon인 <code>httpd</code>이다.
+우리는 이것이 실행중이길 원하고 따라서 <code>state=started</code>로 설정하였고 또 시스템이 시작되었을 때 실행되길 원하기 때문에 <code>enabled=yes</code>로 설정하였다.
+(<code>chkconfig httpd on</code>과 동일하다.)</li>
+</ul>
+</li>
+</ol>
+<p>명령어의 리스트를 변환한 것의 가장 좋은 점은 <code>Ansible</code>이 계속해서 모든 우리의 서버의 상태를 추적한다는 것이다.
+playbook을 처음 실행하면 이는 Apache가 설치되었고 동작되었는지 확인하고, custom configuration이 제위치에 있는지 확인하여 서버를 provision한다.</p>
+<p>더 좋은 점은 <strong>두번째</strong> 실행했을 때 서버가 제대로 된 상태에 있다면 실제로 아무것도 하지도 않고 우리에게 아무것도 변경된 것이 없다고 말해준다.
+따라서 이 짧은 playbook을 통해, 우리는 provision할 수 있고 Apache web server에 대해 적절한 configuration이 되었음을 확인할 수 있다.
+게다가 playbook을 <code>--check</code> 옵션으로 실행하면(아래의 다음 섹션에서 확인할 수 있다) configuration이 우리가 playbook에서 정의한 것과 일치하는지를 서버에서 실제 task를 돌리지 않고도 검증할 수 있다.</p>
+<p>configuration을 업데이트하고 싶거나 다른 httpd 패키지를 설치하고 싶으면 file을 local에서 수정하거나 패키지를 <code>with_items</code> 리스트안에 넣고 다시 playbook을 실행하면 된다.
+하나든 수천개의 서버든지 그 configuration은 우리의 playbook에 맞게 업데이트될 것이다.
+그리고 <code>Ansible</code>은 우리에게 어떤 것이 변하였는지 알려줄 것이다.
+(각각의 production server에 ah-hoc change를 만들지는 않았을 것이다. 그렇지 않은가?)</p>
+<h2 id="running-playbooks-with-ansible-playbook">Running Playbooks with <code>ansible-playbook</code></h2>
+<p>위의 예시로 playbook을 실행한다면(<code>all</code> hosts로 실행하게 되어있다), playbook은 <code>Ansible</code> inventory file에 정의된 모든 host에 대해 실행될 것이다(챕터 1의 basic inventory file 예시를 확인해보아라).</p>
+<h3 id="limiting-playbooks-to-particular-hosts-and-groups">Limiting playbooks to particular hosts and groups</h3>
+<p><code>hosts:</code>를 바꿔서 playbook이 특정한 그룹이나 각각의 hosts에만 동작할 수 있도록 설정할 수 있다.
+해당 값은 <code>all</code> hosts, inventory에 정의된 <code>group</code>, 여러 group들 (e.g. <code>webservers, dbservers</code>, 개별 서버(e.g. <code>at1.example.com</code>, 혼합된 host들로 설정할 수 있다.
+또한 <code>*.example.com</code>과 같은 wildcard를 사용하여 최상위 도메인 중 매칭되는 모든 도메인으로 설정할 수 있다.</p>
+<p>또한 <code>ansible-playbook</code> 명령어를 통해 playbook이 실행될 hosts를 제한할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook playbook.yml --limit webservers
+</code></pre></div><p>이 경우(inventory file이 <code>webserver</code> group을 포함한다고 가정한다), playbook이 <code>hosts: all</code>로 설정되어 있거나 <code>webservers</code> group외의 hosts들을 포함한다고 하더라도 <code>webservers</code>에 정의된 hosts에서만 동작한다.</p>
+<p>또한 playbook을 특정 hosts에만 동작하게 할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook playbook.yml --limit xyz.example.com
+</code></pre></div><p>실행시키기 전에 playbook에 의해 영향을 받는 hosts들이 실제 어떤것인지 확인하고 싶으면 <code>--list-hosts</code>를 사용하면 된다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook playbook.yml --list-hosts
+</code></pre></div><p>결과는 다음과 같을 것이다.</p>
+<pre><code class="language-plain-text" data-lang="plain-text">playbook: playbook.yml
+
+  play #1 (all): host count=4
+    127.0.0.1
+    192.168.24.2
+    foo.example.com
+    bar.example.com
+</code></pre><p>(<code>count</code>는 inventory에 정의된 서버의 숫자이고 그 아래는 inventory에 정의된 모든 hosts의 리스트이다.)</p>
+<h3 id="setting-user-and-sudo-options-with-ansible-playbook">Setting user and sudo options with <code>ansible-playbook</code></h3>
+<p>playbook의 <code>hosts</code> 안에 어떤 <code>user</code>도 정의되어 있지 않으면 <code>Ansible</code>은 특정 host에 대해 inventory file에서 정의한 user로 접속한다고 가정하며, 그 다음 local user account name으로 변경할 것이다.
+<code>--remote-user (-u)</code> 옵션을 통해서 원격 play에 사용될 remote user를 명시적으로 정의할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook playbook.yml --remote-user<span style="color:#f92672">=</span>johndoe
+</code></pre></div><p>어떤 상황에서는 원격 서버에서 <code>sudo</code>를 통해 명령어를 수행하기 위해 sudo password를 입력해야할 필요가 있을 것이다.
+이런 상황에서는 <code>--ask-sudo-pass (-K)</code> 옵션이 필요할 것이다.
+또한 <code>--sudo</code>를 사용하여 명시적으로 playbook 안의 모든 tasks를 강제로 sudo 권한으로 실행하게 할 수 있다.
+마지막으로 <code>--sudo-user (-U)</code>옵션을 통해 <code>sudo</code>로 tasks를 실행할 sudo user(default는 root)를 지정할 수 있다.</p>
+<p>예를 들어, 다음의 명령어는 playbook을 sudo로 실행할 것이고, task에서 <code>janedoe</code>라는 sudo user를 쓸 것이고, <code>Ansible</code>은 sudo password를 입력하게 할 것이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ansible-playbook playbook.yml --sudo --sudo-user<span style="color:#f92672">=</span>janedoe --ask-sudo-pass
+</code></pre></div><p>key-based 인증방식을 사용하여 서버에 접속하지 않는다면(챕터 1에서 그렇게 했을 때 security implication에 대한 경고사항을 읽어라), <code>--ask-pass</code>를 사용할 수 있다.</p>
+<h3 id="other-options-for-ansible-playbook">Other options for <code>ansible-playbook</code></h3>
+<p><code>ansible-playbook</code> 명령어는 다른 옵션들도 사용할 수 있다.</p>
+<ul>
+<li><code>--inventory=PATH (-i PATH)</code>: custom inventory file을 정의한다.
+(default는 default Ansible inventory file이고 보통은 <code>/etc/ansible/hosts</code>에 위치해 있다.)</li>
+<li><code>--verbose (-v)</code>는 Verbose mode이다.
+(성공한 옵션들에 대한 output을 토함한 모든 output을 보여준다.)
+<code>-vvvv</code>를 통해 매 분마다 자세하게 볼 수 있다.</li>
+<li><code>--extra-vars=VARS (-e VARS)</code>: playbook에서 사용되는 variables를 <code>&quot;key=value, key=value&quot;</code>의 형태로 정의할 수 있다.</li>
+<li><code>--forks=NUM (-f NUM)</code>: fork하는 수이다(integer).
+이 값을 5보다 크게하여 <code>Ansible</code>이 task를 동시에 실행하는 서버의 수를 늘릴 수 있다.</li>
+<li><code>--connection=TYPE (-c TYPE)</code>: 사용할 connection의 type이다.
+(default는 <code>ssh</code>이다.
+가끔은 <code>local</code>로 playbook을 local machine에서 실행할 수 있고 또는 cron을 통해 원격 서버에서 실행할 수 있다.)</li>
+<li><code>--check</code>: playbook을 Check Mode (&ldquo;Dry Run&rdquo;)으로 실행한다.
+playbook안에 정의된 모든 task는 모든 hosts에 대해 확인될 것이지만 실제로 실행하지는 않는다.</li>
+</ul>
+<p><code>ansible-playbook</code>을 최대한 활용하기 위해서 중요한 다른 옵션과 configuration variable이 있다.
+그러나 여기 목록들로도 지금 챕터에서 우리의 서버와 가상 머신에 playbook을 실행하는데 충분한 것들이다.</p>
+
+<div class="notices notes" ><p>이 챕터의 나머지는 더 현실적인 <code>Ansible</code> playbook을 사용할 것이다.
+이 챕터의 모든 예시는 <a href="">Ansible for DevOps GitHub repository</a>에 있고, 이를 clone하여 컴퓨터에 저장하고(또는 online으로 코드를 띄워서) 뒤의 단계를 더 쉽게 할 수 있다.</p>
+</div>
+
+<h2 id="real-world-playbook-centos-nodejs-app-service">Real-world playbook: CentOS Node.js app service</h2>
 
 
 <footer class=" footline" >
@@ -3166,6 +3360,22 @@ $ ./shell-script.sh
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3588,19 +3798,19 @@ $ ./shell-script.sh
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1581597153"></script>
-    <script src="/js/perfect-scrollbar.min.js?1581597153"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1581597153"></script>
-    <script src="/js/jquery.sticky.js?1581597153"></script>
-    <script src="/js/featherlight.min.js?1581597153"></script>
-    <script src="/js/highlight.pack.js?1581597153"></script>
+    <script src="/js/clipboard.min.js?1581862203"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581862203"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581862203"></script>
+    <script src="/js/jquery.sticky.js?1581862203"></script>
+    <script src="/js/featherlight.min.js?1581862203"></script>
+    <script src="/js/highlight.pack.js?1581862203"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1581597153"></script>
-    <script src="/js/learn.js?1581597153"></script>
-    <script src="/js/hugo-learn.js?1581597153"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581862203"></script>
+    <script src="/js/learn.js?1581862203"></script>
+    <script src="/js/hugo-learn.js?1581862203"></script>
 
-    <link href="/mermaid/mermaid.css?1581597153" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1581597153"></script>
+    <link href="/mermaid/mermaid.css?1581862203" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581862203"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

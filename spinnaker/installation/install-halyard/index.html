@@ -11,20 +11,20 @@
     <title>Install Halyard :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1581597153" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1581597153" rel="stylesheet">
-    <link href="/css/hybrid.css?1581597153" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1581597153" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1581597153" rel="stylesheet">
-    <link href="/css/auto-complete.css?1581597153" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1581597153" rel="stylesheet">
-    <link href="/css/theme.css?1581597153" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1581597153" rel="stylesheet">
+    <link href="/css/nucleus.css?1581862179" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581862179" rel="stylesheet">
+    <link href="/css/hybrid.css?1581862179" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581862179" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581862179" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581862179" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581862179" rel="stylesheet">
+    <link href="/css/theme.css?1581862179" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581862179" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1581597153" rel="stylesheet">
+      <link href="/css/theme-mine.css?1581862179" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1581597153"></script>
+    <script src="/js/jquery-3.3.1.min.js?1581862179"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1581597153"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1581597153"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1581862179"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1581862180"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1581597153"></script>
+<script type="text/javascript" src="/js/search.js?1581862180"></script>
 
     
   </div>
@@ -1355,6 +1355,25 @@
  
   
     
+      <li data-nav-id="/ubuntu/ssh-without-password/" title="password 없이 ssh 접속하기" class="dd-item ">
+        <a href="/ubuntu/ssh-without-password/">
+        <i class='fas fa-minus'></i>&nbsp;password 없이 ssh 접속하기
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/ubuntu/ssh-tunneling/" title="SSH Tunneling 사용법" class="dd-item ">
         <a href="/ubuntu/ssh-tunneling/">
         <i class='fas fa-minus'></i>&nbsp;SSH Tunneling 사용법
@@ -2195,21 +2214,21 @@ hal config
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -p 8084:8084 -p 9000:9000 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --name halyard --rm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v ~/.hal:/home/spinnaker/.hal <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -it <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -d <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    gcr.io/spinnaker-marketplace/halyard:stable
 </code></pre></div><p><code>kubernetes</code>로 배포하려 할 경우, <code>kubectl</code> 명령어에서 사용할 <code>kubeconfig</code> 파일이 필요합니다. 이 또한 <code>-v</code> 옵션으로 주어야 합니다. 그리고 그 kubeconfig 파일을 읽도록 설정해야 합니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -p 8084:8084 -p 9000:9000 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --name halyard --rm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v ~/.hal:/home/spinnaker/.hal <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v ~/.kube:/home/spinnaker/.kube <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e KUBECONFIG<span style="color:#f92672">=</span>/home/spinnaker/.kube/config
-    -it <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e KUBECONFIG<span style="color:#f92672">=</span>/home/spinnaker/.kube/config <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -d <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    gcr.io/spinnaker-marketplace/halyard:stable
 </code></pre></div><p>사실 5번째 줄의 <code>-e KUBECONFIG=/home/spinnaker/.kube/config</code>은 없어도 default로 들어가있는 설정입니다.
 하지만 혹시나 위에서 <code>/home/spinnaker/.kube</code>가 아닌 다른곳을 저장공간으로 둔다면 아래의 설정도 바뀌어야 합니다.</p>
 <p>프록시 환경이라면 다음과 같이 JAVA_OPT를 추가해주어야 합니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -p 8084:8084 -p 9000:9000 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --name halyard -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --name halyard --rm -d <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v ~/.hal:/home/spinnaker/.hal <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v ~/.kube:/home/spinnaker/.kube <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -e http_proxy<span style="color:#f92672">=</span>http://&lt;proxy_host&gt;:&lt;proxy_port&gt; <span style="color:#ae81ff">\
@@ -3235,6 +3254,22 @@ hal config
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3657,19 +3692,19 @@ hal config
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1581597153"></script>
-    <script src="/js/perfect-scrollbar.min.js?1581597153"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1581597153"></script>
-    <script src="/js/jquery.sticky.js?1581597153"></script>
-    <script src="/js/featherlight.min.js?1581597153"></script>
-    <script src="/js/highlight.pack.js?1581597153"></script>
+    <script src="/js/clipboard.min.js?1581862194"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581862194"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581862194"></script>
+    <script src="/js/jquery.sticky.js?1581862194"></script>
+    <script src="/js/featherlight.min.js?1581862194"></script>
+    <script src="/js/highlight.pack.js?1581862194"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1581597153"></script>
-    <script src="/js/learn.js?1581597153"></script>
-    <script src="/js/hugo-learn.js?1581597153"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581862194"></script>
+    <script src="/js/learn.js?1581862194"></script>
+    <script src="/js/hugo-learn.js?1581862194"></script>
 
-    <link href="/mermaid/mermaid.css?1581597153" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1581597153"></script>
+    <link href="/mermaid/mermaid.css?1581862194" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581862194"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -11,20 +11,20 @@
     <title>Install in Air Gaped Environment :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1581597153" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1581597153" rel="stylesheet">
-    <link href="/css/hybrid.css?1581597153" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1581597153" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1581597153" rel="stylesheet">
-    <link href="/css/auto-complete.css?1581597153" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1581597153" rel="stylesheet">
-    <link href="/css/theme.css?1581597153" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1581597153" rel="stylesheet">
+    <link href="/css/nucleus.css?1581862207" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581862207" rel="stylesheet">
+    <link href="/css/hybrid.css?1581862207" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581862207" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581862207" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581862207" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581862207" rel="stylesheet">
+    <link href="/css/theme.css?1581862207" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581862207" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1581597153" rel="stylesheet">
+      <link href="/css/theme-mine.css?1581862207" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1581597153"></script>
+    <script src="/js/jquery-3.3.1.min.js?1581862207"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1581597153"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1581597153"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1581862207"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1581862207"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1581597153"></script>
+<script type="text/javascript" src="/js/search.js?1581862207"></script>
 
     
   </div>
@@ -1355,6 +1355,25 @@
  
   
     
+      <li data-nav-id="/ubuntu/ssh-without-password/" title="password 없이 ssh 접속하기" class="dd-item ">
+        <a href="/ubuntu/ssh-without-password/">
+        <i class='fas fa-minus'></i>&nbsp;password 없이 ssh 접속하기
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/ubuntu/ssh-tunneling/" title="SSH Tunneling 사용법" class="dd-item ">
         <a href="/ubuntu/ssh-tunneling/">
         <i class='fas fa-minus'></i>&nbsp;SSH Tunneling 사용법
@@ -2190,6 +2209,13 @@ tar xvf packer.tar.gz
 <p>기본적으로 <code>halyard</code>는 <code>gs://halconfig/version.yml</code>을 참조하려 할 것입니다.
 이를 <code>local:</code>이라는 접두사를 붙여 로컬을 바라보게 할 수 있습니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hal config version edit --version local:1.17.4
+</code></pre></div><p>그리고 <code>halyard</code>가 gcs를 바라보지 않도록 설정합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># /opt/spinnaker/config/halyard-local.yml</span>
+spinnaker:
+  config:
+    input:
+      gcs:
+        enabled: <span style="color:#66d9ef">false</span>
 </code></pre></div><p>그러고 난 뒤, 각 서비스들의 BOM도 로컬을 바라보게 설정해야 합니다.
 아까 위에서 1.17.4 버전을 사용한다고 했으니, 해당 yaml파일을 열고 <code>local:</code> 접두사를 추가합니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">artifactSources:
@@ -3297,6 +3323,22 @@ ssh TARGET_IP docker load -i ~/path/to/target/SERVICE.tar.gz
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3719,19 +3761,19 @@ ssh TARGET_IP docker load -i ~/path/to/target/SERVICE.tar.gz
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1581597153"></script>
-    <script src="/js/perfect-scrollbar.min.js?1581597153"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1581597153"></script>
-    <script src="/js/jquery.sticky.js?1581597153"></script>
-    <script src="/js/featherlight.min.js?1581597153"></script>
-    <script src="/js/highlight.pack.js?1581597153"></script>
+    <script src="/js/clipboard.min.js?1581862208"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581862208"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581862208"></script>
+    <script src="/js/jquery.sticky.js?1581862208"></script>
+    <script src="/js/featherlight.min.js?1581862208"></script>
+    <script src="/js/highlight.pack.js?1581862208"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1581597153"></script>
-    <script src="/js/learn.js?1581597153"></script>
-    <script src="/js/hugo-learn.js?1581597153"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581862208"></script>
+    <script src="/js/learn.js?1581862208"></script>
+    <script src="/js/hugo-learn.js?1581862208"></script>
 
-    <link href="/mermaid/mermaid.css?1581597153" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1581597153"></script>
+    <link href="/mermaid/mermaid.css?1581862208" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581862208"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
