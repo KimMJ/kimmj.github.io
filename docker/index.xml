@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Ibiza</title>
+    <link>http://kimmj.github.io/docker/</link>
+    <description>Recent content in Docker on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Feb 2020 18:58:35 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[docker-compose] container에서 다른 container로 접속하기</title>
+      <link>http://kimmj.github.io/docker/connect-container-to-container/</link>
+      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/docker/connect-container-to-container/</guid>
+      <description>배경 docker-compose에서는 network bridge를 설정합니다. 이 bridge로 내부 통신을 하게 되죠. 여기서 port-forward를 통해 외부로 서비스를 expose하게 되면 host의 IP와 port의 조합으로 접속할 수 있습니다.
+그런데 저는 네트워크 설정의 문제인지, 하나의 container에서 host IP로 접속이 불가능했습니다. 그러면서도 저는 어떻게든 다른 docker-compose의 서비스로 네트워킹이 됐어야 했습니다. 정확히 말하자면 harbor라는 서비스(docker registry)에서 jenkins로 webhook을 날려야 하는 상황이었죠.
+먼저 시도했던 것은 jenkins의 ip를 docker inspect jenkins_jenkins_1을 통해 알아내고, 이를 통해 webhook을 전송하는 것이었습니다. 그러나 실패했죠.</description>
+    </item>
+    
+  </channel>
+</rss>

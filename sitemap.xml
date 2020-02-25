@@ -128,6 +128,21 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/git/</loc>
+    <lastmod>2020-02-24T14:27:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/python/</loc>
+    <lastmod>2020-02-22T23:08:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/docker/</loc>
+    <lastmod>2020-02-21T18:58:35+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/ansible-playbooks/</loc>
     <lastmod>2020-02-13T20:59:01+09:00</lastmod>
   </url>
@@ -263,6 +278,36 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/kubernetes/stern/</loc>
+    <lastmod>2020-02-24T23:28:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/git/gitignore/</loc>
+    <lastmod>2020-02-24T14:28:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/check-listen-port/</loc>
+    <lastmod>2020-02-24T13:38:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/using-watch-with-pipes/</loc>
+    <lastmod>2020-02-23T16:07:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/use-alias-in-watch/</loc>
+    <lastmod>2020-02-22T23:33:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/docker/connect-container-to-container/</loc>
+    <lastmod>2020-02-21T18:58:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ubuntu/ssh-without-password/</loc>
     <lastmod>2020-02-15T15:48:57+09:00</lastmod>
   </url>
@@ -330,6 +375,11 @@
   <url>
     <loc>http://kimmj.github.io/hugo/ibiza/font-change/</loc>
     <lastmod>2020-01-12T16:28:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ubuntu/network/netplan/</loc>
+    <lastmod>2020-01-11T01:12:57+09:00</lastmod>
   </url>
   
   <url>
@@ -433,6 +483,91 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-02-24T23:28:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/log/</loc>
+    <lastmod>2020-02-24T23:28:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/stern/</loc>
+    <lastmod>2020-02-24T23:28:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-02-24T23:28:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/git/</loc>
+    <lastmod>2020-02-24T14:28:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/gitignore/</loc>
+    <lastmod>2020-02-24T14:28:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/linux/</loc>
+    <lastmod>2020-02-24T13:38:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/network/</loc>
+    <lastmod>2020-02-24T13:38:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/port/</loc>
+    <lastmod>2020-02-24T13:38:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/pipe/</loc>
+    <lastmod>2020-02-23T16:07:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/watch/</loc>
+    <lastmod>2020-02-23T16:07:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/alias/</loc>
+    <lastmod>2020-02-22T23:33:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-02-22T23:33:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/bridge/</loc>
+    <lastmod>2020-02-21T18:58:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/container/</loc>
+    <lastmod>2020-02-21T18:58:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/docker/</loc>
+    <lastmod>2020-02-21T18:58:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/docker-compose/</loc>
+    <lastmod>2020-02-21T18:58:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/passwordless/</loc>
     <lastmod>2020-02-15T15:48:57+09:00</lastmod>
   </url>
@@ -443,17 +578,7 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/</loc>
-    <lastmod>2020-02-15T15:48:57+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/tunneling/</loc>
-    <lastmod>2020-02-13T21:16:02+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
     <lastmod>2020-02-13T21:16:02+09:00</lastmod>
   </url>
   
@@ -465,11 +590,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/ansible-playbooks/</loc>
     <lastmod>2020-02-13T20:59:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/linux/</loc>
-    <lastmod>2020-02-12T22:08:16+09:00</lastmod>
   </url>
   
   <url>
@@ -520,11 +640,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/roll-out/</loc>
     <lastmod>2020-02-03T14:09:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
-    <lastmod>2020-02-03T14:03:50+09:00</lastmod>
   </url>
   
   <url>
@@ -625,6 +740,21 @@
   <url>
     <loc>http://kimmj.github.io/tags/proxy/</loc>
     <lastmod>2020-01-11T01:41:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/netplan/</loc>
+    <lastmod>2020-01-11T01:12:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/static-ip/</loc>
+    <lastmod>2020-01-11T01:12:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ubuntu-18.04/</loc>
+    <lastmod>2020-01-11T01:12:57+09:00</lastmod>
   </url>
   
   <url>

@@ -6,10 +6,154 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Feb 2020 15:48:57 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 23:28:01 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>kubernetes</title>
+      <link>http://kimmj.github.io/tags/kubernetes/</link>
+      <pubDate>Mon, 24 Feb 2020 23:28:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log</title>
+      <link>http://kimmj.github.io/tags/log/</link>
+      <pubDate>Mon, 24 Feb 2020 23:28:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stern</title>
+      <link>http://kimmj.github.io/tags/stern/</link>
+      <pubDate>Mon, 24 Feb 2020 23:28:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/stern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://kimmj.github.io/tags/git/</link>
+      <pubDate>Mon, 24 Feb 2020 14:28:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitignore</title>
+      <link>http://kimmj.github.io/tags/gitignore/</link>
+      <pubDate>Mon, 24 Feb 2020 14:28:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/gitignore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://kimmj.github.io/tags/linux/</link>
+      <pubDate>Mon, 24 Feb 2020 13:38:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>http://kimmj.github.io/tags/network/</link>
+      <pubDate>Mon, 24 Feb 2020 13:38:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>port</title>
+      <link>http://kimmj.github.io/tags/port/</link>
+      <pubDate>Mon, 24 Feb 2020 13:38:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/port/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipe</title>
+      <link>http://kimmj.github.io/tags/pipe/</link>
+      <pubDate>Sun, 23 Feb 2020 16:07:38 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/pipe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>watch</title>
+      <link>http://kimmj.github.io/tags/watch/</link>
+      <pubDate>Sun, 23 Feb 2020 16:07:38 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/watch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alias</title>
+      <link>http://kimmj.github.io/tags/alias/</link>
+      <pubDate>Sat, 22 Feb 2020 23:33:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/alias/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://kimmj.github.io/tags/ubuntu/</link>
+      <pubDate>Sat, 22 Feb 2020 23:33:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bridge</title>
+      <link>http://kimmj.github.io/tags/bridge/</link>
+      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/bridge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>container</title>
+      <link>http://kimmj.github.io/tags/container/</link>
+      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>http://kimmj.github.io/tags/docker/</link>
+      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>http://kimmj.github.io/tags/docker-compose/</link>
+      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/docker-compose/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>passwordless</title>
@@ -39,15 +183,6 @@
     </item>
     
     <item>
-      <title>ubuntu</title>
-      <link>http://kimmj.github.io/tags/ubuntu/</link>
-      <pubDate>Thu, 13 Feb 2020 21:16:02 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ansible</title>
       <link>http://kimmj.github.io/tags/ansible/</link>
       <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
@@ -62,15 +197,6 @@
       <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/ansible-playbooks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>http://kimmj.github.io/tags/linux/</link>
-      <pubDate>Wed, 12 Feb 2020 22:08:16 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -161,15 +287,6 @@
       <pubDate>Mon, 03 Feb 2020 14:09:25 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/roll-out/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>http://kimmj.github.io/tags/kubernetes/</link>
-      <pubDate>Mon, 03 Feb 2020 14:03:50 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     
@@ -350,6 +467,33 @@
       <pubDate>Sat, 11 Jan 2020 01:41:08 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netplan</title>
+      <link>http://kimmj.github.io/tags/netplan/</link>
+      <pubDate>Sat, 11 Jan 2020 01:12:57 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/netplan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static-ip</title>
+      <link>http://kimmj.github.io/tags/static-ip/</link>
+      <pubDate>Sat, 11 Jan 2020 01:12:57 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/static-ip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu-18.04</title>
+      <link>http://kimmj.github.io/tags/ubuntu-18.04/</link>
+      <pubDate>Sat, 11 Jan 2020 01:12:57 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ubuntu-18.04/</guid>
       <description></description>
     </item>
     

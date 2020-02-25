@@ -377,6 +377,77 @@ Just a little joke to lighten up the mood.</description>
     </item>
     
     <item>
+      <title>Stern을 이용하여 여러 pod의 log를 한번에 확인하기</title>
+      <link>http://kimmj.github.io/kubernetes/stern/</link>
+      <pubDate>Mon, 24 Feb 2020 23:28:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/stern/</guid>
+      <description>Kubernetes에서의 trouble shooting kubernetes 환경에서 어떤 문제가 발생하면 다음과 같은 flow로 확인을 해보면 됩니다.
+ kubectl get pods -o yaml로 yaml을 확인하기 kubectl describe pods로 pod에 대한 설명 확인하기 kubectl describe deployments(statefulset, daemonset)으로 확인하기 kubectl logs로 로그 확인하기  보통 kubernetes 리소스의 부족과 같은 kubernetes단의 문제는 1~3을 확인하면 전부 문제점을 찾을 수 있습니다. 그러나 어플리케이션의 직접적인 원인을 알아보기 위해서는 log를 확인해야 합니다.
+하지만 kubectl의 logs에는 한가지 한계점이 있는데, 바로 단일 container에 대해서만 log 확인이 가능하다는 점입니다.</description>
+    </item>
+    
+    <item>
+      <title>Gitignore 설정</title>
+      <link>http://kimmj.github.io/git/gitignore/</link>
+      <pubDate>Mon, 24 Feb 2020 14:28:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/git/gitignore/</guid>
+      <description>참조: https://git-scm.com/docs/gitignore
+gitignore은 git에서 어떤 파일을 무시할지 설정하는 파일입니다. 이미 tracked된 것들에는 영향을 주지 않습니다.
+gitignore 참조 순서 syntax blank line 파일과 매칭되지 않습니다. 따라서 가독성을 위해 사용할 수 있습니다.
+# #은 comment로 처리됩니다.
+Traling space \로 감싸졌다고 하더라도 무시됩니다.
+! !는 not과 같습니다. 파일 이름 맨 앞에 !가 있고, 이를 ignore할 때 사용하려면 \를 통해 escape 해줘야 합니다.
+/ /는 디렉토리를 구분합니다. 처음, 중간, 끝 어느 위치에도 올 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>열려있는 포트 확인하기</title>
+      <link>http://kimmj.github.io/ubuntu/check-listen-port/</link>
+      <pubDate>Mon, 24 Feb 2020 13:38:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/check-listen-port/</guid>
+      <description>열려있는 포트 확인하기 # 방법 1 lsof -i -nP | grep LISTEN | awk &amp;#39;{print $(NF-1)&amp;#34; &amp;#34; $1}&amp;#39; | sort -u # 방법 2 netstat -tnlp 열려있는 포트 확인하기 + 관련된 프로세스 이름 확인하기 netstat -tnlp | grep -v 127.0.0.1 | sed &amp;#39;s/:::/0 /g&amp;#39; | sed &amp;#39;s/[:\/]/ /g&amp;#39; | awk &amp;#39;{print $5&amp;#34;\t&amp;#34;$10}&amp;#39; | sort -ug </description>
+    </item>
+    
+    <item>
+      <title>pipe를 사용한 명령어를 watch로 확인하기</title>
+      <link>http://kimmj.github.io/ubuntu/using-watch-with-pipes/</link>
+      <pubDate>Sun, 23 Feb 2020 16:07:38 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/using-watch-with-pipes/</guid>
+      <description>pipe(|)는 grep과 다른 기타 명령어들과 함께 사용하면 좀 더 다양한 작업을 할 수 있습니다.
+watch는 특정 명령어를 주기적으로 입력하여 결과 메시지를 확인합니다. 즉, 무엇인가를 모니터링할 때 주로 사용하곤 합니다.
+바로 본론으로 들어가서 pipe를 사용한 명령어를 watch로 확인하는 방법은 다음과 같습니다.
+watch &amp;#39;&amp;lt;command&amp;gt;&amp;#39; 위와같이 quote로 감싸주세요.
+ls -al을 가지고 확인해 보도록 하겠습니다.
+$ ls -al | grep config -rw-rw-r-- 1 wanderlust wanderlust 2.9K 1월 21 23:40 config.toml $ watch ls -al | grep config # quote를 사용하지 않은 것 ^C # 결과 출력되지 않음 $ watch &amp;#34;ls -al | grep config&amp;#34; Every 2.</description>
+    </item>
+    
+    <item>
+      <title>watch를 사용할 때 alias 이용하기</title>
+      <link>http://kimmj.github.io/ubuntu/use-alias-in-watch/</link>
+      <pubDate>Sat, 22 Feb 2020 23:33:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/use-alias-in-watch/</guid>
+      <description>watch는 정해진 시간동안 뒤에 적은 명령어를 실행해주는 프로그램입니다. 가령 kubernetes를 다룰 때 watch kubectl get pods -n kube-system을 통해 kube-system 네임스페이스에 있는 파드들을 지속적으로 모니터링 할 수 있습니다.
+그러나 watch는 alias된 명령어를 인식하지 못합니다.
+$ ll total 44K drwxrwxr-x 2 wanderlust wanderlust 4.0K 1월 7 20:38 archetypes -rw-rw-r-- 1 wanderlust wanderlust 2.9K 1월 21 23:40 config.toml drwxrwxr-x 16 wanderlust wanderlust 4.0K 2월 22 23:08 content $ watch ll Every 2.0s: ll sh: 1: ll: not found 이 때 해결할 수 있는 가장 편한 방법은 watch 자체를 alias 시켜버리는 것입니다.</description>
+    </item>
+    
+    <item>
+      <title>[docker-compose] container에서 다른 container로 접속하기</title>
+      <link>http://kimmj.github.io/docker/connect-container-to-container/</link>
+      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/docker/connect-container-to-container/</guid>
+      <description>배경 docker-compose에서는 network bridge를 설정합니다. 이 bridge로 내부 통신을 하게 되죠. 여기서 port-forward를 통해 외부로 서비스를 expose하게 되면 host의 IP와 port의 조합으로 접속할 수 있습니다.
+그런데 저는 네트워크 설정의 문제인지, 하나의 container에서 host IP로 접속이 불가능했습니다. 그러면서도 저는 어떻게든 다른 docker-compose의 서비스로 네트워킹이 됐어야 했습니다. 정확히 말하자면 harbor라는 서비스(docker registry)에서 jenkins로 webhook을 날려야 하는 상황이었죠.
+먼저 시도했던 것은 jenkins의 ip를 docker inspect jenkins_jenkins_1을 통해 알아내고, 이를 통해 webhook을 전송하는 것이었습니다. 그러나 실패했죠.</description>
+    </item>
+    
+    <item>
       <title>password 없이 ssh 접속하기</title>
       <link>http://kimmj.github.io/ubuntu/ssh-without-password/</link>
       <pubDate>Sat, 15 Feb 2020 15:48:57 +0900</pubDate>
@@ -524,7 +595,7 @@ You&#39;ve moved on. I&#39;ve moved on.</description>
     </item>
     
     <item>
-      <title>Change Hostname</title>
+      <title>Hostname 변경하기</title>
       <link>http://kimmj.github.io/ubuntu/change-hostname/</link>
       <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>
       
@@ -545,6 +616,17 @@ hostname </description>
 find . | grep font 결과를 보니, theme 폴더 안에 제가 사용하는 hugo-theme-learn 테마에서 static/fonts/ 폴더에 폰트들을 저장해두고 있었습니다. 그렇다면 어느 파일에서 어떤 폰트를 사용한다고 설정할까요?
 hugo-theme-learn폴더로 이동하여 어디에 사용되는지 확인해보았습니다.
 grep -ri &amp;#34;font&amp;#34; 결과가 길게 나오는데요, 여기서 static/css/theme.css 안에 폰트에 대한 설정을 한 것이 보였습니다. 그 파일을 보니, @font-face라는 설정이 보이네요.</description>
+    </item>
+    
+    <item>
+      <title>Netplan으로 static IP 할당받기</title>
+      <link>http://kimmj.github.io/ubuntu/network/netplan/</link>
+      <pubDate>Sat, 11 Jan 2020 01:12:57 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/network/netplan/</guid>
+      <description>유선 static IP 할당 다음과 같이 static-IP-netplan.yaml을 작성합니다.
+network: version: 2 ethernets: enp3s0: dhcp4: no dhcp6: no addresses: [ 192.168.1.26/24 ] gateway4: 192.168.1.1 nameservers: addresses: [ 8.8.8.8, 8.8.4.4 ] 하나씩 살펴보도록 하겠습니다.
+ ethernetes: 유선랜 설정입니다. enp3s0 설정을 사용할 랜카드입니다. dhcp4, dhcp6: dynamic으로 IP를 할당받는 dhcp를 disable한 것입니다. addresses: 사용할 IP 및 CIDR입니다. gateway4: IP가 사용하는 gateway입니다. nameservers: dns 주소입니다. 8.8.8.8과 8.8.4.4를 사용합니다.  WIFI static IP 할당 wifis: wlp2s0: dhcp4: no dhcp6: no addresses: [ 192.</description>
     </item>
     
     <item>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>watch on Ibiza</title>
+    <link>http://kimmj.github.io/tags/watch/</link>
+    <description>Recent content in watch on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Feb 2020 16:07:38 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/watch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pipe를 사용한 명령어를 watch로 확인하기</title>
+      <link>http://kimmj.github.io/ubuntu/using-watch-with-pipes/</link>
+      <pubDate>Sun, 23 Feb 2020 16:07:38 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/using-watch-with-pipes/</guid>
+      <description>pipe(|)는 grep과 다른 기타 명령어들과 함께 사용하면 좀 더 다양한 작업을 할 수 있습니다.
+watch는 특정 명령어를 주기적으로 입력하여 결과 메시지를 확인합니다. 즉, 무엇인가를 모니터링할 때 주로 사용하곤 합니다.
+바로 본론으로 들어가서 pipe를 사용한 명령어를 watch로 확인하는 방법은 다음과 같습니다.
+watch &amp;#39;&amp;lt;command&amp;gt;&amp;#39; 위와같이 quote로 감싸주세요.
+ls -al을 가지고 확인해 보도록 하겠습니다.
+$ ls -al | grep config -rw-rw-r-- 1 wanderlust wanderlust 2.9K 1월 21 23:40 config.toml $ watch ls -al | grep config # quote를 사용하지 않은 것 ^C # 결과 출력되지 않음 $ watch &amp;#34;ls -al | grep config&amp;#34; Every 2.</description>
+    </item>
+    
+    <item>
+      <title>watch를 사용할 때 alias 이용하기</title>
+      <link>http://kimmj.github.io/ubuntu/use-alias-in-watch/</link>
+      <pubDate>Sat, 22 Feb 2020 23:33:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/use-alias-in-watch/</guid>
+      <description>watch는 정해진 시간동안 뒤에 적은 명령어를 실행해주는 프로그램입니다. 가령 kubernetes를 다룰 때 watch kubectl get pods -n kube-system을 통해 kube-system 네임스페이스에 있는 파드들을 지속적으로 모니터링 할 수 있습니다.
+그러나 watch는 alias된 명령어를 인식하지 못합니다.
+$ ll total 44K drwxrwxr-x 2 wanderlust wanderlust 4.0K 1월 7 20:38 archetypes -rw-rw-r-- 1 wanderlust wanderlust 2.9K 1월 21 23:40 config.toml drwxrwxr-x 16 wanderlust wanderlust 4.0K 2월 22 23:08 content $ watch ll Every 2.0s: ll sh: 1: ll: not found 이 때 해결할 수 있는 가장 편한 방법은 watch 자체를 alias 시켜버리는 것입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

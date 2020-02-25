@@ -645,8 +645,8 @@ code {
     border-radius: 2px;
     white-space: nowrap;
     color: #5e5e5e;
-    background: #dddddd;
-    border: 1px solid #dddddd;
+    background: #f0f0f0;
+    border: 1px solid #fafafa;
     padding: 0px 2px;
 }
 code + .copy-to-clipboard {
