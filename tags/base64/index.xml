@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>base64 on Ibiza</title>
+    <link>http://kimmj.github.io/tags/base64/</link>
+    <description>Recent content in base64 on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2020 20:44:42 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/base64/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu에서 Base64로 인코딩, 디코딩하기</title>
+      <link>http://kimmj.github.io/ubuntu/base64-encode-decode/</link>
+      <pubDate>Thu, 27 Feb 2020 20:44:42 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/base64-encode-decode/</guid>
+      <description>Encode echo로 입력하기 $ echo &amp;#34;password&amp;#34; | base64 cGFzc3dvcmQK Control+D를 누를때까지 입력하기 $ base64 admin password ^D # Control+D # result YWRtaW4KcGFzc3dvcmQK Decode echo로 입력하기 $ echo &amp;#34;cGFzc3dvcmQK&amp;#34; | base64 --decode password Control+D를 누를때까지 입력하기 $ base64 --decode YWRtaW4KcGFzc3dvcmQK ^D # Control+D # result admin password </description>
+    </item>
+    
+  </channel>
+</rss>

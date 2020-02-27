@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ubuntu 18.04 server on Ibiza</title>
+    <title>ubuntu-18.04-server on Ibiza</title>
     <link>http://kimmj.github.io/tags/ubuntu-18.04-server/</link>
-    <description>Recent content in ubuntu 18.04 server on Ibiza</description>
+    <description>Recent content in ubuntu-18.04-server on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2020 01:52:32 +0900</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Unattended Ubuntu</title>
+      <title>추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기</title>
       <link>http://kimmj.github.io/ubuntu/unattended-ubuntu/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
       

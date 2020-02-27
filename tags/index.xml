@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2020 23:28:01 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 20:44:42 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>base64</title>
+      <link>http://kimmj.github.io/tags/base64/</link>
+      <pubDate>Thu, 27 Feb 2020 20:44:42 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/base64/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://kimmj.github.io/tags/ubuntu/</link>
+      <pubDate>Thu, 27 Feb 2020 20:44:42 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>editor</title>
+      <link>http://kimmj.github.io/tags/editor/</link>
+      <pubDate>Wed, 26 Feb 2020 17:59:29 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>file</title>
+      <link>http://kimmj.github.io/tags/file/</link>
+      <pubDate>Wed, 26 Feb 2020 17:59:29 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/file/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>kubernetes</title>
@@ -107,15 +143,6 @@
       <pubDate>Sat, 22 Feb 2020 23:33:02 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/alias/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>http://kimmj.github.io/tags/ubuntu/</link>
-      <pubDate>Sat, 22 Feb 2020 23:33:02 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
@@ -552,7 +579,7 @@
     </item>
     
     <item>
-      <title>ubuntu 18.04 server</title>
+      <title>ubuntu-18.04-server</title>
       <link>http://kimmj.github.io/tags/ubuntu-18.04-server/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
       

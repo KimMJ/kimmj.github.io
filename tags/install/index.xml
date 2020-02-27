@@ -150,7 +150,7 @@ kubectl patch svc spin-deck -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#
     </item>
     
     <item>
-      <title>How to Edit Boot Parameter During Install</title>
+      <title>Ubuntu 설치 시 Boot Parameter를 수정하기</title>
       <link>http://kimmj.github.io/ubuntu/how-to-edit-boot-parameter-during-install/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       

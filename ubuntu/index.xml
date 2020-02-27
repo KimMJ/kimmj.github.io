@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Ubuntu에서 Base64로 인코딩, 디코딩하기</title>
+      <link>http://kimmj.github.io/ubuntu/base64-encode-decode/</link>
+      <pubDate>Thu, 27 Feb 2020 20:44:42 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/base64-encode-decode/</guid>
+      <description>Encode echo로 입력하기 $ echo &amp;#34;password&amp;#34; | base64 cGFzc3dvcmQK Control+D를 누를때까지 입력하기 $ base64 admin password ^D # Control+D # result YWRtaW4KcGFzc3dvcmQK Decode echo로 입력하기 $ echo &amp;#34;cGFzc3dvcmQK&amp;#34; | base64 --decode password Control+D를 누를때까지 입력하기 $ base64 --decode YWRtaW4KcGFzc3dvcmQK ^D # Control+D # result admin password </description>
+    </item>
+    
+    <item>
+      <title>Editor(vi)가 없을 때 파일 수정하기</title>
+      <link>http://kimmj.github.io/ubuntu/file-edit-without-editor/</link>
+      <pubDate>Wed, 26 Feb 2020 17:59:29 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/file-edit-without-editor/</guid>
+      <description>echo로 파일 내용을 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdfasdfasdf $ echo &amp;#34;asdf&amp;#34; &amp;gt; file $ cat file asdf &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ echo &amp;#34;asdf&amp;#34; &amp;gt;&amp;gt; file $ cat file asdf asdf cat으로 파일 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb ^D # Command+D $ cat file aaaa bbbb &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb ^D # Command+D $ cat file asdf aaaa bbbb &amp;laquo;EOF로 EOF을 입력하면 입력 완료하기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb EOF $ cat file asdf aaaa bbbb </description>
+    </item>
+    
+    <item>
       <title>열려있는 포트 확인하기</title>
       <link>http://kimmj.github.io/ubuntu/check-listen-port/</link>
       <pubDate>Mon, 24 Feb 2020 13:38:04 +0900</pubDate>
@@ -97,7 +115,7 @@ hostname </description>
     </item>
     
     <item>
-      <title>Unattended Ubuntu</title>
+      <title>추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기</title>
       <link>http://kimmj.github.io/ubuntu/unattended-ubuntu/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
       
@@ -107,7 +125,7 @@ hostname </description>
     </item>
     
     <item>
-      <title>How to Edit Boot Parameter During Install</title>
+      <title>Ubuntu 설치 시 Boot Parameter를 수정하기</title>
       <link>http://kimmj.github.io/ubuntu/how-to-edit-boot-parameter-during-install/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       
@@ -119,7 +137,7 @@ hostname </description>
     </item>
     
     <item>
-      <title>How to Use Sudo Without Password</title>
+      <title>sudo를 password 없이 사용하기</title>
       <link>http://kimmj.github.io/ubuntu/how-to-use-sudo-without-password/</link>
       <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
       

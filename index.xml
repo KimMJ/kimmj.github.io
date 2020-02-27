@@ -377,6 +377,24 @@ Just a little joke to lighten up the mood.</description>
     </item>
     
     <item>
+      <title>Ubuntu에서 Base64로 인코딩, 디코딩하기</title>
+      <link>http://kimmj.github.io/ubuntu/base64-encode-decode/</link>
+      <pubDate>Thu, 27 Feb 2020 20:44:42 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/base64-encode-decode/</guid>
+      <description>Encode echo로 입력하기 $ echo &amp;#34;password&amp;#34; | base64 cGFzc3dvcmQK Control+D를 누를때까지 입력하기 $ base64 admin password ^D # Control+D # result YWRtaW4KcGFzc3dvcmQK Decode echo로 입력하기 $ echo &amp;#34;cGFzc3dvcmQK&amp;#34; | base64 --decode password Control+D를 누를때까지 입력하기 $ base64 --decode YWRtaW4KcGFzc3dvcmQK ^D # Control+D # result admin password </description>
+    </item>
+    
+    <item>
+      <title>Editor(vi)가 없을 때 파일 수정하기</title>
+      <link>http://kimmj.github.io/ubuntu/file-edit-without-editor/</link>
+      <pubDate>Wed, 26 Feb 2020 17:59:29 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/file-edit-without-editor/</guid>
+      <description>echo로 파일 내용을 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdfasdfasdf $ echo &amp;#34;asdf&amp;#34; &amp;gt; file $ cat file asdf &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ echo &amp;#34;asdf&amp;#34; &amp;gt;&amp;gt; file $ cat file asdf asdf cat으로 파일 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb ^D # Command+D $ cat file aaaa bbbb &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb ^D # Command+D $ cat file asdf aaaa bbbb &amp;laquo;EOF로 EOF을 입력하면 입력 완료하기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb EOF $ cat file asdf aaaa bbbb </description>
+    </item>
+    
+    <item>
       <title>Stern을 이용하여 여러 pod의 log를 한번에 확인하기</title>
       <link>http://kimmj.github.io/kubernetes/stern/</link>
       <pubDate>Mon, 24 Feb 2020 23:28:01 +0900</pubDate>
@@ -649,7 +667,7 @@ network: version: 2 ethernets: enp3s0: dhcp4: no dhcp6: no addresses: [ 192.168.
       <guid>http://kimmj.github.io/spinnaker/tips/pipeline-expressions/</guid>
       <description>Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.
 이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.
-pipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).
+pipeline functions pipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).
  위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.</description>
     </item>
     
@@ -668,7 +686,7 @@ git clone https://github.com/stackhpc/ansible-role-libvirt-vm 테스트 환경 �
     </item>
     
     <item>
-      <title>Unattended Ubuntu</title>
+      <title>추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기</title>
       <link>http://kimmj.github.io/ubuntu/unattended-ubuntu/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:32 +0900</pubDate>
       
@@ -678,7 +696,7 @@ git clone https://github.com/stackhpc/ansible-role-libvirt-vm 테스트 환경 �
     </item>
     
     <item>
-      <title>How to Edit Boot Parameter During Install</title>
+      <title>Ubuntu 설치 시 Boot Parameter를 수정하기</title>
       <link>http://kimmj.github.io/ubuntu/how-to-edit-boot-parameter-during-install/</link>
       <pubDate>Wed, 08 Jan 2020 01:52:12 +0900</pubDate>
       
@@ -690,7 +708,7 @@ git clone https://github.com/stackhpc/ansible-role-libvirt-vm 테스트 환경 �
     </item>
     
     <item>
-      <title>How to Use Sudo Without Password</title>
+      <title>sudo를 password 없이 사용하기</title>
       <link>http://kimmj.github.io/ubuntu/how-to-use-sudo-without-password/</link>
       <pubDate>Wed, 08 Jan 2020 01:51:54 +0900</pubDate>
       
