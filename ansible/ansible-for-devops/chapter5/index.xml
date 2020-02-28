@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter5 on Ibiza</title>
+    <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/</link>
+    <description>Recent content in Chapter5 on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Feb 2020 11:05:34 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/ansible/ansible-for-devops/chapter5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ansible Playbooks Beyond the Basics</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/</link>
+      <pubDate>Fri, 28 Feb 2020 11:06:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/</guid>
+      <description>playbook과 우리가 이전에 사용한 간단한 playbook organization은 많은 일반적인 use case를 커버할 수 있다. system administration이 필요로 하는 폭에 대해 얘기하자면 Ansible에는 우리가 알아야 할 수많은 기능들이 있다. 우리는 play를 어떻게 더 세분화하여 실행하는지, simplicity와 usability를 위해 어떻게 task와 playbook을 구성하는지, infrastructure를 더 자신있게 다룰 수 있도록 해주는 다른 advanced playbook topic에 대해 다루어 볼 것이다.</description>
+    </item>
+    
+  </channel>
+</rss>

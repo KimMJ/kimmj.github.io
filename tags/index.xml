@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2020 20:44:42 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 11:06:02 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ansible</title>
+      <link>http://kimmj.github.io/tags/ansible/</link>
+      <pubDate>Fri, 28 Feb 2020 11:06:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-for-devops</title>
+      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
+      <pubDate>Fri, 28 Feb 2020 11:06:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playbook</title>
+      <link>http://kimmj.github.io/tags/playbook/</link>
+      <pubDate>Fri, 28 Feb 2020 11:06:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/playbook/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>base64</title>
@@ -147,6 +174,15 @@
     </item>
     
     <item>
+      <title>python</title>
+      <link>http://kimmj.github.io/tags/python/</link>
+      <pubDate>Sat, 22 Feb 2020 23:08:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>bridge</title>
       <link>http://kimmj.github.io/tags/bridge/</link>
       <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
@@ -210,15 +246,6 @@
     </item>
     
     <item>
-      <title>ansible</title>
-      <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ansible-playbooks</title>
       <link>http://kimmj.github.io/tags/ansible-playbooks/</link>
       <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
@@ -260,15 +287,6 @@
       <pubDate>Sun, 09 Feb 2020 20:06:17 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/infrastructure-as-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible-for-devops</title>
-      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
-      <pubDate>Thu, 06 Feb 2020 13:21:42 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
       <description></description>
     </item>
     

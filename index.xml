@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Ansible Playbooks Beyond the Basics</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/</link>
+      <pubDate>Fri, 28 Feb 2020 11:06:02 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/</guid>
+      <description>playbook과 우리가 이전에 사용한 간단한 playbook organization은 많은 일반적인 use case를 커버할 수 있다. system administration이 필요로 하는 폭에 대해 얘기하자면 Ansible에는 우리가 알아야 할 수많은 기능들이 있다. 우리는 play를 어떻게 더 세분화하여 실행하는지, simplicity와 usability를 위해 어떻게 task와 playbook을 구성하는지, infrastructure를 더 자신있게 다룰 수 있도록 해주는 다른 advanced playbook topic에 대해 다루어 볼 것이다.</description>
+    </item>
+    
+    <item>
       <title>Jenkins Install</title>
       <link>http://kimmj.github.io/jenkins/install/</link>
       <pubDate>Tue, 11 Feb 2020 17:20:41 +0900</pubDate>
@@ -452,6 +461,20 @@ $ ls -al | grep config -rw-rw-r-- 1 wanderlust wanderlust 2.9K 1월 21 23:40 con
       <description>watch는 정해진 시간동안 뒤에 적은 명령어를 실행해주는 프로그램입니다. 가령 kubernetes를 다룰 때 watch kubectl get pods -n kube-system을 통해 kube-system 네임스페이스에 있는 파드들을 지속적으로 모니터링 할 수 있습니다.
 그러나 watch는 alias된 명령어를 인식하지 못합니다.
 $ ll total 44K drwxrwxr-x 2 wanderlust wanderlust 4.0K 1월 7 20:38 archetypes -rw-rw-r-- 1 wanderlust wanderlust 2.9K 1월 21 23:40 config.toml drwxrwxr-x 16 wanderlust wanderlust 4.0K 2월 22 23:08 content $ watch ll Every 2.0s: ll sh: 1: ll: not found 이 때 해결할 수 있는 가장 편한 방법은 watch 자체를 alias 시켜버리는 것입니다.</description>
+    </item>
+    
+    <item>
+      <title>[번역]Python을 통해 이쁜 CLI 만들기</title>
+      <link>http://kimmj.github.io/python/python-beautiful-cli/</link>
+      <pubDate>Sat, 22 Feb 2020 23:08:39 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/python/python-beautiful-cli/</guid>
+      <description>링크 : https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df
+command line application을 만드는 것을 다루기 전에 빠르게 Command Line에 대해서 알아보자.
+command line 프로그램은 컴퓨터 프로그램이 생성되었을 때부터 우리와 함께 해왔고, 명령어들로 구성되어있다. commnad line 프로그램은 command line에서 또는 shell에서 동작하는 프로그램이다.
+command line interface는 user interface이지만 마우스를 사용하는 것이 아닌 terminal, shell, console에서 명령어를 입력하여 사용하는 것이다. console은 이미지나 GUI가 하나도 없이 전체 모니터 스크린이 텍스트로만 이루어진 것을 의미한다.
+위키피디아에 의하면
+ CLI는 주로 1960년대 중만에 컴퓨터 terminal에서의 대부분의 컴퓨터 시스템과의 상호작용을 의미하고 1970년대와 1980년대를 거쳐 OpenVMS, MS-DOS를 포함한 개인용 컴퓨터와 Unix system, CP/M과 Apple DOS에서 사용되어 왔다.</description>
     </item>
     
     <item>
