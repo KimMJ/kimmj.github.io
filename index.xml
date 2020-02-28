@@ -26,10 +26,11 @@
       <pubDate>Tue, 11 Feb 2020 17:20:41 +0900</pubDate>
       
       <guid>http://kimmj.github.io/jenkins/install/</guid>
-      <description>Download docker-compose.yaml 링크를 참조하여 docker-compose.yml을 다운로드 받습니다.
-curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-jenkins/master/docker-compose.yml &amp;gt; docker-compose.yml 현재 yaml은 다음과 같은 구성입니다.
-version: &amp;#39;2&amp;#39; services: jenkins: image: &amp;#39;bitnami/jenkins:2&amp;#39; ports: - &amp;#39;80:8080&amp;#39; - &amp;#39;443:8443&amp;#39; - &amp;#39;50000:50000&amp;#39; volumes: - &amp;#39;jenkins_data:/bitnami&amp;#39; volumes: jenkins_data: driver: local 여기서 몇가지 설정을 추가해주도록 합니다.
-version: &amp;#39;2&amp;#39; services: jenkins: image: &amp;#39;bitnami/jenkins:2&amp;#39; ports: - &amp;#39;38080:8080&amp;#39; - &amp;#39;38443:8443&amp;#39; - &amp;#39;50000:50000&amp;#39; volumes: - &amp;#39;jenkins_data:/bitnami&amp;#39; volumes: jenkins_data: driver: local driver_opts: type: none device: $PWD/jenkins_data o: bind jenkins_data는 jenkins가 사용할 데이터들입니다.</description>
+      <description>Configure docker-compose.yaml 다음과 같이 docker-compose.yaml 파일을 적절한 디렉토리에 생성합니다.
+version: &amp;#39;2&amp;#39; services: jenkins: image: &amp;#39;jenkins/jenkins:lts&amp;#39; ports: - &amp;#39;38080:8080&amp;#39; - &amp;#39;38443:8443&amp;#39; - &amp;#39;50000:50000&amp;#39; volumes: - &amp;#39;jenkins_data:/var/jenkins_home&amp;#39; volumes: jenkins_data: driver: local driver_opts: type: none device: $PWD/jenkins_data o: bind jenkins_data는 jenkins가 사용할 데이터들입니다. 이를 local에 폴더로 만들어줍니다.
+mkdir jenkins_data Start Jenkins 이제 docker-compose 명령어를 통해 실행합니다.
+sudo docker-compose up -d http://$IP:38080 으로 접속할 수 있습니다. 로컬에 설치하셨다면 http://localhost:38080으로 접속하면 됩니다.
+Jenkins 세팅 처음에 다음과 같은 화면을 볼 수 있습니다.</description>
     </item>
     
     <item>
@@ -383,6 +384,29 @@ Why are we even talking about this? This is, like, way down the road.
 All is right with the world again.
 Look, I don&#39;t wanna be exactly like my family. And don&#39;t take this the wrong way, but I don&#39;t wanna be exactly like your family, either.
 Just a little joke to lighten up the mood.</description>
+    </item>
+    
+    <item>
+      <title>Docker를 sudo없이 실행하기</title>
+      <link>http://kimmj.github.io/docker/use-docker-without-sudo/</link>
+      <pubDate>Sat, 29 Feb 2020 02:51:19 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/docker/use-docker-without-sudo/</guid>
+      <description>docker 명령어는 docker group으로 실행됩니다. 그러나 저희가 기존에 사용하던 일반 user는 해당 group에 속하지 않기 때문에 docker 명령어를 쳤을 때 permission에 관한 에러가 발생하게 됩니다.
+이 때 다음과 같이 조치를 하면 sudo 없이 user가 docker 명령어를 사용할 수 있게 됩니다.
+sudo usermod -aG docker $USER session을 다시 열고 docker ps 명령어를 입력하여 에러가 발생하는지 확인합니다.
+$ docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES </description>
+    </item>
+    
+    <item>
+      <title>oh-my-zsh에서 home key와 end key가 안될 때 해결방법</title>
+      <link>http://kimmj.github.io/ubuntu/oh-my-zsh-home-end-key/</link>
+      <pubDate>Sat, 29 Feb 2020 02:27:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/oh-my-zsh-home-end-key/</guid>
+      <description>oh-my-zsh을 설치하고 원격접속이나 로컬환경에서 터미널에 접속했을 때 home key와 end key가 먹히지 않는 경우가 있습니다.
+이런 경우에 사용하는 terminal에서 home key와 end key를 눌러 실제 어떤 값이 전달되는지 확인한 후, 이를 beginning-of-line, end-of-line으로 설정하면 해결할 수 있습니다.
+해결법  home key가 되지 않는 terminal에 접속합니다. Control+V를 누릅니다. 문제가 되는 home key를 누릅니다. terminal에 뜬 문자를 기록합니다. ~/.zshrc에 다음과 같이 추가합니다. 여기서 case에 관한 부분은 상황에 따라 넣지 않거나 변경해야 합니다. case $TERM in (xterm*) bindkey &amp;#39;^[[H&amp;#39; beginning-of-line bindkey &amp;#39;^[[F&amp;#39; end-of-line esac  source ~/.</description>
     </item>
     
     <item>

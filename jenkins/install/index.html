@@ -11,20 +11,20 @@
     <title>Jenkins Install :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1582894339" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1582894339" rel="stylesheet">
-    <link href="/css/hybrid.css?1582894339" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1582894339" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1582894339" rel="stylesheet">
-    <link href="/css/auto-complete.css?1582894339" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1582894339" rel="stylesheet">
-    <link href="/css/theme.css?1582894339" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1582894339" rel="stylesheet">
+    <link href="/css/nucleus.css?1582914133" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1582914133" rel="stylesheet">
+    <link href="/css/hybrid.css?1582914133" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1582914133" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1582914133" rel="stylesheet">
+    <link href="/css/auto-complete.css?1582914133" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1582914133" rel="stylesheet">
+    <link href="/css/theme.css?1582914133" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1582914133" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1582894339" rel="stylesheet">
+      <link href="/css/theme-mine.css?1582914133" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1582894339"></script>
+    <script src="/js/jquery-3.3.1.min.js?1582914133"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1582894339"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1582894339"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1582914133"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1582914133"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1582894339"></script>
+<script type="text/javascript" src="/js/search.js?1582914133"></script>
 
     
   </div>
@@ -304,6 +304,25 @@
           
           
         
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/docker/use-docker-without-sudo/" title="Docker를 sudo없이 실행하기" class="dd-item ">
+        <a href="/docker/use-docker-without-sudo/">
+        <i class='fas fa-minus'></i>&nbsp;Docker를 sudo없이 실행하기
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
           
             
             
@@ -1611,6 +1630,25 @@
  
   
     
+      <li data-nav-id="/ubuntu/oh-my-zsh-home-end-key/" title="oh-my-zsh에서 home key와 end key가 안될 때 해결방법" class="dd-item ">
+        <a href="/ubuntu/oh-my-zsh-home-end-key/">
+        <i class='fas fa-minus'></i>&nbsp;oh-my-zsh에서 home key와 end key가 안될 때 해결방법
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/ubuntu/base64-encode-decode/" title="Ubuntu에서 Base64로 인코딩, 디코딩하기" class="dd-item ">
         <a href="/ubuntu/base64-encode-decode/">
         <i class='fas fa-minus'></i>&nbsp;Ubuntu에서 Base64로 인코딩, 디코딩하기
@@ -2464,7 +2502,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#download-docker-composeyaml">Download docker-compose.yaml</a></li>
+    <li><a href="#configure-docker-composeyaml">Configure docker-compose.yaml</a></li>
+    <li><a href="#start-jenkins">Start Jenkins</a></li>
+    <li><a href="#jenkins-세팅">Jenkins 세팅</a></li>
     <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
@@ -2501,39 +2541,25 @@
 
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#download-docker-composeyaml">Download docker-compose.yaml</a></li>
+    <li><a href="#configure-docker-composeyaml">Configure docker-compose.yaml</a></li>
+    <li><a href="#start-jenkins">Start Jenkins</a></li>
+    <li><a href="#jenkins-세팅">Jenkins 세팅</a></li>
     <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
 
-<h2 id="download-docker-composeyaml">Download docker-compose.yaml</h2>
-<p><a href="https://hub.docker.com/r/bitnami/jenkins/">링크</a>를 참조하여 docker-compose.yml을 다운로드 받습니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-jenkins/master/docker-compose.yml &gt; docker-compose.yml
-</code></pre></div><p>현재 yaml은 다음과 같은 구성입니다.</p>
+<h2 id="configure-docker-composeyaml">Configure docker-compose.yaml</h2>
+<p>다음과 같이 <code>docker-compose.yaml</code> 파일을 적절한 디렉토리에 생성합니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version: <span style="color:#e6db74">&#39;2&#39;</span>
 services:
   jenkins:
-    image: <span style="color:#e6db74">&#39;bitnami/jenkins:2&#39;</span>
-    ports:
-      - <span style="color:#e6db74">&#39;80:8080&#39;</span>
-      - <span style="color:#e6db74">&#39;443:8443&#39;</span>
-      - <span style="color:#e6db74">&#39;50000:50000&#39;</span>
-    volumes:
-      - <span style="color:#e6db74">&#39;jenkins_data:/bitnami&#39;</span>
-volumes:
-  jenkins_data:
-    driver: local
-</code></pre></div><p>여기서 몇가지 설정을 추가해주도록 합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version: <span style="color:#e6db74">&#39;2&#39;</span>
-services:
-  jenkins:
-    image: <span style="color:#e6db74">&#39;bitnami/jenkins:2&#39;</span>
+    image: <span style="color:#e6db74">&#39;jenkins/jenkins:lts&#39;</span>
     ports:
       - <span style="color:#e6db74">&#39;38080:8080&#39;</span>
       - <span style="color:#e6db74">&#39;38443:8443&#39;</span>
       - <span style="color:#e6db74">&#39;50000:50000&#39;</span>
     volumes:
-      - <span style="color:#e6db74">&#39;jenkins_data:/bitnami&#39;</span>
+      - <span style="color:#e6db74">&#39;jenkins_data:/var/jenkins_home&#39;</span>
 volumes:
   jenkins_data:
     driver: local
@@ -2544,13 +2570,33 @@ volumes:
 </code></pre></div><p><code>jenkins_data</code>는 jenkins가 사용할 데이터들입니다.
 이를 local에 폴더로 만들어줍니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir jenkins_data
-</code></pre></div><p>그 다음 실행합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker-compose up -d
+</code></pre></div><h2 id="start-jenkins">Start Jenkins</h2>
+<p>이제 <code>docker-compose</code> 명령어를 통해 실행합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose up -d
 </code></pre></div><p><code>http://$IP:38080</code> 으로 접속할 수 있습니다.
-기본 ID/PASSWD는 (user/bitnami)입니다.</p>
+로컬에 설치하셨다면 <code>http://localhost:38080</code>으로 접속하면 됩니다.</p>
+<h2 id="jenkins-세팅">Jenkins 세팅</h2>
+<p>처음에 다음과 같은 화면을 볼 수 있습니다.</p>
+<p><img src="/images/Jenkins/Jenkins-start.png" alt="Jenkins-start"></p>
+<p>여기서 <code>/var/jenkins_home/secrets/initialAdminPassword</code>의 내용을 아래 칸에 입려하라고 지시합니다.</p>
+<p>저희는 앞서 <code>$PWD/jenkins_data</code>를 <code>/var/jenkins_home</code>에 binding했으므로, <code>$PWD/jenkins_data/secrets/initialAdminPassword</code>를 확인하면 됩니다.
+또는 docker container에 직접 접속해서 해당 path로 이동 후 값을 확인해도 됩니다.</p>
+<p>이제 다음과 같은 화면이 뜰 것입니다.</p>
+<p><img src="/images/Jenkins/Jenkins-plugin-install.png" alt="Jenkins-plugin-install"></p>
+<p>여기서는 왼쪽의 <code>Install suggested plugins</code>를 선택해줍니다.</p>
+<p>다음과 같이 설치가 진행됩니다.</p>
+<p><img src="/images/Jenkins/Jenkins-plugin-installing.png" alt="Jenkins-plugin-installing"></p>
+<p>위의 plugin 설치과정이 완료되고 나면 다음과 같은 admin 계정 생성에 관한 화면이 나옵니다.</p>
+<p><img src="/images/Jenkins/Jenkins-admin-user.png" alt="Jenkins-admin-user"></p>
+<p>알맞게 입력을 한 뒤 저장하면 접속 URL을 작성하라고 합니다.
+default로 적어져 있으니 확인후 변경이 필요하면 바꾸면 됩니다.</p>
+<p><img src="/images/Jenkins/Jenkins-address.png" alt="Jenkins-address"></p>
+<p>여기까지 하면 기본 설정은 다 끝났습니다.
+Jenkins가 준비될 때까지 잠시 기다리면 home 화면이 뜹니다.</p>
+<p><img src="/images/Jenkins/Jenkins-home.png" alt="Jenkins-home"></p>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="https://hub.docker.com/r/bitnami/jenkins/">https://hub.docker.com/r/bitnami/jenkins/</a></li>
+<li><a href="https://hub.docker.com/_/jenkins/">https://hub.docker.com/_/jenkins/</a></li>
 </ul>
 
 
@@ -2769,59 +2815,6 @@ volumes:
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -2845,6 +2838,43 @@ volumes:
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2934,66 +2964,6 @@ volumes:
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -3009,142 +2979,6 @@ volumes:
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -3257,70 +3091,6 @@ volumes:
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -3349,154 +3119,6 @@ volumes:
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -3599,6 +3221,9 @@ volumes:
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -3614,6 +3239,459 @@ volumes:
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -4232,19 +4310,19 @@ volumes:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1582894340"></script>
-    <script src="/js/perfect-scrollbar.min.js?1582894340"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1582894340"></script>
-    <script src="/js/jquery.sticky.js?1582894340"></script>
-    <script src="/js/featherlight.min.js?1582894340"></script>
-    <script src="/js/highlight.pack.js?1582894340"></script>
+    <script src="/js/clipboard.min.js?1582914133"></script>
+    <script src="/js/perfect-scrollbar.min.js?1582914133"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1582914133"></script>
+    <script src="/js/jquery.sticky.js?1582914133"></script>
+    <script src="/js/featherlight.min.js?1582914133"></script>
+    <script src="/js/highlight.pack.js?1582914133"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1582894340"></script>
-    <script src="/js/learn.js?1582894340"></script>
-    <script src="/js/hugo-learn.js?1582894340"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1582914133"></script>
+    <script src="/js/learn.js?1582914133"></script>
+    <script src="/js/hugo-learn.js?1582914133"></script>
 
-    <link href="/mermaid/mermaid.css?1582894340" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1582894340"></script>
+    <link href="/mermaid/mermaid.css?1582914133" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1582914133"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

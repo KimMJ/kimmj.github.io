@@ -11,7 +11,7 @@
 	"title": "Jenkins Install",
 	"tags": ["jenkins", "install"],
 	"description": "",
-	"content": "Download docker-compose.yaml 링크를 참조하여 docker-compose.yml을 다운로드 받습니다.\ncurl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-jenkins/master/docker-compose.yml \u0026gt; docker-compose.yml 현재 yaml은 다음과 같은 구성입니다.\nversion: \u0026#39;2\u0026#39; services: jenkins: image: \u0026#39;bitnami/jenkins:2\u0026#39; ports: - \u0026#39;80:8080\u0026#39; - \u0026#39;443:8443\u0026#39; - \u0026#39;50000:50000\u0026#39; volumes: - \u0026#39;jenkins_data:/bitnami\u0026#39; volumes: jenkins_data: driver: local 여기서 몇가지 설정을 추가해주도록 합니다.\nversion: \u0026#39;2\u0026#39; services: jenkins: image: \u0026#39;bitnami/jenkins:2\u0026#39; ports: - \u0026#39;38080:8080\u0026#39; - \u0026#39;38443:8443\u0026#39; - \u0026#39;50000:50000\u0026#39; volumes: - \u0026#39;jenkins_data:/bitnami\u0026#39; volumes: jenkins_data: driver: local driver_opts: type: none device: $PWD/jenkins_data o: bind jenkins_data는 jenkins가 사용할 데이터들입니다. 이를 local에 폴더로 만들어줍니다.\nmkdir jenkins_data 그 다음 실행합니다.\ndocker-compose up -d http://$IP:38080 으로 접속할 수 있습니다. 기본 ID/PASSWD는 (user/bitnami)입니다.\nReference  https://hub.docker.com/r/bitnami/jenkins/  "
+	"content": "Configure docker-compose.yaml 다음과 같이 docker-compose.yaml 파일을 적절한 디렉토리에 생성합니다.\nversion: \u0026#39;2\u0026#39; services: jenkins: image: \u0026#39;jenkins/jenkins:lts\u0026#39; ports: - \u0026#39;38080:8080\u0026#39; - \u0026#39;38443:8443\u0026#39; - \u0026#39;50000:50000\u0026#39; volumes: - \u0026#39;jenkins_data:/var/jenkins_home\u0026#39; volumes: jenkins_data: driver: local driver_opts: type: none device: $PWD/jenkins_data o: bind jenkins_data는 jenkins가 사용할 데이터들입니다. 이를 local에 폴더로 만들어줍니다.\nmkdir jenkins_data Start Jenkins 이제 docker-compose 명령어를 통해 실행합니다.\nsudo docker-compose up -d http://$IP:38080 으로 접속할 수 있습니다. 로컬에 설치하셨다면 http://localhost:38080으로 접속하면 됩니다.\nJenkins 세팅 처음에 다음과 같은 화면을 볼 수 있습니다.\n여기서 /var/jenkins_home/secrets/initialAdminPassword의 내용을 아래 칸에 입려하라고 지시합니다.\n저희는 앞서 $PWD/jenkins_data를 /var/jenkins_home에 binding했으므로, $PWD/jenkins_data/secrets/initialAdminPassword를 확인하면 됩니다. 또는 docker container에 직접 접속해서 해당 path로 이동 후 값을 확인해도 됩니다.\n이제 다음과 같은 화면이 뜰 것입니다.\n여기서는 왼쪽의 Install suggested plugins를 선택해줍니다.\n다음과 같이 설치가 진행됩니다.\n위의 plugin 설치과정이 완료되고 나면 다음과 같은 admin 계정 생성에 관한 화면이 나옵니다.\n알맞게 입력을 한 뒤 저장하면 접속 URL을 작성하라고 합니다. default로 적어져 있으니 확인후 변경이 필요하면 바꾸면 됩니다.\n여기까지 하면 기본 설정은 다 끝났습니다. Jenkins가 준비될 때까지 잠시 기다리면 home 화면이 뜹니다.\nReference  https://hub.docker.com/_/jenkins/  "
 },
 {
 	"uri": "http://kimmj.github.io/english/himym/season2/episode01/",
@@ -399,6 +399,20 @@
 	"content": "Okay, Lily, we're putting you on salad duty.\nWhy are we even talking about this? This is, like, way down the road.\nAll is right with the world again.\nLook, I don't wanna be exactly like my family. And don't take this the wrong way, but I don't wanna be exactly like your family, either.\nJust a little joke to lighten up the mood.\n"
 },
 {
+	"uri": "http://kimmj.github.io/docker/use-docker-without-sudo/",
+	"title": "Docker를 sudo없이 실행하기",
+	"tags": ["docker", "sudo"],
+	"description": "",
+	"content": "docker 명령어는 docker group으로 실행됩니다. 그러나 저희가 기존에 사용하던 일반 user는 해당 group에 속하지 않기 때문에 docker 명령어를 쳤을 때 permission에 관한 에러가 발생하게 됩니다.\n이 때 다음과 같이 조치를 하면 sudo 없이 user가 docker 명령어를 사용할 수 있게 됩니다.\nsudo usermod -aG docker $USER session을 다시 열고 docker ps 명령어를 입력하여 에러가 발생하는지 확인합니다.\n$ docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES "
+},
+{
+	"uri": "http://kimmj.github.io/ubuntu/oh-my-zsh-home-end-key/",
+	"title": "oh-my-zsh에서 home key와 end key가 안될 때 해결방법",
+	"tags": ["oh-my-zsh", "zsh"],
+	"description": "",
+	"content": "oh-my-zsh을 설치하고 원격접속이나 로컬환경에서 터미널에 접속했을 때 home key와 end key가 먹히지 않는 경우가 있습니다.\n이런 경우에 사용하는 terminal에서 home key와 end key를 눌러 실제 어떤 값이 전달되는지 확인한 후, 이를 beginning-of-line, end-of-line으로 설정하면 해결할 수 있습니다.\n해결법  home key가 되지 않는 terminal에 접속합니다. Control+V를 누릅니다. 문제가 되는 home key를 누릅니다. terminal에 뜬 문자를 기록합니다. ~/.zshrc에 다음과 같이 추가합니다. 여기서 case에 관한 부분은 상황에 따라 넣지 않거나 변경해야 합니다. case $TERM in (xterm*) bindkey \u0026#39;^[[H\u0026#39; beginning-of-line bindkey \u0026#39;^[[F\u0026#39; end-of-line esac  source ~/.zshrc를 하거나 새로운 session을 열어서 확인합니다.  "
+},
+{
 	"uri": "http://kimmj.github.io/ubuntu/base64-encode-decode/",
 	"title": "Ubuntu에서 Base64로 인코딩, 디코딩하기",
 	"tags": ["ubuntu", "base64"],
@@ -707,6 +721,41 @@
 	"content": "English "
 },
 {
+	"uri": "http://kimmj.github.io/tags/docker/",
+	"title": "docker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/sudo/",
+	"title": "sudo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/oh-my-zsh/",
+	"title": "oh-my-zsh",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/zsh/",
+	"title": "zsh",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/tags/ansible/",
 	"title": "ansible",
 	"tags": [],
@@ -723,13 +772,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/playbook/",
 	"title": "playbook",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -856,13 +898,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/container/",
 	"title": "container",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/docker/",
-	"title": "docker",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -1178,13 +1213,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/boot-parameter/",
 	"title": "boot parameter",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/sudo/",
-	"title": "sudo",
 	"tags": [],
 	"description": "",
 	"content": ""
