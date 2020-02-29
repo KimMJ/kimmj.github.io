@@ -1,12 +1,5 @@
 [
 {
-	"uri": "http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/",
-	"title": "Ansible Playbooks Beyond the Basics",
-	"tags": ["ansible", "ansible-for-devops", "playbook"],
-	"description": "",
-	"content": "playbook과 우리가 이전에 사용한 간단한 playbook organization은 많은 일반적인 use case를 커버할 수 있다. system administration이 필요로 하는 폭에 대해 얘기하자면 Ansible에는 우리가 알아야 할 수많은 기능들이 있다. 우리는 play를 어떻게 더 세분화하여 실행하는지, simplicity와 usability를 위해 어떻게 task와 playbook을 구성하는지, infrastructure를 더 자신있게 다룰 수 있도록 해주는 다른 advanced playbook topic에 대해 다루어 볼 것이다.\n"
-},
-{
 	"uri": "http://kimmj.github.io/jenkins/install/",
 	"title": "Jenkins Install",
 	"tags": ["jenkins", "install"],
@@ -180,13 +173,6 @@
 	"tags": ["install", "spinnaker"],
 	"description": "",
 	"content": "Spinnaker를 배포하는 방법에는 3가지가 있습니다. Kubernetes 환경에 배포하기, local debian으로 배포하기, local git으로 배포하기가 있습니다.\n여기에서는 Kubernetes 환경에 배포하기를 진행할 것입니다.\nACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACCOUNT 위와같이 설정하면 됩니다. ACCOUNT는 kubernetes cluster를 추가할 때 사용했던 이름을 사용하면 됩니다.\n"
-},
-{
-	"uri": "http://kimmj.github.io/ansible/ansible-for-devops/chapter5/",
-	"title": "Chapter5",
-	"tags": [],
-	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
 	"uri": "http://kimmj.github.io/git/",
@@ -399,6 +385,13 @@
 	"content": "Okay, Lily, we're putting you on salad duty.\nWhy are we even talking about this? This is, like, way down the road.\nAll is right with the world again.\nLook, I don't wanna be exactly like my family. And don't take this the wrong way, but I don't wanna be exactly like your family, either.\nJust a little joke to lighten up the mood.\n"
 },
 {
+	"uri": "http://kimmj.github.io/ubuntu/start-tmux-after-reboot/",
+	"title": "reboot 후에 tmux를 실행시켜 원하는 작업을 하기",
+	"tags": ["tmux", "reboot", "ubuntu"],
+	"description": "",
+	"content": "tmux는 terminal을 한 창에 여러개 띄울 때 사용하는 프로그램입니다.\n이 프로그램의 특징은 detach 모드로 들어가면, 어디서든 terminal에 접속하여 해당 session에 접속했을 때, 그 화면 그대로를 가져올 수 있다는 것입니다.\n즉, 원격 접속을 통해 서버에 접속했을 때 작업을 돌려놓고 detach모드로 들어가면 나의 session을 꺼도 실제 서버에서는 해당 작업이 계속해서 돌아가고 있다는 것입니다. 퇴근하기 전 시간이 오래걸리는 작업을 돌려놓고 가야할 때 유용하게 사용할 수 있습니다.\n저의 경우는 제 로컬 컴퓨터에서 hugo를 통해 사이트를 생성하여 블로그를 편집할 때마다 즉시 그 결과를 보고 있습니다. 이 떄 사용되는 명령어는 간단하지만, 매번 컴퓨터를 켤 때마다 이를 수행해주어야 한다는 것은 여간 귀찮은 일이 아닙니다. 따라서 다음과 같은 프로세스로 tmux를 생성하여 제가 하는 작업을 수행하도록 설정할 것입니다.\noverview  tmux session을 이름을 지정하여 생성하고, daemon으로 돌린다. 해당 session에 직접 접속하지 않고 명령어를 전달한다. 1, 2의 작업을 스크립트로 만들고 재부팅 시 실행하도록 한다.  절차 sh script 작성 다음과 같은 스크립트를 작성합니다. (tmux-on-reboot.sh)\n#!/bin/zsh  SESSIONNAME=\u0026#34;script\u0026#34; tmux has-session -t $SESSIONNAME 2\u0026gt; /dev/null if [ $? != 0 ] then tmux new-session -s $SESSIONNAME -n script -d \u0026#34;bin/zsh\u0026#34; tmux send-keys -t $SESSIONNAME \u0026#34;cd /home/wanderlust/Ibiza\u0026#34; C-m tmux send-keys -t $SESSIONNAME \u0026#34;hugo server --bind 0.0.0.0 --port 8000 --disableFastRender\u0026#34; C-m fi 여기서 C-m은 enter 명령을 주기 위함입니다.\n그 다음 해당 파일에 실행권한을 줍니다.\nchmod +x tmux-on-reboot.sh 재부팅 시 실행하도록 설정 이를 위해서는 crontab을 사용할 것입니다.\ncrontab을 사용하는 방법은 crontab -e를 통해 root 권한으로 명령어를 실행하는 방법과 /etc/crontab을 수정하여 원하는 유저를 부여하는 방법이 있습니다. 여기서는 제가 사용할 계정을 가지고 생성하는 것을 해보도록 하겠습니다.\nvi /etc/crontab vim이 열리면 가장 아랫줄에 다음과 같이 추가합니다.\n@reboot wanderlust /home/wanderlust/scripts/tmux-on-reboot.sh 저장 후 재부팅하여 실행되는지 확인합니다.\nReference  https://superuser.com/a/440082?  "
+},
+{
 	"uri": "http://kimmj.github.io/docker/use-docker-without-sudo/",
 	"title": "Docker를 sudo없이 실행하기",
 	"tags": ["docker", "sudo"],
@@ -592,7 +585,7 @@
 	"title": "Pipeline Expressions",
 	"tags": ["spinnaker", "pipeline"],
 	"description": "",
-	"content": "Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.\n이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.\npipeline functions pipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).\n 위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.\n기본적으로 ${ expression }의 형태를 가지게 됩니다.\n여기서 한가지 기억해 두어야 할 것은 nested가 되지 않는다는 것입니다. 즉, ${ expression1 ${expression2} }가 되지 않습니다.\n언제 pipeline expression을 사용하나요? pipeline expression은 Spinnaker UI로는 해결할 수 없는 문제들을 해결하여줍니다. 예를 들어 특정 stage가 성공했는지의 여부에 따라 stage를 실행할지, 말지 결정하는 방법을 제공해 줍니다. 또는 가장 최근에 deploy된 pod를 알아낸다거나, spinnaker를 통한 canary analysis를 할 때 비교할 두가지 대상을 선택하기 위해 사용할 수도 있습니다.\nSpinnaker는 모든 파이프라인을 JSON 형태로도 관리할 수 있기 때문에, UI에는 없는 값들도 입력할 수 있습니다. 이렇게 좀 더 유연한 방법으로 Spinnaker를 이용하고자 한다면 pipeline expression은 꼭 알아두어야 합니다.\n원하는 값을 어떻게 찾나요? pipeline이 구동되고 나면, Details를 누르고 Source를 눌렀을 때 해당 pipeline의 실행결과가 json형태로 출력됩니다. 이를 VS Code나 다른 편집기를 이용하여, json으로 인식하게 한 뒤, 자동 들여쓰기를 하면 보기 좋게 만들어줍니다.\n이를 통해서 어떤 값을 내가 사용할 지 확인하여 pipeline expression을 작성하면 됩니다.\n내가 작성한 pipeline expression은 어떻게 테스트하나요? 작성한 pipeline expression을 테스트하기 위해 파이프라인을 구동한다는 것은 끔직한 일입니다. Spinnaker는 이를 테스트하기 위해 API endpoint를 제공합니다. 즉, 파이프라인을 다시 구동시키지 않고도 어떤 결과값이 나오는지 확인할 수 있다는 것을 의미합니다.\n테스트 방법은 간단합니다. 다음과 같이 curl을 통해 endpoint로 테스트하면 됩니다.\nPIPELINE_ID=[your_pipeline_id] curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression \\  -H \u0026#34;Content-Type: text/plain\u0026#34; \\  --data \u0026#39;${ #stage(\u0026#34;Deploy\u0026#34;).status.toString() }\u0026#39; 여기서 api.my.spinnaker는 Gate의 Service를 보고 포트를 참조하여 작성하면 됩니다. 기본값은 localhost:8084입니다. 이렇게 하면 Deploy라는 stage가 성공했을 때 다음과 같은 결과를 볼 수 있습니다.\n{\u0026#34;result\u0026#34;: \u0026#34;SUCCEEDED\u0026#34;} Spinnaker가 expression을 통해 결과를 만들어내지 못한다면 다음과 같이 에러와 로그가 발생합니다.\n{ \u0026#34;detail\u0026#34;: { \u0026#34;{ #stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;: [ { \u0026#34;description\u0026#34;: \u0026#34;Failed to evaluate [expression] Expression [{ #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() ] @0: No ending suffix \u0026#39;}\u0026#39; for expression starting at character 0: { #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;, \u0026#34;exceptionType\u0026#34;:\u0026#34;org.springframework.expression.ParseException\u0026#34;, \u0026#34;level\u0026#34;:\u0026#34;ERROR\u0026#34;, \u0026#34;timestamp\u0026#34;:1531254890849 } ] }, \u0026#34;result\u0026#34;:\u0026#34;${#stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34; } Reference Spinnaker Docs: https://www.spinnaker.io/guides/user/pipeline/expressions/\n"
+	"content": "Spinnaker는 배포를 자동화할 때 사용합니다. 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.\n이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.\npipeline에서 다른 pipeline의 값들 불러오기 Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).\n 위의 Note에도 적었듯이, Spinnaker는 SpEL을 기반으로 Expressions를 사용합니다. SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익숙하지가 않았기 때문에 많은 시행착오를 거쳐서 습득을 하게 되었습니다.\n기본적으로 ${ expression }의 형태를 가지게 됩니다.\n여기서 한가지 기억해 두어야 할 것은 nested가 되지 않는다는 것입니다. 즉, ${ expression1 ${expression2} }가 되지 않습니다.\n언제 pipeline expression을 사용하나요? pipeline expression은 Spinnaker UI로는 해결할 수 없는 문제들을 해결하여줍니다. 예를 들어 특정 stage가 성공했는지의 여부에 따라 stage를 실행할지, 말지 결정하는 방법을 제공해 줍니다. 또는 가장 최근에 deploy된 pod를 알아낸다거나, spinnaker를 통한 canary analysis를 할 때 비교할 두가지 대상을 선택하기 위해 사용할 수도 있습니다.\nSpinnaker는 모든 파이프라인을 JSON 형태로도 관리할 수 있기 때문에, UI에는 없는 값들도 입력할 수 있습니다. 이렇게 좀 더 유연한 방법으로 Spinnaker를 이용하고자 한다면 pipeline expression은 꼭 알아두어야 합니다.\n원하는 값을 어떻게 찾나요? pipeline이 구동되고 나면, Details를 누르고 Source를 눌렀을 때 해당 pipeline의 실행결과가 json형태로 출력됩니다. 이를 VS Code나 다른 편집기를 이용하여, json으로 인식하게 한 뒤, 자동 들여쓰기를 하면 보기 좋게 만들어줍니다.\n이를 통해서 어떤 값을 내가 사용할 지 확인하여 pipeline expression을 작성하면 됩니다.\n내가 작성한 pipeline expression은 어떻게 테스트하나요? 작성한 pipeline expression을 테스트하기 위해 파이프라인을 구동한다는 것은 끔직한 일입니다. Spinnaker는 이를 테스트하기 위해 API endpoint를 제공합니다. 즉, 파이프라인을 다시 구동시키지 않고도 어떤 결과값이 나오는지 확인할 수 있다는 것을 의미합니다.\n테스트 방법은 간단합니다. 다음과 같이 curl을 통해 endpoint로 테스트하면 됩니다.\nPIPELINE_ID=[your_pipeline_id] curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression \\  -H \u0026#34;Content-Type: text/plain\u0026#34; \\  --data \u0026#39;${ #stage(\u0026#34;Deploy\u0026#34;).status.toString() }\u0026#39; 여기서 api.my.spinnaker는 Gate의 Service를 보고 포트를 참조하여 작성하면 됩니다. 기본값은 localhost:8084입니다. 이렇게 하면 Deploy라는 stage가 성공했을 때 다음과 같은 결과를 볼 수 있습니다.\n{\u0026#34;result\u0026#34;: \u0026#34;SUCCEEDED\u0026#34;} Spinnaker가 expression을 통해 결과를 만들어내지 못한다면 다음과 같이 에러와 로그가 발생합니다.\n{ \u0026#34;detail\u0026#34;: { \u0026#34;{ #stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;: [ { \u0026#34;description\u0026#34;: \u0026#34;Failed to evaluate [expression] Expression [{ #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() ] @0: No ending suffix \u0026#39;}\u0026#39; for expression starting at character 0: { #stage( #root.execution, \\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34;, \u0026#34;exceptionType\u0026#34;:\u0026#34;org.springframework.expression.ParseException\u0026#34;, \u0026#34;level\u0026#34;:\u0026#34;ERROR\u0026#34;, \u0026#34;timestamp\u0026#34;:1531254890849 } ] }, \u0026#34;result\u0026#34;:\u0026#34;${#stage(\\\u0026#34;Deploy\\\u0026#34;).status.toString() \u0026#34; } Reference Spinnaker Docs: https://www.spinnaker.io/guides/user/pipeline/expressions/\n"
 },
 {
 	"uri": "http://kimmj.github.io/spinnaker/tips/",
@@ -721,6 +714,34 @@
 	"content": "English "
 },
 {
+	"uri": "http://kimmj.github.io/tags/reboot/",
+	"title": "reboot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/tmux/",
+	"title": "tmux",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/ubuntu/",
+	"title": "ubuntu",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/tags/docker/",
 	"title": "docker",
 	"tags": [],
@@ -730,13 +751,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/sudo/",
 	"title": "sudo",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -756,36 +770,8 @@
 	"content": ""
 },
 {
-	"uri": "http://kimmj.github.io/tags/ansible/",
-	"title": "ansible",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/ansible-for-devops/",
-	"title": "ansible-for-devops",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/playbook/",
-	"title": "playbook",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "http://kimmj.github.io/tags/base64/",
 	"title": "base64",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/ubuntu/",
-	"title": "ubuntu",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -931,6 +917,13 @@
 	"content": ""
 },
 {
+	"uri": "http://kimmj.github.io/tags/ansible/",
+	"title": "ansible",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/tags/ansible-playbooks/",
 	"title": "ansible-playbooks",
 	"tags": [],
@@ -961,6 +954,13 @@
 {
 	"uri": "http://kimmj.github.io/tags/infrastructure-as-code/",
 	"title": "infrastructure-as-code",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/ansible-for-devops/",
+	"title": "ansible-for-devops",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -1038,13 +1038,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/utterance/",
 	"title": "utterance",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/tmux/",
-	"title": "tmux",
 	"tags": [],
 	"description": "",
 	"content": ""

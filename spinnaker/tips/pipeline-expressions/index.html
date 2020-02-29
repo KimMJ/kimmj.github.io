@@ -11,20 +11,20 @@
     <title>Pipeline Expressions :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1582914140" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1582914140" rel="stylesheet">
-    <link href="/css/hybrid.css?1582914140" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1582914140" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1582914140" rel="stylesheet">
-    <link href="/css/auto-complete.css?1582914140" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1582914140" rel="stylesheet">
-    <link href="/css/theme.css?1582914140" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1582914140" rel="stylesheet">
+    <link href="/css/nucleus.css?1582967103" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1582967103" rel="stylesheet">
+    <link href="/css/hybrid.css?1582967103" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1582967103" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1582967103" rel="stylesheet">
+    <link href="/css/auto-complete.css?1582967103" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1582967103" rel="stylesheet">
+    <link href="/css/theme.css?1582967103" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1582967103" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1582914140" rel="stylesheet">
+      <link href="/css/theme-mine.css?1582967103" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1582914140"></script>
+    <script src="/js/jquery-3.3.1.min.js?1582967103"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1582914140"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1582914140"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1582967103"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1582967103"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/kimmj.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1582914140"></script>
+<script type="text/javascript" src="/js/search.js?1582967103"></script>
 
     
   </div>
@@ -1320,8 +1320,6 @@
         <ul>
           
           
-            
-          
           
           
         
@@ -1378,59 +1376,6 @@
         </a>
     </li>
      
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible/ansible-for-devops/chapter5/" title="Chapter5" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/ansible/ansible-for-devops/chapter5/">
-          <i class='fas fa-angle-right'></i>&nbsp;Chapter5
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/" title="Ansible Playbooks Beyond the Basics" class="dd-item ">
-        <a href="/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/">
-        <i class='fas fa-minus'></i>&nbsp;Ansible Playbooks Beyond the Basics
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
   
  
 
@@ -1618,6 +1563,25 @@
         </ul>
               
     </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/ubuntu/start-tmux-after-reboot/" title="reboot 후에 tmux를 실행시켜 원하는 작업을 하기" class="dd-item ">
+        <a href="/ubuntu/start-tmux-after-reboot/">
+        <i class='fas fa-minus'></i>&nbsp;reboot 후에 tmux를 실행시켜 원하는 작업을 하기
+        
+        </a>
+    </li>
+     
   
  
 
@@ -2508,7 +2472,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#pipeline-functions">pipeline functions</a>
+    <li>
       <ul>
         <li><a href="#pipeline에서-다른-pipeline의-값들-불러오기">pipeline에서 다른 pipeline의 값들 불러오기</a></li>
         <li><a href="#언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요?</a></li>
@@ -2551,7 +2515,7 @@
 
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#pipeline-functions">pipeline functions</a>
+    <li>
       <ul>
         <li><a href="#pipeline에서-다른-pipeline의-값들-불러오기">pipeline에서 다른 pipeline의 값들 불러오기</a></li>
         <li><a href="#언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요?</a></li>
@@ -2565,7 +2529,6 @@
 <p>Spinnaker는 배포를 자동화할 때 사용합니다.
 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.</p>
 <p>이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.</p>
-<h2 id="pipeline-functions">pipeline functions</h2>
 <h3 id="pipeline에서-다른-pipeline의-값들-불러오기">pipeline에서 다른 pipeline의 값들 불러오기</h3>
 
 <div class="notices note" ><p>Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).</p>
@@ -3504,8 +3467,6 @@ curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression <span sty
 
                     
                     
-                        
-                    
                     
 
                     
@@ -3553,38 +3514,6 @@ curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression <span sty
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -3702,6 +3631,22 @@ curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression <span sty
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -4336,19 +4281,19 @@ curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression <span sty
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1582914140"></script>
-    <script src="/js/perfect-scrollbar.min.js?1582914140"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1582914140"></script>
-    <script src="/js/jquery.sticky.js?1582914140"></script>
-    <script src="/js/featherlight.min.js?1582914140"></script>
-    <script src="/js/highlight.pack.js?1582914140"></script>
+    <script src="/js/clipboard.min.js?1582967103"></script>
+    <script src="/js/perfect-scrollbar.min.js?1582967103"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1582967103"></script>
+    <script src="/js/jquery.sticky.js?1582967103"></script>
+    <script src="/js/featherlight.min.js?1582967103"></script>
+    <script src="/js/highlight.pack.js?1582967103"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1582914140"></script>
-    <script src="/js/learn.js?1582914140"></script>
-    <script src="/js/hugo-learn.js?1582914140"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1582967103"></script>
+    <script src="/js/learn.js?1582967103"></script>
+    <script src="/js/hugo-learn.js?1582967103"></script>
 
-    <link href="/mermaid/mermaid.css?1582914140" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1582914140"></script>
+    <link href="/mermaid/mermaid.css?1582967103" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1582967103"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
