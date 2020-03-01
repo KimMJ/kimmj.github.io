@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/</loc>
+    <lastmod>2020-02-28T11:06:02+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/jenkins/install/</loc>
     <lastmod>2020-02-11T17:20:41+09:00</lastmod>
   </url>
@@ -60,6 +65,11 @@
   <url>
     <loc>http://kimmj.github.io/</loc>
     <lastmod>2020-01-08T01:00:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/handover/</loc>
+    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
   </url>
   
   <url>
@@ -245,6 +255,11 @@
   <url>
     <loc>http://kimmj.github.io/ubuntu/</loc>
     <lastmod>2020-01-08T01:51:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/</loc>
+    <lastmod>2020-02-28T11:05:34+09:00</lastmod>
   </url>
   
   <url>
@@ -513,12 +528,22 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/reboot/</loc>
-    <lastmod>2020-02-29T14:00:40+09:00</lastmod>
+    <loc>http://kimmj.github.io/tags/ansible/</loc>
+    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
+    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/reboot/</loc>
     <lastmod>2020-02-29T14:00:40+09:00</lastmod>
   </url>
   
@@ -550,6 +575,11 @@
   <url>
     <loc>http://kimmj.github.io/tags/zsh/</loc>
     <lastmod>2020-02-29T02:27:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/playbook/</loc>
+    <lastmod>2020-02-28T11:06:02+09:00</lastmod>
   </url>
   
   <url>
@@ -658,11 +688,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-02-13T20:59:01+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/ansible-playbooks/</loc>
     <lastmod>2020-02-13T20:59:01+09:00</lastmod>
   </url>
@@ -685,11 +710,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/infrastructure-as-code/</loc>
     <lastmod>2020-02-09T20:06:17+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-02-06T13:21:42+09:00</lastmod>
   </url>
   
   <url>
