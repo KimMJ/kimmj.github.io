@@ -397,6 +397,17 @@ Just a little joke to lighten up the mood.</description>
     </item>
     
     <item>
+      <title>Harbor 설치</title>
+      <link>http://kimmj.github.io/harbor/install/</link>
+      <pubDate>Tue, 03 Mar 2020 10:07:50 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/harbor/install/</guid>
+      <description>docker-compose 설치 $ sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose $ sudo chmod +x /usr/local/bin/docker-compose # 설치 후 docker-compose 명령어가 실패한다면, symbolic link를 직접 걸어주도록 합니다. $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose $ docker-compose --version docker-compose version 1.24.1, build 1110ad01 harbor installer 다운로드 공식 Github에서 원하는 인스톨러를 다운로드 받습니다. 저는 online installer를 사용할 예정입니다.
+다운로드가 완료되었으면 압축을 해제합니다.
+$ tar xvf harbor-*.tgz harbor/prepare harbor/LICENSE harbor/install.sh harbor/common.sh harbor/harbor.yml harbor.yml 설정 vi로 harbor/harbor.</description>
+    </item>
+    
+    <item>
       <title>reboot 후에 tmux를 실행시켜 원하는 작업을 하기</title>
       <link>http://kimmj.github.io/ubuntu/start-tmux-after-reboot/</link>
       <pubDate>Sat, 29 Feb 2020 14:00:40 +0900</pubDate>

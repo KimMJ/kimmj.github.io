@@ -189,6 +189,13 @@
 	"content": "Spinnaker를 배포하는 방법에는 3가지가 있습니다. Kubernetes 환경에 배포하기, local debian으로 배포하기, local git으로 배포하기가 있습니다.\n여기에서는 Kubernetes 환경에 배포하기를 진행할 것입니다.\nACCOUNT=wonderland hal config deploy edit --type distributed --account-name $ACCOUNT 위와같이 설정하면 됩니다. ACCOUNT는 kubernetes cluster를 추가할 때 사용했던 이름을 사용하면 됩니다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/harbor/",
+	"title": "Harbor",
+	"tags": [],
+	"description": "",
+	"content": "Harbor "
+},
+{
 	"uri": "http://kimmj.github.io/git/",
 	"title": "Git",
 	"tags": [],
@@ -404,6 +411,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Okay, Lily, we're putting you on salad duty.\nWhy are we even talking about this? This is, like, way down the road.\nAll is right with the world again.\nLook, I don't wanna be exactly like my family. And don't take this the wrong way, but I don't wanna be exactly like your family, either.\nJust a little joke to lighten up the mood.\n"
+},
+{
+	"uri": "http://kimmj.github.io/harbor/install/",
+	"title": "Harbor 설치",
+	"tags": ["harbor", "docker-registry"],
+	"description": "",
+	"content": "docker-compose 설치 $ sudo curl -L \u0026#34;https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)\u0026#34; -o /usr/local/bin/docker-compose $ sudo chmod +x /usr/local/bin/docker-compose # 설치 후 docker-compose 명령어가 실패한다면, symbolic link를 직접 걸어주도록 합니다. $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose $ docker-compose --version docker-compose version 1.24.1, build 1110ad01 harbor installer 다운로드 공식 Github에서 원하는 인스톨러를 다운로드 받습니다. 저는 online installer를 사용할 예정입니다.\n다운로드가 완료되었으면 압축을 해제합니다.\n$ tar xvf harbor-*.tgz harbor/prepare harbor/LICENSE harbor/install.sh harbor/common.sh harbor/harbor.yml harbor.yml 설정 vi로 harbor/harbor.yml을 열고 적당하게 편집합니다.\n여기서는 http로 간단하게 배포하는 설정을 해볼 것입니다.\nhostname: \u0026lt;domain or IP\u0026gt; # 192.168.x.x 그리고 https와 관련된 value를 모두 주석처리해줍니다.\n# https: # https port for harbor, default is 443 # port: 443 # The path of cert and key files for nginx # certificate: /your/certificate/path # private_key: /your/private/key/path proxy 환경이 아니라면 더 손댈 곳은 없습니다. proxy 환경일 경우 하단에 있는 proxy 설정을 /etc/environment 등을 참조하여 미리 적혀있는 부분을 추가하여 작성하시면 됩니다.\ninstall install시 clair, notary, chart-museum을 함께 설치할 수 있습니다.\n여기서 notary는 https 설정이 필요하기 때문에 생략하고 나머지 두개를 설치합니다.\n~/harbor$ ./install.sh --with-clair --with-chartmuseum 확인 이제 hostname에서 설정한 곳으로 접속하여 확인합니다. 설정을 바꾸지 않았다면 80포트로 접속할 수 있기 때문에 address만 입력해주면 접속할 수 있습니다.\n기본 ID/PW는 admin/Harbor12345 입니다.\n"
 },
 {
 	"uri": "http://kimmj.github.io/ubuntu/start-tmux-after-reboot/",
@@ -735,6 +749,27 @@
 	"content": "English "
 },
 {
+	"uri": "http://kimmj.github.io/tags/docker-registry/",
+	"title": "docker-registry",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/harbor/",
+	"title": "harbor",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/tags/ansible/",
 	"title": "ansible",
 	"tags": [],
@@ -744,13 +779,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/ansible-for-devops/",
 	"title": "ansible-for-devops",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""

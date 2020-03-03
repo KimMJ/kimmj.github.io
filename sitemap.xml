@@ -138,6 +138,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/harbor/</loc>
+    <lastmod>2020-03-03T10:07:35+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/git/</loc>
     <lastmod>2020-02-24T14:27:45+09:00</lastmod>
   </url>
@@ -290,6 +295,11 @@
   <url>
     <loc>http://kimmj.github.io/english/himym/season1/episode9/</loc>
     <lastmod>2020-01-15T23:58:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/harbor/install/</loc>
+    <lastmod>2020-03-03T10:07:50+09:00</lastmod>
   </url>
   
   <url>
@@ -528,17 +538,27 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/docker-registry/</loc>
+    <lastmod>2020-03-03T10:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/harbor/</loc>
+    <lastmod>2020-03-03T10:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-03T10:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/ansible/</loc>
     <lastmod>2020-03-01T00:22:17+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-03-01T00:22:17+09:00</lastmod>
   </url>
   
