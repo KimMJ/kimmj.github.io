@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season2/episode01/</loc>
-    <lastmod>2020-02-06T02:49:21+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/english/himym/season1/episode1/</loc>
     <lastmod>2020-02-05T12:28:04+09:00</lastmod>
   </url>
@@ -98,11 +93,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season2/episode03/</loc>
-    <lastmod>2020-02-08T22:50:46+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/</loc>
     <lastmod>2020-02-05T15:09:00+09:00</lastmod>
   </url>
@@ -173,11 +163,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season2/</loc>
-    <lastmod>2020-02-06T02:48:07+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/</loc>
     <lastmod>2020-02-05T01:17:27+09:00</lastmod>
   </url>
@@ -238,11 +223,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode5/</loc>
-    <lastmod>2020-01-11T00:03:30+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/hugo/</loc>
     <lastmod>2020-01-10T02:21:23+09:00</lastmod>
   </url>
@@ -273,28 +253,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode6/</loc>
-    <lastmod>2020-01-13T01:27:04+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/install-in-air-gaped-environment/</loc>
     <lastmod>2020-01-20T01:16:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode7/</loc>
-    <lastmod>2020-01-14T00:53:23+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode8/</loc>
-    <lastmod>2020-01-15T01:41:53+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode9/</loc>
-    <lastmod>2020-01-15T23:58:54+09:00</lastmod>
   </url>
   
   <url>
@@ -418,11 +378,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode10/</loc>
-    <lastmod>2020-01-17T00:06:57+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/ubuntu/change-hostname/</loc>
     <lastmod>2020-01-14T01:00:02+09:00</lastmod>
   </url>
@@ -470,66 +425,6 @@
   <url>
     <loc>http://kimmj.github.io/ubuntu/how-to-use-sudo-without-password/</loc>
     <lastmod>2020-01-08T01:51:54+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode11/</loc>
-    <lastmod>2020-01-18T19:44:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode12/</loc>
-    <lastmod>2020-01-20T01:13:47+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode13/</loc>
-    <lastmod>2020-01-21T00:17:34+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode14/</loc>
-    <lastmod>2020-01-21T23:25:30+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode15/</loc>
-    <lastmod>2020-01-29T01:33:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode16/</loc>
-    <lastmod>2020-01-30T00:14:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode17/</loc>
-    <lastmod>2020-01-30T23:49:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode18/</loc>
-    <lastmod>2020-02-01T00:05:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode19/</loc>
-    <lastmod>2020-02-02T00:41:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode20/</loc>
-    <lastmod>2020-02-03T01:46:43+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode21/</loc>
-    <lastmod>2020-02-04T00:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode22/</loc>
-    <lastmod>2020-02-05T01:18:04+09:00</lastmod>
   </url>
   
   <url>

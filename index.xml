@@ -34,20 +34,6 @@ Jenkins 세팅 처음에 다음과 같은 화면을 볼 수 있습니다.</descr
     </item>
     
     <item>
-      <title>Episode01</title>
-      <link>http://kimmj.github.io/english/himym/season2/episode01/</link>
-      <pubDate>Thu, 06 Feb 2020 02:49:21 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season2/episode01/</guid>
-      <description>Hey, cut her some slack.
-Do you know why you&#39;re not over Lily yet?
-I think he&#39;s beyond repair.
-Eat Haagen-Dazs and watch Love Actually till your periods sync up?
-That&#39;s really the only reason I&#39;ve been able to hold it together so far this summer.
-You are the miserable, whining, shampoo-sniffing ghost of Marshall, and frankly, a guy like you doesn&#39;t have a shot in hell with a girl like Lily.</description>
-    </item>
-    
-    <item>
       <title>Episode1</title>
       <link>http://kimmj.github.io/english/himym/season1/episode1/</link>
       <pubDate>Wed, 05 Feb 2020 12:28:04 +0900</pubDate>
@@ -165,21 +151,6 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
  꾸준하게 이 블로그 운영하기 꾸준하게 영어공부 하기 (쉐도잉) 꾸준하게 운동하기 나만의 hugo blog 만들기 적금으로 목돈만들기 개인 공부 많이 하기 CKA 취득  적다보니 너무 많아진 감이 없지않아 있지만, 올해는 자기계발을 많이 할 수 있는 한해가 되었으면 한다.
 특히 지금은 누군가가 만든 블로그 테마를 사용하고 있지만 나중에는 내가 원하는 대로 커스터마이징이 가능하도록 나만의 블로그 테마를 만들고 싶다.
 이를 위해서는 무엇이 필요한지도, 어떤 기술 스택을 쌓아야 할지도 모르지만 일단 도전해보고자 한다.</description>
-    </item>
-    
-    <item>
-      <title>Episode03</title>
-      <link>http://kimmj.github.io/english/himym/season2/episode03/</link>
-      <pubDate>Sat, 08 Feb 2020 22:50:46 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season2/episode03/</guid>
-      <description>Lily calling off the wedding and dumping me?
-Marshall and Lily had seen each other since breaking up, but to their credit, it wasn&#39;t that awkward.
-It&#39;s kind of revealing.
-I&#39;ve been doing all these toe lifts lately, and so my calves have really been cramping up.
-To us, sure, in very small, infrequent doses.
-Way to wreck the curve, kiss ass.
-The woman&#39;s basically a ride at a water park.</description>
     </item>
     
     <item>
@@ -303,16 +274,6 @@ version: &#39;3.7&#39; services: minio: image: minio/minio:RELEASE.2020-01-16T22
     </item>
     
     <item>
-      <title>Episode5</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode5/</link>
-      <pubDate>Sat, 11 Jan 2020 00:03:30 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode5/</guid>
-      <description>Did I just have a stroke? 여기서 stroke은 뇌졸증이라고 해석할 수 있습니다. 이를 약간은 의역하자면 내가 뇌졸증에 걸렸나?보단 내 머리가 이상해졌나? 이정도로 생각해보면 될 것 같습니다.
-All the things you do when you know where your next thousand lays are coming from. 이 말 앞에는 마샬, 릴리가 약혼 후에 더욱 성숙해지고자 북클럽에 가입하고, 와인파티를 한다는 내용이 있습니다. 여기서 바니가 위의 대사를 하는데 이러한 것들(성숙해지고자 하는 행동들)은 where your next thousand lays are coming from을 알때나 하는 행동이라는 뜻입니다.</description>
-    </item>
-    
-    <item>
       <title>Deploy and Connect</title>
       <link>http://kimmj.github.io/spinnaker/installation/deploy-and-connect/</link>
       <pubDate>Sun, 19 Jan 2020 01:20:12 +0900</pubDate>
@@ -328,23 +289,6 @@ kubectl patch svc spin-deck -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#
     </item>
     
     <item>
-      <title>Episode6</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode6/</link>
-      <pubDate>Mon, 13 Jan 2020 01:27:04 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode6/</guid>
-      <description>Do they rule? They rule.
-It&#39;s the one night of the year chicks use to unleash their inner ho-bag
-trot out your new fella
-It was carve3d in strategic places
-She could be engaged, or married, or, God forbid, fat
-Oh, yeah. Weirdly hor, right?
-What are you going as? Oh, like I evend need to ask.
-What? She thought it was hilarious
-What a sad commentary on our national attention span, that we could forget such a turbulent time in our political history</description>
-    </item>
-    
-    <item>
       <title>Install in Air Gaped Environment</title>
       <link>http://kimmj.github.io/spinnaker/installation/install-in-air-gaped-environment/</link>
       <pubDate>Mon, 20 Jan 2020 01:16:52 +0900</pubDate>
@@ -353,47 +297,6 @@ What a sad commentary on our national attention span, that we could forget such 
       <description>이번에는 인터넷이 되지 않는 환경에서 어떻게 Spinnaker를 설치하는지에 대해 알아보도록 하겠습니다.
 먼저 halyard에서 언제 인터넷과 통신하는지를 대강 추려보도록 하겠습니다.
  Spinnaker의 version.yaml을 불러와서 최신의 halyard 버전과 최신 Spinnaker의 버전들을 보여줍니다.  gs://halconfig/version.yml   설치하고자 하는 Spinnaker의 버전을 선택하면, 그에 따른 배포에 필요한 yaml들을 불러옵니다.  gs://halconfig/bom/VERSION.yml gs://halconfig/MICRO_SERVICE/TAG.yml   deploy를 하기 위해 Google Cloud Repository에서 이미지를 가지고 옵니다.  gcr.io/spinnaker-marketplace/SERVICE   마지막으로 dependency가 있는 몇가지 서비스를 Google Cloud Repository에서 가지고옵니다.</description>
-    </item>
-    
-    <item>
-      <title>Episode7</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode7/</link>
-      <pubDate>Tue, 14 Jan 2020 00:53:23 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode7/</guid>
-      <description>Yeah, we do that behind you back.
-You&#39;re messing with me, right?
-Summer Breeze is my guilty-pleasure song.
-Well, by some million-to-one long shot, and I&#39;m not rooting for this, you wind up not getting married this weekend, give me a call
-Brace yourself, dude.</description>
-    </item>
-    
-    <item>
-      <title>Episode8</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode8/</link>
-      <pubDate>Wed, 15 Jan 2020 01:41:53 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode8/</guid>
-      <description>You&#39;re making this up.
-Never even saw the bus.
-Just keep your eyes open.
-But this girl, she wants the same stuff, and it&#39;s bumming me out.
-But in the meantime, wish me luck.
-May lead to an argument, but we&#39;re settling this.
-Is this a discussion of the degree to which you stabbed me?</description>
-    </item>
-    
-    <item>
-      <title>Episode9</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode9/</link>
-      <pubDate>Wed, 15 Jan 2020 23:58:54 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode9/</guid>
-      <description>Okay, Lily, we&#39;re putting you on salad duty.
-Why are we even talking about this? This is, like, way down the road.
-All is right with the world again.
-Look, I don&#39;t wanna be exactly like my family. And don&#39;t take this the wrong way, but I don&#39;t wanna be exactly like your family, either.
-Just a little joke to lighten up the mood.</description>
     </item>
     
     <item>
@@ -677,20 +580,6 @@ session 생성 tmux 위처럼 tmux를 생성할 수 있습니다.</description>
     </item>
     
     <item>
-      <title>Episode10</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode10/</link>
-      <pubDate>Fri, 17 Jan 2020 00:06:57 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode10/</guid>
-      <description>Hey, it&#39;s on the hous.
-Ted, as your mentor and spiritual guide, I forbid you from calling her.
-Sleep it off, bro.
-This way, if you pass out in the gutter someone with call me, and I will come get you.
-Why do they call it &amp;lsquo;karaoke,&amp;rsquo; anyhow?
-You&#39;ve moved on. I&#39;ve moved on.</description>
-    </item>
-    
-    <item>
       <title>Hostname 변경하기</title>
       <link>http://kimmj.github.io/ubuntu/change-hostname/</link>
       <pubDate>Tue, 14 Jan 2020 01:00:02 +0900</pubDate>
@@ -796,167 +685,6 @@ git clone https://github.com/stackhpc/ansible-role-libvirt-vm 테스트 환경 �
  즉, 직접 이 파일을 수정해서 sudo 권한을 주지 말고, /etc/sudoers.d/ 폴더 내에 파일을 추가하라는 의미입니다.
 이 곳에는 /etc/sudoers와 마찬가지로 계정에 대한 설정을 추가할 수 있습니다. 그리고 /etc/sudoers에서는 &amp;ldquo;NOPASSWD&amp;quot;라는 옵션을 주어 password없이 타 계정의 권한을 가지게 만들 수 있습니다.
 이 두가지를 종합하여 내 linux 계정이 sudo 명령어를 입력할 때, 즉 root 권한을 가지게 될 때 password를 입력하지 않도록 설정할 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>Episode11</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode11/</link>
-      <pubDate>Sat, 18 Jan 2020 19:44:05 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode11/</guid>
-      <description>She seems like she might be into me.
-I&#39;ve moved up in the world.
-Oh, well, my word.
-Can we swing by the aprtment so I can change?
-Ted, Derek stood me up.
-What are the odds?
-Oh, nuts.
-Give it a rest, Ted.</description>
-    </item>
-    
-    <item>
-      <title>Episode12</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode12/</link>
-      <pubDate>Mon, 20 Jan 2020 01:13:47 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode12/</guid>
-      <description>We never really clicked.
-Tehy were buried in a shallow grave.
-I&#39;m just saying that it&#39;s my wedding, too, and I should have a say in it.
-Did you see how fired up she was?</description>
-    </item>
-    
-    <item>
-      <title>Episode13</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode13/</link>
-      <pubDate>Tue, 21 Jan 2020 00:17:34 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode13/</guid>
-      <description>It was her big break.
-Like just now, when I saw you doing the Chicken Dance out there, I&#39;m not gonna lie to you, big time thunderbolt.
-Robin, care to chime in with anything?
-You know, there&#39;s one little flaw in our plan.</description>
-    </item>
-    
-    <item>
-      <title>Episode14</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode14/</link>
-      <pubDate>Tue, 21 Jan 2020 23:25:30 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode14/</guid>
-      <description>Awkward conversations with middle-aged couples trying to stave off divorce.
-That snuck up on me.
-I mean, the whole point was not to rush into this.
-Honey, Ted has been going out of his mind waiting for this.</description>
-    </item>
-    
-    <item>
-      <title>Episode15</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode15/</link>
-      <pubDate>Wed, 29 Jan 2020 01:33:51 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode15/</guid>
-      <description>I am smelling dirt.
-You guys will pick it up.
-Prude-alert.
-Slut-alert.
-Whatevs.
-As long as you&#39;re nailing that.
-Listen to you.
-And FYI, Shannon and I have decided to wait till we&#39;re married.
-Way to step up.
-My saga continues.
-You let me dodge a bullet, Big Guy.</description>
-    </item>
-    
-    <item>
-      <title>Episode16</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode16/</link>
-      <pubDate>Thu, 30 Jan 2020 00:14:51 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode16/</guid>
-      <description>I&#39;m flat broke.
-We bust on each other.
-It&#39;s a date.
-Where does she get off?
-Stop being sarcastic.</description>
-    </item>
-    
-    <item>
-      <title>Episode17</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode17/</link>
-      <pubDate>Thu, 30 Jan 2020 23:49:27 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode17/</guid>
-      <description>Marshall, sidebar.
-Try to keep up.
-Not even Old Reliable.
-Break a leg.</description>
-    </item>
-    
-    <item>
-      <title>Episode18</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode18/</link>
-      <pubDate>Sat, 01 Feb 2020 00:05:55 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode18/</guid>
-      <description>Sorry to bug you with my problems.
-He has more sense than that.
-And so, really, What&#39;s it gonna matter in 50 years if I jump the gun by one night?</description>
-    </item>
-    
-    <item>
-      <title>Episode19</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode19/</link>
-      <pubDate>Sun, 02 Feb 2020 00:41:41 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode19/</guid>
-      <description>It&#39;s an intentional hiatus from girls.
-Ted, you&#39;re my cabron.
-People get a kick out of it.
-God, that pisses me off.
-I mean, talk about anal.</description>
-    </item>
-    
-    <item>
-      <title>Episode20</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode20/</link>
-      <pubDate>Mon, 03 Feb 2020 01:46:43 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode20/</guid>
-      <description>All tuckered out.
-Man, you really have snapped.
-That&#39;s the spirit.
-Oh, Robin, are you tearing up?
-Well, look, if you absolutely must bring Ted, it&#39;s not like I&#39;m going to claw my own eyes out if he comes.</description>
-    </item>
-    
-    <item>
-      <title>Episode21</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode21/</link>
-      <pubDate>Tue, 04 Feb 2020 00:12:34 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode21/</guid>
-      <description>This is the high point of my day.
-Duck!
-But Executive Mischief Consultant Marshall Eriksen reporting for duty.
-I just got in the zone and&amp;hellip;
-I was having second thoughts.
-Can&#39;t a brother go apple picking without getting the third degree?
-You just made my night.</description>
-    </item>
-    
-    <item>
-      <title>Episode22</title>
-      <link>http://kimmj.github.io/english/himym/season1/episode22/</link>
-      <pubDate>Wed, 05 Feb 2020 01:18:04 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/english/himym/season1/episode22/</guid>
-      <description>Don&#39;t piss off the universe.
-It&#39;s gonna rain cats and dogs, folks.
-But how are you ever gonna top that?
-I will always treasure it.
-My camping trip got rained out.</description>
     </item>
     
   </channel>
