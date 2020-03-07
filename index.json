@@ -357,6 +357,13 @@
 	"content": "이번에는 인터넷이 되지 않는 환경에서 어떻게 Spinnaker를 설치하는지에 대해 알아보도록 하겠습니다.\n먼저 halyard에서 언제 인터넷과 통신하는지를 대강 추려보도록 하겠습니다.\n Spinnaker의 version.yaml을 불러와서 최신의 halyard 버전과 최신 Spinnaker의 버전들을 보여줍니다.  gs://halconfig/version.yml   설치하고자 하는 Spinnaker의 버전을 선택하면, 그에 따른 배포에 필요한 yaml들을 불러옵니다.  gs://halconfig/bom/VERSION.yml gs://halconfig/MICRO_SERVICE/TAG.yml   deploy를 하기 위해 Google Cloud Repository에서 이미지를 가지고 옵니다.  gcr.io/spinnaker-marketplace/SERVICE   마지막으로 dependency가 있는 몇가지 서비스를 Google Cloud Repository에서 가지고옵니다. (consul, redis, vault)  gcr.io/kubernetes-spinnaker/SERVICE    여기서 local 설정으로 변경이 가능한 것은 2020.01.20 현재 1,2,3번 항목들입니다. 이것들을 어떻게 인터넷이 되지 않는 환경에서 설치가 가능하도록 설정하는지에 대해 알아보겠습니다.\ngsutil로 gs://halconfig 파일들을 로컬에 복사하기 우선 인터넷이 잘 되는 서버가 하나 필요합니다. 이 서버에서 우리는 필요한 BOM(Bill of Materials)를 미리 다운로드 할 것입니다.\ngsutil이 설치되어 있어야 합니다.\ngsutil -m cp -r gs://halconfig 이렇게하면 로컬에 halconfig라는 폴더가 생겼을 것입니다. 이를 인터넷이 안되는 halyard가 설치된 서버로 복사합니다. 이때, halconfig 폴더 내의 내용들은 ~/.hal/.boms/ 폴더 내에 복사합니다.\n$ ls ~/.hal/.boms/ bom clouddriver deck echo fiat front50 gate igor kayenta monitoring-daemon orca rosco versions.yml 여기서 rosco/master 폴더로 들어가면 packer.tar.gz라는 폴더가 있습니다. 이를 rosco 폴더로 옮기고 압축을 해제합니다.\nmv ~/.hal/.boms/rosco/master/packer.tar.gz ~/.hal/.boms/rosco cd ~/.hal/.boms/rosco tar xvf packer.tar.gz halyard에서 gcs의 version.yml이 아닌 로컬의 version.yml을 참조하도록 설정 기본적으로 halyard는 gs://halconfig/version.yml을 참조하려 할 것입니다. 이를 local:이라는 접두사를 붙여 로컬을 바라보게 할 수 있습니다.\nhal config version edit --version local:1.17.4 그리고 halyard가 gcs를 바라보지 않도록 설정합니다.\n# /opt/spinnaker/config/halyard-local.yml spinnaker: config: input: gcs: enabled: false 그러고 난 뒤, 각 서비스들의 BOM도 로컬을 바라보게 설정해야 합니다. 아까 위에서 1.17.4 버전을 사용한다고 했으니, 해당 yaml파일을 열고 local: 접두사를 추가합니다.\nartifactSources: debianRepository: https://dl.bintray.com/spinnaker-releases/debians dockerRegistry: gcr.io/spinnaker-marketplace gitPrefix: https://github.com/spinnaker googleImageProject: marketplace-spinnaker-release dependencies: consul: version: 0.7.5 redis: version: 2:2.8.4-2 vault: version: 0.7.0 services: clouddriver: commit: 024b9220a1322f80ed732de9f58aec2768e93d1b version: local:6.4.3-20191210131345 deck: commit: 12edf0a7c05f3fab921535723c8a384c1336218b version: local:2.13.3-20191210131345 defaultArtifact: {} echo: commit: acca50adef83a67e275bcb6aabba1ccdce2ca705 version: local:2.9.0-20191029172246 fiat: commit: c62d038c2a9531042ff33c5992384184b1370b27 version: local:1.8.3-20191202102650 front50: commit: 9415a443b0d6bf800ccca8c2764d303eb4d29366 version: local:0.20.1-20191107034416 gate: commit: a453541b47c745a283712bb240ab392ad7319e8d version: local:1.13.0-20191029172246 igor: commit: 37fe1ed0c463bdaa87996a4d4dd81fee2325ec8e version: local:1.7.0-20191029183208 kayenta: commit: 5dcec805b7533d0406f1e657a62122f4278d665d version: local:0.12.0-20191023142816 monitoring-daemon: commit: 59cbbec589f982864cee45d20c99c32d39c75f7f version: local:0.16.0-20191007112816 monitoring-third-party: commit: 59cbbec589f982864cee45d20c99c32d39c75f7f version: local:0.16.0-20191007112816 orca: commit: b88f62a1b2b1bdee0f45d7f9491932f9c51371d9 version: local:2.11.2-20191212093351 rosco: commit: 269dc830cf7ea2ee6c160163e30d6cbd099269c2 version: local:0.15.1-20191202163249 timestamp: \u0026#39;2019-12-12 14:34:16\u0026#39; version: 1.17.4 이렇게 설정하면 echo를 예로 들 때 ~/.hal/.boms/echo/2.9.0-20191029172246/echo.yml을 참조하게 될 것입니다.\n배포에 필요한 이미지들을 private registry에 불러오기 이제 실제 배포에 필요한 이미지를 로컬로 복사해두어야 합니다. 저는 내부에서 사용하는 docker registry에다가 저장해 둘 것입니다. 인터넷이 되는 서버에서 다음과 같이 작업하면 됩니다.\ndocker pull gcr.io/spinnaker-marketplace/SERVICE:TAG docker tag gcr.io/spinnaker-marketplace/SERVICE:TAG private-docker-registry/repository-name/SERVICE:TAG docker push private-docker-registry/repository-name/SERVICE:TAG 이렇게 private registry로 저장을 해 두었을 경우 VERSION.yml 파일에서 dockerRegistry 항목을 수정합니다.\nartifactSources: debianRepository: https://dl.bintray.com/spinnaker-releases/debians #dockerRegistry: gcr.io/spinnaker-marketplace dockerRegistry: private-docker-registry/repository-name gitPrefix: https://github.com/spinnaker googleImageProject: marketplace-spinnaker-release 또는 docker pull을 이용해서 이미지를 다운받고, 이를 docker save 명령어를 통해 tar.gz 파일로 변환한 뒤, Kubernetes의 모든 워커노드에서 이를 이리 docker load 하는 방법도 있습니다. 이렇게 하면 이미 로컬에 있는 이미지이기 때문에 외부로 접속하지 않습니다.\ndocker pull gcr.io/spinnaker-marketplace/SERVICE:TAG docker save -o SERVICE.tar.gz gcr.io/spinnaker-marketplace/SERVICE:TAG scp SERVICE.tar.gz TARGET_IP:~/path/to/target ssh TARGET_IP docker load -i ~/path/to/target/SERVICE.tar.gz 이번에는 dependency와 관련된 이미지를 불러와야 합니다. 먼저 Image Registry를 변경하기 위해서는 다음과 같이 조치합니다.\n ~/.hal/default/service-settings/redis.yml파일을 생성합니다. 다음과 같이 작성합니다. artifactId: private-docker-registry/repository-name/redis-cluster:v2   이 다음에는 마찬가지로 image를 pull하고 이를 private docker registry로 push합니다.\ndocker pull gcr.io/kubernetes-spinnaker/SERVICE:TAG # redis-cluster:v2 docker tag gcr.io/kubernetes-spinnaker/SERVICE:TAG private-docker-registry/repository-name/SERVICE:TAG docker push private-docker-registry/repository-name/SERVICE:TAG 또는 이미지를 tar로 묶어서 복사하는 방법도 있습니다.\ndocker pull gcr.io/kubernetes-spinnaker/SERVICE:TAG docker save -o SERVICE.tar.gz gcr.io/kubernetes-spinnaker/SERVICE:TAG scp SERVICE.tar.gz TARGET_IP:~/path/to/target ssh TARGET_IP docker load -i ~/path/to/target/SERVICE.tar.gz Image Registry가 kubernetes-spinnaker로 변경된 것을 주의하시면 됩니다.\nDeploy 여기까지 왔으면 모든 준비작업은 끝났습니다. 이제 배포만 하면 됩니다.\nhal deploy apply Reference https://www.spinnaker.io/guides/operator/custom-boms/\nhttps://github.com/spinnaker/spinnaker/issues/3967#issuecomment-522306893\n"
 },
 {
+	"uri": "http://kimmj.github.io/git/git-secret/",
+	"title": "git-secret을 통한 github 파일 암호화",
+	"tags": ["git-secret", "github", "git"],
+	"description": "",
+	"content": "git을 사용하다 보면 password나 credential같은 정보가 git에 올라가는 경우가 종종 있습니다. aws같은 cloud provider의 crediential을 git에 생각없이 올리고, 이를 다른 해커가 크롤링을 통해 얻어 비트코인을 채굴하는 사례도 있었습니다.\n이처럼 보안이 필요한 파일을 git에 올릴 때, 암호화를 하여 업로드하는 방법이 있습니다.\nhttps://github.com/sobolevn/git-secret\ngit-secret git-secret은 파일에 대한 암화를 지원하기 위해 사용되는 프로그램입니다.\ngit-secret add 명령어를 통해 파일을 암호화하고, git-secret reveal을 통해 복호화합니다. 이 때 gpg를 이용하게 됩니다.\nInstall 사용자 환경에 따라 brew, apt, yum을 통해 설치할 수 있습니다. 또한 make를 통해서 빌드할 수도 있습니다.\n저의 경우 Ubuntu를 사용하고 있고 apt가 있기 때문에 이를 이용하여 설치하였습니다.\napt install git-secret 파일 암호화하기 gpg를 이용하여 키 생성하기 먼저, gpg가 설치되어있는지 확인하고 설치합니다.\n$ gpg -h | grep version License GPLv3+: GNU GPL version 3 or later \u0026lt;https://gnu.org/licenses/gpl.html\u0026gt; # 위와같은 결과가 나오지 않는다면, 설치해야합니다. $ apt install gpg 설치가 되었으면 gpg key를 생성합니다.\n$ gpg --full-generate-key gpg (GnuPG) 2.2.4; Copyright (C) 2017 Free Software Foundation, Inc. This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. Please select what kind of key you want: (1) RSA and RSA (default) (2) DSA and Elgamal (3) DSA (sign only) (4) RSA (sign only) Your selection? 1  RSA keys may be between 1024 and 4096 bits long. What keysize do you want? (3072) 4096 Requested keysize is 4096 bits Please specify how long the key should be valid. 0 = key does not expire \u0026lt;n\u0026gt; = key expires in n days \u0026lt;n\u0026gt;w = key expires in n weeks \u0026lt;n\u0026gt;m = key expires in n months \u0026lt;n\u0026gt;y = key expires in n years Key is valid for? (0) 0  Key does not expire at all Is this correct? (y/N) y  GnuPG needs to construct a user ID to identify your key. Real name: Ibiza  Email address: my@email.com  Comment: Wanderlust  You selected this USER-ID: \"Ibiza (Wanderlust) \u0026lt;my@email.com\u0026gt;\" Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O  We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the keyboard, move the mouse, utilize the disks) during the prime generation; this gives the random number generator a better chance to gain enough entropy. We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the keyboard, move the mouse, utilize the disks) during the prime generation; this gives the random number generator a better chance to gain enough entropy.  전부 완료되기까지 꽤 시간이 많이 걸립니다.\ngit-secret을 통한 암호화 본격적으로 시작하기 위해 git-secret을 init합니다.\ngit secret init 그 다음 git-secret에 사용자를 추가합니다.\ngit secret tell my@email.com 이제 secret을 통해 암호화할 파일은 원본이 github에 올라가지 않게 하기 위해 .gitignore에 추가하도록 합니다. 저의 경우 ./config.toml이라는 파일을 암호화하기 위해 다음과 같이 추가하였습니다.\nconfig.toml 그 다음 git-secret이 암호화 하도록 파일을 추가합니다.\ngit secret add config.toml 이 때 다음과 같은 에러가 발생했는데, github issue 중 비슷한 문제가 있어 이를 통해 해결할 수 있었습니다.\n$ git secret add config.toml config.toml is not a file. abort. $ git rm --cached config.toml $ git secret add config.toml 1 items added. 이제 hide를 통해 암호화할 수 있습니다.\ngit secret hide 이후 ls를 통해 확인해보면 .secret이라는 postfix가 들어간 파일을 보실 수 있습니다.\n$ ls config.toml* config.toml config.toml.secret git-secret을 이용한 복호화 reveal을 통해 파일을 복호화할 수 있습니다.\n$ git secret reveal File \u0026#39;/home/wanderlust/Ibiza/config.toml\u0026#39; exists. Overwrite? (y/N) y done. all 1 files are revealed. 이제 .secret 파일을 github에 올리면 안전하게 이용할 수 있습니다.\n다른 컴퓨터에서 접속할 때는 어떻게 해야하나요? gpg 알고리즘은 public key로 암호화하여 private key로 복호화합니다. 즉, 우리는 gpg key를 생성한 host에서 다른 host로 private key를 복사해주어야 합니다.\n따라서 다음과 같이 private key를 복사하고, 이를 import합니다.\n# gpg key를 생성했던 host wanderlust@wonderland $ gpg --export-secret-keys my@email.com \u0026gt; private-key.asc # key 복사 wanderlust@wonderland $ scp private-key.asc wanderlust@wonderland-laptop:~/ # gpg key를 import할 host wnaderlust@wonderland-laptop $ gpg --import ~/private-key.asc 그 다음 tell 옵션을 사용합니다.\ngit secret tell my@email.com 마지막으로 reveal 옵션을 통해 복호화합니다.\n$ git secret reveal done. all 1 files are revealed. "
+},
+{
 	"uri": "http://kimmj.github.io/harbor/install/",
 	"title": "Harbor 설치",
 	"tags": ["harbor", "docker-registry"],
@@ -602,6 +609,34 @@
 	"content": "English "
 },
 {
+	"uri": "http://kimmj.github.io/tags/git/",
+	"title": "git",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/git-secret/",
+	"title": "git-secret",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/github/",
+	"title": "github",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/tags/docker-registry/",
 	"title": "docker-registry",
 	"tags": [],
@@ -611,13 +646,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/harbor/",
 	"title": "harbor",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -730,13 +758,6 @@
 {
 	"uri": "http://kimmj.github.io/tags/stern/",
 	"title": "stern",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://kimmj.github.io/tags/git/",
-	"title": "git",
 	"tags": [],
 	"description": "",
 	"content": ""
