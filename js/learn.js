@@ -385,11 +385,6 @@ jQuery(window).on('load', function() {
 
     $(".highlightable").highlight(sessionStorage.getItem('search-value'), { element: 'mark' });
 
-
-
-    if ($(".padding.highlightable div#chapter").length) {
-        $("#utterance").hide();
-    }
 });
 
 $(function() {
