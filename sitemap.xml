@@ -93,6 +93,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/environment-variables/</loc>
+    <lastmod>2020-03-01T18:43:27+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/</loc>
     <lastmod>2020-02-05T15:09:00+09:00</lastmod>
   </url>
@@ -255,6 +260,11 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/install-in-air-gaped-environment/</loc>
     <lastmod>2020-01-20T01:16:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/hugo/google-analytics/</loc>
+    <lastmod>2020-03-09T23:19:18+09:00</lastmod>
   </url>
   
   <url>
@@ -438,6 +448,21 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/google-analytics/</loc>
+    <lastmod>2020-03-09T23:19:18+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/hugo/</loc>
+    <lastmod>2020-03-09T23:19:18+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-09T23:19:18+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/git/</loc>
     <lastmod>2020-03-07T23:39:23+09:00</lastmod>
   </url>
@@ -453,11 +478,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/</loc>
-    <lastmod>2020-03-07T23:39:23+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/docker-registry/</loc>
     <lastmod>2020-03-03T10:07:50+09:00</lastmod>
   </url>
@@ -469,12 +489,12 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
+    <lastmod>2020-03-01T18:43:27+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
+    <lastmod>2020-03-01T18:43:27+09:00</lastmod>
   </url>
   
   <url>
@@ -685,11 +705,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/prometheus/</loc>
     <lastmod>2020-01-30T18:00:24+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/hugo/</loc>
-    <lastmod>2020-01-24T20:56:47+09:00</lastmod>
   </url>
   
   <url>

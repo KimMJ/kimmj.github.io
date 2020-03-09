@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Mar 2020 23:39:23 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 23:19:18 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>google-analytics</title>
+      <link>http://kimmj.github.io/tags/google-analytics/</link>
+      <pubDate>Mon, 09 Mar 2020 23:19:18 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/google-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://kimmj.github.io/tags/hugo/</link>
+      <pubDate>Mon, 09 Mar 2020 23:19:18 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>git</title>
@@ -59,7 +77,7 @@
     <item>
       <title>ansible</title>
       <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Sun, 01 Mar 2020 00:22:17 +0900</pubDate>
+      <pubDate>Sun, 01 Mar 2020 18:43:27 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/ansible/</guid>
       <description></description>
@@ -68,7 +86,7 @@
     <item>
       <title>ansible-for-devops</title>
       <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
-      <pubDate>Sun, 01 Mar 2020 00:22:17 +0900</pubDate>
+      <pubDate>Sun, 01 Mar 2020 18:43:27 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
       <description></description>
@@ -449,15 +467,6 @@
       <pubDate>Thu, 30 Jan 2020 18:00:24 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/prometheus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>http://kimmj.github.io/tags/hugo/</link>
-      <pubDate>Fri, 24 Jan 2020 20:56:47 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

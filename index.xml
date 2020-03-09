@@ -154,6 +154,16 @@ halyard는 Spinnaker 관련 설정들의 validation, 배포한 환경 백업, �
     </item>
     
     <item>
+      <title>Environment Variables</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/environment-variables/</link>
+      <pubDate>Sun, 01 Mar 2020 18:43:27 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/environment-variables/</guid>
+      <description>Ansible은 다양한 방법으로 environment variable을 사용할 수 있도록 해준다. 첫번째로 remote user account에 대해 어떤 environment variable을 설정하고자 한다면 remote user의 .bash_profile에 다음과 같이 추가하면 된다.
+- name: Add an environment variable to the remote user&amp;#39;s shell lineinfile: dest=~/.bash_profile regexp=^ENV_VAR= line=ENV_VAR=value 그러면 다음에 실행되는 모든 task는 이 environment variable에 접근할 수 있다. (물론 shell module만 environment variable을 사용하는 shell command를 이해할 것이다!) environment variable을 나중 task에서 사용하려면 task의 register 옵션을 사용하여 environment variable을 variable에 저장하여 Ansible이 나중에 사용할 수 있도록 하는 것을 추천한다.</description>
+    </item>
+    
+    <item>
       <title>Chapter 2 - Local Infrastructure Development: Ansible and Vagrant</title>
       <link>http://kimmj.github.io/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/</link>
       <pubDate>Wed, 05 Feb 2020 15:09:00 +0900</pubDate>
@@ -297,6 +307,18 @@ kubectl patch svc spin-deck -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#
       <description>이번에는 인터넷이 되지 않는 환경에서 어떻게 Spinnaker를 설치하는지에 대해 알아보도록 하겠습니다.
 먼저 halyard에서 언제 인터넷과 통신하는지를 대강 추려보도록 하겠습니다.
  Spinnaker의 version.yaml을 불러와서 최신의 halyard 버전과 최신 Spinnaker의 버전들을 보여줍니다.  gs://halconfig/version.yml   설치하고자 하는 Spinnaker의 버전을 선택하면, 그에 따른 배포에 필요한 yaml들을 불러옵니다.  gs://halconfig/bom/VERSION.yml gs://halconfig/MICRO_SERVICE/TAG.yml   deploy를 하기 위해 Google Cloud Repository에서 이미지를 가지고 옵니다.  gcr.io/spinnaker-marketplace/SERVICE   마지막으로 dependency가 있는 몇가지 서비스를 Google Cloud Repository에서 가지고옵니다.</description>
+    </item>
+    
+    <item>
+      <title>Hugo에 Google Analytics 적용하기</title>
+      <link>http://kimmj.github.io/hugo/google-analytics/</link>
+      <pubDate>Mon, 09 Mar 2020 23:19:18 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/hugo/google-analytics/</guid>
+      <description>google analytics는 내 블로그를 사용하는 사람들이 얼마나 많은지, 어떤 정보를 보는지 확인할 수 있는 서비스입니다. 무료로 사용할 수 있고, 사용 방법도 어렵지 않기 때문에 search console과 더불어 사용하면 좋은 서비스로 보입니다.
+그래서 저도 제 블로그에 google analytics를 설정할 수 있는지 찾아보던 중 다음과 같은 글을 확인하고, 이를 통해 설정할 수 있었습니다.
+https://discourse.gohugo.io/t/implementing-google-analytics-in-hugo/2671/2
+적용 방법 config.toml의 수정 hugo에서는 config 파일을 사용하여 사용자의 설정정보를 보관합니다. 저는 config.toml을 사용하고 있었는데 여기에다가 다음과 같이 추가하면 됩니다.</description>
     </item>
     
     <item>
