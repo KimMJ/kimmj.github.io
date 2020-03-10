@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Mar 2020 23:19:18 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 23:40:25 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bgimg-darken</title>
+      <link>http://kimmj.github.io/tags/bgimg-darken/</link>
+      <pubDate>Tue, 10 Mar 2020 23:40:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/bgimg-darken/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>http://kimmj.github.io/tags/css/</link>
+      <pubDate>Tue, 10 Mar 2020 23:40:25 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/css/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>google-analytics</title>
@@ -440,15 +458,6 @@
       <pubDate>Mon, 03 Feb 2020 14:03:50 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/pod/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>css</title>
-      <link>http://kimmj.github.io/tags/css/</link>
-      <pubDate>Sat, 01 Feb 2020 19:56:45 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/css/</guid>
       <description></description>
     </item>
     

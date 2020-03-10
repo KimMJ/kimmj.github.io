@@ -263,6 +263,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/css/background-img-darken/</loc>
+    <lastmod>2020-03-10T23:40:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/hugo/google-analytics/</loc>
     <lastmod>2020-03-09T23:19:18+09:00</lastmod>
   </url>
@@ -448,17 +453,27 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/bgimg-darken/</loc>
+    <lastmod>2020-03-10T23:40:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/css/</loc>
+    <lastmod>2020-03-10T23:40:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-10T23:40:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/google-analytics/</loc>
     <lastmod>2020-03-09T23:19:18+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/hugo/</loc>
-    <lastmod>2020-03-09T23:19:18+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-03-09T23:19:18+09:00</lastmod>
   </url>
   
@@ -690,11 +705,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/pod/</loc>
     <lastmod>2020-02-03T14:03:50+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/css/</loc>
-    <lastmod>2020-02-01T19:56:45+09:00</lastmod>
   </url>
   
   <url>

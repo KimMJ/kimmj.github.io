@@ -8,23 +8,23 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>git :: Ibiza</title>
+    <title>background image 어둡게 하기 :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1583851851" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1583851851" rel="stylesheet">
-    <link href="/css/hybrid.css?1583851851" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1583851851" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1583851851" rel="stylesheet">
-    <link href="/css/auto-complete.css?1583851851" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1583851851" rel="stylesheet">
-    <link href="/css/theme.css?1583851851" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1583851851" rel="stylesheet">
+    <link href="/css/nucleus.css?1583851849" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583851849" rel="stylesheet">
+    <link href="/css/hybrid.css?1583851849" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583851849" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583851849" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583851849" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583851849" rel="stylesheet">
+    <link href="/css/theme.css?1583851849" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583851849" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1583851851" rel="stylesheet">
+      <link href="/css/theme-mine.css?1583851849" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1583851851"></script>
+    <script src="/js/jquery-3.3.1.min.js?1583851849"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -49,7 +49,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/tags/git/">
+  <body class="" data-url="/css/background-img-darken/">
     <nav id="sidebar" class="">
 
 
@@ -580,7 +580,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/css/" title="CSS" class="dd-item 
-        
+        parent
         
         
         ">
@@ -604,7 +604,7 @@ if (!doNotTrack) {
  
   
     
-      <li data-nav-id="/css/background-img-darken/" title="background image 어둡게 하기" class="dd-item ">
+      <li data-nav-id="/css/background-img-darken/" title="background image 어둡게 하기" class="dd-item active">
         <a href="/css/background-img-darken/">
         <i class='fas fa-minus'></i>&nbsp;background image 어둡게 하기
         
@@ -2251,7 +2251,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/tags/'>Tags</a> > git
+            <a href='/'>Ibiza</a> > <a href='/css/'>CSS</a> > background image 어둡게 하기
           
          
           
@@ -2264,7 +2264,7 @@ if (!doNotTrack) {
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -2274,15 +2274,21 @@ if (!doNotTrack) {
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/css">css</a>
+
+  <a class="tag-link" href="/tags/bgimg-darken">bgimg-darken</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              git
+              background image 어둡게 하기
             </h1>
           
 
@@ -2290,21 +2296,23 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents"></nav>
 
-
-
-<ul>
-	
-		<li><a href="/git/git-secret/">git-secret을 통한 github 파일 암호화</a></li>
-	
-		<li><a href="/git/gitignore/">Gitignore 설정</a></li>
-	
-</ul>
+<p>배경 이미지를 삽입했는데 사진이 너무 밝아 어둡게 필터처리를 넣고 싶은 경우가 있을 수 있습니다.
+저의 경우 logo에 제 깃허브 프로필사진을 빼고 노을진 풍경을 넣었는데 사진이 너무 밝아 부자연스러운 느낌이 들었습니다.</p>
+<p>이 때 검색 후 다음과 같이 조치를 하여 어두워지는 효과를 줄 수 있었습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">#sidebar #header-wrapper {
+    <span style="color:#66d9ef">background-image</span>: linear-gradient( rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>), rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>) ),url(<span style="color:#e6db74">../images/sunset_on_ibiza.jpg</span>);
+}
+</code></pre></div><p><code>linear-gradient</code> 속성은 선형으로 gradient를 적용하는 속성인데 이를 활용하여 검정색 필터를 넣었습니다.
+필수 파라미터로 두개의 색깔이 필요하고, 이를 각각 검정색(<code>rgb(0, 0, 0)</code>)에 투명도를 <code>0.3</code>으로 설정한 <code>rgba(0, 0, 0, 0.3)</code>으로 설정하여 이미지가 전체적으로 어둡게 보이도록 설정한 것입니다.</p>
+<p>여담으로, 파워포인트에서 사진을 어둡게 하여 텍스트를 강조하고자 할 때 많이 이용했던 검정색 반투명 박스를 이용하는 것과 비슷한 방법이라고 느껴지네요.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
             <div id="utterance">    
@@ -2685,6 +2693,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -2697,6 +2706,7 @@ if (!doNotTrack) {
             
             
                 
+                    
                     
                 
                 
@@ -2713,6 +2723,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3799,19 +3812,19 @@ if (!doNotTrack) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1583851853"></script>
-    <script src="/js/perfect-scrollbar.min.js?1583851853"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1583851853"></script>
-    <script src="/js/jquery.sticky.js?1583851853"></script>
-    <script src="/js/featherlight.min.js?1583851853"></script>
-    <script src="/js/highlight.pack.js?1583851853"></script>
+    <script src="/js/clipboard.min.js?1583851850"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583851850"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583851850"></script>
+    <script src="/js/jquery.sticky.js?1583851850"></script>
+    <script src="/js/featherlight.min.js?1583851850"></script>
+    <script src="/js/highlight.pack.js?1583851850"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1583851853"></script>
-    <script src="/js/learn.js?1583851853"></script>
-    <script src="/js/hugo-learn.js?1583851853"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583851850"></script>
+    <script src="/js/learn.js?1583851850"></script>
+    <script src="/js/hugo-learn.js?1583851850"></script>
 
-    <link href="/mermaid/mermaid.css?1583851853" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1583851853"></script>
+    <link href="/mermaid/mermaid.css?1583851850" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583851850"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -3820,3 +3833,4 @@ if (!doNotTrack) {
 
   </body>
 </html>
+
