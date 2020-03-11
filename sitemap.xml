@@ -263,6 +263,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ubuntu/customize-login-message/</loc>
+    <lastmod>2020-03-11T14:20:42+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/css/background-img-darken/</loc>
     <lastmod>2020-03-10T23:40:25+09:00</lastmod>
   </url>
@@ -453,17 +458,32 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/login-message/</loc>
+    <lastmod>2020-03-11T14:20:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/motd/</loc>
+    <lastmod>2020-03-11T14:20:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-11T14:20:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-03-11T14:20:42+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/bgimg-darken/</loc>
     <lastmod>2020-03-10T23:40:25+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/css/</loc>
-    <lastmod>2020-03-10T23:40:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-03-10T23:40:25+09:00</lastmod>
   </url>
   
@@ -519,11 +539,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/tmux/</loc>
-    <lastmod>2020-02-29T14:00:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
     <lastmod>2020-02-29T14:00:40+09:00</lastmod>
   </url>
   
