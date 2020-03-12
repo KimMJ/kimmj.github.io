@@ -118,6 +118,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/variables/</loc>
+    <lastmod>2020-03-08T18:19:40+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/ad-hoc-commands/</loc>
     <lastmod>2020-02-06T13:21:42+09:00</lastmod>
   </url>
@@ -130,6 +135,11 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/conditionals/</loc>
+    <lastmod>2020-03-12T10:15:33+09:00</lastmod>
   </url>
   
   <url>
@@ -248,6 +258,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/delegation-local-actions-and-pauses/</loc>
+    <lastmod>2020-03-12T13:32:45+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/</loc>
     <lastmod>2020-02-28T11:05:34+09:00</lastmod>
   </url>
@@ -258,8 +273,23 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/prompts/</loc>
+    <lastmod>2020-03-12T19:18:08+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/install-in-air-gaped-environment/</loc>
     <lastmod>2020-01-20T01:16:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/tags/</loc>
+    <lastmod>2020-03-12T19:35:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/summary/</loc>
+    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
   </url>
   
   <url>
@@ -458,17 +488,27 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/ansible/</loc>
+    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
+    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/login-message/</loc>
     <lastmod>2020-03-11T14:20:42+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/motd/</loc>
-    <lastmod>2020-03-11T14:20:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-03-11T14:20:42+09:00</lastmod>
   </url>
   
@@ -520,16 +560,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/harbor/</loc>
     <lastmod>2020-03-03T10:07:50+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-03-01T18:43:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-03-01T18:43:27+09:00</lastmod>
   </url>
   
   <url>

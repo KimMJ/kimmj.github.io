@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Mar 2020 14:20:42 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 20:17:20 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ansible</title>
+      <link>http://kimmj.github.io/tags/ansible/</link>
+      <pubDate>Thu, 12 Mar 2020 20:17:20 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-for-devops</title>
+      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
+      <pubDate>Thu, 12 Mar 2020 20:17:20 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>login-message</title>
@@ -116,24 +134,6 @@
       <pubDate>Tue, 03 Mar 2020 10:07:50 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/harbor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible</title>
-      <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Sun, 01 Mar 2020 18:43:27 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible-for-devops</title>
-      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
-      <pubDate>Sun, 01 Mar 2020 18:43:27 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
       <description></description>
     </item>
     

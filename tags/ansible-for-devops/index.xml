@@ -6,7 +6,7 @@
     <description>Recent content in ansible-for-devops on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2020 18:43:27 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 20:17:20 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/ansible-for-devops/index.xml" rel="self" type="application/rss+xml" />
     
@@ -64,6 +64,20 @@ shell script로 보완을 하려고 하지만, 모든 edge case를 커버하기�
     </item>
     
     <item>
+      <title>Variables</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/variables/</link>
+      <pubDate>Sun, 08 Mar 2020 18:19:40 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/variables/</guid>
+      <description>Ansible에서의 variable은 대부분의 다른 시스템에서의 variable과 비슷하다. variable은 항상 글자로 시작하고[A-Za-z] 그 다음부터는 _나 숫자들 [0-9]를 포함할 수 있다.
+사용가능한 variable name은 foo, foo_bar, foo_bar_5, fooBar을 포함하지만 표준은 모두 소준자를 사용하고 variable name에서 숫자를 제거하는 것이다(camelCase나 UpperCamelCase를 피한다).
+사용불가능한 variable name은 _foo, foo-bar, 5-foo-bar, foo bar가 있다.
+inventory file에서 variable의 값은 equal sign으로 할당된다.
+foo=bar playbook이나 파일에 포함된 variable에서는 variable의 value가 colon을 통해 할당된다.
+foo: bar Playbook variables task에서 사용할 variable을 정의하는 방법에는 여러가지가 있다.</description>
+    </item>
+    
+    <item>
       <title>Ad Hoc Commands</title>
       <link>http://kimmj.github.io/ansible/ansible-for-devops/ad-hoc-commands/</link>
       <pubDate>Thu, 06 Feb 2020 13:21:42 +0900</pubDate>
@@ -73,6 +87,48 @@ shell script로 보완을 하려고 하지만, 모든 edge case를 커버하기�
 나중 챕터에서는 playbook에 대해 자세히 알아볼 것이지만, 지금은 어떻게 Ansible이 하나 이상의 서버에 대해 ad-hoc command로 빠르게 공통적인 일을 수행하는지, 데이터를 가져오는지에 대해 알아볼 것이다.
 Conducting an orchestra 각 개인 administrator가 관리하는 서버의 수는 수년간 급격하게 증가했다. 특히 virtualization과 cloud application의 발전은 표준처럼 되었다.
 어느 때든 system administrator는 여러가지 업무가 있다.</description>
+    </item>
+    
+    <item>
+      <title>if/then/when - Conditionals</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/conditionals/</link>
+      <pubDate>Thu, 12 Mar 2020 10:15:33 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/conditionals/</guid>
+      <description>많은 task가 특정한 상황에서만 동작해야 하는 조건을 가지고 있다. 몇몇 task는 idempotence가 내장된 module(yum이나 apt 패키지가 설치되어 있는 경우)을 사용하고 우리는 보통 이 task에 대해 추가적인 행동을 정의할 필요가 없다.
+하지만 많은 task에서 - 특히 Ansible의 command나 shell module을 사용하는 경우 - 이 module이 실행되고 나서 변화가 있는지 없는지에 따라 또는 실행했을때 실패되었던 경우, 언제 실행될지를 결정하는 추가적인 input을 필요로 하게 된다.
+우리는 이런 모든 주된 conditional behavior를 Ansible task에 적용할 수 있도록 할 것이고 또한 Ansible에게 언제 play가 끝나는지 또는 실패하는지를 알려줄수도 있다.</description>
+    </item>
+    
+    <item>
+      <title>Delegation Local Actions and Pauses</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/delegation-local-actions-and-pauses/</link>
+      <pubDate>Thu, 12 Mar 2020 13:32:45 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/delegation-local-actions-and-pauses/</guid>
+      <description>notification을 보내는 것, load balancer와 통신하는것 또는 DNS, 네트워킹에 변화를 주는것, 서버를 모니터링하는 것과 같은 몇몇 task는 Ansible이 host machine(playbook을 실행하는)에서 동작하거나 playbook에 의해 관리되지 않는 host에서 실행할 필요가 있다. Ansible은 delegate_to를 사용한 특정 host에 task를 delegate할 수 있다.
+- name: Add server to Munin monitoring configuration. command: monitor-server webservers {{ inventory_hostname }} delegate_to: &amp;#34;{{ monitoring_master }}&amp;#34; delegation은 서버의 load balancer 또는 replication pool에 등록하는 것을 관리하기 위해 사용된다. 우리는 특정한 command를 local에서 실행하거나 Ansible에 내장된 load balancer module을 사용하고 delegate_to를 이용하여 직접 load balancer host에서 command를 실행할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Prompts</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/prompts/</link>
+      <pubDate>Thu, 12 Mar 2020 19:18:08 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/prompts/</guid>
+      <description>드문 경우이지만 사용자가 playbook에서 사용할 variable의 값을 입력하게 해야할 경우가 있을 수 있다. playbook이 사용자의 개인 로그인 정보를 필요로 하거나 playbook을 실행하는 사람에 의해 버전이나 다른 값들을 입력받아야 할 때, 어디에서 실행되어야 하는지 알아야 할 때면서 이런 정보들이 configured(environment variable나 inventory variable을 사용하는 것)되는 방법이 없는 경우에는 vars_prompt를 이용한다.
+간단한 예시로 사용자에게 username과 password를 입력하게 하여 network share에 로그인할 수 있도록 할 수 있다.
+--- - hosts: all vars_prompt: - name: share_user prompt: &amp;#34;What is your network username?</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/summary/</link>
+      <pubDate>Thu, 12 Mar 2020 20:17:20 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/summary/</guid>
+      <description>playbook은 Ansible의 automating infrastructure management의 중요한 수단이다. 이 챕터를 읽은 뒤로 우리는 어떻게 variable, inventory, handler, conditional, tag 등을 사용하는지 알게 되었다.
+playbook에 대해서 기본적인 component들을 더 알고싶다면 infrastructure를 Ansible로 만들고 확장하는 것을 해보는 것이 더욱 효과적일 것이다.</description>
     </item>
     
   </channel>
