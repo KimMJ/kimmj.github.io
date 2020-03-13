@@ -426,13 +426,13 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #body-inner {
     margin-bottom: 5rem;
 }
-#chapter {
+/* #chapter {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     padding: 2rem 0;
-}
+} */
 #chapter #body-inner {
     padding-bottom: 3rem;
     max-width: 80%;
@@ -446,10 +446,12 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     font-size: 5rem;
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 300;
-    border-bottom: 4px solid #F0F2F4;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #F0F2F4;
 }
 #chapter p {
-    text-align: center;
+    /* text-align: center; */
     font-size: 1.2rem;
 }
 #footer {
