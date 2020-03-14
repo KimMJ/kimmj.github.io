@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>HUGO로 HTML이 되지 않을 때 가능하게 하는 방법 :: Ibiza</title>
+    <title>http를 사용하는 docker registry를 위한 insecure registry 설정 :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1584214206" rel="stylesheet">
@@ -49,7 +49,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/hugo/hugo-with-html/">
+  <body class="" data-url="/docker/insecure-registry/">
     <nav id="sidebar" class="">
 
 
@@ -357,7 +357,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/docker/" title="Docker" class="dd-item 
-        
+        parent
         
         
         ">
@@ -381,7 +381,7 @@ if (!doNotTrack) {
  
   
     
-      <li data-nav-id="/docker/insecure-registry/" title="http를 사용하는 docker registry를 위한 insecure registry 설정" class="dd-item ">
+      <li data-nav-id="/docker/insecure-registry/" title="http를 사용하는 docker registry를 위한 insecure registry 설정" class="dd-item active">
         <a href="/docker/insecure-registry/">
         <i class='fas fa-minus'></i>&nbsp;http를 사용하는 docker registry를 위한 insecure registry 설정
         
@@ -955,7 +955,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/hugo/" title="Hugo" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1072,7 +1072,7 @@ if (!doNotTrack) {
  
   
     
-      <li data-nav-id="/hugo/hugo-with-html/" title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class="dd-item active">
+      <li data-nav-id="/hugo/hugo-with-html/" title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class="dd-item ">
         <a href="/hugo/hugo-with-html/">
         <i class='fas fa-minus'></i>&nbsp;hugo with html
         
@@ -2427,7 +2427,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/hugo/'>Hugo</a> > HUGO로 HTML이 되지 않을 때 가능하게 하는 방법
+            <a href='/'>Ibiza</a> > <a href='/docker/'>Docker</a> > http를 사용하는 docker registry를 위한 insecure registry 설정
           
          
           
@@ -2440,7 +2440,16 @@ if (!doNotTrack) {
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#절차">절차</a>
+      <ul>
+        <li><a href="#insecure-registry-설정">insecure-registry 설정</a></li>
+        <li><a href="#docker-재시작">docker 재시작</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -2452,9 +2461,11 @@ if (!doNotTrack) {
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/hugo">hugo</a>
+  <a class="tag-link" href="/tags/docker">docker</a>
 
-  <a class="tag-link" href="/tags/html">html</a>
+  <a class="tag-link" href="/tags/insecure-registry">insecure-registry</a>
+
+  <a class="tag-link" href="/tags/docker-registry">docker-registry</a>
 
 </div>
 
@@ -2464,7 +2475,7 @@ if (!doNotTrack) {
           
             <h1>
               
-              HUGO로 HTML이 되지 않을 때 가능하게 하는 방법
+              http를 사용하는 docker registry를 위한 insecure registry 설정
             </h1>
           
 
@@ -2472,16 +2483,36 @@ if (!doNotTrack) {
 
 
 
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#절차">절차</a>
+      <ul>
+        <li><a href="#insecure-registry-설정">insecure-registry 설정</a></li>
+        <li><a href="#docker-재시작">docker 재시작</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-<p><code>Hugo</code>는 markdown을 기본적으로 사용하지만 html을 이용해서 좀 더 다양하게 커스터마이징이 가능한 장점도 가지고 있습니다.</p>
-<p>하지만 저는 처음에 html 코드를 사용하게 되면 <code>&lt;!-- raw HTML omitted --&gt;</code>와 같은 줄로 대치가 되곤 했습니다.
-구글링 결과 이는 <code>Hugo</code>의 버전이 0.60.0으로 되면서부터 기본적으로 disable 시켰기 때문입니다.</p>
-<p>따라서 다음과 같이 조치를 하면 간단하게 해결이 가능합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
-<span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
-</code></pre></div><p>위와 같은 설정을 <code>config.toml</code>에 추가하기만 하면 됩니다.
-추가를 한 뒤 다시 확인해보면 정상적으로 html 코드가 적용된 모습을 볼 수 있습니다.</p>
+<p>회사같은 곳에서는 보안상의 문제 때문에 Dockerhub에다가 이미지를 올리지 못하는 경우가 많습니다.
+이를 위해서 docker에서도 docker registry라는 툴을 제공하는데요, 이는 자신의 local server를 구축하고, dockerhub처럼 이미지를 올릴 수 있는 툴입니다.</p>
+<p>이러한 docker registry는 사용자의 환경에 따라 http를 사용하는 경우가 있습니다.
+이 때, <code>docker</code>는 default로 https 통신을 하려 하기 때문에 문제가 발생합니다.
+이 경우 다음과 같이 조치를 하면 http 통신을 할 수 있습니다.</p>
+<h2 id="절차">절차</h2>
+<h3 id="insecure-registry-설정">insecure-registry 설정</h3>
+<p><code>/etc/docker/daemon.json</code> 파일을 열어 예시처럼 작성합니다.
+없을 경우 생성하면 됩니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;insecure-registries&#34;</span> : [<span style="color:#e6db74">&#34;docker-registry:5000&#34;</span>]
+}
+</code></pre></div><h3 id="docker-재시작">docker 재시작</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># flush changes</span>
+sudo systemctl daemon-reload
+<span style="color:#75715e"># restart docker</span>
+sudo systemctl restart docker
+</code></pre></div><hr>
+<p>이제 다시한번 <code>docker pull</code> 명령어를 통해 이미지가 제대로 다운로드 되는지 확인합니다.</p>
 
 
 <footer class=" footline" >
@@ -2724,6 +2755,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -2736,6 +2768,7 @@ if (!doNotTrack) {
             
             
                 
+                    
                     
                 
                 
@@ -2753,40 +2786,8 @@ if (!doNotTrack) {
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -2795,6 +2796,9 @@ if (!doNotTrack) {
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -2908,22 +2912,6 @@ if (!doNotTrack) {
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2939,85 +2927,6 @@ if (!doNotTrack) {
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -3112,26 +3021,6 @@ if (!doNotTrack) {
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -3142,9 +3031,6 @@ if (!doNotTrack) {
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -3152,25 +3038,6 @@ if (!doNotTrack) {
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -3209,6 +3076,53 @@ if (!doNotTrack) {
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -3229,8 +3143,122 @@ if (!doNotTrack) {
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 

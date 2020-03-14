@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2020 20:17:20 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 04:18:15 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>docker</title>
+      <link>http://kimmj.github.io/tags/docker/</link>
+      <pubDate>Sun, 15 Mar 2020 04:18:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-registry</title>
+      <link>http://kimmj.github.io/tags/docker-registry/</link>
+      <pubDate>Sun, 15 Mar 2020 04:18:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/docker-registry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>insecure-registry</title>
+      <link>http://kimmj.github.io/tags/insecure-registry/</link>
+      <pubDate>Sun, 15 Mar 2020 04:18:15 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/insecure-registry/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ansible</title>
@@ -120,15 +147,6 @@
     </item>
     
     <item>
-      <title>docker-registry</title>
-      <link>http://kimmj.github.io/tags/docker-registry/</link>
-      <pubDate>Tue, 03 Mar 2020 10:07:50 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/docker-registry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>harbor</title>
       <link>http://kimmj.github.io/tags/harbor/</link>
       <pubDate>Tue, 03 Mar 2020 10:07:50 +0900</pubDate>
@@ -152,15 +170,6 @@
       <pubDate>Sat, 29 Feb 2020 14:00:40 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/tmux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>http://kimmj.github.io/tags/docker/</link>
-      <pubDate>Sat, 29 Feb 2020 02:51:19 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/docker/</guid>
       <description></description>
     </item>
     

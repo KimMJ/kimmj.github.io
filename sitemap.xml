@@ -298,6 +298,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/docker/insecure-registry/</loc>
+    <lastmod>2020-03-15T04:18:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ubuntu/customize-login-message/</loc>
     <lastmod>2020-03-11T14:20:42+09:00</lastmod>
   </url>
@@ -493,17 +498,32 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/docker/</loc>
+    <lastmod>2020-03-15T04:18:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/docker-registry/</loc>
+    <lastmod>2020-03-15T04:18:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/insecure-registry/</loc>
+    <lastmod>2020-03-15T04:18:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-15T04:18:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/ansible/</loc>
     <lastmod>2020-03-12T20:17:20+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-03-12T20:17:20+09:00</lastmod>
   </url>
   
@@ -558,11 +578,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/docker-registry/</loc>
-    <lastmod>2020-03-03T10:07:50+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/harbor/</loc>
     <lastmod>2020-03-03T10:07:50+09:00</lastmod>
   </url>
@@ -575,11 +590,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/tmux/</loc>
     <lastmod>2020-02-29T14:00:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/docker/</loc>
-    <lastmod>2020-02-29T02:51:19+09:00</lastmod>
   </url>
   
   <url>
