@@ -377,6 +377,18 @@ playbook에 대해서 기본적인 component들을 더 알고싶다면 infrastru
     </item>
     
     <item>
+      <title>[번역] 쿠버네티스에서의 Port, TargetPort, NodePort</title>
+      <link>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</link>
+      <pubDate>Sun, 15 Mar 2020 23:13:37 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</guid>
+      <description>원문: https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-ports-targetport-nodeport-service.html
+쿠버네티스의 port declaration 필드에는 여러가지가 있다. 각 type에 대해 빠르게 살펴보고 YAML에서 각각 어떤 의미를 가지고 있는지 알아보도록 하자.
+Pod ports list pod.spec.containers[].ports로 정의된 이 배열은 container가 노출하고 있는 포트의 리스트를 나타낸다. 이 리스트를 꼭 작성해야할 필요는 없다. 리스트가 비어있다고 하더라도 container가 포트를 listening하고 있는 한 여전히 네트워크 접속이 가능하다. 이는 단순히 쿠버네티스에게 추가적인 정보를 줄 뿐이다.
+ List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational.</description>
+    </item>
+    
+    <item>
       <title>http를 사용하는 docker registry를 위한 insecure registry 설정</title>
       <link>http://kimmj.github.io/docker/insecure-registry/</link>
       <pubDate>Sun, 15 Mar 2020 04:18:15 +0900</pubDate>

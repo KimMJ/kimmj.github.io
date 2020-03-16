@@ -6,7 +6,7 @@
     <description>Recent content in kubernetes on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2020 23:28:01 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 23:13:37 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,18 @@
       <description>Contents 이 포스트에서는 Kubernetes의 Controller들에 대해서 알아보도록 하겠습니다. 가장 작은 단위인 Container부터, 상위 개념인 Deployment, StatefulSet까지 다루어 보도록 하겠습니다.
  Containers Pods ReplicaSets Deployments StatefulSets  Monolithic vs. Microservice 우선 Monolithic과 Microservice에 대해서 짚고 넘어가도록 하겠습니다.
 Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.</description>
+    </item>
+    
+    <item>
+      <title>[번역] 쿠버네티스에서의 Port, TargetPort, NodePort</title>
+      <link>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</link>
+      <pubDate>Sun, 15 Mar 2020 23:13:37 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</guid>
+      <description>원문: https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-ports-targetport-nodeport-service.html
+쿠버네티스의 port declaration 필드에는 여러가지가 있다. 각 type에 대해 빠르게 살펴보고 YAML에서 각각 어떤 의미를 가지고 있는지 알아보도록 하자.
+Pod ports list pod.spec.containers[].ports로 정의된 이 배열은 container가 노출하고 있는 포트의 리스트를 나타낸다. 이 리스트를 꼭 작성해야할 필요는 없다. 리스트가 비어있다고 하더라도 container가 포트를 listening하고 있는 한 여전히 네트워크 접속이 가능하다. 이는 단순히 쿠버네티스에게 추가적인 정보를 줄 뿐이다.
+ List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational.</description>
     </item>
     
     <item>

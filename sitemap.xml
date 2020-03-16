@@ -298,6 +298,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</loc>
+    <lastmod>2020-03-15T23:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/docker/insecure-registry/</loc>
     <lastmod>2020-03-15T04:18:15+09:00</lastmod>
   </url>
@@ -498,6 +503,26 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-03-15T23:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/service/</loc>
+    <lastmod>2020-03-15T23:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-15T23:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/targetport/</loc>
+    <lastmod>2020-03-15T23:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/docker/</loc>
     <lastmod>2020-03-15T04:18:15+09:00</lastmod>
   </url>
@@ -509,11 +534,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/insecure-registry/</loc>
-    <lastmod>2020-03-15T04:18:15+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-03-15T04:18:15+09:00</lastmod>
   </url>
   
@@ -625,11 +645,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/file/</loc>
     <lastmod>2020-02-26T17:59:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/kubernetes/</loc>
-    <lastmod>2020-02-24T23:28:01+09:00</lastmod>
   </url>
   
   <url>
