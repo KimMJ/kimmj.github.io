@@ -49,7 +49,7 @@
       <pubDate>Wed, 26 Feb 2020 17:59:29 +0900</pubDate>
       
       <guid>http://kimmj.github.io/ubuntu/file-edit-without-editor/</guid>
-      <description>echo로 파일 내용을 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdfasdfasdf $ echo &amp;#34;asdf&amp;#34; &amp;gt; file $ cat file asdf &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ echo &amp;#34;asdf&amp;#34; &amp;gt;&amp;gt; file $ cat file asdf asdf cat으로 파일 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb ^D # Command+D $ cat file aaaa bbbb &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb ^D # Command+D $ cat file asdf aaaa bbbb &amp;laquo;EOF로 EOF을 입력하면 입력 완료하기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb EOF $ cat file asdf aaaa bbbb </description>
+      <description>echo로 파일 내용을 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdfasdfasdf $ echo &amp;#34;asdf&amp;#34; &amp;gt; file $ cat file asdf &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ echo &amp;#34;asdf&amp;#34; &amp;gt;&amp;gt; file $ cat file asdf asdf cat으로 파일 입력하는 방법 &amp;gt;로 파일 덮어쓰기 $ cat file asdf $ cat &amp;gt; file aaaa bbbb ^D # Command+D $ cat file aaaa bbbb &amp;gt;&amp;gt;로 파일에 이어쓰기 $ cat file asdf $ cat &amp;gt;&amp;gt; file aaaa bbbb ^D # Command+D $ cat file asdf aaaa bbbb &amp;laquo;EOF로 EOF을 입력하면 입력 완료하기 $ cat file asdf $ cat &amp;lt;&amp;lt;EOF &amp;gt; file aaaa bbbb EOF $ cat file asdf aaaa bbbb </description>
     </item>
     
     <item>

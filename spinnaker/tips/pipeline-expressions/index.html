@@ -11,20 +11,20 @@
     <title>Pipeline Expressions :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1584361096" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1584361096" rel="stylesheet">
-    <link href="/css/hybrid.css?1584361096" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1584361096" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1584361096" rel="stylesheet">
-    <link href="/css/auto-complete.css?1584361096" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1584361096" rel="stylesheet">
-    <link href="/css/theme.css?1584361096" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1584361096" rel="stylesheet">
+    <link href="/css/nucleus.css?1584437779" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1584437779" rel="stylesheet">
+    <link href="/css/hybrid.css?1584437779" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1584437779" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1584437779" rel="stylesheet">
+    <link href="/css/auto-complete.css?1584437779" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1584437779" rel="stylesheet">
+    <link href="/css/theme.css?1584437779" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1584437779" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1584361096" rel="stylesheet">
+      <link href="/css/theme-mine.css?1584437779" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1584361096"></script>
+    <script src="/js/jquery-3.3.1.min.js?1584437779"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -2307,35 +2307,6 @@ if (!doNotTrack) {
           
       </a>
       
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/english/himym/season1/episode1/" title="Episode1" class="dd-item ">
-        <a href="/english/himym/season1/episode1/">
-        <i class='fas fa-minus'></i>&nbsp;Episode1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -2467,14 +2438,15 @@ if (!doNotTrack) {
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#pipeline-functions">pipeline functions</a>
       <ul>
         <li><a href="#pipeline에서-다른-pipeline의-값들-불러오기">pipeline에서 다른 pipeline의 값들 불러오기</a></li>
-        <li><a href="#언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요?</a></li>
-        <li><a href="#원하는-값을-어떻게-찾나요">원하는 값을 어떻게 찾나요?</a></li>
-        <li><a href="#내가-작성한-pipeline-expression은-어떻게-테스트하나요">내가 작성한 pipeline expression은 어떻게 테스트하나요?</a></li>
+        <li><a href="#언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요</a></li>
+        <li><a href="#원하는-값을-어떻게-찾나요">원하는 값을 어떻게 찾나요</a></li>
+        <li><a href="#내가-작성한-pipeline-expression은-어떻게-테스트하나요">내가 작성한 pipeline expression은 어떻게 테스트하나요</a></li>
       </ul>
     </li>
+    <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
     </div>
@@ -2510,20 +2482,22 @@ if (!doNotTrack) {
 
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#pipeline-functions">pipeline functions</a>
       <ul>
         <li><a href="#pipeline에서-다른-pipeline의-값들-불러오기">pipeline에서 다른 pipeline의 값들 불러오기</a></li>
-        <li><a href="#언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요?</a></li>
-        <li><a href="#원하는-값을-어떻게-찾나요">원하는 값을 어떻게 찾나요?</a></li>
-        <li><a href="#내가-작성한-pipeline-expression은-어떻게-테스트하나요">내가 작성한 pipeline expression은 어떻게 테스트하나요?</a></li>
+        <li><a href="#언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요</a></li>
+        <li><a href="#원하는-값을-어떻게-찾나요">원하는 값을 어떻게 찾나요</a></li>
+        <li><a href="#내가-작성한-pipeline-expression은-어떻게-테스트하나요">내가 작성한 pipeline expression은 어떻게 테스트하나요</a></li>
       </ul>
     </li>
+    <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
 
 <p>Spinnaker는 배포를 자동화할 때 사용합니다.
 그렇기 때문에 자동화를 위해선 다른 곳에서 사용된 값들을 가지고 와야할 필요성이 생기기도 합니다.</p>
 <p>이 문서에서는 그럴 때 사용할 수 있는 pipeline function에 대해 알아보도록 하겠습니다.</p>
+<h2 id="pipeline-functions">pipeline functions</h2>
 <h3 id="pipeline에서-다른-pipeline의-값들-불러오기">pipeline에서 다른 pipeline의 값들 불러오기</h3>
 
 <div class="notices note" ><p>Note: Pipeline expression syntax is based on Spring Expression Language (SpEL).</p>
@@ -2534,17 +2508,17 @@ SpEL에 대해 이미 잘 알고있다면 너무나도 좋겠지만, 저는 익�
 <p>기본적으로 <code>${ expression }</code>의 형태를 가지게 됩니다.</p>
 <p>여기서 한가지 기억해 두어야 할 것은 nested가 되지 않는다는 것입니다.
 즉, <code>${ expression1 ${expression2} }</code>가 되지 않습니다.</p>
-<h3 id="언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요?</h3>
+<h3 id="언제-pipeline-expression을-사용하나요">언제 pipeline expression을 사용하나요</h3>
 <p>pipeline expression은 Spinnaker UI로는 해결할 수 없는 문제들을 해결하여줍니다.
 예를 들어 특정 stage가 성공했는지의 여부에 따라 stage를 실행할지, 말지 결정하는 방법을 제공해 줍니다.
 또는 가장 최근에 deploy된 pod를 알아낸다거나, spinnaker를 통한 canary analysis를 할 때 비교할 두가지 대상을 선택하기 위해 사용할 수도 있습니다.</p>
 <p>Spinnaker는 모든 파이프라인을 <code>JSON</code> 형태로도 관리할 수 있기 때문에, UI에는 없는 값들도 입력할 수 있습니다.
 이렇게 좀 더 유연한 방법으로 Spinnaker를 이용하고자 한다면 pipeline expression은 꼭 알아두어야 합니다.</p>
-<h3 id="원하는-값을-어떻게-찾나요">원하는 값을 어떻게 찾나요?</h3>
+<h3 id="원하는-값을-어떻게-찾나요">원하는 값을 어떻게 찾나요</h3>
 <p>pipeline이 구동되고 나면, Details를 누르고 Source를 눌렀을 때 해당 pipeline의 실행결과가 json형태로 출력됩니다.
 이를 <code>VS Code</code>나 다른 편집기를 이용하여, json으로 인식하게 한 뒤, 자동 들여쓰기를 하면 보기 좋게 만들어줍니다.</p>
 <p>이를 통해서 어떤 값을 내가 사용할 지 확인하여 pipeline expression을 작성하면 됩니다.</p>
-<h3 id="내가-작성한-pipeline-expression은-어떻게-테스트하나요">내가 작성한 pipeline expression은 어떻게 테스트하나요?</h3>
+<h3 id="내가-작성한-pipeline-expression은-어떻게-테스트하나요">내가 작성한 pipeline expression은 어떻게 테스트하나요</h3>
 <p>작성한 pipeline expression을 테스트하기 위해 파이프라인을 구동한다는 것은 끔직한 일입니다.
 Spinnaker는 이를 테스트하기 위해 API endpoint를 제공합니다.
 즉, 파이프라인을 다시 구동시키지 않고도 어떤 결과값이 나오는지 확인할 수 있다는 것을 의미합니다.</p>
@@ -2576,7 +2550,7 @@ curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression <span sty
    },
   <span style="color:#f92672">&#34;result&#34;</span>:<span style="color:#e6db74">&#34;${#stage(\&#34;Deploy\&#34;).status.toString() &#34;</span>
 }
-</code></pre></div><h4 id="reference">Reference</h4>
+</code></pre></div><h2 id="reference">Reference</h2>
 <p>Spinnaker Docs: <a href="https://www.spinnaker.io/guides/user/pipeline/expressions/">https://www.spinnaker.io/guides/user/pipeline/expressions/</a></p>
 
 
@@ -4207,22 +4181,6 @@ curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression <span sty
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -4247,19 +4205,19 @@ curl http://api.my.spinnaker/pipelines/$PIPELINE_ID/evaluateExpression <span sty
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1584361097"></script>
-    <script src="/js/perfect-scrollbar.min.js?1584361097"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1584361097"></script>
-    <script src="/js/jquery.sticky.js?1584361097"></script>
-    <script src="/js/featherlight.min.js?1584361097"></script>
-    <script src="/js/highlight.pack.js?1584361097"></script>
+    <script src="/js/clipboard.min.js?1584437780"></script>
+    <script src="/js/perfect-scrollbar.min.js?1584437780"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1584437780"></script>
+    <script src="/js/jquery.sticky.js?1584437780"></script>
+    <script src="/js/featherlight.min.js?1584437780"></script>
+    <script src="/js/highlight.pack.js?1584437780"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1584361097"></script>
-    <script src="/js/learn.js?1584361097"></script>
-    <script src="/js/hugo-learn.js?1584361097"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1584437780"></script>
+    <script src="/js/learn.js?1584437780"></script>
+    <script src="/js/hugo-learn.js?1584437780"></script>
 
-    <link href="/mermaid/mermaid.css?1584361097" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1584361097"></script>
+    <link href="/mermaid/mermaid.css?1584437780" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1584437780"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

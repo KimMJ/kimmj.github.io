@@ -11,20 +11,20 @@
     <title>Install in Air Gaped Environment :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1584361094" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1584361094" rel="stylesheet">
-    <link href="/css/hybrid.css?1584361094" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1584361094" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1584361094" rel="stylesheet">
-    <link href="/css/auto-complete.css?1584361094" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1584361094" rel="stylesheet">
-    <link href="/css/theme.css?1584361094" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1584361094" rel="stylesheet">
+    <link href="/css/nucleus.css?1584437779" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1584437779" rel="stylesheet">
+    <link href="/css/hybrid.css?1584437779" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1584437779" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1584437779" rel="stylesheet">
+    <link href="/css/auto-complete.css?1584437779" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1584437779" rel="stylesheet">
+    <link href="/css/theme.css?1584437779" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1584437779" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1584361094" rel="stylesheet">
+      <link href="/css/theme-mine.css?1584437779" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1584361094"></script>
+    <script src="/js/jquery-3.3.1.min.js?1584437779"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -2307,35 +2307,6 @@ if (!doNotTrack) {
           
       </a>
       
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/english/himym/season1/episode1/" title="Episode1" class="dd-item ">
-        <a href="/english/himym/season1/episode1/">
-        <i class='fas fa-minus'></i>&nbsp;Episode1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -2475,6 +2446,7 @@ if (!doNotTrack) {
         <li><a href="#deploy">Deploy</a></li>
       </ul>
     </li>
+    <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
     </div>
@@ -2520,6 +2492,7 @@ if (!doNotTrack) {
         <li><a href="#deploy">Deploy</a></li>
       </ul>
     </li>
+    <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
 
@@ -2554,7 +2527,7 @@ if (!doNotTrack) {
 <p>우선 인터넷이 잘 되는 서버가 하나 필요합니다.
 이 서버에서 우리는 필요한 BOM(Bill of Materials)를 미리 다운로드 할 것입니다.</p>
 <p><code>gsutil</code>이 설치되어 있어야 합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gsutil -m cp -r gs://halconfig
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gsutil -m cp -r gs://halconfig .
 </code></pre></div><p>이렇게하면 로컬에 <code>halconfig</code>라는 폴더가 생겼을 것입니다.
 이를 인터넷이 안되는 <code>halyard</code>가 설치된 서버로 복사합니다.
 이때, <code>halconfig</code> 폴더 내의 내용들은 <code>~/.hal/.boms/</code> 폴더 내에 복사합니다.</p>
@@ -2677,7 +2650,7 @@ ssh TARGET_IP docker load -i ~/path/to/target/SERVICE.tar.gz
 <p>여기까지 왔으면 모든 준비작업은 끝났습니다.
 이제 배포만 하면 됩니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hal deploy apply
-</code></pre></div><h4 id="reference">Reference</h4>
+</code></pre></div><h2 id="reference">Reference</h2>
 <p><a href="https://www.spinnaker.io/guides/operator/custom-boms/">https://www.spinnaker.io/guides/operator/custom-boms/</a><br>
 <a href="https://github.com/spinnaker/spinnaker/issues/3967#issuecomment-522306893">https://github.com/spinnaker/spinnaker/issues/3967#issuecomment-522306893</a></p>
 
@@ -4309,22 +4282,6 @@ ssh TARGET_IP docker load -i ~/path/to/target/SERVICE.tar.gz
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -4349,19 +4306,19 @@ ssh TARGET_IP docker load -i ~/path/to/target/SERVICE.tar.gz
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1584361095"></script>
-    <script src="/js/perfect-scrollbar.min.js?1584361095"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1584361095"></script>
-    <script src="/js/jquery.sticky.js?1584361095"></script>
-    <script src="/js/featherlight.min.js?1584361095"></script>
-    <script src="/js/highlight.pack.js?1584361095"></script>
+    <script src="/js/clipboard.min.js?1584437779"></script>
+    <script src="/js/perfect-scrollbar.min.js?1584437779"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1584437779"></script>
+    <script src="/js/jquery.sticky.js?1584437779"></script>
+    <script src="/js/featherlight.min.js?1584437779"></script>
+    <script src="/js/highlight.pack.js?1584437779"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1584361095"></script>
-    <script src="/js/learn.js?1584361095"></script>
-    <script src="/js/hugo-learn.js?1584361095"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1584437779"></script>
+    <script src="/js/learn.js?1584437779"></script>
+    <script src="/js/hugo-learn.js?1584437779"></script>
 
-    <link href="/mermaid/mermaid.css?1584361095" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1584361095"></script>
+    <link href="/mermaid/mermaid.css?1584437779" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1584437779"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
