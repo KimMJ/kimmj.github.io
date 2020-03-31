@@ -387,6 +387,15 @@ playbook에 대해서 기본적인 component들을 더 알고싶다면 infrastru
     </item>
     
     <item>
+      <title>20200331</title>
+      <link>http://kimmj.github.io/ibiza/diary/20200331/</link>
+      <pubDate>Tue, 31 Mar 2020 21:19:53 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ibiza/diary/20200331/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
       <title>[번역] 쿠버네티스에서의 Port, TargetPort, NodePort</title>
       <link>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</link>
       <pubDate>Sun, 15 Mar 2020 23:13:37 +0900</pubDate>

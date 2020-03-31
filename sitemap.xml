@@ -143,6 +143,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ibiza/diary/</loc>
+    <lastmod>2020-03-31T21:19:18+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/conditionals/</loc>
     <lastmod>2020-03-12T10:15:33+09:00</lastmod>
   </url>
@@ -300,6 +305,11 @@
   <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/summary/</loc>
     <lastmod>2020-03-12T20:17:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ibiza/diary/20200331/</loc>
+    <lastmod>2020-03-31T21:19:53+09:00</lastmod>
   </url>
   
   <url>
@@ -508,17 +518,17 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-03-31T21:19:53+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/kubernetes/</loc>
     <lastmod>2020-03-15T23:13:37+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/service/</loc>
-    <lastmod>2020-03-15T23:13:37+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-03-15T23:13:37+09:00</lastmod>
   </url>
   
