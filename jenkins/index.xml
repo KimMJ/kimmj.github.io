@@ -24,5 +24,16 @@ sudo docker-compose up -d http://$IP:38080 으로 접속할 수 있습니다. �
 Jenkins 세팅 처음에 다음과 같은 화면을 볼 수 있습니다.</description>
     </item>
     
+    <item>
+      <title>Workspace@2를 변경하기 - Workspace List 설정 변경</title>
+      <link>http://kimmj.github.io/jenkins/workspace-list/</link>
+      <pubDate>Thu, 16 Apr 2020 16:23:22 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/jenkins/workspace-list/</guid>
+      <description>운용하는 노드에 executor가 2개 이상이라면, concurrent build 옵션을 disable했다고 하더라도 zombie process가 있을 경우 workspace@2처럼 @ 캐릭터가 들어간 workspace를 사용할 수 있다.
+workspace 안에 특정한 파일을 넣고 사용하는 경우라면 @2가 생기면 안될 것이다. 그러나 이는 그렇게 좋은 방법은 아닌것 같으며 이런 경우에는 github 등에 스크립트같은 파일을 옮겨놓고 git pull이나 git 관련 플러그인을 통해 다운로드 한 뒤 사용하는 것이 더 좋은 방법인 것 같다.
+하지만 나의 경우 Perforce를 사용하고 있었느데 p4 sync에서 문제가 발생했다.</description>
+    </item>
+    
   </channel>
 </rss>

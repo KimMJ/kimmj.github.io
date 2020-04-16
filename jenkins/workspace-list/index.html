@@ -8,23 +8,23 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>infrastructure-as-code :: Ibiza</title>
+    <title>Workspace@2를 변경하기 - Workspace List 설정 변경 :: Ibiza</title>
 
     
-    <link href="/css/nucleus.css?1587022420" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1587022420" rel="stylesheet">
-    <link href="/css/hybrid.css?1587022420" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1587022420" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1587022420" rel="stylesheet">
-    <link href="/css/auto-complete.css?1587022420" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1587022420" rel="stylesheet">
-    <link href="/css/theme.css?1587022420" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1587022420" rel="stylesheet">
+    <link href="/css/nucleus.css?1587022419" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1587022419" rel="stylesheet">
+    <link href="/css/hybrid.css?1587022419" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1587022419" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1587022419" rel="stylesheet">
+    <link href="/css/auto-complete.css?1587022419" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1587022419" rel="stylesheet">
+    <link href="/css/theme.css?1587022419" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1587022419" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1587022420" rel="stylesheet">
+      <link href="/css/theme-mine.css?1587022419" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1587022420"></script>
+    <script src="/js/jquery-3.3.1.min.js?1587022419"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -49,7 +49,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/tags/infrastructure-as-code/">
+  <body class="" data-url="/jenkins/workspace-list/">
     <nav id="sidebar" class="">
 
 
@@ -501,7 +501,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/jenkins/" title="Jenkins" class="dd-item 
-        
+        parent
         
         
         ">
@@ -544,7 +544,7 @@ if (!doNotTrack) {
  
   
     
-      <li data-nav-id="/jenkins/workspace-list/" title="Workspace@2를 변경하기 - Workspace List 설정 변경" class="dd-item ">
+      <li data-nav-id="/jenkins/workspace-list/" title="Workspace@2를 변경하기 - Workspace List 설정 변경" class="dd-item active">
         <a href="/jenkins/workspace-list/">
         <i class='fas fa-minus'></i>&nbsp;Workspace@2를 변경하기 - Workspace List 설정 변경
         
@@ -2539,7 +2539,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Ibiza</a> > <a href='/tags/'>Tags</a> > infrastructure-as-code
+            <a href='/'>Ibiza</a> > <a href='/jenkins/'>Jenkins</a> > Workspace@2를 변경하기 - Workspace List 설정 변경
           
          
           
@@ -2552,7 +2552,7 @@ if (!doNotTrack) {
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -2562,15 +2562,21 @@ if (!doNotTrack) {
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/jenkins">jenkins</a>
+
+  <a class="tag-link" href="/tags/workspace">workspace</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              infrastructure-as-code
+              Workspace@2를 변경하기 - Workspace List 설정 변경
             </h1>
           
 
@@ -2578,19 +2584,28 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents"></nav>
 
-
-
-<ul>
-	
-		<li><a href="/iac/translate-what-is-infrastructure-as-a-code/">[번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials</a></li>
-	
-</ul>
+<p>운용하는 노드에 executor가 2개 이상이라면, concurrent build 옵션을 disable했다고 하더라도
+zombie process가 있을 경우 <code>workspace@2</code>처럼 <code>@</code> 캐릭터가 들어간 workspace를 사용할 수 있다.</p>
+<p>workspace 안에 특정한 파일을 넣고 사용하는 경우라면 <code>@2</code>가 생기면 안될 것이다.
+그러나 이는 그렇게 좋은 방법은 아닌것 같으며 이런 경우에는 github 등에 스크립트같은 파일을 옮겨놓고
+<code>git pull</code>이나 <code>git</code> 관련 플러그인을 통해 다운로드 한 뒤 사용하는 것이 더 좋은 방법인 것 같다.</p>
+<p>하지만 나의 경우 <code>Perforce</code>를 사용하고 있었느데 <code>p4 sync</code>에서 문제가 발생했다.
+<code>@</code>라는 문자가 없어야 한다는 것이었다.
+사실 저 문자만 없다면, workspace의 폴더 이름이 무엇이든 상관이 없었기 때문에 <code>@</code>대신 다른 캐릭터를 사용하기로 결정했다.</p>
+<p><code>JAVA_OPTS= '-Dhudson.slaves.WorkspaceList=A'</code>를 추가하면 된다.
+내 경우 <code>docker-compose</code>를 통해 jenkins를 설치했으므로 다음과 같이 작성했다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">environments:
+    JAVA_OPTS= <span style="color:#e6db74">&#39;-Dhudson.slaves.WorkspaceList=_&#39;</span>
+</code></pre></div><p>파일에서 <code>envieonments</code>의 정확한 위치는 때에 따라 다를 수 있으므로 검색을 통해 environments의 정확한 위치를 확인해보고 설정하면 될 것 이다.
+위와 같이 설정하면 두번째 workspace는 <code>workspace_2</code>와 같이 생길 것이다.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
             <div id="utterance">    
@@ -2925,6 +2940,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -2937,6 +2953,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2954,6 +2973,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -2972,6 +2992,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4311,19 +4334,19 @@ if (!doNotTrack) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1587022420"></script>
-    <script src="/js/perfect-scrollbar.min.js?1587022420"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1587022420"></script>
-    <script src="/js/jquery.sticky.js?1587022420"></script>
-    <script src="/js/featherlight.min.js?1587022420"></script>
-    <script src="/js/highlight.pack.js?1587022420"></script>
+    <script src="/js/clipboard.min.js?1587022419"></script>
+    <script src="/js/perfect-scrollbar.min.js?1587022419"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1587022419"></script>
+    <script src="/js/jquery.sticky.js?1587022419"></script>
+    <script src="/js/featherlight.min.js?1587022419"></script>
+    <script src="/js/highlight.pack.js?1587022419"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1587022420"></script>
-    <script src="/js/learn.js?1587022420"></script>
-    <script src="/js/hugo-learn.js?1587022420"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1587022419"></script>
+    <script src="/js/learn.js?1587022419"></script>
+    <script src="/js/hugo-learn.js?1587022419"></script>
 
-    <link href="/mermaid/mermaid.css?1587022420" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1587022420"></script>
+    <link href="/mermaid/mermaid.css?1587022419" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1587022419"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -4332,3 +4355,4 @@ if (!doNotTrack) {
 
   </body>
 </html>
+

@@ -308,6 +308,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/jenkins/workspace-list/</loc>
+    <lastmod>2020-04-16T16:23:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ibiza/diary/20200331/</loc>
     <lastmod>2020-03-31T21:19:53+09:00</lastmod>
   </url>
@@ -518,8 +523,18 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/jenkins/</loc>
+    <lastmod>2020-04-16T16:23:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/</loc>
-    <lastmod>2020-03-31T21:19:53+09:00</lastmod>
+    <lastmod>2020-04-16T16:23:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/workspace/</loc>
+    <lastmod>2020-04-16T16:23:22+09:00</lastmod>
   </url>
   
   <url>
@@ -749,11 +764,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/install/</loc>
-    <lastmod>2020-02-11T17:20:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/jenkins/</loc>
     <lastmod>2020-02-11T17:20:41+09:00</lastmod>
   </url>
   
