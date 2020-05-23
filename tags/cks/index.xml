@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cks on Ibiza</title>
+    <link>http://kimmj.github.io/tags/cks/</link>
+    <description>Recent content in cks on Ibiza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Apr 2020 17:02:09 +0900</lastBuildDate>
+    
+	<atom:link href="http://kimmj.github.io/tags/cks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>05 Application Lifecycle Management</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</link>
+      <pubDate>Sun, 19 Apr 2020 17:02:09 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</guid>
+      <description>Rolling Updates and Rollbacks  kubectl rollout status deployment/myapp-deployment로 롤아웃 상태 확인 가능 kubectl rollout history deployment/myapp-deployment로 히스토리 확인 가능 Recreate: old를 모두 죽인 뒤 new를 생성 Rolling Update: old를 하나씩 죽이고 하나씩 new를 생성 kubectl set image deployment myapp-deployment nginx=nginx:1.9.1로 이미지 수정 가능 StrategyType이 Recreate면 old의 replica가 모두 0으로 줄고난 뒤 new의 replica를 늘린다. 반면 RollingUpdate일 경우 old를 하나씩 죽이고 new를 하나씩 늘린다. Rollback을 할때는 반대로 동작한다. kubectl run을 통해 파드를 생성하면 deployment가 생성된다.</description>
+    </item>
+    
+  </channel>
+</rss>
