@@ -313,6 +313,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ibiza/diary/20200627/</loc>
+    <lastmod>2020-06-27T22:31:40+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</loc>
     <lastmod>2020-05-12T01:46:22+09:00</lastmod>
   </url>
@@ -365,6 +370,11 @@
   <url>
     <loc>http://kimmj.github.io/ibiza/diary/20200331/</loc>
     <lastmod>2020-03-31T21:19:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/ibiza/cka-prepare/</loc>
+    <lastmod>2020-03-16T21:23:52+09:00</lastmod>
   </url>
   
   <url>
@@ -600,6 +610,11 @@
   <url>
     <loc>http://kimmj.github.io/tags/workspace/</loc>
     <lastmod>2020-04-16T16:23:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/cncf/</loc>
+    <lastmod>2020-03-16T21:23:52+09:00</lastmod>
   </url>
   
   <url>

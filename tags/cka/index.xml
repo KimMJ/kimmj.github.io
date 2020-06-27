@@ -83,5 +83,15 @@
       <description>Controller는 Kubernetes의 brain과 같다.  ReplicaSets  Pod가 죽게 되면 사용자가 접근을 할 수 없게 된다. 따라서 여러개의 파드를 띄워 하나가 죽어도 나머지가 동작하도록 해야한다. Replication Controller는 여러개의 파드를 띄울 수 있도록 도와준다. 이를 High Availability라고 한다. 하나의 파드만 관리한다고 해서 쓸모없는게 아니라 이는 하나가 죽으면 다시 하나를 실행시키는 방식으로 동작한다. 로드가 늘어나면 파드를 늘릴 수 있다. Replica Controller와 Replica Set은 비슷하지만 다르다.  Replica Controller는 Replica Set으로 대체되었다.   Replica Controller  apiVersion=v1 spec.</description>
     </item>
     
+    <item>
+      <title>CKA(Certified Kubernetes Administrator) 시험 준비</title>
+      <link>http://kimmj.github.io/ibiza/cka-prepare/</link>
+      <pubDate>Mon, 16 Mar 2020 21:23:52 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ibiza/cka-prepare/</guid>
+      <description>작년 6월경 처음 쿠버네티스를 접할때부터 알게되었던 인증시험. 계속해서 취득해보겠다고 다짐은 했지만 미루다보니 어느덧 해가 지나 3월이 되었다. 올해 목표로 삼은 것이기도 하니 빨리 준비해서 취득해야겠다.
+스터디  https://github.com/cncf/curriculum 참조 https://kubernetes.io/ 공부  유용한 글  https://github.com/kelseyhightower/kubernetes-the-hard-way  gcp를 통한 쿠버네티스 구성   https://coffeewhale.com/k8s/network/2019/04/19/k8s-network-01/ 시리즈  목표  시험: 4월 26일 이전까지 -&amp;gt; 계속 밀려서 7월 마지막날까지로 변경 응시료: $300  </description>
+    </item>
+    
   </channel>
 </rss>

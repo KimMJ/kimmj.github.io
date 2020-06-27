@@ -53,7 +53,7 @@
 	"title": "Installation",
 	"tags": [],
 	"description": "",
-	"content": "Spinnaker Installation spinnaker를 설치해 볼 것입니다.\n쉽지 않았던 여정들을 기록하려고 합니다.\n Overview    Install Prometheus     Federation      Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment     "
+	"content": "Spinnaker Installation spinnaker를 설치해 볼 것입니다.\n쉽지 않았던 여정들을 기록하려고 합니다.\n Overview     Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment     "
 },
 {
 	"uri": "http://kimmj.github.io/spinnaker/installation/overview/",
@@ -74,14 +74,14 @@
 	"title": "Ibiza",
 	"tags": [],
 	"description": "",
-	"content": "Ibiza 子曰\n學而時習之 不亦說乎\n배우고 때때로 익히니 이 또한 기쁘지 아니한가.\n Importance of Record     2020 Plan     Ibiza Project     2020 New Year Holiday Plans     Diary    20200331      "
+	"content": "Ibiza 子曰\n學而時習之 不亦說乎\n배우고 때때로 익히니 이 또한 기쁘지 아니한가.\n Importance of Record     2020 Plan     Ibiza Project     2020 New Year Holiday Plans     Diary    2020년 6월 27일 일기     2020/03/31 일기      CKA(Certified Kubernetes Administrator) 시험 준비     "
 },
 {
 	"uri": "http://kimmj.github.io/",
 	"title": "Ibiza",
 	"tags": [],
 	"description": "",
-	"content": "Ibiza  Ibiza    Importance of Record     2020 Plan     Ibiza Project     2020 New Year Holiday Plans     Diary    20200331       Harbor    Harbor 설치      Git    git-secret을 통한 github 파일 암호화     Gitignore 설정      Python    [번역]Python을 통해 이쁜 CLI 만들기      Docker    http를 사용하는 docker registry를 위한 insecure registry 설정     Docker를 sudo없이 실행하기     [docker-compose] container에서 다른 container로 접속하기      Jenkins    Jenkins Install     Workspace@2를 변경하기 - Workspace List 설정 변경      IaC    [번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials      CICD    Deploy Strategy      CSS    background image 어둡게 하기     Greater Than Sign      Prometheus    Install Prometheus     Federation      Kubernetes    Install    Overview     Install Kubeadm     Create a Single Control Plane Cluster With Kubeadm      CKA Study    10 Kubernetes the Hard Way     09 Networking     08 Storage     07 Security     06 Cluster Maintenance     05 Application Lifecycle Management     04 Logging and Monitoring     03 Scheduling     02 Core Concepts      Concepts    Controllers Overview     Pods      [번역] 쿠버네티스에서의 Port, TargetPort, NodePort     Stern을 이용하여 여러 pod의 log를 한번에 확인하기      Hugo    Ibiza    Font Change      Hugo에 Google Analytics 적용하기     Hugo에 Comment 추가하기 (Utterance)     HUGO로 HTML이 되지 않을 때 가능하게 하는 방법      Spinnaker    Installation    Overview     Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment      CanaryAnalysis    Canary Analysis      Tips    Pipeline Expressions       Ansible    Ansible for DevOps    Chapter 1 - Getting Started With Ansible     Chapter 2 - Local Infrastructure Development: Ansible and Vagrant     Ad Hoc Commands     Ansible Playbooks     Chapter5    Ansible Playbooks Beyond the Basics     Handover     Environment Variables     Variables     if/then/when - Conditionals     Delegation Local Actions and Pauses     Prompts     Tags     Summary      Chapter6      Create Vm With Ansible Libvirt      Ubuntu    Tools    Tmux      Network    Netplan으로 static IP 할당받기      Ubuntu의 Login Message 수정하기     reboot 후에 tmux를 실행시켜 원하는 작업을 하기     oh-my-zsh에서 home key와 end key가 안될 때 해결방법     Ubuntu에서 Base64로 인코딩, 디코딩하기     Editor(vi)가 없을 때 파일 수정하기     열려있는 포트 확인하기     pipe를 사용한 명령어를 watch로 확인하기     watch를 사용할 때 alias 이용하기     password 없이 ssh 접속하기     SSH Tunneling 사용법     Gateway를 이용하여 SSH 접속하기     Hostname 변경하기     추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기     Ubuntu 설치 시 Boot Parameter를 수정하기     sudo를 password 없이 사용하기      English    HIMYM    Season1    Episode01     Episode02        "
+	"content": "Ibiza  Ibiza    Importance of Record     2020 Plan     Ibiza Project     2020 New Year Holiday Plans     Diary    2020년 6월 27일 일기     2020/03/31 일기      CKA(Certified Kubernetes Administrator) 시험 준비      Harbor    Harbor 설치      Git    git-secret을 통한 github 파일 암호화     Gitignore 설정      Python    [번역]Python을 통해 이쁜 CLI 만들기      Docker    http를 사용하는 docker registry를 위한 insecure registry 설정     Docker를 sudo없이 실행하기     [docker-compose] container에서 다른 container로 접속하기      Jenkins    Jenkins Install     Workspace@2를 변경하기 - Workspace List 설정 변경      IaC    [번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials      CICD    Deploy Strategy      CSS    background image 어둡게 하기     Greater Than Sign      Prometheus    Install Prometheus     Federation      Kubernetes    Install    Overview     Install Kubeadm     Create a Single Control Plane Cluster With Kubeadm      CKA Study    10 Kubernetes the Hard Way     09 Networking     08 Storage     07 Security     06 Cluster Maintenance     05 Application Lifecycle Management     04 Logging and Monitoring     03 Scheduling     02 Core Concepts      Concepts    Controllers Overview     Pods      [번역] 쿠버네티스에서의 Port, TargetPort, NodePort     Stern을 이용하여 여러 pod의 log를 한번에 확인하기      Hugo    Ibiza    Font Change      Hugo에 Google Analytics 적용하기     Hugo에 Comment 추가하기 (Utterance)     HUGO로 HTML이 되지 않을 때 가능하게 하는 방법      Spinnaker    Installation    Overview    Tools    Tmux      Network    Netplan으로 static IP 할당받기      Ubuntu의 Login Message 수정하기     reboot 후에 tmux를 실행시켜 원하는 작업을 하기     oh-my-zsh에서 home key와 end key가 안될 때 해결방법     Ubuntu에서 Base64로 인코딩, 디코딩하기     Editor(vi)가 없을 때 파일 수정하기     열려있는 포트 확인하기     pipe를 사용한 명령어를 watch로 확인하기     watch를 사용할 때 alias 이용하기     password 없이 ssh 접속하기     SSH Tunneling 사용법     Gateway를 이용하여 SSH 접속하기     Hostname 변경하기     추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기     Ubuntu 설치 시 Boot Parameter를 수정하기     sudo를 password 없이 사용하기      Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment      CanaryAnalysis    Canary Analysis      Tips    Pipeline Expressions       Ansible    Ansible for DevOps    Chapter 1 - Getting Started With Ansible     Chapter 2 - Local Infrastructure Development: Ansible and Vagrant     Ad Hoc Commands     Ansible Playbooks     Chapter5    Ansible Playbooks Beyond the Basics     Handover     Environment Variables     Variables     if/then/when - Conditionals     Delegation Local Actions and Pauses     Prompts     Tags     Summary      Chapter6      Create Vm With Ansible Libvirt      Ubuntu    Tools    Tmux      Network    Netplan으로 static IP 할당받기      Ubuntu의 Login Message 수정하기     reboot 후에 tmux를 실행시켜 원하는 작업을 하기     oh-my-zsh에서 home key와 end key가 안될 때 해결방법     Ubuntu에서 Base64로 인코딩, 디코딩하기     Editor(vi)가 없을 때 파일 수정하기     열려있는 포트 확인하기     pipe를 사용한 명령어를 watch로 확인하기     watch를 사용할 때 alias 이용하기     password 없이 ssh 접속하기     SSH Tunneling 사용법     Gateway를 이용하여 SSH 접속하기     Hostname 변경하기     추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기     Ubuntu 설치 시 Boot Parameter를 수정하기     sudo를 password 없이 사용하기      English    HIMYM    Season1    Episode01     Episode02        "
 },
 {
 	"uri": "http://kimmj.github.io/english/himym/season1/episode02/",
@@ -123,7 +123,7 @@
 	"title": "HIMYM",
 	"tags": [],
 	"description": "",
-	"content": "English How I Met Your Mother Script : https://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=how-i-met-your-mother\n Season1    Episode01     Episode02    Ibiza    Font Change      Hugo에 Google Analytics 적용하기     Hugo에 Comment 추가하기 (Utterance)     HUGO로 HTML이 되지 않을 때 가능하게 하는 방법       "
+	"content": "English How I Met Your Mother Script : https://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=how-i-met-your-mother\n Season1    Episode01     Episode02      "
 },
 {
 	"uri": "http://kimmj.github.io/ibiza/2020-plan/",
@@ -207,7 +207,7 @@
 	"title": "Diary",
 	"tags": [],
 	"description": "",
-	"content": "Diary  20200331     "
+	"content": "Diary  2020년 6월 27일 일기     2020/03/31 일기     "
 },
 {
 	"uri": "http://kimmj.github.io/ansible/ansible-for-devops/chapter5/conditionals/",
@@ -298,7 +298,7 @@
 	"title": "Concepts",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Concepts  Controllers Overview     Pods     "
+	"content": "Kubernetes Concepts  Controllers Overview    HIMYM    Season1    Episode01     Episode02        Pods     "
 },
 {
 	"uri": "http://kimmj.github.io/ubuntu/tools/",
@@ -434,6 +434,13 @@
 	"content": "playbook은 Ansible의 automating infrastructure management의 중요한 수단이다. 이 챕터를 읽은 뒤로 우리는 어떻게 variable, inventory, handler, conditional, tag 등을 사용하는지 알게 되었다.\nplaybook에 대해서 기본적인 component들을 더 알고싶다면 infrastructure를 Ansible로 만들고 확장하는 것을 해보는 것이 더욱 효과적일 것이다.\n"
 },
 {
+	"uri": "http://kimmj.github.io/ibiza/diary/20200627/",
+	"title": "2020년 6월 27일 일기",
+	"tags": [],
+	"description": "",
+	"content": "벌써 한 해의 반이 지나갔다.\n요즘들어 나태해지고 늘어지는 시기가 계속되고 있다. 평일에 하는 일들이 너무 지쳐서 그런건지, 잠을 적게 자서 그런건지 모르겠다. 집에만 오면 누워있고 싶고, 평소에 즐겨하던 게임도 많이는 안하게 된다.\n뭔가 삶이 무력해지는 시기이다.\n남들과 비교를 하게 되면서 불행해 보이는 시기이다.\n그러면 안된다고 생각은 하지만, 그게 말처럼 쉽지는 않나보다.\n동기부여가 쉽지 않지만, 이 시간만 극복하면 더 좋은 날이 밝아오겠지.\n"
+},
+{
 	"uri": "http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/",
 	"title": "10 Kubernetes the Hard Way",
 	"tags": ["kubernetes", "cka"],
@@ -505,10 +512,17 @@
 },
 {
 	"uri": "http://kimmj.github.io/ibiza/diary/20200331/",
-	"title": "20200331",
-	"tags": [""],
+	"title": "2020/03/31 일기",
+	"tags": [],
 	"description": "",
-	"content": "Lorem Ipsum.\n"
+	"content": "이 블로그를 운영하기로 마음먹은지도 어느덧 3개월이 지나간다. 그동안 매일같이 뭐든 이 블로그에 담아가자고, 하루에 하나 이상씩 하자고 마음을 먹었었다. 하지만 그건 그렇게 좋은 방법만은 아니었다. 매일 github에 submit을 하겠다고, 강박적으로 뭔가를 올리기위해 대충 적기도 했었고 어떤날은 이미 예전에 작성해 두었던 것을 올리기만 한 적도 있었다.\n물론, 이런 행동들이 결코 아무 의미 없는 것은 아니다. 그동안에 억지로라도 무엇인갈 올려보며 정리하는 시간도 되긴 했다. 하지만 약 2주간 회사일로 너무 바빴던 탓에 잘 챙기지 못하다가 저번주 금요일경 하루 놓쳤던 날이 있었다. 너무 스스로에게 스트레스도 받으면서, 회사일로도 스트레스를 받아 기분이 좋지 않았었다.\n마침 오늘은 일찍 퇴근하고 집에 오게 되었다. 오랜만에 일찍 온김에 다시 블로그도 시작해야겠다고 마음을 다시 잡았다. 이전처럼 강박관념처럼 억지로 하려고는 하지 않을 것이다. 그보다 더 좋은글을 번역한다던지, 양질의 포스트를 한다던지 이런쪽으로 힘을 쓰도록 할 것이다.\n이 글을 쓰는 순간마저도 피로가 누적되어있는 탓에 졸음이 몰려오지만, 나도 할 수 있을 것이다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/ibiza/cka-prepare/",
+	"title": "CKA(Certified Kubernetes Administrator) 시험 준비",
+	"tags": ["cka", "cncf", "kubernetes"],
+	"description": "",
+	"content": "작년 6월경 처음 쿠버네티스를 접할때부터 알게되었던 인증시험. 계속해서 취득해보겠다고 다짐은 했지만 미루다보니 어느덧 해가 지나 3월이 되었다. 올해 목표로 삼은 것이기도 하니 빨리 준비해서 취득해야겠다.\n스터디  https://github.com/cncf/curriculum 참조 https://kubernetes.io/ 공부  유용한 글  https://github.com/kelseyhightower/kubernetes-the-hard-way  gcp를 통한 쿠버네티스 구성   https://coffeewhale.com/k8s/network/2019/04/19/k8s-network-01/ 시리즈  목표  시험: 4월 26일 이전까지 -\u0026gt; 계속 밀려서 7월 마지막날까지로 변경 응시료: $300  "
 },
 {
 	"uri": "http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/",
@@ -835,6 +849,13 @@
 {
 	"uri": "http://kimmj.github.io/tags/workspace/",
 	"title": "workspace",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://kimmj.github.io/tags/cncf/",
+	"title": "cncf",
 	"tags": [],
 	"description": "",
 	"content": ""

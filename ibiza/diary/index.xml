@@ -12,12 +12,27 @@
     
     
     <item>
-      <title>20200331</title>
+      <title>2020년 6월 27일 일기</title>
+      <link>http://kimmj.github.io/ibiza/diary/20200627/</link>
+      <pubDate>Sat, 27 Jun 2020 22:31:40 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ibiza/diary/20200627/</guid>
+      <description>벌써 한 해의 반이 지나갔다.
+요즘들어 나태해지고 늘어지는 시기가 계속되고 있다. 평일에 하는 일들이 너무 지쳐서 그런건지, 잠을 적게 자서 그런건지 모르겠다. 집에만 오면 누워있고 싶고, 평소에 즐겨하던 게임도 많이는 안하게 된다.
+뭔가 삶이 무력해지는 시기이다.
+남들과 비교를 하게 되면서 불행해 보이는 시기이다.
+그러면 안된다고 생각은 하지만, 그게 말처럼 쉽지는 않나보다.
+동기부여가 쉽지 않지만, 이 시간만 극복하면 더 좋은 날이 밝아오겠지.</description>
+    </item>
+    
+    <item>
+      <title>2020/03/31 일기</title>
       <link>http://kimmj.github.io/ibiza/diary/20200331/</link>
       <pubDate>Tue, 31 Mar 2020 21:19:53 +0900</pubDate>
       
       <guid>http://kimmj.github.io/ibiza/diary/20200331/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>이 블로그를 운영하기로 마음먹은지도 어느덧 3개월이 지나간다. 그동안 매일같이 뭐든 이 블로그에 담아가자고, 하루에 하나 이상씩 하자고 마음을 먹었었다. 하지만 그건 그렇게 좋은 방법만은 아니었다. 매일 github에 submit을 하겠다고, 강박적으로 뭔가를 올리기위해 대충 적기도 했었고 어떤날은 이미 예전에 작성해 두었던 것을 올리기만 한 적도 있었다.
+물론, 이런 행동들이 결코 아무 의미 없는 것은 아니다. 그동안에 억지로라도 무엇인갈 올려보며 정리하는 시간도 되긴 했다. 하지만 약 2주간 회사일로 너무 바빴던 탓에 잘 챙기지 못하다가 저번주 금요일경 하루 놓쳤던 날이 있었다.</description>
     </item>
     
   </channel>
