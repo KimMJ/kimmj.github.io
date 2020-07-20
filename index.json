@@ -81,7 +81,7 @@
 	"title": "Ibiza",
 	"tags": [],
 	"description": "",
-	"content": "Ibiza  Ibiza    Importance of Record     2020 Plan     Ibiza Project     2020 New Year Holiday Plans     Diary    2020년 6월 27일 일기     2020/03/31 일기      CKA(Certified Kubernetes Administrator) 시험 준비      Harbor    Harbor 설치      Git    git-secret을 통한 github 파일 암호화     Gitignore 설정      Python    [번역]Python을 통해 이쁜 CLI 만들기      Docker    http를 사용하는 docker registry를 위한 insecure registry 설정     Docker를 sudo없이 실행하기     [docker-compose] container에서 다른 container로 접속하기      Jenkins    Jenkins Install     Workspace@2를 변경하기 - Workspace List 설정 변경      IaC    [번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials      CICD    Deploy Strategy      CSS    background image 어둡게 하기     Greater Than Sign      Prometheus    Install Prometheus     Federation      Kubernetes    Install    Overview     Install Kubeadm     Create a Single Control Plane Cluster With Kubeadm      CKA Study    10 Kubernetes the Hard Way     09 Networking     08 Storage     07 Security     06 Cluster Maintenance     05 Application Lifecycle Management     04 Logging and Monitoring     03 Scheduling     02 Core Concepts      Concepts    Controllers Overview     Pods      [번역] 쿠버네티스에서의 Port, TargetPort, NodePort     Stern을 이용하여 여러 pod의 log를 한번에 확인하기      Hugo    Ibiza    Font Change      Hugo에 Google Analytics 적용하기     Hugo에 Comment 추가하기 (Utterance)     HUGO로 HTML이 되지 않을 때 가능하게 하는 방법      Spinnaker    Installation    Overview    Tools    Tmux      Network    Netplan으로 static IP 할당받기      Ubuntu의 Login Message 수정하기     reboot 후에 tmux를 실행시켜 원하는 작업을 하기     oh-my-zsh에서 home key와 end key가 안될 때 해결방법     Ubuntu에서 Base64로 인코딩, 디코딩하기     Editor(vi)가 없을 때 파일 수정하기     열려있는 포트 확인하기     pipe를 사용한 명령어를 watch로 확인하기     watch를 사용할 때 alias 이용하기     password 없이 ssh 접속하기     SSH Tunneling 사용법     Gateway를 이용하여 SSH 접속하기     Hostname 변경하기     추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기     Ubuntu 설치 시 Boot Parameter를 수정하기     sudo를 password 없이 사용하기      Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment      CanaryAnalysis    Canary Analysis      Tips    Pipeline Expressions       Ansible    Ansible for DevOps    Chapter 1 - Getting Started With Ansible     Chapter 2 - Local Infrastructure Development: Ansible and Vagrant     Ad Hoc Commands     Ansible Playbooks     Chapter5    Ansible Playbooks Beyond the Basics     Handover     Environment Variables     Variables     if/then/when - Conditionals     Delegation Local Actions and Pauses     Prompts     Tags     Summary      Chapter6      Create Vm With Ansible Libvirt      Ubuntu    Tools    Tmux      Network    Netplan으로 static IP 할당받기      Ubuntu의 Login Message 수정하기     reboot 후에 tmux를 실행시켜 원하는 작업을 하기     oh-my-zsh에서 home key와 end key가 안될 때 해결방법     Ubuntu에서 Base64로 인코딩, 디코딩하기     Editor(vi)가 없을 때 파일 수정하기     열려있는 포트 확인하기     pipe를 사용한 명령어를 watch로 확인하기     watch를 사용할 때 alias 이용하기     password 없이 ssh 접속하기     SSH Tunneling 사용법     Gateway를 이용하여 SSH 접속하기     Hostname 변경하기     추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기     Ubuntu 설치 시 Boot Parameter를 수정하기     sudo를 password 없이 사용하기      English    HIMYM    Season1    Episode01     Episode02        "
+	"content": "Ibiza  Ibiza    Importance of Record     2020 Plan     Ibiza Project     2020 New Year Holiday Plans     Diary    2020년 6월 27일 일기     2020/03/31 일기      CKA(Certified Kubernetes Administrator) 시험 준비      Harbor    Harbor 설치      Git    git-secret을 통한 github 파일 암호화     Gitignore 설정      Python    [번역]Python을 통해 이쁜 CLI 만들기      Docker    http를 사용하는 docker registry를 위한 insecure registry 설정     Docker를 sudo없이 실행하기     [docker-compose] container에서 다른 container로 접속하기      Jenkins    Jenkins Install     Workspace@2를 변경하기 - Workspace List 설정 변경      IaC    [번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials      CICD    Deploy Strategy      CSS    background image 어둡게 하기     Greater Than Sign      Prometheus    Install Prometheus     Federation      Kubernetes    Install    Overview     Install Kubeadm     Create a Single Control Plane Cluster With Kubeadm      CKA Study    10 Kubernetes the Hard Way     09 Networking     08 Storage     07 Security     06 Cluster Maintenance     05 Application Lifecycle Management     04 Logging and Monitoring     03 Scheduling     02 Core Concepts      Concepts    Controllers Overview     Pods      CKA: Certified Kubernetes Administrator 취득 후기     [번역] 쿠버네티스에서의 Port, TargetPort, NodePort     Stern을 이용하여 여러 pod의 log를 한번에 확인하기      Hugo    Ibiza    Font Change      Hugo에 Google Analytics 적용하기     Hugo에 Comment 추가하기 (Utterance)     HUGO로 HTML이 되지 않을 때 가능하게 하는 방법      Spinnaker    Installation    Overview     Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment      CanaryAnalysis    Canary Analysis      Tips    Pipeline Expressions       Ansible    Ansible for DevOps    Chapter 1 - Getting Started With Ansible     Chapter 2 - Local Infrastructure Development: Ansible and Vagrant     Ad Hoc Commands     Ansible Playbooks     Chapter5    Ansible Playbooks Beyond the Basics     Handover     Environment Variables     Variables     if/then/when - Conditionals     Delegation Local Actions and Pauses     Prompts     Tags     Summary      Chapter6      Create Vm With Ansible Libvirt      Ubuntu    Tools    Tmux      Network    Netplan으로 static IP 할당받기      Ubuntu의 Login Message 수정하기     reboot 후에 tmux를 실행시켜 원하는 작업을 하기     oh-my-zsh에서 home key와 end key가 안될 때 해결방법     Ubuntu에서 Base64로 인코딩, 디코딩하기     Editor(vi)가 없을 때 파일 수정하기     열려있는 포트 확인하기     pipe를 사용한 명령어를 watch로 확인하기     watch를 사용할 때 alias 이용하기     password 없이 ssh 접속하기     SSH Tunneling 사용법     Gateway를 이용하여 SSH 접속하기     Hostname 변경하기     추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기     Ubuntu 설치 시 Boot Parameter를 수정하기     sudo를 password 없이 사용하기      English    HIMYM    Season1    Episode01     Episode02        "
 },
 {
 	"uri": "http://kimmj.github.io/english/himym/season1/episode02/",
@@ -298,7 +298,7 @@
 	"title": "Concepts",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Concepts  Controllers Overview    HIMYM    Season1    Episode01     Episode02        Pods     "
+	"content": "Kubernetes Concepts  Controllers Overview     Pods     "
 },
 {
 	"uri": "http://kimmj.github.io/ubuntu/tools/",
@@ -333,7 +333,7 @@
 	"title": "Kubernetes",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Kubernetes는 deploy, scaling, 그리고 컨테이너화된 애플리케이션의\nmanagement를 자동화 해주는 open source container orchestration engine입니다.\n Install    Overview     Install Kubeadm     Create a Single Control Plane Cluster With Kubeadm      CKA Study    10 Kubernetes the Hard Way     09 Networking     08 Storage     07 Security     06 Cluster Maintenance     05 Application Lifecycle Management     04 Logging and Monitoring     03 Scheduling     02 Core Concepts      Concepts    Controllers Overview     Pods      [번역] 쿠버네티스에서의 Port, TargetPort, NodePort     Stern을 이용하여 여러 pod의 log를 한번에 확인하기     "
+	"content": "Kubernetes Kubernetes는 deploy, scaling, 그리고 컨테이너화된 애플리케이션의\nmanagement를 자동화 해주는 open source container orchestration engine입니다.\n Install    Overview     Install Kubeadm     Create a Single Control Plane Cluster With Kubeadm      CKA Study    10 Kubernetes the Hard Way     09 Networking     08 Storage     07 Security     06 Cluster Maintenance     05 Application Lifecycle Management     04 Logging and Monitoring     03 Scheduling     02 Core Concepts      Concepts    Controllers Overview     Pods      CKA: Certified Kubernetes Administrator 취득 후기     [번역] 쿠버네티스에서의 Port, TargetPort, NodePort     Stern을 이용하여 여러 pod의 log를 한번에 확인하기     "
 },
 {
 	"uri": "http://kimmj.github.io/hugo/ibiza/",
@@ -432,6 +432,13 @@
 	"tags": ["ansible", "ansible-for-devops"],
 	"description": "",
 	"content": "playbook은 Ansible의 automating infrastructure management의 중요한 수단이다. 이 챕터를 읽은 뒤로 우리는 어떻게 variable, inventory, handler, conditional, tag 등을 사용하는지 알게 되었다.\nplaybook에 대해서 기본적인 component들을 더 알고싶다면 infrastructure를 Ansible로 만들고 확장하는 것을 해보는 것이 더욱 효과적일 것이다.\n"
+},
+{
+	"uri": "http://kimmj.github.io/kubernetes/cka-epilogue/",
+	"title": "CKA: Certified Kubernetes Administrator 취득 후기",
+	"tags": ["CKA", "Certified-Kubernetes-Administrator"],
+	"description": "",
+	"content": "작년부터 미뤄왔던 CKA: Certified Kubernetes Administrator 취득을 드디어 하게 되었습니다. 이제까지 제가 했던 공부들을 공유하며 이 시험을 보려는 사람들에게 유용한 정보를 주기 위해 이 포스트를 작성합니다.\n저는 다음과 같이 CKA를 취득하였습니다.\n 점수: 97점 (커트라인: 74점) 유효기간: 2020.07 ~ 2023.07 (3년)  CKA는 CNCF를 리딩하는 Linux Foundation에서 주관하는 시험입니다. 가격은 정가 $300으로 저렴하지는 않은 편입니다. 그러나 할인행사를 많이 하므로 급하지 않다면 시간을 가지고 천천히 결제하는게 좋습니다. 결제 후 1년까지 총 두번의 시험을 치룰 수 있습니다. 두번의 기회 안에만 합격하면 CKA를 취득할 수 있습니다.\n시험 환경 시험은 온라인으로 치루게 됩니다. 해당 시험을 위해서 Chrome Extension을 설치해야 합니다. 이외에도 Requirements가 몇가지 더 있으며 이는 시험을 보기 전에 사이트에서 제공하는 툴로 확인이 가능합니다. 시험 종류중에는 중국/일본어로 진행되는 시험도 있지만 아직 한글은 지원하지 않습니다. 그래서 저도 영어로 지원하였고, 이에따라 감독관도 영어권 사람으로 배정되었습니다. 시험을 위해 마이크 및 웹캠이 필요합니다. 웹캠은 주변 환경을 찍어서 보여줘야 하기 때문에 자유롭게 움직일 수 있어야 합니다. 감독관과는 보통 영어로 대화하지 않고 시험 페이지에서 제공하는 메신저를 통해 텍스트로 대화합니다. 시험 스케줄은 KST로 변환하여 선호하는 시간을 선택하면, 가능한 일정을 알려줍니다. 저의 경우 밤에 집중이 잘 되어 저녁 10시에 응시하였습니다. 취소 및 변경은 응시 하루전까지 자유롭게 가능하고, 24시간 이후가 되었을 경우 패널티를 받게 됩니다. 시험 시간은 총 3시간으로 그 시간 안에 24문제를 풀면 됩니다.\n시험의 난이도는 그렇게 어려운 편은 아닙니다. 물론 저의 경우 약 1년간 쿠버네티스 환경을 익혀왔고, 강의도 학습하였지만 객관적으로 보았을 때에도 시험 난이도가 높지는 않습니다. 가격때문에, 떨어질까봐 걱정되어 망설여지신다면 자신있게 응시해도 좋을 것 같습니다. 어차피 일정 변경이 결제 후 1년간 자유롭기 때문에 막상 시험이 다가왔을 때 공부가 좀 더 필요할 것 같다고 생각되면 취소 후 다시 응시하면 됩니다. 게다가 1개의 추가적인 탭을 사용할 수 있는데, 이 탭으로 kubernetes.io 및 github.com/kubernetes에 접속이 가능합니다. 저의 경우 확실하게 하기 위해 모든 문제를 kubernetes.io에서 검색하여 풀었고, 이렇게 풀어도 시간이 1시간가량 남았습니다.\n준비했던 것들 공식 Docs 먼저 공식 Docs를 보시면 됩니다. 가장 기본이 되는 문서로, 필요한 내용은 전부 Docs에 들어가 있습니다. 내용을 외운다기 보다는 어떤 기능이 있는지 이해하는 방식으로 넘어가면 좋을 것 같습니다. 저의 경우 Concepts만 읽어보았으면 Tasks에 있는 내용은 거의 보지 못했습니다.\nkubernetes the hard way 두번째로 kubernetes-the-hard-way입니다. GCP에 쿠버네티스를 kubeadm이 아닌 직접 프로세스를 실행시키는 방식으로 한땀한땀 구성하는게 특징인 프로젝트입니다. 처음에 개념이 잡히지 않은 상태에서는 해도 단순한 복붙작업이 될 가능성이 높습니다. 따라서 어느정도 공부를 하고 난 뒤 심화학습을 한다는 생각으로 해보시면 좋을 것 같습니다.\nUdemy CKA 강의 세번째로 Udemy에서 하는 CKA 강의입니다. 이 강의에서는 Katacoda를 활용하여 직접 실습도 해볼 수 있어서 배웠던 것을 복습하는 데 매우 좋습니다. 또한 강의 말미에는 Mock Exam이 3개 포함되어 있는데 실제 시험과 난이도가 매우 비슷하고 문제도 크게 다르지 않아서 시험을 준비하는데 많은 도움이 되었습니다. 가격도 계속 2만원 선으로 되어있는 것 같으니 그렇게 큰 부담도 되지 않을 것 같습니다. 저의 경우 회사에서 Udemy 서비스를 지원해주어 이를 통해 강의를 들었습니다. 강의 내용이 평소 혼자 공부할 때에는 넘어갈 수 있는 부분들이 많이 포함되어 있어 부족한 부분을 채우는 데 매우 좋았습니다.\n저는 이렇게 3가지만 공부하고 시험을 치뤘습니다. 심화된 내용을 모두 공부하는 것도 좋겠지만 이정도로만 해도 CKA를 취득하는 데에는 무리가 없습니다.\n공부해야 할 것들  kubectl create 명령어 및 kubectl run(파드 실행) 명령어에 익숙해지기 --dry-run -o yaml 옵션을 통해 대강의 뼈대를 구성하고 kubernetes.io를 참조하며 수정하기 journalctl -u kubelet -f로 kubelet의 로그 확인하기 service kubelet status로 kubelet의 상태 확인하기 static pod를 구성하는 방법 알아보기 (kubelet에서 static pod 위치 지정하는 것, 실제로 static pod를 생성해보는 것) etcdctl을 통해 ETCD를 백업하고 복구하기 kubeadm을 통해 클러스터 구성하고, 업그레이드 하기 kubeadm을 통해 새로운 노드를 워커노드로 붙이기 pv, pvc를 통해 파드에 볼륨 추가하기 taint, toleration, cordon, drain, nodeSelector, affinity를 사용하여 파드가 뜨는 위치를 원하는 대로 조정하기  "
 },
 {
 	"uri": "http://kimmj.github.io/ibiza/diary/20200627/",
@@ -812,6 +819,13 @@
 	"content": "English  HIMYM    Season1    Episode01     Episode02       "
 },
 {
+	"uri": "http://kimmj.github.io/tags/certified-kubernetes-administrator/",
+	"title": "Certified-Kubernetes-Administrator",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://kimmj.github.io/tags/cka/",
 	"title": "cka",
 	"tags": [],
@@ -819,15 +833,15 @@
 	"content": ""
 },
 {
-	"uri": "http://kimmj.github.io/tags/kubernetes/",
-	"title": "kubernetes",
+	"uri": "http://kimmj.github.io/tags/",
+	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://kimmj.github.io/tags/",
-	"title": "Tags",
+	"uri": "http://kimmj.github.io/tags/kubernetes/",
+	"title": "kubernetes",
 	"tags": [],
 	"description": "",
 	"content": ""
