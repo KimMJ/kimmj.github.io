@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>cka</title>
+      <title>CKA</title>
       <link>http://kimmj.github.io/tags/cka/</link>
       <pubDate>Thu, 16 Jul 2020 13:10:22 +0900</pubDate>
       
@@ -32,9 +32,18 @@
     <item>
       <title>kubernetes</title>
       <link>http://kimmj.github.io/tags/kubernetes/</link>
-      <pubDate>Tue, 12 May 2020 01:46:22 +0900</pubDate>
+      <pubDate>Mon, 15 Jun 2020 21:19:17 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetse</title>
+      <link>http://kimmj.github.io/tags/kubernetse/</link>
+      <pubDate>Mon, 15 Jun 2020 19:39:06 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/kubernetse/</guid>
       <description></description>
     </item>
     
@@ -66,15 +75,6 @@
     </item>
     
     <item>
-      <title>cncf</title>
-      <link>http://kimmj.github.io/tags/cncf/</link>
-      <pubDate>Mon, 16 Mar 2020 21:23:52 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/cncf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>service</title>
       <link>http://kimmj.github.io/tags/service/</link>
       <pubDate>Sun, 15 Mar 2020 23:13:37 +0900</pubDate>
@@ -89,6 +89,24 @@
       <pubDate>Sun, 15 Mar 2020 23:13:37 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/targetport/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible</title>
+      <link>http://kimmj.github.io/tags/ansible/</link>
+      <pubDate>Sun, 15 Mar 2020 20:54:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-for-devops</title>
+      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
+      <pubDate>Sun, 15 Mar 2020 20:54:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
       <description></description>
     </item>
     
@@ -116,24 +134,6 @@
       <pubDate>Sun, 15 Mar 2020 04:18:15 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/insecure-registry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible</title>
-      <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Thu, 12 Mar 2020 20:17:20 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible-for-devops</title>
-      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
-      <pubDate>Thu, 12 Mar 2020 20:17:20 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
       <description></description>
     </item>
     
@@ -579,15 +579,6 @@
     </item>
     
     <item>
-      <title>holiday</title>
-      <link>http://kimmj.github.io/tags/holiday/</link>
-      <pubDate>Wed, 22 Jan 2020 00:34:37 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/holiday/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>federation</title>
       <link>http://kimmj.github.io/tags/federation/</link>
       <pubDate>Tue, 21 Jan 2020 23:34:44 +0900</pubDate>
@@ -737,24 +728,6 @@
       <pubDate>Fri, 10 Jan 2020 01:33:32 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/pipeline/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>http://kimmj.github.io/tags/blog/</link>
-      <pubDate>Fri, 10 Jan 2020 00:47:03 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>record</title>
-      <link>http://kimmj.github.io/tags/record/</link>
-      <pubDate>Fri, 10 Jan 2020 00:47:03 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/record/</guid>
       <description></description>
     </item>
     

@@ -23,5 +23,14 @@ Pod ports list pod.spec.containers[].ports로 정의된 이 배열은 container�
  List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational.</description>
     </item>
     
+    <item>
+      <title>Services</title>
+      <link>http://kimmj.github.io/kubernetes/concepts/services/</link>
+      <pubDate>Sun, 15 Mar 2020 19:28:06 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/concepts/services/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

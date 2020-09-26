@@ -11,5 +11,39 @@
 	<atom:link href="http://kimmj.github.io/ansible/ansible-for-devops/chapter6/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Playbook Organization Roles and Includes</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/playbook-organization-roles-and-includes/</link>
+      <pubDate>Fri, 13 Mar 2020 12:04:52 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/playbook-organization-roles-and-includes/</guid>
+      <description>이제까지 우리는 꽤 쉬운 예시들을 사용해왔다. 대부분의 예시는 특정 서버에 대해서 생성되었고 하나의 긴 playbook이었다.
+ANsible은 더 효과적인 방법으로 task들을 구성할 수 있어 playbook을 더 유지보수할 수 있도록, 재사용할 수 있도록, 강력하게 만들어줄 수 있다. 우리는 task를 나누어 include와 role을 이용하여 더 효과적이게 만들고 common package와 application을 configure하는 데 도움을 주는, community-maintained role의 repository인 Ansible Galaxy를 조사하는 두가지를 해볼 것이다.</description>
+    </item>
+    
+    <item>
+      <title>Includes</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/includes/</link>
+      <pubDate>Fri, 13 Mar 2020 12:10:01 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/includes/</guid>
+      <description>우리는 챕터 4에서 vars_files를 사용하여 variable을 playbook에 적는 것이 아닌 분리된 vars.yml에 저장할 때 다른 파일들을 include하는 기본적인 방법을 이미 봤었다.
+- hosts: all vars_files: - vars.yml task도 이와 비슷한 방법으로 include할 수 있다. playbook에서의 tasks:  섹션에서 include 지시자를 다음과 같이 작성한다.
+tasks: - include: included-playbook.yml variable include file과 같이 task도 included file에서 flat list 형태로 있게 된다. 예를 들어 included-playbook.yml은 다음과 같을 수 있다.
+--- - name: Add profile info for user.</description>
+    </item>
+    
+    <item>
+      <title>Roles</title>
+      <link>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/roles/</link>
+      <pubDate>Sun, 15 Mar 2020 20:54:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/roles/</guid>
+      <description>다른 playbook 안에있는 playbook을 include하는 것은 우리의 playbook 구조를 더 알맞게 해주지만 playbook 안에서 전체 infrastructure의 configuration을 감싸기 시작하면 Russian nesting dolls와 같은 형태가 되어버릴 것이다.
+좀 더 나은 방법으로 관련된 configuration들을 함께 패키징하는 방법은 없을까? 추가적으로 이 패키지를 사용하면서 좀 더 유연하게 만들어 우리 infrastructure 전체에 동일한 패키지를 사용하지만 개별 서버와 서버 그룹마다 약간씩 다른 설정을 줄 수 있을까?
+Ansible Role이 이것을 할 수 있도록 해준다.
+어떻게 Ansible role이 roles를 사용하여 챕터 4에서 사용했던 playbook 예시를 좀 더 유연한 구조로 만드는지 알아보도록 하자.</description>
+    </item>
+    
   </channel>
 </rss>

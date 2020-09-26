@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/playbook-organization-roles-and-includes/</loc>
+    <lastmod>2020-03-13T12:04:52+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/</loc>
     <lastmod>2020-02-28T11:06:02+09:00</lastmod>
   </url>
@@ -10,11 +15,6 @@
   <url>
     <loc>http://kimmj.github.io/jenkins/install/</loc>
     <lastmod>2020-02-11T17:20:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode01/</loc>
-    <lastmod>2020-02-05T12:28:04+09:00</lastmod>
   </url>
   
   <url>
@@ -33,11 +33,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season1/</loc>
-    <lastmod>2020-01-11T00:02:57+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/</loc>
     <lastmod>2020-01-10T01:28:34+09:00</lastmod>
   </url>
@@ -48,23 +43,13 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ibiza/importance-of-record/</loc>
-    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ibiza/</loc>
-    <lastmod>2020-01-08T01:49:46+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/</loc>
     <lastmod>2020-01-08T01:00:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/season1/episode02/</loc>
-    <lastmod>2020-03-16T21:04:28+09:00</lastmod>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/includes/</loc>
+    <lastmod>2020-03-13T12:10:01+09:00</lastmod>
   </url>
   
   <url>
@@ -88,13 +73,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/himym/</loc>
-    <lastmod>2020-01-11T00:02:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ibiza/2020-plan/</loc>
-    <lastmod>2020-01-08T01:51:18+09:00</lastmod>
+    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/roles/</loc>
+    <lastmod>2020-03-15T20:54:04+09:00</lastmod>
   </url>
   
   <url>
@@ -118,11 +98,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ibiza/ibiza-project/</loc>
-    <lastmod>2020-01-08T01:50:49+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/variables/</loc>
     <lastmod>2020-03-08T18:19:40+09:00</lastmod>
   </url>
@@ -133,11 +108,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ibiza/2020-new-year-holiday-plans/</loc>
-    <lastmod>2020-01-22T00:34:37+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
   </url>
@@ -145,11 +115,6 @@
   <url>
     <loc>http://kimmj.github.io/kubernetes/cka-study/</loc>
     <lastmod>2020-04-14T00:41:30+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ibiza/diary/</loc>
-    <lastmod>2020-03-31T21:19:18+09:00</lastmod>
   </url>
   
   <url>
@@ -318,8 +283,18 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ibiza/diary/20200627/</loc>
-    <lastmod>2020-06-27T22:31:40+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</loc>
+    <lastmod>2020-06-15T21:19:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</loc>
+    <lastmod>2020-06-15T20:23:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</loc>
+    <lastmod>2020-06-15T19:39:06+09:00</lastmod>
   </url>
   
   <url>
@@ -373,18 +348,13 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ibiza/diary/20200331/</loc>
-    <lastmod>2020-03-31T21:19:53+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ibiza/cka-prepare/</loc>
-    <lastmod>2020-03-16T21:23:52+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</loc>
     <lastmod>2020-03-15T23:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/kubernetes/concepts/services/</loc>
+    <lastmod>2020-03-15T19:28:06+09:00</lastmod>
   </url>
   
   <url>
@@ -583,11 +553,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/english/</loc>
-    <lastmod>2020-01-11T00:02:11+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/certified-kubernetes-administrator/</loc>
     <lastmod>2020-07-16T13:10:22+09:00</lastmod>
   </url>
@@ -604,7 +569,12 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/kubernetes/</loc>
-    <lastmod>2020-05-12T01:46:22+09:00</lastmod>
+    <lastmod>2020-06-15T21:19:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/kubernetse/</loc>
+    <lastmod>2020-06-15T19:39:06+09:00</lastmod>
   </url>
   
   <url>
@@ -623,11 +593,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/cncf/</loc>
-    <lastmod>2020-03-16T21:23:52+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/service/</loc>
     <lastmod>2020-03-15T23:13:37+09:00</lastmod>
   </url>
@@ -635,6 +600,16 @@
   <url>
     <loc>http://kimmj.github.io/tags/targetport/</loc>
     <lastmod>2020-03-15T23:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible/</loc>
+    <lastmod>2020-03-15T20:54:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
+    <lastmod>2020-03-15T20:54:04+09:00</lastmod>
   </url>
   
   <url>
@@ -650,16 +625,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/insecure-registry/</loc>
     <lastmod>2020-03-15T04:18:15+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
   </url>
   
   <url>
@@ -908,11 +873,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/holiday/</loc>
-    <lastmod>2020-01-22T00:34:37+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/federation/</loc>
     <lastmod>2020-01-21T23:34:44+09:00</lastmod>
   </url>
@@ -995,16 +955,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/pipeline/</loc>
     <lastmod>2020-01-10T01:33:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/blog/</loc>
-    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/record/</loc>
-    <lastmod>2020-01-10T00:47:03+09:00</lastmod>
   </url>
   
   <url>

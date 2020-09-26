@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cka on Ibiza</title>
+    <title>CKA on Ibiza</title>
     <link>http://kimmj.github.io/tags/cka/</link>
-    <description>Recent content in cka on Ibiza</description>
+    <description>Recent content in CKA on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Jul 2020 13:10:22 +0900</lastBuildDate>
@@ -20,6 +20,33 @@
       <description>작년부터 미뤄왔던 CKA: Certified Kubernetes Administrator 취득을 드디어 하게 되었습니다. 이제까지 제가 했던 공부들을 공유하며 이 시험을 보려는 사람들에게 유용한 정보를 주기 위해 이 포스트를 작성합니다.
 저는 다음과 같이 CKA를 취득하였습니다.
  점수: 97점 (커트라인: 74점) 유효기간: 2020.07 ~ 2023.07 (3년)  CKA는 CNCF를 리딩하는 Linux Foundation에서 주관하는 시험입니다. 가격은 정가 $300으로 저렴하지는 않은 편입니다. 그러나 할인행사를 많이 하므로 급하지 않다면 시간을 가지고 천천히 결제하는게 좋습니다. 결제 후 1년까지 총 두번의 시험을 치룰 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>14 Other Topics</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</link>
+      <pubDate>Mon, 15 Jun 2020 21:19:17 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</guid>
+      <description>Advanced Kubectl Commands  JSON PATH를 사용하는 이유는 많은 정보들 속에서 특정한 데이터를 필터링하기 위함이다. kubectl command를 사용하면 kube-apiserver와 통신한다.  이는 json 포멧으로 kubectl에게 응답하고, 이를 사람이 읽을 수 있게 보여주는 것이다. detail을 보려면 -o wide를 주면 된다.   JSON PATH를 사용하면 보고싶은 결과만 볼 수 있다. 이를 사용하려면 다음과 같은 절차가 필요하다.  kubectl command로 raw data를 볼 수 있어야 한다. -o json을 통해 json output을 확인할 수 있어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>13 Troubleshooting</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</link>
+      <pubDate>Mon, 15 Jun 2020 20:23:00 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</guid>
+      <description>Application Failure  Appllication failure의 root cause 검색  application에 대한 map을 작성한 다음 root cause를 찾는다.    </description>
+    </item>
+    
+    <item>
+      <title>12 End to End Tests on a Kubernetes Cluster</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</link>
+      <pubDate>Mon, 15 Jun 2020 19:39:06 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</guid>
+      <description>End to End Tests  Test - Manual  kubectl get nodes kubectl get pods -n kube-system이 잘 되는지 service kube-apiserver status service kube-controller-manager status service kube-scheduler status service kubelet status service kube-proxy status kubectl run nginx kubectl expose deployment nginx --port=80 --type=NodePort   Kubernetes에는 test-infra라는 프로젝트가 있다.  약 1000개의 테스트를 해줌.   sonobuoy  End to End Tests - Run and Anlyze  go get으로 소스를 받고 skeleton으로 하여 op-prem을 테스트할 수 있다.</description>
     </item>
     
     <item>
@@ -92,16 +119,6 @@
       
       <guid>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</guid>
       <description>Controller는 Kubernetes의 brain과 같다.  ReplicaSets  Pod가 죽게 되면 사용자가 접근을 할 수 없게 된다. 따라서 여러개의 파드를 띄워 하나가 죽어도 나머지가 동작하도록 해야한다. Replication Controller는 여러개의 파드를 띄울 수 있도록 도와준다. 이를 High Availability라고 한다. 하나의 파드만 관리한다고 해서 쓸모없는게 아니라 이는 하나가 죽으면 다시 하나를 실행시키는 방식으로 동작한다. 로드가 늘어나면 파드를 늘릴 수 있다. Replica Controller와 Replica Set은 비슷하지만 다르다.  Replica Controller는 Replica Set으로 대체되었다.   Replica Controller  apiVersion=v1 spec.</description>
-    </item>
-    
-    <item>
-      <title>CKA(Certified Kubernetes Administrator) 시험 준비</title>
-      <link>http://kimmj.github.io/ibiza/cka-prepare/</link>
-      <pubDate>Mon, 16 Mar 2020 21:23:52 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/ibiza/cka-prepare/</guid>
-      <description>작년 6월경 처음 쿠버네티스를 접할때부터 알게되었던 인증시험. 계속해서 취득해보겠다고 다짐은 했지만 미루다보니 어느덧 해가 지나 3월이 되었다. 올해 목표로 삼은 것이기도 하니 빨리 준비해서 취득해야겠다.
-스터디  https://github.com/cncf/curriculum 참조 https://kubernetes.io/ 공부  유용한 글  https://github.com/kelseyhightower/kubernetes-the-hard-way  gcp를 통한 쿠버네티스 구성   https://coffeewhale.com/k8s/network/2019/04/19/k8s-network-01/ 시리즈  목표  시험: 4월 26일 이전까지 -&amp;gt; 계속 밀려서 7월 마지막날까지로 변경 응시료: $300  </description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content in kubernetes on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2020 01:46:22 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2020 21:19:17 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,24 @@
       <description>Contents 이 포스트에서는 Kubernetes의 Controller들에 대해서 알아보도록 하겠습니다. 가장 작은 단위인 Container부터, 상위 개념인 Deployment, StatefulSet까지 다루어 보도록 하겠습니다.
  Containers Pods ReplicaSets Deployments StatefulSets  Monolithic vs. Microservice 우선 Monolithic과 Microservice에 대해서 짚고 넘어가도록 하겠습니다.
 Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.</description>
+    </item>
+    
+    <item>
+      <title>14 Other Topics</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</link>
+      <pubDate>Mon, 15 Jun 2020 21:19:17 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</guid>
+      <description>Advanced Kubectl Commands  JSON PATH를 사용하는 이유는 많은 정보들 속에서 특정한 데이터를 필터링하기 위함이다. kubectl command를 사용하면 kube-apiserver와 통신한다.  이는 json 포멧으로 kubectl에게 응답하고, 이를 사람이 읽을 수 있게 보여주는 것이다. detail을 보려면 -o wide를 주면 된다.   JSON PATH를 사용하면 보고싶은 결과만 볼 수 있다. 이를 사용하려면 다음과 같은 절차가 필요하다.  kubectl command로 raw data를 볼 수 있어야 한다. -o json을 통해 json output을 확인할 수 있어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>13 Troubleshooting</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</link>
+      <pubDate>Mon, 15 Jun 2020 20:23:00 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</guid>
+      <description>Application Failure  Appllication failure의 root cause 검색  application에 대한 map을 작성한 다음 root cause를 찾는다.    </description>
     </item>
     
     <item>
@@ -114,16 +132,6 @@ Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러
     </item>
     
     <item>
-      <title>CKA(Certified Kubernetes Administrator) 시험 준비</title>
-      <link>http://kimmj.github.io/ibiza/cka-prepare/</link>
-      <pubDate>Mon, 16 Mar 2020 21:23:52 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/ibiza/cka-prepare/</guid>
-      <description>작년 6월경 처음 쿠버네티스를 접할때부터 알게되었던 인증시험. 계속해서 취득해보겠다고 다짐은 했지만 미루다보니 어느덧 해가 지나 3월이 되었다. 올해 목표로 삼은 것이기도 하니 빨리 준비해서 취득해야겠다.
-스터디  https://github.com/cncf/curriculum 참조 https://kubernetes.io/ 공부  유용한 글  https://github.com/kelseyhightower/kubernetes-the-hard-way  gcp를 통한 쿠버네티스 구성   https://coffeewhale.com/k8s/network/2019/04/19/k8s-network-01/ 시리즈  목표  시험: 4월 26일 이전까지 -&amp;gt; 계속 밀려서 7월 마지막날까지로 변경 응시료: $300  </description>
-    </item>
-    
-    <item>
       <title>[번역] 쿠버네티스에서의 Port, TargetPort, NodePort</title>
       <link>http://kimmj.github.io/kubernetes/port-targetport-nodeport-in-kubernetes/</link>
       <pubDate>Sun, 15 Mar 2020 23:13:37 +0900</pubDate>
@@ -133,6 +141,15 @@ Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러
 쿠버네티스의 port declaration 필드에는 여러가지가 있다. 각 type에 대해 빠르게 살펴보고 YAML에서 각각 어떤 의미를 가지고 있는지 알아보도록 하자.
 Pod ports list pod.spec.containers[].ports로 정의된 이 배열은 container가 노출하고 있는 포트의 리스트를 나타낸다. 이 리스트를 꼭 작성해야할 필요는 없다. 리스트가 비어있다고 하더라도 container가 포트를 listening하고 있는 한 여전히 네트워크 접속이 가능하다. 이는 단순히 쿠버네티스에게 추가적인 정보를 줄 뿐이다.
  List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational.</description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>http://kimmj.github.io/kubernetes/concepts/services/</link>
+      <pubDate>Sun, 15 Mar 2020 19:28:06 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/concepts/services/</guid>
+      <description></description>
     </item>
     
     <item>

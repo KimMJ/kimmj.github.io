@@ -12,6 +12,33 @@
     
     
     <item>
+      <title>14 Other Topics</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</link>
+      <pubDate>Mon, 15 Jun 2020 21:19:17 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</guid>
+      <description>Advanced Kubectl Commands  JSON PATH를 사용하는 이유는 많은 정보들 속에서 특정한 데이터를 필터링하기 위함이다. kubectl command를 사용하면 kube-apiserver와 통신한다.  이는 json 포멧으로 kubectl에게 응답하고, 이를 사람이 읽을 수 있게 보여주는 것이다. detail을 보려면 -o wide를 주면 된다.   JSON PATH를 사용하면 보고싶은 결과만 볼 수 있다. 이를 사용하려면 다음과 같은 절차가 필요하다.  kubectl command로 raw data를 볼 수 있어야 한다. -o json을 통해 json output을 확인할 수 있어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>13 Troubleshooting</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</link>
+      <pubDate>Mon, 15 Jun 2020 20:23:00 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</guid>
+      <description>Application Failure  Appllication failure의 root cause 검색  application에 대한 map을 작성한 다음 root cause를 찾는다.    </description>
+    </item>
+    
+    <item>
+      <title>12 End to End Tests on a Kubernetes Cluster</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</link>
+      <pubDate>Mon, 15 Jun 2020 19:39:06 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</guid>
+      <description>End to End Tests  Test - Manual  kubectl get nodes kubectl get pods -n kube-system이 잘 되는지 service kube-apiserver status service kube-controller-manager status service kube-scheduler status service kubelet status service kube-proxy status kubectl run nginx kubectl expose deployment nginx --port=80 --type=NodePort   Kubernetes에는 test-infra라는 프로젝트가 있다.  약 1000개의 테스트를 해줌.   sonobuoy  End to End Tests - Run and Anlyze  go get으로 소스를 받고 skeleton으로 하여 op-prem을 테스트할 수 있다.</description>
+    </item>
+    
+    <item>
       <title>10 Kubernetes the Hard Way</title>
       <link>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</link>
       <pubDate>Tue, 12 May 2020 01:46:22 +0900</pubDate>
