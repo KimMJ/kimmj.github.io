@@ -93,24 +93,6 @@
     </item>
     
     <item>
-      <title>ansible</title>
-      <link>http://kimmj.github.io/tags/ansible/</link>
-      <pubDate>Sun, 15 Mar 2020 20:54:04 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible-for-devops</title>
-      <link>http://kimmj.github.io/tags/ansible-for-devops/</link>
-      <pubDate>Sun, 15 Mar 2020 20:54:04 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible-for-devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>docker</title>
       <link>http://kimmj.github.io/tags/docker/</link>
       <pubDate>Sun, 15 Mar 2020 04:18:15 +0900</pubDate>
@@ -282,15 +264,6 @@
     </item>
     
     <item>
-      <title>playbook</title>
-      <link>http://kimmj.github.io/tags/playbook/</link>
-      <pubDate>Fri, 28 Feb 2020 11:06:02 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/playbook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>base64</title>
       <link>http://kimmj.github.io/tags/base64/</link>
       <pubDate>Thu, 27 Feb 2020 20:44:42 +0900</pubDate>
@@ -458,15 +431,6 @@
       <pubDate>Thu, 13 Feb 2020 21:16:02 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/tunneling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ansible-playbooks</title>
-      <link>http://kimmj.github.io/tags/ansible-playbooks/</link>
-      <pubDate>Thu, 13 Feb 2020 20:59:01 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ansible-playbooks/</guid>
       <description></description>
     </item>
     
@@ -728,6 +692,15 @@
       <pubDate>Fri, 10 Jan 2020 01:33:32 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible</title>
+      <link>http://kimmj.github.io/tags/ansible/</link>
+      <pubDate>Wed, 08 Jan 2020 01:52:47 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ansible/</guid>
       <description></description>
     </item>
     

@@ -22,95 +22,12 @@
     </item>
     
     <item>
-      <title>Controllers Overview</title>
-      <link>http://kimmj.github.io/kubernetes/concepts/controllers-overview/</link>
-      <pubDate>Thu, 30 Jan 2020 18:26:04 +0900</pubDate>
+      <title>02 Core Concepts</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</link>
+      <pubDate>Tue, 14 Apr 2020 00:42:25 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/kubernetes/concepts/controllers-overview/</guid>
-      <description>Contents 이 포스트에서는 Kubernetes의 Controller들에 대해서 알아보도록 하겠습니다. 가장 작은 단위인 Container부터, 상위 개념인 Deployment, StatefulSet까지 다루어 보도록 하겠습니다.
- Containers Pods ReplicaSets Deployments StatefulSets  Monolithic vs. Microservice 우선 Monolithic과 Microservice에 대해서 짚고 넘어가도록 하겠습니다.
-Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.</description>
-    </item>
-    
-    <item>
-      <title>14 Other Topics</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</link>
-      <pubDate>Mon, 15 Jun 2020 21:19:17 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</guid>
-      <description>Advanced Kubectl Commands  JSON PATH를 사용하는 이유는 많은 정보들 속에서 특정한 데이터를 필터링하기 위함이다. kubectl command를 사용하면 kube-apiserver와 통신한다.  이는 json 포멧으로 kubectl에게 응답하고, 이를 사람이 읽을 수 있게 보여주는 것이다. detail을 보려면 -o wide를 주면 된다.   JSON PATH를 사용하면 보고싶은 결과만 볼 수 있다. 이를 사용하려면 다음과 같은 절차가 필요하다.  kubectl command로 raw data를 볼 수 있어야 한다. -o json을 통해 json output을 확인할 수 있어야 한다.</description>
-    </item>
-    
-    <item>
-      <title>13 Troubleshooting</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</link>
-      <pubDate>Mon, 15 Jun 2020 20:23:00 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</guid>
-      <description>Application Failure  Appllication failure의 root cause 검색  application에 대한 map을 작성한 다음 root cause를 찾는다.    </description>
-    </item>
-    
-    <item>
-      <title>10 Kubernetes the Hard Way</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</link>
-      <pubDate>Tue, 12 May 2020 01:46:22 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</guid>
-      <description>Design a Kubernetes Cluster  Purpose  Education  Minikube Single node cluster with kubeadm/GCP/AWS   Development &amp;amp; Testing  Multi-node cluster with a Single Master and Multiple workers Setup using kubeadm tool or quick provision on GCP or AWS or AKS   Hosting Production Applications  HA Multi node cluster with multiple master nodes 최대 5000노드 클러스터 내에 최대 약 150000 파드 최대 300000개의 컨테이너 노드당 최대 약 100개의 파드     Cloud or OnPrem  on-prem에는 kubeadm을 사용하자.</description>
-    </item>
-    
-    <item>
-      <title>09 Networking</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/09-networking/</link>
-      <pubDate>Mon, 04 May 2020 18:12:04 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/09-networking/</guid>
-      <description>Switching Routing  Switching  컴퓨터 두대를 스위치를 통해 연결하는 방법. 연결된 스위치의 인터페이스에 ip를 할당한다. 동일한 네트워크로만 트래픽을 보내준다.   Routing  라우터는 스위치로 연결된 두 네트워크 대역을 연결해준다. 각 네트워크 대역에 대해서 아이피를 동시에 가지고 있다.   Gateway  어떤 아이피 대역에 대해서 어떤 라우터를 통해서 가게 할지 결정하는 것 외부 인터넷과 연결하고 싶다면 먼저 인터넷을 라우터에 연결하고, 이 곳으로 route 설정을 하면 된다. default gateway는 Destination=0.</description>
-    </item>
-    
-    <item>
-      <title>08 Storage</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/08-storage/</link>
-      <pubDate>Mon, 04 May 2020 02:34:12 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/08-storage/</guid>
-      <description>Introduction to Docker Storage  docker에는 두가지 컨셉의 stroage가 있다.  storage drivers volume drivers    Storage in Docker  file system  /var/lib/docker에 docker가 사용하는 파일들이 있다.   docker는 layered architecture라서 caching을 사용할 수 있다. 이렇게 해서 이미지를 실행시키면 해당 이미지에 사용된 layer들은 Read Only이다. 컨테이너 상에서 실행하는 것들은 container layer로, Read Write이다. Read Only상의 파일을 수정하면 도커는 자동으로 이를 복사해서 수정한다. 여기서 영구적으로 보관하고 싶은 것들이 있다면, volume을 사용해야한다.</description>
-    </item>
-    
-    <item>
-      <title>07 Security</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/07-security/</link>
-      <pubDate>Sat, 25 Apr 2020 20:26:41 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/07-security/</guid>
-      <description>Kubernetes Security Primitives  host와 cluster 자체의 security  당연히 host는 그 자체로 안전해야하고, root access는 disable 되어야 하며 password based authentication은 disabled되고 SSH key based authentication만 가능해야 한다. Kubernetes를 실행시키고 있는 호스트에 대한 physical, virtual infrastructure에 대한 보안도 필요하다.   쿠버네티스와 관련된 security  kube-apiserver는 모든것을 하는 주체가 되기 때문에 이곳에 대한 보안부터 챙겨야 한다. Who can access? / What can they do? API 서버에 누가 접근을 할 수 있게 할 것인가?</description>
-    </item>
-    
-    <item>
-      <title>06 Cluster Maintenance</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/06-cluster-maintenance/</link>
-      <pubDate>Fri, 24 Apr 2020 13:09:30 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/06-cluster-maintenance/</guid>
-      <description>OS Upgrades  Node가 Down된 상태에서 5분이 지나면 pod는 terminate가 된다.  Dead로 간주   ReplicaSet으로 관리되면 다른곳에 파드를 띄워준다. kube-controller-manager에 pod-eviction-timeout이 기본적으로 5분이 설정되어 있다. 다시 online으로 오게되면 blank node로 뜨게 된다. ReplicaSet으로 관리되지 않았던 파드는 삭제되고 재생성되지 않는다. 따라서 kubectl drain node를 통해 파드를 이주시키고 cordon을 통해 스케줄되지 않도록 한다. 그 다음에 노드를 down시키고 살리면 된다. 산 뒤에도 이전에 처리한 cordon이 남아있게 되는데 이를 삭제하기 위해선 kubectl uncordon을 해야한다.</description>
-    </item>
-    
-    <item>
-      <title>05 Application Lifecycle Management</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</link>
-      <pubDate>Sun, 19 Apr 2020 17:02:09 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</guid>
-      <description>Rolling Updates and Rollbacks  kubectl rollout status deployment/myapp-deployment로 롤아웃 상태 확인 가능 kubectl rollout history deployment/myapp-deployment로 히스토리 확인 가능 Recreate: old를 모두 죽인 뒤 new를 생성 Rolling Update: old를 하나씩 죽이고 하나씩 new를 생성 kubectl set image deployment myapp-deployment nginx=nginx:1.9.1로 이미지 수정 가능 StrategyType이 Recreate면 old의 replica가 모두 0으로 줄고난 뒤 new의 replica를 늘린다. 반면 RollingUpdate일 경우 old를 하나씩 죽이고 new를 하나씩 늘린다. Rollback을 할때는 반대로 동작한다. kubectl run을 통해 파드를 생성하면 deployment가 생성된다.</description>
-    </item>
-    
-    <item>
-      <title>04 Logging and Monitoring</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/04-logging-and-monitoring/</link>
-      <pubDate>Sat, 18 Apr 2020 21:47:08 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/kubernetes/cka-study/04-logging-and-monitoring/</guid>
-      <description>Monitor Cluster Componets  쿠버네티스에서 자체 제공하는 것은 없으나 다음과 같은 것들이 있다.  Metrics Server Prometheus Elastic Stack DataDog Dynatrace   metric server는 각 쿠버네티스의 노드와 파드의 메트릭을 모아서 메모리에 저장한다. metric server는 유일한 in-memory monitoring solution이다.  데이터를 저장하지 않아서 이전 자료를 보지 못한다.   kubelet은 cAdvisor를 포함한다.  파드로부터 퍼포먼스 메트릭을 수집하여 메트릭 서버로 전송한다.   metric server가 설치되면 kubectl top node, kubectl top pods를 사용하여 메트릭을 볼 수 있다.</description>
+      <guid>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</guid>
+      <description>Controller는 Kubernetes의 brain과 같다.  ReplicaSets  Pod가 죽게 되면 사용자가 접근을 할 수 없게 된다. 따라서 여러개의 파드를 띄워 하나가 죽어도 나머지가 동작하도록 해야한다. Replication Controller는 여러개의 파드를 띄울 수 있도록 도와준다. 이를 High Availability라고 한다. 하나의 파드만 관리한다고 해서 쓸모없는게 아니라 이는 하나가 죽으면 다시 하나를 실행시키는 방식으로 동작한다. 로드가 늘어나면 파드를 늘릴 수 있다. Replica Controller와 Replica Set은 비슷하지만 다르다.  Replica Controller는 Replica Set으로 대체되었다.   Replica Controller  apiVersion=v1 spec.</description>
     </item>
     
     <item>
@@ -123,12 +40,77 @@ Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러
     </item>
     
     <item>
-      <title>02 Core Concepts</title>
-      <link>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</link>
-      <pubDate>Tue, 14 Apr 2020 00:42:25 +0900</pubDate>
+      <title>04 Logging and Monitoring</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/04-logging-and-monitoring/</link>
+      <pubDate>Sat, 18 Apr 2020 21:47:08 +0900</pubDate>
       
-      <guid>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</guid>
-      <description>Controller는 Kubernetes의 brain과 같다.  ReplicaSets  Pod가 죽게 되면 사용자가 접근을 할 수 없게 된다. 따라서 여러개의 파드를 띄워 하나가 죽어도 나머지가 동작하도록 해야한다. Replication Controller는 여러개의 파드를 띄울 수 있도록 도와준다. 이를 High Availability라고 한다. 하나의 파드만 관리한다고 해서 쓸모없는게 아니라 이는 하나가 죽으면 다시 하나를 실행시키는 방식으로 동작한다. 로드가 늘어나면 파드를 늘릴 수 있다. Replica Controller와 Replica Set은 비슷하지만 다르다.  Replica Controller는 Replica Set으로 대체되었다.   Replica Controller  apiVersion=v1 spec.</description>
+      <guid>http://kimmj.github.io/kubernetes/cka-study/04-logging-and-monitoring/</guid>
+      <description>Monitor Cluster Componets  쿠버네티스에서 자체 제공하는 것은 없으나 다음과 같은 것들이 있다.  Metrics Server Prometheus Elastic Stack DataDog Dynatrace   metric server는 각 쿠버네티스의 노드와 파드의 메트릭을 모아서 메모리에 저장한다. metric server는 유일한 in-memory monitoring solution이다.  데이터를 저장하지 않아서 이전 자료를 보지 못한다.   kubelet은 cAdvisor를 포함한다.  파드로부터 퍼포먼스 메트릭을 수집하여 메트릭 서버로 전송한다.   metric server가 설치되면 kubectl top node, kubectl top pods를 사용하여 메트릭을 볼 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>05 Application Lifecycle Management</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</link>
+      <pubDate>Sun, 19 Apr 2020 17:02:09 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</guid>
+      <description>Rolling Updates and Rollbacks  kubectl rollout status deployment/myapp-deployment로 롤아웃 상태 확인 가능 kubectl rollout history deployment/myapp-deployment로 히스토리 확인 가능 Recreate: old를 모두 죽인 뒤 new를 생성 Rolling Update: old를 하나씩 죽이고 하나씩 new를 생성 kubectl set image deployment myapp-deployment nginx=nginx:1.9.1로 이미지 수정 가능 StrategyType이 Recreate면 old의 replica가 모두 0으로 줄고난 뒤 new의 replica를 늘린다. 반면 RollingUpdate일 경우 old를 하나씩 죽이고 new를 하나씩 늘린다. Rollback을 할때는 반대로 동작한다. kubectl run을 통해 파드를 생성하면 deployment가 생성된다.</description>
+    </item>
+    
+    <item>
+      <title>Controllers Overview</title>
+      <link>http://kimmj.github.io/kubernetes/concepts/controllers-overview/</link>
+      <pubDate>Thu, 30 Jan 2020 18:26:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/concepts/controllers-overview/</guid>
+      <description>Contents 이 포스트에서는 Kubernetes의 Controller들에 대해서 알아보도록 하겠습니다. 가장 작은 단위인 Container부터, 상위 개념인 Deployment, StatefulSet까지 다루어 보도록 하겠습니다.
+ Containers Pods ReplicaSets Deployments StatefulSets  Monolithic vs. Microservice 우선 Monolithic과 Microservice에 대해서 짚고 넘어가도록 하겠습니다.
+Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러 사람이 개발을 하고 나서 하나의 큰 패키지로 빌드하고 이를 배포하죠. 간단한 서비스라면 문제가 발생하지는 않겠지만, 점점 코드의 수가 늘어나고 거대해질 수록 문제점이 생깁니다. 예를 들면 빌드시간이 오래걸린다던지, scale-out을 하기 힘들다던지 하는 문제가 있겠네요.</description>
+    </item>
+    
+    <item>
+      <title>06 Cluster Maintenance</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/06-cluster-maintenance/</link>
+      <pubDate>Fri, 24 Apr 2020 13:09:30 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/06-cluster-maintenance/</guid>
+      <description>OS Upgrades  Node가 Down된 상태에서 5분이 지나면 pod는 terminate가 된다.  Dead로 간주   ReplicaSet으로 관리되면 다른곳에 파드를 띄워준다. kube-controller-manager에 pod-eviction-timeout이 기본적으로 5분이 설정되어 있다. 다시 online으로 오게되면 blank node로 뜨게 된다. ReplicaSet으로 관리되지 않았던 파드는 삭제되고 재생성되지 않는다. 따라서 kubectl drain node를 통해 파드를 이주시키고 cordon을 통해 스케줄되지 않도록 한다. 그 다음에 노드를 down시키고 살리면 된다. 산 뒤에도 이전에 처리한 cordon이 남아있게 되는데 이를 삭제하기 위해선 kubectl uncordon을 해야한다.</description>
+    </item>
+    
+    <item>
+      <title>07 Security</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/07-security/</link>
+      <pubDate>Sat, 25 Apr 2020 20:26:41 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/07-security/</guid>
+      <description>Kubernetes Security Primitives  host와 cluster 자체의 security  당연히 host는 그 자체로 안전해야하고, root access는 disable 되어야 하며 password based authentication은 disabled되고 SSH key based authentication만 가능해야 한다. Kubernetes를 실행시키고 있는 호스트에 대한 physical, virtual infrastructure에 대한 보안도 필요하다.   쿠버네티스와 관련된 security  kube-apiserver는 모든것을 하는 주체가 되기 때문에 이곳에 대한 보안부터 챙겨야 한다. Who can access? / What can they do? API 서버에 누가 접근을 할 수 있게 할 것인가?</description>
+    </item>
+    
+    <item>
+      <title>08 Storage</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/08-storage/</link>
+      <pubDate>Mon, 04 May 2020 02:34:12 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/08-storage/</guid>
+      <description>Introduction to Docker Storage  docker에는 두가지 컨셉의 stroage가 있다.  storage drivers volume drivers    Storage in Docker  file system  /var/lib/docker에 docker가 사용하는 파일들이 있다.   docker는 layered architecture라서 caching을 사용할 수 있다. 이렇게 해서 이미지를 실행시키면 해당 이미지에 사용된 layer들은 Read Only이다. 컨테이너 상에서 실행하는 것들은 container layer로, Read Write이다. Read Only상의 파일을 수정하면 도커는 자동으로 이를 복사해서 수정한다. 여기서 영구적으로 보관하고 싶은 것들이 있다면, volume을 사용해야한다.</description>
+    </item>
+    
+    <item>
+      <title>09 Networking</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/09-networking/</link>
+      <pubDate>Mon, 04 May 2020 18:12:04 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/09-networking/</guid>
+      <description>Switching Routing  Switching  컴퓨터 두대를 스위치를 통해 연결하는 방법. 연결된 스위치의 인터페이스에 ip를 할당한다. 동일한 네트워크로만 트래픽을 보내준다.   Routing  라우터는 스위치로 연결된 두 네트워크 대역을 연결해준다. 각 네트워크 대역에 대해서 아이피를 동시에 가지고 있다.   Gateway  어떤 아이피 대역에 대해서 어떤 라우터를 통해서 가게 할지 결정하는 것 외부 인터넷과 연결하고 싶다면 먼저 인터넷을 라우터에 연결하고, 이 곳으로 route 설정을 하면 된다. default gateway는 Destination=0.</description>
+    </item>
+    
+    <item>
+      <title>10 Kubernetes the Hard Way</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</link>
+      <pubDate>Tue, 12 May 2020 01:46:22 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</guid>
+      <description>Design a Kubernetes Cluster  Purpose  Education  Minikube Single node cluster with kubeadm/GCP/AWS   Development &amp;amp; Testing  Multi-node cluster with a Single Master and Multiple workers Setup using kubeadm tool or quick provision on GCP or AWS or AKS   Hosting Production Applications  HA Multi node cluster with multiple master nodes 최대 5000노드 클러스터 내에 최대 약 150000 파드 최대 300000개의 컨테이너 노드당 최대 약 100개의 파드     Cloud or OnPrem  on-prem에는 kubeadm을 사용하자.</description>
     </item>
     
     <item>
@@ -172,6 +154,24 @@ Pod ports list pod.spec.containers[].ports로 정의된 이 배열은 container�
       <description>Pod Overview Pod의 이해 Pod는 Kubernetes에서 가장 작은 배포 오브젝트이며 쿠버네티스에서 관리하는 최소 관리 단위입니다. Pod는 cluster 안에서 실행중인 어떤 프로세스를 의미합니다. application container, 스토리지 리소스, 유일한 network ip, container가 어떻게 실행할지를 캡슐화한 것입니다.
 각각의 Pod는 주어진 application에서 단일 인스턴스를 수행합니다. 즉, 한가지 역할을 맡고 있다고 생각하시면 됩니다.. 따라서 application을 수직확장하고 싶다면 각 인스턴스에 대해 여러 Pod를 생성하면 된다. 그러면 동일한 역할을 하는 Pod가 늘어나니, 병렬적으로 처리가 가능할 것입니다.
 Pod는 서비스 중에서 서로 연관성이 높은 프로세스를 지원하기 위해 디자인되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>13 Troubleshooting</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</link>
+      <pubDate>Mon, 15 Jun 2020 20:23:00 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</guid>
+      <description>Application Failure  Appllication failure의 root cause 검색  application에 대한 map을 작성한 다음 root cause를 찾는다.    </description>
+    </item>
+    
+    <item>
+      <title>14 Other Topics</title>
+      <link>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</link>
+      <pubDate>Mon, 15 Jun 2020 21:19:17 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</guid>
+      <description>Advanced Kubectl Commands  JSON PATH를 사용하는 이유는 많은 정보들 속에서 특정한 데이터를 필터링하기 위함이다. kubectl command를 사용하면 kube-apiserver와 통신한다.  이는 json 포멧으로 kubectl에게 응답하고, 이를 사람이 읽을 수 있게 보여주는 것이다. detail을 보려면 -o wide를 주면 된다.   JSON PATH를 사용하면 보고싶은 결과만 볼 수 있다. 이를 사용하려면 다음과 같은 절차가 필요하다.  kubectl command로 raw data를 볼 수 있어야 한다. -o json을 통해 json output을 확인할 수 있어야 한다.</description>
     </item>
     
   </channel>

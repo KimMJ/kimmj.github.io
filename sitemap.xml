@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/playbook-organization-roles-and-includes/</loc>
-    <lastmod>2020-03-13T12:04:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/ansible-playbooks-beyond-the-basics/</loc>
-    <lastmod>2020-02-28T11:06:02+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/jenkins/install/</loc>
     <lastmod>2020-02-11T17:20:41+09:00</lastmod>
   </url>
@@ -48,18 +38,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/includes/</loc>
-    <lastmod>2020-03-13T12:10:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/handover/</loc>
-    <lastmod>2020-03-01T00:22:17+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/getting-started-with-ansible/</loc>
-    <lastmod>2020-02-05T01:41:13+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</loc>
+    <lastmod>2020-04-14T00:42:25+09:00</lastmod>
   </url>
   
   <url>
@@ -73,18 +53,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/roles/</loc>
-    <lastmod>2020-03-15T20:54:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/environment-variables/</loc>
-    <lastmod>2020-03-01T18:43:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/local-infrastructure-development-ansible-and-vagrant/</loc>
-    <lastmod>2020-02-05T15:09:00+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/03-scheduling/</loc>
+    <lastmod>2020-04-15T18:55:03+09:00</lastmod>
   </url>
   
   <url>
@@ -98,13 +68,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/variables/</loc>
-    <lastmod>2020-03-08T18:19:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/ad-hoc-commands/</loc>
-    <lastmod>2020-02-06T13:21:42+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/04-logging-and-monitoring/</loc>
+    <lastmod>2020-04-18T21:47:08+09:00</lastmod>
   </url>
   
   <url>
@@ -113,13 +78,13 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/</loc>
-    <lastmod>2020-04-14T00:41:30+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</loc>
+    <lastmod>2020-04-19T17:02:09+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/conditionals/</loc>
-    <lastmod>2020-03-12T10:15:33+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/</loc>
+    <lastmod>2020-04-14T00:41:30+09:00</lastmod>
   </url>
   
   <url>
@@ -143,11 +108,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/ansible-playbooks/</loc>
-    <lastmod>2020-02-13T20:59:01+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/jenkins/</loc>
     <lastmod>2020-02-11T17:20:30+09:00</lastmod>
   </url>
@@ -155,11 +115,6 @@
   <url>
     <loc>http://kimmj.github.io/iac/</loc>
     <lastmod>2020-02-09T20:05:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/</loc>
-    <lastmod>2020-02-05T01:17:27+09:00</lastmod>
   </url>
   
   <url>
@@ -238,13 +193,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/delegation-local-actions-and-pauses/</loc>
-    <lastmod>2020-03-12T13:32:45+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/</loc>
-    <lastmod>2020-02-28T11:05:34+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/06-cluster-maintenance/</loc>
+    <lastmod>2020-04-24T13:09:30+09:00</lastmod>
   </url>
   
   <url>
@@ -253,13 +203,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter6/</loc>
-    <lastmod>2020-03-13T12:03:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/prompts/</loc>
-    <lastmod>2020-03-12T19:18:08+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/07-security/</loc>
+    <lastmod>2020-04-25T20:26:41+09:00</lastmod>
   </url>
   
   <url>
@@ -268,38 +213,8 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/tags/</loc>
-    <lastmod>2020-03-12T19:35:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/ansible/ansible-for-devops/chapter5/summary/</loc>
-    <lastmod>2020-03-12T20:17:20+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-epilogue/</loc>
-    <lastmod>2020-07-16T13:10:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</loc>
-    <lastmod>2020-06-15T21:19:17+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</loc>
-    <lastmod>2020-06-15T20:23:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</loc>
-    <lastmod>2020-06-15T19:39:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</loc>
-    <lastmod>2020-05-12T01:46:22+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/08-storage/</loc>
+    <lastmod>2020-05-04T02:34:12+09:00</lastmod>
   </url>
   
   <url>
@@ -308,43 +223,18 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/08-storage/</loc>
-    <lastmod>2020-05-04T02:34:12+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-epilogue/</loc>
+    <lastmod>2020-07-16T13:10:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/07-security/</loc>
-    <lastmod>2020-04-25T20:26:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/06-cluster-maintenance/</loc>
-    <lastmod>2020-04-24T13:09:30+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</loc>
-    <lastmod>2020-04-19T17:02:09+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/04-logging-and-monitoring/</loc>
-    <lastmod>2020-04-18T21:47:08+09:00</lastmod>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</loc>
+    <lastmod>2020-05-12T01:46:22+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/jenkins/workspace-list/</loc>
     <lastmod>2020-04-16T16:23:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/03-scheduling/</loc>
-    <lastmod>2020-04-15T18:55:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</loc>
-    <lastmod>2020-04-14T00:42:25+09:00</lastmod>
   </url>
   
   <url>
@@ -553,6 +443,21 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</loc>
+    <lastmod>2020-06-15T19:39:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</loc>
+    <lastmod>2020-06-15T20:23:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</loc>
+    <lastmod>2020-06-15T21:19:17+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/certified-kubernetes-administrator/</loc>
     <lastmod>2020-07-16T13:10:22+09:00</lastmod>
   </url>
@@ -600,16 +505,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/targetport/</loc>
     <lastmod>2020-03-15T23:13:37+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible/</loc>
-    <lastmod>2020-03-15T20:54:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible-for-devops/</loc>
-    <lastmod>2020-03-15T20:54:04+09:00</lastmod>
   </url>
   
   <url>
@@ -708,11 +603,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/playbook/</loc>
-    <lastmod>2020-02-28T11:06:02+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/base64/</loc>
     <lastmod>2020-02-27T20:44:42+09:00</lastmod>
   </url>
@@ -805,11 +695,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/tunneling/</loc>
     <lastmod>2020-02-13T21:16:02+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ansible-playbooks/</loc>
-    <lastmod>2020-02-13T20:59:01+09:00</lastmod>
   </url>
   
   <url>
@@ -955,6 +840,11 @@
   <url>
     <loc>http://kimmj.github.io/tags/pipeline/</loc>
     <lastmod>2020-01-10T01:33:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ansible/</loc>
+    <lastmod>2020-01-08T01:52:47+09:00</lastmod>
   </url>
   
   <url>
