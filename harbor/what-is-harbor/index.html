@@ -8,7 +8,7 @@
 <meta name="author" content="Myeongjin Kim">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>IaC :: Ibiza</title>
+    <title>Private Docker Registry 오픈소스: Harbor란 :: Ibiza</title>
 
     
     <link href="/css/nucleus.css?1603009787" rel="stylesheet">
@@ -50,7 +50,7 @@ if (!doNotTrack) {
 
 <script data-ad-client="ca-pub-1788337254638181" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
-  <body class="" data-url="/iac/">
+  <body class="" data-url="/harbor/what-is-harbor/">
     <nav id="sidebar" class="">
 
 
@@ -78,7 +78,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/harbor/" title="Harbor" class="dd-item 
-        
+        parent
         
         
         ">
@@ -102,7 +102,7 @@ if (!doNotTrack) {
  
   
     
-      <li data-nav-id="/harbor/what-is-harbor/" title="Private Docker Registry 오픈소스: Harbor란" class="dd-item ">
+      <li data-nav-id="/harbor/what-is-harbor/" title="Private Docker Registry 오픈소스: Harbor란" class="dd-item active">
         <a href="/harbor/what-is-harbor/">
         <i class='fas fa-minus'></i>&nbsp;Private Docker Registry 오픈소스: Harbor란
         
@@ -428,8 +428,8 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/iac/" title="IaC" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/iac/">
@@ -2195,6 +2195,8 @@ if (!doNotTrack) {
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2205,7 +2207,13 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Ibiza</a> > IaC
+            
+            
+          
+          
+            <a href='/'>Ibiza</a> > <a href='/harbor/'>Harbor</a> > Private Docker Registry 오픈소스: Harbor란
+          
+         
           
          
           
@@ -2214,95 +2222,100 @@ if (!doNotTrack) {
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#harbor란">Harbor란</a></li>
+    <li><a href="#주요-기능">주요 기능</a></li>
+    <li><a href="#개인적인-생각">개인적인 생각</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/harbor">harbor</a>
+
+  <a class="tag-link" href="/tags/docker-registry">docker-registry</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Private Docker Registry 오픈소스: Harbor란
+            </h1>
           
 
         
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#harbor란">Harbor란</a></li>
+    <li><a href="#주요-기능">주요 기능</a></li>
+    <li><a href="#개인적인-생각">개인적인 생각</a></li>
+  </ul>
+</nav>
 
-	<h1 id="infrastructure-as-code">Infrastructure as Code</h1>
-
-
-
-
-
-
-
-<ul class="children children-li">
-	
-
-	
-		
-	
-
-	
-
-	
-		
-	
-		
-			
-				
-<li>
-<a href="/iac/translate-what-is-infrastructure-as-a-code/" >[번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials</a>
-</li>
-				
-
-				
-			
-			
-
-				
+<h2 id="harbor란">Harbor란</h2>
+<p><code>Harbor</code> 는 올해(20년) 중순 쯤 <code>CNCF</code> 의 graduated된 오픈소스 프로젝트로 <code>Docker Hub</code> 처럼 이미지를 저장할 수 있는 저장소이다.
+<code>Docker</code> 는 이미 <code>docker registry</code> 라는 이름으로 개인 이미지 저장소를 컨테이너화 하였었다.
+<code>Harbor</code> 는 내부적으로 이 <code>docker registry</code> 를 사용하고 있으며, 여기에 <code>RBAC</code>, web page, image scan 같은 편리한 기능을 추가하였다.
+외부 서비스를 이용하는 것이 아니라 내부에 이미지 파일을 저장하기 때문에 사내 보안 정책에도 알맞게 사용할 수 있다.
+아니면 필요에 따라 <code>S3</code>나 <code>Minio</code>를 사용할 수 있을듯 하다.</p>
+<h2 id="주요-기능">주요 기능</h2>
+<p>사내에서 사용하며 편리하다고 생각되었던 몇가지 기능들을 소개한다.</p>
 <ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
+<li>이미지 복제 (<code>Harbor</code> 외부 &lt;-&gt; <code>Harbor</code> 내부)</li>
+<li>이미지 주기적 삭제 (tag retention)</li>
+<li>Project 별 Disk quota 기능</li>
+<li>Project 별 Private/Public 기능</li>
+<li>Webhook 기능 (v1.10 이상에서 가능)</li>
+<li>OCI Support (v2.0 이상에서 가능)</li>
+<li><code>docker registry</code> 의 API 사용 가능 (인증 관련해서만 코딩에 주의)</li>
+<li><code>Swagger</code> 를 통한 API Docs 제공</li>
 </ul>
-				
-			
-		
-	
-
-	
-</ul>
-
-
-
-
-
-
-
+<h2 id="개인적인-생각">개인적인 생각</h2>
+<p>다른 <code>docker registry</code> 서비스들(예를 들면 <code>Artifactory</code> 라던지, <code>AWS ECR</code> 이라던지..)을 사용해보진 않았지만, 잘 만들어진 프로젝트라고 생각된다.
+업데이트도 자주 이루어 지고 있는 중이고 이슈도 등록하면 금방 확인해주는 듯 하다.
+특히나 Graduated 된 상태이니 믿고 사용해도 좋을 정도라고 생각된다.
+나는 사내에서 용도별로 여러개의 <code>Harbor</code> 를 설치하고 운용중인데, 설치 과정이 매우 쉬워서 새롭게 시작하려는 사람도 테스트를 해보기 용이할 듯 하다.</p>
+<p><code>docker registry</code> 를 사용하다보면 당연스럽게도 아쉬운 부분이 GUI에 관한 부분인데 <code>Harbor</code> 는 GUI로 많은 것들을 할 수 있어서 정말 편리하다.
+이미지간 복제도 GUI로 할 수 있었고(나의 회사에서는 VPN으로 연결된 구간이 있었는데, <code>Harbor</code> 가 컨테이너 기반이라서 그런지 VPN을 타고 트래픽이 나가지 못했다.
+그래서 결국은 그 구간만 스크립트를 짜서 이미지 복제를 하였다), 기본적인 이미지 삭제나 특정 기간을 지난 이미지 삭제
+또는 가장 최근에 Pull된 N개의 이미지만 빼고 삭제하기 등 운용하기에 편리한 기능들도 있다.</p>
+<p>내 생각엔 일단, 한 번 써보면 좋을 프로젝트인 듯 하다.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
+
         
-            </div> 
+            <div id="utterance">    
+    <script src="https://utteranc.es/client.js"
+            repo="kimmj/kimmj.github.io"
+            issue-term="pathname"
+            label="comments"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
         
         </div> 
       </div>
@@ -2332,8 +2345,6 @@ if (!doNotTrack) {
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -2347,6 +2358,7 @@ if (!doNotTrack) {
             
             
                 
+                    
                     
                 
                 
@@ -2364,149 +2376,8 @@ if (!doNotTrack) {
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2575,6 +2446,37 @@ if (!doNotTrack) {
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2589,8 +2491,117 @@ if (!doNotTrack) {
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -3834,3 +3845,4 @@ if (!doNotTrack) {
 
   </body>
 </html>
+

@@ -223,6 +223,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/harbor/what-is-harbor/</loc>
+    <lastmod>2020-10-18T16:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/kubernetes/cka-epilogue/</loc>
     <lastmod>2020-07-16T13:10:22+09:00</lastmod>
   </url>
@@ -458,17 +463,27 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/tags/docker-registry/</loc>
+    <lastmod>2020-10-18T16:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/harbor/</loc>
+    <lastmod>2020-10-18T16:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-10-18T16:52:12+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/tags/certified-kubernetes-administrator/</loc>
     <lastmod>2020-07-16T13:10:22+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/cka/</loc>
-    <lastmod>2020-07-16T13:10:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/</loc>
     <lastmod>2020-07-16T13:10:22+09:00</lastmod>
   </url>
   
@@ -509,11 +524,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/docker/</loc>
-    <lastmod>2020-03-15T04:18:15+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/docker-registry/</loc>
     <lastmod>2020-03-15T04:18:15+09:00</lastmod>
   </url>
   
@@ -570,11 +580,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/github/</loc>
     <lastmod>2020-03-07T23:39:23+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/harbor/</loc>
-    <lastmod>2020-03-03T10:07:50+09:00</lastmod>
   </url>
   
   <url>
