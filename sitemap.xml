@@ -78,6 +78,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/coredns/</loc>
+    <lastmod>2020-11-21T01:13:37+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</loc>
     <lastmod>2020-04-19T17:02:09+09:00</lastmod>
   </url>
