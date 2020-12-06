@@ -246,6 +246,29 @@ kubectl patch svc spin-deck -n spinnaker --type=&amp;#39;json&amp;#39; -p &amp;#
     </item>
     
     <item>
+      <title>Samba를 통한 디스크 공유</title>
+      <link>http://kimmj.github.io/ubuntu/samba/</link>
+      <pubDate>Sat, 28 Nov 2020 00:42:06 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/ubuntu/samba/</guid>
+      <description>Samba는 리눅스에 있는 폴더를 윈도우와 공유하기 위해 사용한다. 최초에 NFS로 구성했으나 NFS는 다음과 같은 문제점이 있었다.
+ 폴더 전체를 rwx 권한을 주게 만들거나 nobody:nogroup으로 모든 권한을 폴더에 줘야 했다. perforce와 연동하려고 구성한 것이었는데 1번의 문제로 인해 자꾸 충돌이 발생했다.  이때문에 다른 대안을 찾던 중 samba를 알게 되었고, 이를 내 컴퓨터에도 적용해보았다.
+Samba 구성 samba 설치 apt install samba -y samba 설정 /etc/samba/smb.conf 파일을 열어 수정한다.
+[workspace] # 여기서 workspace는 접근할 때 사용되는 이름 comment = workspace path path = /path read only = no ritable = yes browseable = yes guest ok = yes available = yes public = yes valid users = root user 추가 실제 passwd에 등록된 계정으로 설정해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>CoreDNS를 통한 Dns Server 구축하기 with docker</title>
+      <link>http://kimmj.github.io/coredns/configure-dns-server/</link>
+      <pubDate>Sat, 21 Nov 2020 01:14:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/coredns/configure-dns-server/</guid>
+      <description>CoreDNS는 kubernetes에서 dns resolve를 위해 사용하고 있는 오픈소스이다. 실제로 kubernetes의 kube-system 네임스페이스를 보면 coredns-xxx 파드가 떠있는 것이 보일 것이다.
+사내에서 CoreDNS를 통한 DNS 서버를 구축하며 알게된 사실들, 구축 방법등을 공유한다.
+CoreDNS를 시작하는 것은 정말 어렵지 않다. docker를 통해 컨테이너만 실행시켜도 우선은 CoreDNS를 맛볼 수 있다. 다만 나의 경우 docker를 그 자체로 실행시키는 것 보다 docker-compose를 통해 실행시키는 것을 더 선호하는 편이다. docker-compose의 장점이라면 복잡한 docker 명령어를 일일이 기억하고 있지 않아도 docker-compose up -d 명령어 하나로 사전에 설정된 명령을 실행시킬수 있다는 것이다.</description>
+    </item>
+    
+    <item>
       <title>Private Docker Registry 오픈소스: Harbor란</title>
       <link>http://kimmj.github.io/harbor/what-is-harbor/</link>
       <pubDate>Sun, 18 Oct 2020 16:52:12 +0900</pubDate>

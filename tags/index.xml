@@ -6,10 +6,64 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Oct 2020 16:52:12 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2020 00:42:06 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>samba</title>
+      <link>http://kimmj.github.io/tags/samba/</link>
+      <pubDate>Sat, 28 Nov 2020 00:42:06 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/samba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bridge</title>
+      <link>http://kimmj.github.io/tags/bridge/</link>
+      <pubDate>Sat, 21 Nov 2020 01:14:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/bridge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>container</title>
+      <link>http://kimmj.github.io/tags/container/</link>
+      <pubDate>Sat, 21 Nov 2020 01:14:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>http://kimmj.github.io/tags/docker/</link>
+      <pubDate>Sat, 21 Nov 2020 01:14:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>http://kimmj.github.io/tags/docker-compose/</link>
+      <pubDate>Sat, 21 Nov 2020 01:14:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>http://kimmj.github.io/tags/network/</link>
+      <pubDate>Sat, 21 Nov 2020 01:14:13 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/network/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker-registry</title>
@@ -107,15 +161,6 @@
       <pubDate>Sun, 15 Mar 2020 23:13:37 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/targetport/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>http://kimmj.github.io/tags/docker/</link>
-      <pubDate>Sun, 15 Mar 2020 04:18:15 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -327,15 +372,6 @@
     </item>
     
     <item>
-      <title>network</title>
-      <link>http://kimmj.github.io/tags/network/</link>
-      <pubDate>Mon, 24 Feb 2020 13:38:04 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>port</title>
       <link>http://kimmj.github.io/tags/port/</link>
       <pubDate>Mon, 24 Feb 2020 13:38:04 +0900</pubDate>
@@ -377,33 +413,6 @@
       <pubDate>Sat, 22 Feb 2020 23:08:39 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bridge</title>
-      <link>http://kimmj.github.io/tags/bridge/</link>
-      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/bridge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>container</title>
-      <link>http://kimmj.github.io/tags/container/</link>
-      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/container/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker-compose</title>
-      <link>http://kimmj.github.io/tags/docker-compose/</link>
-      <pubDate>Fri, 21 Feb 2020 18:58:15 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/docker-compose/</guid>
       <description></description>
     </item>
     
