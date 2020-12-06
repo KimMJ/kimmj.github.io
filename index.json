@@ -256,7 +256,7 @@
 	"title": "Spinnaker",
 	"tags": [],
 	"description": "",
-	"content": "CI/CD Spinnaker Spinnaker는 Kubernetes 환경에서 배포 자동화를 위해 만들어진 툴입니다.\n배포하려는 클러스터가 GKE인지, EKS인지, On-Premise 환경인지 상관없이 하나의 툴로 배포하기 위해 만들어졌습니다.\n이 툴 자체가 MSA 구조로 만들어져있습니다.\n Installation    Overview     Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment      CanaryAnalysis    Canary Analysis      Tips    Pipeline Expressions      "
+	"content": "CI/CD Spinnaker Spinnaker는 Kubernetes 환경에서 배포 자동화를 위해 만들어진 툴입니다.\n배포하려는 클러스터가 GKE인지, EKS인지, On-Premise 환경인지 상관없이 하나의 툴로 배포하기 위해 만들어졌습니다.\n이 툴 자체가 MSA 구조로 만들어져있습니다.\n Installation    Overview     Install Halyard     Choose Cloud Providers     Choose Your Environment     Choose a Storage Service     Deploy and Connect     Install in Air Gaped Environment      CanaryAnalysis     Tips    Pipeline Expressions      "
 },
 {
 	"uri": "http://kimmj.github.io/ansible/",
