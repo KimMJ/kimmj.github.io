@@ -228,6 +228,11 @@
   </url>
   
   <url>
+    <loc>http://kimmj.github.io/ubuntu/split-tgz/</loc>
+    <lastmod>2020-12-06T17:52:11+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kimmj.github.io/ubuntu/samba/</loc>
     <lastmod>2020-11-28T00:42:06+09:00</lastmod>
   </url>
@@ -478,12 +483,32 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/tags/samba/</loc>
-    <lastmod>2020-11-28T00:42:06+09:00</lastmod>
+    <loc>http://kimmj.github.io/tags/split/</loc>
+    <lastmod>2020-12-06T17:52:11+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://kimmj.github.io/tags/</loc>
+    <lastmod>2020-12-06T17:52:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/tar/</loc>
+    <lastmod>2020-12-06T17:52:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/tgz/</loc>
+    <lastmod>2020-12-06T17:52:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-12-06T17:52:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kimmj.github.io/tags/samba/</loc>
     <lastmod>2020-11-28T00:42:06+09:00</lastmod>
   </url>
   
@@ -579,11 +604,6 @@
   
   <url>
     <loc>http://kimmj.github.io/tags/motd/</loc>
-    <lastmod>2020-03-11T14:20:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/ubuntu/</loc>
     <lastmod>2020-03-11T14:20:42+09:00</lastmod>
   </url>
   

@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Nov 2020 00:42:06 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 17:52:11 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>split</title>
+      <link>http://kimmj.github.io/tags/split/</link>
+      <pubDate>Sun, 06 Dec 2020 17:52:11 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/split/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tar</title>
+      <link>http://kimmj.github.io/tags/tar/</link>
+      <pubDate>Sun, 06 Dec 2020 17:52:11 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/tar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tgz</title>
+      <link>http://kimmj.github.io/tags/tgz/</link>
+      <pubDate>Sun, 06 Dec 2020 17:52:11 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/tgz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://kimmj.github.io/tags/ubuntu/</link>
+      <pubDate>Sun, 06 Dec 2020 17:52:11 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>samba</title>
@@ -188,15 +224,6 @@
       <pubDate>Wed, 11 Mar 2020 14:20:42 +0900</pubDate>
       
       <guid>http://kimmj.github.io/tags/motd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>http://kimmj.github.io/tags/ubuntu/</link>
-      <pubDate>Wed, 11 Mar 2020 14:20:42 +0900</pubDate>
-      
-      <guid>http://kimmj.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
