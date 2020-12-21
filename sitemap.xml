@@ -38,11 +38,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/02-core-concepts/</loc>
-    <lastmod>2020-04-14T00:42:25+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/kubernetes/installation/install-kubeadm/</loc>
     <lastmod>2020-01-17T00:38:41+09:00</lastmod>
   </url>
@@ -50,11 +45,6 @@
   <url>
     <loc>http://kimmj.github.io/spinnaker/installation/install-halyard/</loc>
     <lastmod>2020-01-11T01:41:08+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/03-scheduling/</loc>
-    <lastmod>2020-04-15T18:55:03+09:00</lastmod>
   </url>
   
   <url>
@@ -68,11 +58,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/04-logging-and-monitoring/</loc>
-    <lastmod>2020-04-18T21:47:08+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/choose-your-environment/</loc>
     <lastmod>2020-01-19T00:42:56+09:00</lastmod>
   </url>
@@ -80,16 +65,6 @@
   <url>
     <loc>http://kimmj.github.io/coredns/</loc>
     <lastmod>2020-11-21T01:13:37+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/05-application-lifecycle-management/</loc>
-    <lastmod>2020-04-19T17:02:09+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/</loc>
-    <lastmod>2020-04-14T00:41:30+09:00</lastmod>
   </url>
   
   <url>
@@ -198,33 +173,13 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/06-cluster-maintenance/</loc>
-    <lastmod>2020-04-24T13:09:30+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/deploy-and-connect/</loc>
     <lastmod>2020-01-19T01:20:12+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/07-security/</loc>
-    <lastmod>2020-04-25T20:26:41+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/spinnaker/installation/install-in-air-gaped-environment/</loc>
     <lastmod>2020-01-20T01:16:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/08-storage/</loc>
-    <lastmod>2020-05-04T02:34:12+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/09-networking/</loc>
-    <lastmod>2020-05-04T18:12:04+09:00</lastmod>
   </url>
   
   <url>
@@ -255,11 +210,6 @@
   <url>
     <loc>http://kimmj.github.io/kubernetes/cka-epilogue/</loc>
     <lastmod>2020-07-16T13:10:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/10-kubernetes-the-hard-way/</loc>
-    <lastmod>2020-05-12T01:46:22+09:00</lastmod>
   </url>
   
   <url>
@@ -473,21 +423,6 @@
   </url>
   
   <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/12-end-to-end-tests-on-a-kubernetes-cluster/</loc>
-    <lastmod>2020-06-15T19:39:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/13-troubleshooting/</loc>
-    <lastmod>2020-06-15T20:23:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/kubernetes/cka-study/14-other-topics/</loc>
-    <lastmod>2020-06-15T21:19:17+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://kimmj.github.io/tags/cpu-manager/</loc>
     <lastmod>2020-12-22T02:02:49+09:00</lastmod>
   </url>
@@ -580,16 +515,6 @@
   <url>
     <loc>http://kimmj.github.io/tags/cka/</loc>
     <lastmod>2020-07-16T13:10:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/kubernetse/</loc>
-    <lastmod>2020-06-15T19:39:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://kimmj.github.io/tags/cks/</loc>
-    <lastmod>2020-04-19T17:02:09+09:00</lastmod>
   </url>
   
   <url>
