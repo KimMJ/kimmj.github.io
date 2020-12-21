@@ -6,7 +6,7 @@
     <description>Recent content in kubernetes on Ibiza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jun 2020 21:19:17 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 22 Dec 2020 02:02:49 +0900</lastBuildDate>
     
 	<atom:link href="http://kimmj.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
@@ -102,6 +102,17 @@ Monolithic의 개념은 하나의 큰 어플리케이션을 말합니다. 여러
       
       <guid>http://kimmj.github.io/kubernetes/cka-study/09-networking/</guid>
       <description>Switching Routing  Switching  컴퓨터 두대를 스위치를 통해 연결하는 방법. 연결된 스위치의 인터페이스에 ip를 할당한다. 동일한 네트워크로만 트래픽을 보내준다.   Routing  라우터는 스위치로 연결된 두 네트워크 대역을 연결해준다. 각 네트워크 대역에 대해서 아이피를 동시에 가지고 있다.   Gateway  어떤 아이피 대역에 대해서 어떤 라우터를 통해서 가게 할지 결정하는 것 외부 인터넷과 연결하고 싶다면 먼저 인터넷을 라우터에 연결하고, 이 곳으로 route 설정을 하면 된다. default gateway는 Destination=0.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes에서의 cpu requests, cpu limits는 어떻게 적용될까</title>
+      <link>http://kimmj.github.io/kubernetes/kubernetes-cpu-request-limit/</link>
+      <pubDate>Tue, 22 Dec 2020 02:02:49 +0900</pubDate>
+      
+      <guid>http://kimmj.github.io/kubernetes/kubernetes-cpu-request-limit/</guid>
+      <description>Kubernetes 에서는 컨테이너 단위로 resource를 할당할 수 있다. 여기에는 memory, cpu, ephemeral-storage, hugepages 등이 포함된다. 이 중에서 cpu 의 requests, limits 가 어떤 방식으로 적용이 되는지에 대해 알아볼 것이다.
+Linux Kernel 먼저 기본적으로 Kubernetes는 Linux Kernel의 cgroup을 사용하여 리소스 할당을 한다. cgroup은 control groups 의 의미를 가지며 프로세서들의 자원(cpu, memory 등)을 제한하는 기술이다.
+CPU Share cpu.shares는 CPU를 다른 group에 비해 상대적으로 얼마나 사용할 수 있는지를 나타내는 값이다. 예를 들어 하나의 CPU를 가지고 있고, 두개의 group이 있다고 해보자.</description>
     </item>
     
     <item>
