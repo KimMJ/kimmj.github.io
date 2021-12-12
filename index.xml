@@ -163,6 +163,6 @@ git clone https://github.com/stackhpc/ansible-role-libvirt-vm 테스트 환경 �
 Please consider adding local content in /etc/sudoers.d/ instead of directly modifying this file
 즉, 직접 이 파일을 수정해서 sudo 권한을 주지 말고, /etc/sudoers.d/ 폴더 내에 파일을 추가하라는 의미입니다.
 이 곳에는 /etc/sudoers와 마찬가지로 계정에 대한 설정을 추가할 수 있습니다. 그리고 /etc/sudoers에서는 &amp;ldquo;NOPASSWD&amp;quot;라는 옵션을 주어 password없이 타 계정의 권한을 가지게 만들 수 있습니다.
-이 두가지를 종합하여 내 linux 계정이 sudo 명령어를 입력할 때, 즉 root 권한을 가지게 될 때 password를 입력하지 않도록 설정할 수 있습니다.</description></item><item><title>Hugo Build Git Action</title><link>http://kimmj.github.io/hugo/hugo-build-git-action/</link><pubDate>Sun, 12 Dec 2021 23:16:34 +0900</pubDate><guid>http://kimmj.github.io/hugo/hugo-build-git-action/</guid><description>Github Action은 Github에서 제공하는 CI/CD 솔루션이다. 유저는 uses 라는 명령어로 원하는 작업을 불러올 수 있다.
+이 두가지를 종합하여 내 linux 계정이 sudo 명령어를 입력할 때, 즉 root 권한을 가지게 될 때 password를 입력하지 않도록 설정할 수 있습니다.</description></item><item><title>Git Action으로 hugo build 자동화 하기</title><link>http://kimmj.github.io/hugo/hugo-build-git-action/</link><pubDate>Sun, 12 Dec 2021 23:16:34 +0900</pubDate><guid>http://kimmj.github.io/hugo/hugo-build-git-action/</guid><description>Github Action은 Github에서 제공하는 CI/CD 솔루션이다. 유저는 uses 라는 명령어로 원하는 작업을 불러올 수 있다.
 현재 내가 설정했던 Jenkins를 통한 빌드 및 배포는 이사하며 네트워크 환경이 변경되고, github에서 token을 통한 push만 허용되는 변경 등으로 인해 더이상 실행되고 있지 않았다. 또한 항상 포스트를 작성하려면 VM을 켜야했기에, 너무나 귀찮은 일이 아닐 수 없었다.
 따라서 Github Action 통해서 기존에 로컬에서 Jenkins를 통해 hugo 파일을 빌드해서 다른 repo에 올리는 것을 Jenkins를 사용하지 않고 Github Action을 통해 빌드하고 배포하도록 수정했다.</description></item></channel></rss>
