@@ -6,7 +6,7 @@
 <meta name=description content="Do Learn">
 <meta name=author content="Myeongjin Kim">
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
-<title>Jenkins Install :: Ibiza</title>
+<title>Hugo Build Git Action :: Ibiza</title>
 <link href=/css/nucleus.css?1639320383 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1639320383 rel=stylesheet>
 <link href=/css/hybrid.css?1639320383 rel=stylesheet>
@@ -22,7 +22,7 @@
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-159865175-1','auto'),ga('send','pageview'))</script>
 <script data-ad-client=ca-pub-1788337254638181 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
 </head>
-<body data-url=/jenkins/install/>
+<body data-url=/hugo/hugo-build-git-action/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -115,13 +115,12 @@
 </li>
 </ul>
 </li>
-<li data-nav-id=/jenkins/ title=Jenkins class="dd-item
-parent">
+<li data-nav-id=/jenkins/ title=Jenkins class=dd-item>
 <a href=/jenkins/>
 <i class="fas fa-angle-right"></i>&nbsp;Jenkins
 </a>
 <ul>
-<li data-nav-id=/jenkins/install/ title="Jenkins Install" class="dd-item active">
+<li data-nav-id=/jenkins/install/ title="Jenkins Install" class=dd-item>
 <a href=/jenkins/install/>
 <i class="fas fa-minus"></i>&nbsp;Install
 </a>
@@ -245,7 +244,8 @@ parent">
 </li>
 </ul>
 </li>
-<li data-nav-id=/hugo/ title=Hugo class=dd-item>
+<li data-nav-id=/hugo/ title=Hugo class="dd-item
+parent">
 <a href=/hugo/>
 <i class="fas fa-angle-right"></i>&nbsp;Hugo
 </a>
@@ -277,7 +277,7 @@ parent">
 <i class="fas fa-minus"></i>&nbsp;hugo with html
 </a>
 </li>
-<li data-nav-id=/hugo/hugo-build-git-action/ title="Hugo Build Git Action" class=dd-item>
+<li data-nav-id=/hugo/hugo-build-git-action/ title="Hugo Build Git Action" class="dd-item active">
 <a href=/hugo/hugo-build-git-action/>
 Hugo Build Git Action
 </a>
@@ -527,17 +527,23 @@ Hugo Build Git Action
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/>Ibiza</a> > <a href=/jenkins/>Jenkins</a> > Jenkins Install
+<a href=/>Ibiza</a> > <a href=/hugo/>Hugo</a> > Hugo Build Git Action
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#configure-docker-composeyaml>Configure docker-compose.yaml</a></li>
-<li><a href=#start-jenkins>Start Jenkins</a></li>
-<li><a href=#jenkins-세팅>Jenkins 세팅</a></li>
-<li><a href=#reference>Reference</a></li>
+<li><a href=#workflows>workflows</a>
+<ul>
+<li><a href=#master-브랜치로-새로운-내용-삽입><code>master</code> 브랜치로 새로운 내용 삽입</a></li>
+<li><a href=#git-checkout-을-통해-submodule-git-contents를-pull><code>git checkout</code> 을 통해 submodule, git contents를 pull</a></li>
+<li><a href=#github-secrets-에-configtoml-파일을-저장-후-불러오기>Github <code>secrets</code> 에 <code>config.toml</code> 파일을 저장 후 불러오기</a></li>
+<li><a href=#hugo---minify-로-public-폴더에-내용-생성><code>hugo --minify</code> 로 ./public 폴더에 내용 생성</a></li>
+<li><a href=#google-adsense를-위한-파일-삽입>google adsense를 위한 파일 삽입</a></li>
+<li><a href=#github-page용-repo에-파일-push>github page용 repo에 파일 push</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 </div>
@@ -545,73 +551,130 @@ Hugo Build Git Action
 </div>
 </div>
 <div id=head-tags>
-<div class=tags>
-<a class=tag-link href=/tags/jenkins>jenkins</a>
-<a class=tag-link href=/tags/install>install</a>
-</div>
 </div>
 <div id=body-inner>
 <h1>
-Jenkins Install
+Hugo Build Git Action
 </h1>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#configure-docker-composeyaml>Configure docker-compose.yaml</a></li>
-<li><a href=#start-jenkins>Start Jenkins</a></li>
-<li><a href=#jenkins-세팅>Jenkins 세팅</a></li>
-<li><a href=#reference>Reference</a></li>
+<li><a href=#workflows>workflows</a>
+<ul>
+<li><a href=#master-브랜치로-새로운-내용-삽입><code>master</code> 브랜치로 새로운 내용 삽입</a></li>
+<li><a href=#git-checkout-을-통해-submodule-git-contents를-pull><code>git checkout</code> 을 통해 submodule, git contents를 pull</a></li>
+<li><a href=#github-secrets-에-configtoml-파일을-저장-후-불러오기>Github <code>secrets</code> 에 <code>config.toml</code> 파일을 저장 후 불러오기</a></li>
+<li><a href=#hugo---minify-로-public-폴더에-내용-생성><code>hugo --minify</code> 로 ./public 폴더에 내용 생성</a></li>
+<li><a href=#google-adsense를-위한-파일-삽입>google adsense를 위한 파일 삽입</a></li>
+<li><a href=#github-page용-repo에-파일-push>github page용 repo에 파일 push</a></li>
+</ul>
+</li>
 </ul>
 </nav>
-<h2 id=configure-docker-composeyaml>Configure docker-compose.yaml</h2>
-<p>다음과 같이 <code>docker-compose.yaml</code> 파일을 적절한 디렉토리에 생성합니다.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;2&#39;</span>
-<span style=color:#f92672>services</span>:
-  <span style=color:#f92672>jenkins</span>:
-    <span style=color:#f92672>image</span>: <span style=color:#e6db74>&#39;jenkins/jenkins:lts&#39;</span>
-    <span style=color:#f92672>ports</span>:
-      - <span style=color:#e6db74>&#39;38080:8080&#39;</span>
-      - <span style=color:#e6db74>&#39;38443:8443&#39;</span>
-      - <span style=color:#e6db74>&#39;50000:50000&#39;</span>
-    <span style=color:#f92672>volumes</span>:
-      - <span style=color:#e6db74>&#39;jenkins_data:/var/jenkins_home&#39;</span>
-<span style=color:#f92672>volumes</span>:
-  <span style=color:#f92672>jenkins_data</span>:
-    <span style=color:#f92672>driver</span>: <span style=color:#ae81ff>local</span>
-    <span style=color:#f92672>driver_opts</span>:
-      <span style=color:#f92672>type</span>: <span style=color:#ae81ff>none</span>
-      <span style=color:#f92672>device</span>: <span style=color:#ae81ff>$PWD/jenkins_data</span>
-      <span style=color:#f92672>o</span>: <span style=color:#ae81ff>bind</span>
-</code></pre></div><p><code>jenkins_data</code>는 jenkins가 사용할 데이터들입니다.
-이를 local에 폴더로 만들어줍니다.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>mkdir jenkins_data
-</code></pre></div><h2 id=start-jenkins>Start Jenkins</h2>
-<p>이제 <code>docker-compose</code> 명령어를 통해 실행합니다.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo docker-compose up -d
-</code></pre></div><p><code>http://$IP:38080</code> 으로 접속할 수 있습니다.
-로컬에 설치하셨다면 <code>http://localhost:38080</code>으로 접속하면 됩니다.</p>
-<h2 id=jenkins-세팅>Jenkins 세팅</h2>
-<p>처음에 다음과 같은 화면을 볼 수 있습니다.</p>
-<p><img src=/images/Jenkins/Jenkins-start.png alt=Jenkins-start></p>
-<p>여기서 <code>/var/jenkins_home/secrets/initialAdminPassword</code>의 내용을 아래 칸에 입려하라고 지시합니다.</p>
-<p>저희는 앞서 <code>$PWD/jenkins_data</code>를 <code>/var/jenkins_home</code>에 binding했으므로, <code>$PWD/jenkins_data/secrets/initialAdminPassword</code>를 확인하면 됩니다.
-또는 docker container에 직접 접속해서 해당 path로 이동 후 값을 확인해도 됩니다.</p>
-<p>이제 다음과 같은 화면이 뜰 것입니다.</p>
-<p><img src=/images/Jenkins/Jenkins-plugin-install.png alt=Jenkins-plugin-install></p>
-<p>여기서는 왼쪽의 <code>Install suggested plugins</code>를 선택해줍니다.</p>
-<p>다음과 같이 설치가 진행됩니다.</p>
-<p><img src=/images/Jenkins/Jenkins-plugin-installing.png alt=Jenkins-plugin-installing></p>
-<p>위의 plugin 설치과정이 완료되고 나면 다음과 같은 admin 계정 생성에 관한 화면이 나옵니다.</p>
-<p><img src=/images/Jenkins/Jenkins-admin-user.png alt=Jenkins-admin-user></p>
-<p>알맞게 입력을 한 뒤 저장하면 접속 URL을 작성하라고 합니다.
-default로 적어져 있으니 확인후 변경이 필요하면 바꾸면 됩니다.</p>
-<p><img src=/images/Jenkins/Jenkins-address.png alt=Jenkins-address></p>
-<p>여기까지 하면 기본 설정은 다 끝났습니다.
-Jenkins가 준비될 때까지 잠시 기다리면 home 화면이 뜹니다.</p>
-<p><img src=/images/Jenkins/Jenkins-home.png alt=Jenkins-home></p>
-<h2 id=reference>Reference</h2>
-<ul>
-<li><a href=https://hub.docker.com/_/jenkins/>https://hub.docker.com/_/jenkins/</a></li>
-</ul>
+<p>Github Action은 Github에서 제공하는 CI/CD 솔루션이다.
+유저는 <code>uses</code> 라는 명령어로 원하는 작업을 불러올 수 있다.</p>
+<p>현재 내가 설정했던 Jenkins를 통한 빌드 및 배포는 이사하며 네트워크 환경이 변경되고, github에서 token을 통한 push만 허용되는 변경 등으로 인해 더이상 실행되고 있지 않았다.
+또한 항상 포스트를 작성하려면 VM을 켜야했기에, 너무나 귀찮은 일이 아닐 수 없었다.</p>
+<p>따라서 Github Action 통해서 기존에 로컬에서 Jenkins를 통해 hugo 파일을 빌드해서 다른 repo에 올리는 것을 Jenkins를 사용하지 않고 Github Action을 통해 빌드하고 배포하도록 수정했다.
+이를 통해 VM에 대한 dependency를 없앨 수 있었으며, 어디서나 내 repo에 push만 하면 포스팅이 자동으로 업데이트 되도록 변경하였다.</p>
+<h2 id=workflows>workflows</h2>
+<p>전체 플로우를 확인한 뒤 하나씩 자세히 확인해보도록 하자.</p>
+<ol>
+<li><code>master</code> 브랜치로 새로운 내용 삽입</li>
+<li><code>git checkout</code> 을 통해 submodule, git contents를 pull</li>
+<li>Github <code>secrets</code> 에 <code>config.toml</code> 파일을 저장 후 불러오기</li>
+<li><code>hugo --minify</code> 로 ./public 폴더에 내용 생성</li>
+<li>google adsense를 위한 파일 삽입</li>
+<li>github page용 repo에 파일 push</li>
+</ol>
+<p>간단하게 모든 플로우가 하나의 container에서 이루어진다고 생각하면 좀 더 이해하기 쉬울 것이다.
+해당 container에다가 <code>sudo apt install -y</code> 로 필요한 파일들을 다운받을 수도 있고, 원하는 명령어를 마음껏 사용할 수도 있다.
+그리고 물론, 실행 후에는 삭제가 된다.</p>
+<p>이를 기반으로 한 Github Action 파일은 아래와 같다.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>github pages</span>
+
+<span style=color:#f92672>on</span>:
+  <span style=color:#f92672>push</span>:
+    <span style=color:#f92672>branches</span>:
+      - <span style=color:#ae81ff>master </span> <span style=color:#75715e># Set a branch to deploy</span>
+
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#f92672>deploy</span>:
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-20.04</span>
+    <span style=color:#f92672>steps</span>:
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>token</span>: <span style=color:#ae81ff>${{ secrets.GIT_TOKEN }}</span>
+          <span style=color:#f92672>submodules</span>: <span style=color:#ae81ff>recursive</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>copy config.toml</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo &#34;${CONFIG_TOML}&#34; &gt; config.toml</span>
+        <span style=color:#f92672>env</span>:
+          <span style=color:#f92672>CONFIG_TOML</span>: <span style=color:#ae81ff>${{ secrets.config }}</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Hugo</span>
+        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#39;latest&#39;</span>
+          <span style=color:#75715e># extended: true</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>hugo --minify</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>site-verification</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo &#34;${{ secrets.SITE_VERIFICATION }}&#34; &gt; ./public/google34bf590cfe76298c.html</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy</span>
+        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v3</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>deploy_key</span>: <span style=color:#ae81ff>${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
+          <span style=color:#f92672>external_repository</span>: <span style=color:#ae81ff>kimmj/kimmj.github.io</span>
+          <span style=color:#f92672>publish_branch: master  # default</span>: <span style=color:#ae81ff>gh-pages</span>
+          <span style=color:#f92672>publish_dir</span>: <span style=color:#ae81ff>./public</span>
+</code></pre></div><h3 id=master-브랜치로-새로운-내용-삽입><code>master</code> 브랜치로 새로운 내용 삽입</h3>
+<p>기존처럼 새로운 포스팅을 생성하는 부분이다.
+<code>hugo new --kind contents Hugo/hubo-build-git-action.md</code> 처럼 생성하면 된다.</p>
+<h3 id=git-checkout-을-통해-submodule-git-contents를-pull><code>git checkout</code> 을 통해 submodule, git contents를 pull</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml>      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>token</span>: <span style=color:#ae81ff>${{ secrets.GIT_TOKEN }}</span>
+          <span style=color:#f92672>submodules</span>: <span style=color:#ae81ff>recursive</span>
+</code></pre></div><p>여기서 <code>${{ secrets.GIT_TOKEN }}</code> 은 <code>PAT</code> (Personal Access Token) 이다.
+이 토큰을 이용해서 hugo 폴더에 있는 themes 아래 submodule들을 불러온다.</p>
+<h3 id=github-secrets-에-configtoml-파일을-저장-후-불러오기>Github <code>secrets</code> 에 <code>config.toml</code> 파일을 저장 후 불러오기</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>copy config.toml</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo &#34;${CONFIG_TOML}&#34; &gt; config.toml</span>
+        <span style=color:#f92672>env</span>:
+          <span style=color:#f92672>CONFIG_TOML</span>: <span style=color:#ae81ff>${{ secrets.config }}</span>
+</code></pre></div><p>내 <code>config.toml</code> 에는 credential같은 정보가 들어가있어서, github에 파일을 올릴 수 없었다.
+이 파일은 이전에 <code>git-secrets</code> 라는걸로 해결을 했었는데, github에 이제 secret을 올릴 수 있는 기능이 생겨서, 여기다 그냥 올려버렸다.
+이를 <code>echo</code>를 통해 repo에 함께 담아 주었다.</p>
+<h3 id=hugo---minify-로-public-폴더에-내용-생성><code>hugo --minify</code> 로 ./public 폴더에 내용 생성</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Hugo</span>
+        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#39;latest&#39;</span>
+          <span style=color:#75715e># extended: true</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>hugo --minify</span>
+</code></pre></div><p><code>hugo --minify</code> 를 입력하게 되면 실제로 <code>./public</code> 폴더에 정적 HTML 파일들이 저장된다.
+이 파일들은 github page를 위해 사용될 것이다.</p>
+<h3 id=google-adsense를-위한-파일-삽입>google adsense를 위한 파일 삽입</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>site-verification</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo &#34;${{ secrets.SITE_VERIFICATION }}&#34; &gt; ./public/google34bf590cfe76298c.html</span>
+</code></pre></div><p>예전에 adsense를 달 때 site-verification 파일을 넣었었다.
+이게 이번에도 필요한지는 정확하게 기억이 안나지만, 혹시몰라서 그냥 넣어주었다.</p>
+<h3 id=github-page용-repo에-파일-push>github page용 repo에 파일 push</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy</span>
+        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v3</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>deploy_key</span>: <span style=color:#ae81ff>${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
+          <span style=color:#f92672>external_repository</span>: <span style=color:#ae81ff>kimmj/kimmj.github.io</span>
+          <span style=color:#f92672>publish_branch: master  # default</span>: <span style=color:#ae81ff>gh-pages</span>
+          <span style=color:#f92672>publish_dir</span>: <span style=color:#ae81ff>./public</span>
+</code></pre></div><p>여기서 <code>ACTIONS_DEPLOY_KEY</code> 는 <a href=https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-create-ssh-deploy-key>create-ssh-deploy-key</a> 를 보고 따라하여 만들었다.</p>
+<p>이렇게 하면 <code>kimmj/kimmj.github.io</code> repo에 master branch로 <code>./public</code> 에 있는 파일들이 push된다.
+이 때 기존에 있던 파일을 모두 지운 뒤 push 하는 방식이므로 따로 필요한 static file이 해당 repo에 반드시 있어야 할 경우, 위에서 내가 했던 방법대로 secret에 담고 echo로 넣어둔다던지, workaround를 찾아서 해결하면 된다.</p>
 <footer class=footline>
 </footer>
 <div id=utterance>

@@ -6,4 +6,6 @@ https://discourse.gohugo.io/t/implementing-google-analytics-in-hugo/2671/2
 저는 이 hugo 기반 블로그를 만드는 데 큰 도움을 준 https://ryan-han.</description></item><item><title>HUGO로 HTML이 되지 않을 때 가능하게 하는 방법</title><link>http://kimmj.github.io/hugo/hugo-with-html/</link><pubDate>Fri, 10 Jan 2020 02:22:34 +0900</pubDate><guid>http://kimmj.github.io/hugo/hugo-with-html/</guid><description>Hugo는 markdown을 기본적으로 사용하지만 html을 이용해서 좀 더 다양하게 커스터마이징이 가능한 장점도 가지고 있습니다.
 하지만 저는 처음에 html 코드를 사용하게 되면 &amp;lt;!-- raw HTML omitted --&amp;gt;와 같은 줄로 대치가 되곤 했습니다. 구글링 결과 이는 Hugo의 버전이 0.60.0으로 되면서부터 기본적으로 disable 시켰기 때문입니다.
 따라서 다음과 같이 조치를 하면 간단하게 해결이 가능합니다.
-[markup.goldmark.renderer] unsafe= true 위와 같은 설정을 config.toml에 추가하기만 하면 됩니다. 추가를 한 뒤 다시 확인해보면 정상적으로 html 코드가 적용된 모습을 볼 수 있습니다.</description></item></channel></rss>
+[markup.goldmark.renderer] unsafe= true 위와 같은 설정을 config.toml에 추가하기만 하면 됩니다. 추가를 한 뒤 다시 확인해보면 정상적으로 html 코드가 적용된 모습을 볼 수 있습니다.</description></item><item><title>Hugo Build Git Action</title><link>http://kimmj.github.io/hugo/hugo-build-git-action/</link><pubDate>Sun, 12 Dec 2021 23:16:34 +0900</pubDate><guid>http://kimmj.github.io/hugo/hugo-build-git-action/</guid><description>Github Action은 Github에서 제공하는 CI/CD 솔루션이다. 유저는 uses 라는 명령어로 원하는 작업을 불러올 수 있다.
+현재 내가 설정했던 Jenkins를 통한 빌드 및 배포는 이사하며 네트워크 환경이 변경되고, github에서 token을 통한 push만 허용되는 변경 등으로 인해 더이상 실행되고 있지 않았다. 또한 항상 포스트를 작성하려면 VM을 켜야했기에, 너무나 귀찮은 일이 아닐 수 없었다.
+따라서 Github Action 통해서 기존에 로컬에서 Jenkins를 통해 hugo 파일을 빌드해서 다른 repo에 올리는 것을 Jenkins를 사용하지 않고 Github Action을 통해 빌드하고 배포하도록 수정했다.</description></item></channel></rss>
