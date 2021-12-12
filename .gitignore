@@ -1,0 +1,4 @@
+public/**
+themes/**
+.gitsecret/keys/random_seed
+config.toml
