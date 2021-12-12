@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Ibiza</title><link>http://kimmj.github.io/tags/git/</link><description>Recent content in git on Ibiza</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 07 Mar 2020 23:39:23 +0900</lastBuildDate><atom:link href="http://kimmj.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>git-secret을 통한 github 파일 암호화</title><link>http://kimmj.github.io/git/git-secret/</link><pubDate>Sat, 07 Mar 2020 23:39:23 +0900</pubDate><guid>http://kimmj.github.io/git/git-secret/</guid><description>git을 사용하다 보면 password나 credential같은 정보가 git에 올라가는 경우가 종종 있습니다. aws같은 cloud provider의 crediential을 git에 생각없이 올리고, 이를 다른 해커가 크롤링을 통해 얻어 비트코인을 채굴하는 사례도 있었습니다.
+이처럼 보안이 필요한 파일을 git에 올릴 때, 암호화를 하여 업로드하는 방법이 있습니다.
+https://github.com/sobolevn/git-secret
+git-secret git-secret은 파일에 대한 암화를 지원하기 위해 사용되는 프로그램입니다.
+git-secret add 명령어를 통해 파일을 암호화하고, git-secret reveal을 통해 복호화합니다. 이 때 gpg를 이용하게 됩니다.
+Install 사용자 환경에 따라 brew, apt, yum을 통해 설치할 수 있습니다.</description></item><item><title>Gitignore 설정</title><link>http://kimmj.github.io/git/gitignore/</link><pubDate>Mon, 24 Feb 2020 14:28:13 +0900</pubDate><guid>http://kimmj.github.io/git/gitignore/</guid><description>참조: https://git-scm.com/docs/gitignore
+gitignore은 git에서 어떤 파일을 무시할지 설정하는 파일입니다. 이미 tracked된 것들에는 영향을 주지 않습니다.
+gitignore 참조 순서 syntax blank line 파일과 매칭되지 않습니다. 따라서 가독성을 위해 사용할 수 있습니다.
+# #은 comment로 처리됩니다.
+Traling space \로 감싸졌다고 하더라도 무시됩니다.
+! !는 not과 같습니다. 파일 이름 맨 앞에 !가 있고, 이를 ignore할 때 사용하려면 \를 통해 escape 해줘야 합니다.
+/ /는 디렉토리를 구분합니다. 처음, 중간, 끝 어느 위치에도 올 수 있습니다.</description></item></channel></rss>

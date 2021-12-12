@@ -1,0 +1,662 @@
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.90.1">
+<meta name=description content="Do Learn">
+<meta name=author content="Myeongjin Kim">
+<link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
+<title>CKA: Certified Kubernetes Administrator 취득 후기 :: Ibiza</title>
+<link href=/css/nucleus.css?1639316885 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1639316885 rel=stylesheet>
+<link href=/css/hybrid.css?1639316885 rel=stylesheet>
+<link href=/css/featherlight.min.css?1639316885 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1639316885 rel=stylesheet>
+<link href=/css/auto-complete.css?1639316885 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1639316885 rel=stylesheet>
+<link href=/css/theme.css?1639316885 rel=stylesheet>
+<link href=/css/hugo-theme.css?1639316885 rel=stylesheet>
+<link href=/css/theme-mine.css?1639316885 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1639316885></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-159865175-1','auto'),ga('send','pageview'))</script>
+<script data-ad-client=ca-pub-1788337254638181 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+</head>
+<body data-url=/kubernetes/cka-epilogue/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<div>
+<img src="https://avatars3.githubusercontent.com/u/6358016?s=460&v=4" style=border-radius:50%;opacity:0 width=50% height=50%>
+</div>
+<h3 margin=100px><p style=color:#fff>Ibiza</p></h3>
+<p style=color:#fff>기록하는 습관</p>
+</div>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/coredns/ title=CoreDNS class=dd-item>
+<a href=/coredns/>
+<i class="fas fa-angle-right"></i>&nbsp;CoreDNS
+</a>
+<ul>
+<li data-nav-id=/coredns/configure-dns-server/ title="CoreDNS를 통한 Dns Server 구축하기 with docker" class=dd-item>
+<a href=/coredns/configure-dns-server/>
+<i class="fas fa-minus"></i>&nbsp;CoreDNS를 통한 Dns Server 구축하기 with docker
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/harbor/ title=Harbor class=dd-item>
+<a href=/harbor/>
+<i class="fas fa-angle-right"></i>&nbsp;Harbor
+</a>
+<ul>
+<li data-nav-id=/harbor/what-is-harbor/ title="Private Docker Registry 오픈소스: Harbor란" class=dd-item>
+<a href=/harbor/what-is-harbor/>
+<i class="fas fa-minus"></i>&nbsp;Private Docker Registry 오픈소스: Harbor란
+</a>
+</li>
+<li data-nav-id=/harbor/install/ title="Harbor 설치" class=dd-item>
+<a href=/harbor/install/>
+<i class="fas fa-minus"></i>&nbsp;Harbor 설치
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/git/ title=Git class=dd-item>
+<a href=/git/>
+<i class="fas fa-angle-right"></i>&nbsp;Git
+</a>
+<ul>
+<li data-nav-id=/git/git-secret/ title="git-secret을 통한 github 파일 암호화" class=dd-item>
+<a href=/git/git-secret/>
+<i class="fas fa-minus"></i>&nbsp;git-secret을 통한 github 파일 암호화
+</a>
+</li>
+<li data-nav-id=/git/gitignore/ title="Gitignore 설정" class=dd-item>
+<a href=/git/gitignore/>
+<i class="fas fa-minus"></i>&nbsp;Gitignore 설정
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/python/ title=Python class=dd-item>
+<a href=/python/>
+<i class="fas fa-angle-right"></i>&nbsp;Python
+</a>
+<ul>
+<li data-nav-id=/python/python-beautiful-cli/ title="[번역]Python을 통해 이쁜 CLI 만들기" class=dd-item>
+<a href=/python/python-beautiful-cli/>
+<i class="fas fa-minus"></i>&nbsp;[번역]Python을 통해 이쁜 CLI 만들기
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/docker/ title=Docker class=dd-item>
+<a href=/docker/>
+<i class="fas fa-angle-right"></i>&nbsp;Docker
+</a>
+<ul>
+<li data-nav-id=/docker/insecure-registry/ title="http를 사용하는 docker registry를 위한 insecure registry 설정" class=dd-item>
+<a href=/docker/insecure-registry/>
+<i class="fas fa-minus"></i>&nbsp;http를 사용하는 docker registry를 위한 insecure registry 설정
+</a>
+</li>
+<li data-nav-id=/docker/use-docker-without-sudo/ title="Docker를 sudo없이 실행하기" class=dd-item>
+<a href=/docker/use-docker-without-sudo/>
+<i class="fas fa-minus"></i>&nbsp;Docker를 sudo없이 실행하기
+</a>
+</li>
+<li data-nav-id=/docker/connect-container-to-container/ title="[docker-compose] container에서 다른 container로 접속하기" class=dd-item>
+<a href=/docker/connect-container-to-container/>
+<i class="fas fa-minus"></i>&nbsp;[docker-compose] container에서 다른 container로 접속하기
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/jenkins/ title=Jenkins class=dd-item>
+<a href=/jenkins/>
+<i class="fas fa-angle-right"></i>&nbsp;Jenkins
+</a>
+<ul>
+<li data-nav-id=/jenkins/install/ title="Jenkins Install" class=dd-item>
+<a href=/jenkins/install/>
+<i class="fas fa-minus"></i>&nbsp;Install
+</a>
+</li>
+<li data-nav-id=/jenkins/workspace-list/ title="Workspace@2를 변경하기 - Workspace List 설정 변경" class=dd-item>
+<a href=/jenkins/workspace-list/>
+<i class="fas fa-minus"></i>&nbsp;Workspace@2를 변경하기 - Workspace List 설정 변경
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/iac/ title=IaC class=dd-item>
+<a href=/iac/>
+<i class="fas fa-angle-right"></i>&nbsp;IaC
+</a>
+<ul>
+<li data-nav-id=/iac/translate-what-is-infrastructure-as-a-code/ title="[번역] What Is Infrastructure as a Code? How It Works, Best Practices, Tutorials" class=dd-item>
+<a href=/iac/translate-what-is-infrastructure-as-a-code/>
+<i class="fas fa-minus"></i>&nbsp;[Translate] What Is Infrastructure as a Code
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/cicd/ title=CICD class=dd-item>
+<a href=/cicd/>
+<i class="fas fa-angle-right"></i>&nbsp;CICD
+</a>
+<ul>
+<li data-nav-id=/cicd/deploy-strategy/ title="Deploy Strategy" class=dd-item>
+<a href=/cicd/deploy-strategy/>
+<i class="fas fa-minus"></i>&nbsp;Deploy Strategy
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/css/ title=CSS class=dd-item>
+<a href=/css/>
+<i class="fas fa-angle-right"></i>&nbsp;CSS
+</a>
+<ul>
+<li data-nav-id=/css/background-img-darken/ title="background image 어둡게 하기" class=dd-item>
+<a href=/css/background-img-darken/>
+<i class="fas fa-minus"></i>&nbsp;background image 어둡게 하기
+</a>
+</li>
+<li data-nav-id=/css/greater-than-sign/ title="Greater Than Sign" class=dd-item>
+<a href=/css/greater-than-sign/>
+<i class="fas fa-minus"></i>&nbsp;Greater Than Sign
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/prometheus/ title=Prometheus class=dd-item>
+<a href=/prometheus/>
+<i class="fas fa-angle-right"></i>&nbsp;Prometheus
+</a>
+<ul>
+<li data-nav-id=/prometheus/install/ title="Install Prometheus" class=dd-item>
+<a href=/prometheus/install/>
+<i class="fas fa-minus"></i>&nbsp;Install
+</a>
+</li>
+<li data-nav-id=/prometheus/federation/ title=Federation class=dd-item>
+<a href=/prometheus/federation/>
+<i class="fas fa-minus"></i>&nbsp;Federation
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/kubernetes/ title=Kubernetes class="dd-item
+parent">
+<a href=/kubernetes/>
+<i class="fas fa-angle-right"></i>&nbsp;Kubernetes
+</a>
+<ul>
+<li data-nav-id=/kubernetes/concepts/ title=Concepts class=dd-item>
+<a href=/kubernetes/concepts/>
+<i class="fas fa-angle-right"></i>&nbsp;Concepts
+</a>
+<ul>
+<li data-nav-id=/kubernetes/concepts/controllers-overview/ title="Controllers Overview" class=dd-item>
+<a href=/kubernetes/concepts/controllers-overview/>
+<i class="fas fa-minus"></i>&nbsp;Controllers Overview
+</a>
+</li>
+<li data-nav-id=/kubernetes/concepts/kubernetes-components/ title="Kubernetes Components" class=dd-item>
+<a href=/kubernetes/concepts/kubernetes-components/>
+<i class="fas fa-minus"></i>&nbsp;Kubernetes Components
+</a>
+</li>
+<li data-nav-id=/kubernetes/concepts/pods/ title=Pods class=dd-item>
+<a href=/kubernetes/concepts/pods/>
+<i class="fas fa-minus"></i>&nbsp;Pods
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/kubernetes/kubernetes-service-iptables/ title="Kubernetes Service는 어떻게 iptables 설정이 되는가" class=dd-item>
+<a href=/kubernetes/kubernetes-service-iptables/>
+<i class="fas fa-minus"></i>&nbsp;Kubernetes Service는 어떻게 iptables 설정이 되는가
+</a>
+</li>
+<li data-nav-id=/kubernetes/kubernetes-cpu-request-limit/ title="Kubernetes에서의 cpu requests, cpu limits는 어떻게 적용될까" class=dd-item>
+<a href=/kubernetes/kubernetes-cpu-request-limit/>
+<i class="fas fa-minus"></i>&nbsp;Kubernetes에서의 cpu requests, cpu limits는 어떻게 적용될까
+</a>
+</li>
+<li data-nav-id=/kubernetes/cka-epilogue/ title="CKA: Certified Kubernetes Administrator 취득 후기" class="dd-item active">
+<a href=/kubernetes/cka-epilogue/>
+<i class="fas fa-minus"></i>&nbsp;CKA: Certified Kubernetes Administrator 취득 후기
+</a>
+</li>
+<li data-nav-id=/kubernetes/port-targetport-nodeport-in-kubernetes/ title="[번역] 쿠버네티스에서의 Port, TargetPort, NodePort" class=dd-item>
+<a href=/kubernetes/port-targetport-nodeport-in-kubernetes/>
+<i class="fas fa-minus"></i>&nbsp;[번역] 쿠버네티스에서의 Port, TargetPort, NodePort
+</a>
+</li>
+<li data-nav-id=/kubernetes/stern/ title="Stern을 이용하여 여러 pod의 log를 한번에 확인하기" class=dd-item>
+<a href=/kubernetes/stern/>
+<i class="fas fa-minus"></i>&nbsp;Stern을 이용하여 여러 pod의 log를 한번에 확인하기
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/hugo/ title=Hugo class=dd-item>
+<a href=/hugo/>
+<i class="fas fa-angle-right"></i>&nbsp;Hugo
+</a>
+<ul>
+<li data-nav-id=/hugo/ibiza/ title=Ibiza class=dd-item>
+<a href=/hugo/ibiza/>
+<i class="fas fa-angle-right"></i>&nbsp;Ibiza
+</a>
+<ul>
+<li data-nav-id=/hugo/ibiza/font-change/ title="Font Change" class=dd-item>
+<a href=/hugo/ibiza/font-change/>
+<i class="fas fa-minus"></i>&nbsp;Font Change
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/hugo/google-analytics/ title="Hugo에 Google Analytics 적용하기" class=dd-item>
+<a href=/hugo/google-analytics/>
+<i class="fas fa-minus"></i>&nbsp;Hugo에 Google Analytics 적용하기
+</a>
+</li>
+<li data-nav-id=/hugo/insert-comment/ title="Hugo에 Comment 추가하기 (Utterance)" class=dd-item>
+<a href=/hugo/insert-comment/>
+<i class="fas fa-minus"></i>&nbsp;Hugo에 Comment 추가하기 (Utterance)
+</a>
+</li>
+<li data-nav-id=/hugo/hugo-with-html/ title="HUGO로 HTML이 되지 않을 때 가능하게 하는 방법" class=dd-item>
+<a href=/hugo/hugo-with-html/>
+<i class="fas fa-minus"></i>&nbsp;hugo with html
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/spinnaker/ title=Spinnaker class=dd-item>
+<a href=/spinnaker/>
+<i class="fas fa-angle-right"></i>&nbsp;Spinnaker
+</a>
+<ul>
+<li data-nav-id=/spinnaker/installation/ title=Installation class=dd-item>
+<a href=/spinnaker/installation/>
+<i class="fas fa-angle-right"></i>&nbsp;Installation
+</a>
+<ul>
+<li data-nav-id=/spinnaker/installation/overview/ title=Overview class=dd-item>
+<a href=/spinnaker/installation/overview/>
+<i class="fas fa-minus"></i>&nbsp;Overview
+</a>
+</li>
+<li data-nav-id=/spinnaker/installation/install-halyard/ title="Install Halyard" class=dd-item>
+<a href=/spinnaker/installation/install-halyard/>
+<i class="fas fa-minus"></i>&nbsp;Install Halyard
+</a>
+</li>
+<li data-nav-id=/spinnaker/installation/choose-cloud-providers/ title="Choose Cloud Providers" class=dd-item>
+<a href=/spinnaker/installation/choose-cloud-providers/>
+<i class="fas fa-minus"></i>&nbsp;Choose Cloud Providers
+</a>
+</li>
+<li data-nav-id=/spinnaker/installation/choose-your-environment/ title="Choose Your Environment" class=dd-item>
+<a href=/spinnaker/installation/choose-your-environment/>
+<i class="fas fa-minus"></i>&nbsp;Choose Your Environment
+</a>
+</li>
+<li data-nav-id=/spinnaker/installation/choose-a-storage-service/ title="Choose a Storage Service" class=dd-item>
+<a href=/spinnaker/installation/choose-a-storage-service/>
+<i class="fas fa-minus"></i>&nbsp;Choose a Storage Service
+</a>
+</li>
+<li data-nav-id=/spinnaker/installation/deploy-and-connect/ title="Deploy and Connect" class=dd-item>
+<a href=/spinnaker/installation/deploy-and-connect/>
+<i class="fas fa-minus"></i>&nbsp;Deploy and Connect
+</a>
+</li>
+<li data-nav-id=/spinnaker/installation/install-in-air-gaped-environment/ title="Install in Air Gaped Environment" class=dd-item>
+<a href=/spinnaker/installation/install-in-air-gaped-environment/>
+<i class="fas fa-minus"></i>&nbsp;Install in Air Gaped Environment
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/spinnaker/canaryanalysis/ title=CanaryAnalysis class=dd-item>
+<a href=/spinnaker/canaryanalysis/>
+<i class="fas fa-angle-right"></i>&nbsp;CanaryAnalysis
+</a>
+<ul>
+<li data-nav-id=/spinnaker/canaryanalysis/canary-analysis/ title="Canary Analysis" class=dd-item>
+<a href=/spinnaker/canaryanalysis/canary-analysis/>
+<i class="fas fa-minus"></i>&nbsp;Canary Analysis
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/spinnaker/tips/ title=Tips class=dd-item>
+<a href=/spinnaker/tips/>
+<i class="fas fa-angle-right"></i>&nbsp;Tips
+</a>
+<ul>
+<li data-nav-id=/spinnaker/tips/pipeline-expressions/ title="Pipeline Expressions" class=dd-item>
+<a href=/spinnaker/tips/pipeline-expressions/>
+<i class="fas fa-minus"></i>&nbsp;Pipeline Expressions
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ansible/ title=Ansible class=dd-item>
+<a href=/ansible/>
+<i class="fas fa-angle-right"></i>&nbsp;Ansible
+</a>
+<ul>
+<li data-nav-id=/ansible/create-vm-with-ansible-libvirt/ title="Create Vm With Ansible Libvirt" class=dd-item>
+<a href=/ansible/create-vm-with-ansible-libvirt/>
+<i class="fas fa-minus"></i>&nbsp;Create Vm With Ansible Libvirt
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ubuntu/ title=Ubuntu class=dd-item>
+<a href=/ubuntu/>
+<i class="fas fa-angle-right"></i>&nbsp;Ubuntu
+</a>
+<ul>
+<li data-nav-id=/ubuntu/tools/ title=Tools class=dd-item>
+<a href=/ubuntu/tools/>
+<i class="fas fa-angle-right"></i>&nbsp;Tools
+</a>
+<ul>
+<li data-nav-id=/ubuntu/tools/tmux/ title=Tmux class=dd-item>
+<a href=/ubuntu/tools/tmux/>
+<i class="fas fa-minus"></i>&nbsp;Tmux
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ubuntu/network/ title=Network class=dd-item>
+<a href=/ubuntu/network/>
+<i class="fas fa-angle-right"></i>&nbsp;Network
+</a>
+<ul>
+<li data-nav-id=/ubuntu/network/netplan/ title="Netplan으로 static IP 할당받기" class=dd-item>
+<a href=/ubuntu/network/netplan/>
+<i class="fas fa-minus"></i>&nbsp;Netplan으로 static IP 할당받기
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ubuntu/split-tgz/ title="Linux에서 압축파일 분할하기" class=dd-item>
+<a href=/ubuntu/split-tgz/>
+<i class="fas fa-minus"></i>&nbsp;Linux에서 압축파일 분할하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/samba/ title="Samba를 통한 디스크 공유" class=dd-item>
+<a href=/ubuntu/samba/>
+<i class="fas fa-minus"></i>&nbsp;Samba를 통한 디스크 공유
+</a>
+</li>
+<li data-nav-id=/ubuntu/customize-login-message/ title="Ubuntu의 Login Message 수정하기" class=dd-item>
+<a href=/ubuntu/customize-login-message/>
+<i class="fas fa-minus"></i>&nbsp;Ubuntu의 Login Message 수정하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/start-tmux-after-reboot/ title="reboot 후에 tmux를 실행시켜 원하는 작업을 하기" class=dd-item>
+<a href=/ubuntu/start-tmux-after-reboot/>
+<i class="fas fa-minus"></i>&nbsp;reboot 후에 tmux를 실행시켜 원하는 작업을 하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/oh-my-zsh-home-end-key/ title="oh-my-zsh에서 home key와 end key가 안될 때 해결방법" class=dd-item>
+<a href=/ubuntu/oh-my-zsh-home-end-key/>
+<i class="fas fa-minus"></i>&nbsp;oh-my-zsh에서 home key와 end key가 안될 때 해결방법
+</a>
+</li>
+<li data-nav-id=/ubuntu/base64-encode-decode/ title="Ubuntu에서 Base64로 인코딩, 디코딩하기" class=dd-item>
+<a href=/ubuntu/base64-encode-decode/>
+<i class="fas fa-minus"></i>&nbsp;Ubuntu에서 Base64로 인코딩, 디코딩하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/file-edit-without-editor/ title="Editor(vi)가 없을 때 파일 수정하기" class=dd-item>
+<a href=/ubuntu/file-edit-without-editor/>
+<i class="fas fa-minus"></i>&nbsp;Editor(vi)가 없을 때 파일 수정하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/check-listen-port/ title="열려있는 포트 확인하기" class=dd-item>
+<a href=/ubuntu/check-listen-port/>
+<i class="fas fa-minus"></i>&nbsp;열려있는 포트 확인하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/using-watch-with-pipes/ title="pipe를 사용한 명령어를 watch로 확인하기" class=dd-item>
+<a href=/ubuntu/using-watch-with-pipes/>
+<i class="fas fa-minus"></i>&nbsp;pipe를 사용한 명령어를 watch로 확인하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/use-alias-in-watch/ title="watch를 사용할 때 alias 이용하기" class=dd-item>
+<a href=/ubuntu/use-alias-in-watch/>
+<i class="fas fa-minus"></i>&nbsp;watch를 사용할 때 alias 이용하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/ssh-without-password/ title="password 없이 ssh 접속하기" class=dd-item>
+<a href=/ubuntu/ssh-without-password/>
+<i class="fas fa-minus"></i>&nbsp;password 없이 ssh 접속하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/ssh-tunneling/ title="SSH Tunneling 사용법" class=dd-item>
+<a href=/ubuntu/ssh-tunneling/>
+<i class="fas fa-minus"></i>&nbsp;SSH Tunneling 사용법
+</a>
+</li>
+<li data-nav-id=/ubuntu/ssh-with-jump/ title="Gateway를 이용하여 SSH 접속하기" class=dd-item>
+<a href=/ubuntu/ssh-with-jump/>
+<i class="fas fa-minus"></i>&nbsp;Gateway를 이용하여 SSH 접속하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/change-hostname/ title="Hostname 변경하기" class=dd-item>
+<a href=/ubuntu/change-hostname/>
+<i class="fas fa-minus"></i>&nbsp;Hostname 변경하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/unattended-ubuntu/ title="추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기" class=dd-item>
+<a href=/ubuntu/unattended-ubuntu/>
+<i class="fas fa-minus"></i>&nbsp;추가 입력절차(prompt) 없이 Ubuntu 설치하는 이미지 만들기
+</a>
+</li>
+<li data-nav-id=/ubuntu/how-to-edit-boot-parameter-during-install/ title="Ubuntu 설치 시 Boot Parameter를 수정하기" class=dd-item>
+<a href=/ubuntu/how-to-edit-boot-parameter-during-install/>
+<i class="fas fa-minus"></i>&nbsp;Ubuntu 설치 시 Boot Parameter를 수정하기
+</a>
+</li>
+<li data-nav-id=/ubuntu/how-to-use-sudo-without-password/ title="sudo를 password 없이 사용하기" class=dd-item>
+<a href=/ubuntu/how-to-use-sudo-without-password/>
+<i class="fas fa-minus"></i>&nbsp;sudo를 password 없이 사용하기
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>More</h3>
+<ul>
+<li>
+<a class=padding href=https://github.com/KimMJ><i class="fab fa-github"></i> Github</a>
+</li>
+<li>
+<a class=padding href=https://gohugo.io/><i class="fas fa-bookmark"></i> Hugo Documentation</a>
+</li>
+<li>
+<a class=padding href=https://learn.netlify.com/en/><i class="fas fa-bookmark"></i> Hugo Theme Learn</a>
+</li>
+<li>
+<a class=padding href=http://kimmj.github.io/tags><i class="fas fa-tags"></i> Tags</a>
+</li>
+</ul>
+</section>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<div id=docsToc>
+<div class=pi-accordion>
+</div>
+<button class=push-menu-close-button onclick=kub.toggleToc()></button>
+</div>
+© 2020 GitHub, Inc.
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/>Ibiza</a> > <a href=/kubernetes/>Kubernetes</a> > CKA: Certified Kubernetes Administrator 취득 후기
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#시험-환경>시험 환경</a></li>
+<li><a href=#준비했던-것들>준비했던 것들</a>
+<ul>
+<li><a href=#공식-docs>공식 Docs</a></li>
+<li><a href=#kubernetes-the-hard-way>kubernetes the hard way</a></li>
+<li><a href=#udemy-cka-강의>Udemy CKA 강의</a></li>
+</ul>
+</li>
+<li><a href=#공부해야-할-것들>공부해야 할 것들</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+<div class=tags>
+<a class=tag-link href=/tags/cka>CKA</a>
+<a class=tag-link href=/tags/certified-kubernetes-administrator>Certified-Kubernetes-Administrator</a>
+</div>
+</div>
+<div id=body-inner>
+<h1>
+CKA: Certified Kubernetes Administrator 취득 후기
+</h1>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#시험-환경>시험 환경</a></li>
+<li><a href=#준비했던-것들>준비했던 것들</a>
+<ul>
+<li><a href=#공식-docs>공식 Docs</a></li>
+<li><a href=#kubernetes-the-hard-way>kubernetes the hard way</a></li>
+<li><a href=#udemy-cka-강의>Udemy CKA 강의</a></li>
+</ul>
+</li>
+<li><a href=#공부해야-할-것들>공부해야 할 것들</a></li>
+</ul>
+</nav>
+<p>작년부터 미뤄왔던 <code>CKA: Certified Kubernetes Administrator</code> 취득을 드디어 하게 되었습니다.
+이제까지 제가 했던 공부들을 공유하며 이 시험을 보려는 사람들에게 유용한 정보를 주기 위해 이 포스트를 작성합니다.</p>
+<p>저는 다음과 같이 <code>CKA</code>를 취득하였습니다.</p>
+<ul>
+<li>점수: 97점 (커트라인: 74점)</li>
+<li>유효기간: 2020.07 ~ 2023.07 (3년)</li>
+</ul>
+<p><img src="/images/Kubernetes/CKA-certificate.png?width=50pc" alt=image></p>
+<p><code>CKA</code>는 CNCF를 리딩하는 <code>Linux Foundation</code>에서 주관하는 시험입니다.
+가격은 정가 $300으로 저렴하지는 않은 편입니다.
+그러나 할인행사를 많이 하므로 급하지 않다면 시간을 가지고 천천히 결제하는게 좋습니다.
+결제 후 1년까지 총 두번의 시험을 치룰 수 있습니다.
+두번의 기회 안에만 합격하면 <code>CKA</code>를 취득할 수 있습니다.</p>
+<h2 id=시험-환경>시험 환경</h2>
+<p>시험은 온라인으로 치루게 됩니다.
+해당 시험을 위해서 Chrome Extension을 설치해야 합니다.
+이외에도 Requirements가 몇가지 더 있으며 이는 시험을 보기 전에 사이트에서 제공하는 툴로 확인이 가능합니다.
+시험 종류중에는 중국/일본어로 진행되는 시험도 있지만 아직 한글은 지원하지 않습니다.
+그래서 저도 영어로 지원하였고, 이에따라 감독관도 영어권 사람으로 배정되었습니다.
+시험을 위해 마이크 및 웹캠이 필요합니다.
+웹캠은 주변 환경을 찍어서 보여줘야 하기 때문에 자유롭게 움직일 수 있어야 합니다.
+감독관과는 보통 영어로 대화하지 않고 시험 페이지에서 제공하는 메신저를 통해 텍스트로 대화합니다.
+시험 스케줄은 KST로 변환하여 선호하는 시간을 선택하면, 가능한 일정을 알려줍니다.
+저의 경우 밤에 집중이 잘 되어 저녁 10시에 응시하였습니다.
+취소 및 변경은 응시 하루전까지 자유롭게 가능하고, 24시간 이후가 되었을 경우 패널티를 받게 됩니다.
+시험 시간은 총 3시간으로 그 시간 안에 24문제를 풀면 됩니다.</p>
+<p>시험의 난이도는 그렇게 어려운 편은 아닙니다.
+물론 저의 경우 약 1년간 쿠버네티스 환경을 익혀왔고, 강의도 학습하였지만 객관적으로 보았을 때에도 시험 난이도가 높지는 않습니다.
+가격때문에, 떨어질까봐 걱정되어 망설여지신다면 자신있게 응시해도 좋을 것 같습니다.
+어차피 일정 변경이 결제 후 1년간 자유롭기 때문에 막상 시험이 다가왔을 때 공부가 좀 더 필요할 것 같다고 생각되면 취소 후 다시 응시하면 됩니다.
+게다가 1개의 추가적인 탭을 사용할 수 있는데, 이 탭으로 <code>kubernetes.io</code> 및 <code>github.com/kubernetes</code>에 접속이 가능합니다.
+저의 경우 확실하게 하기 위해 모든 문제를 <code>kubernetes.io</code>에서 검색하여 풀었고, 이렇게 풀어도 시간이 1시간가량 남았습니다.</p>
+<h2 id=준비했던-것들>준비했던 것들</h2>
+<h3 id=공식-docs>공식 Docs</h3>
+<p>먼저 공식 Docs를 보시면 됩니다.
+가장 기본이 되는 문서로, 필요한 내용은 전부 Docs에 들어가 있습니다.
+내용을 외운다기 보다는 어떤 기능이 있는지 이해하는 방식으로 넘어가면 좋을 것 같습니다.
+저의 경우 <code>Concepts</code>만 읽어보았으면 <code>Tasks</code>에 있는 내용은 거의 보지 못했습니다.</p>
+<h3 id=kubernetes-the-hard-way>kubernetes the hard way</h3>
+<p>두번째로 <a href=https://github.com/kelseyhightower/kubernetes-the-hard-way><code>kubernetes-the-hard-way</code></a>입니다.
+GCP에 쿠버네티스를 <code>kubeadm</code>이 아닌 직접 프로세스를 실행시키는 방식으로 한땀한땀 구성하는게 특징인 프로젝트입니다.
+처음에 개념이 잡히지 않은 상태에서는 해도 단순한 복붙작업이 될 가능성이 높습니다.
+따라서 어느정도 공부를 하고 난 뒤 심화학습을 한다는 생각으로 해보시면 좋을 것 같습니다.</p>
+<h3 id=udemy-cka-강의>Udemy CKA 강의</h3>
+<p>세번째로 Udemy에서 하는 <a href=https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/>CKA 강의</a>입니다.
+이 강의에서는 Katacoda를 활용하여 직접 실습도 해볼 수 있어서 배웠던 것을 복습하는 데 매우 좋습니다.
+또한 강의 말미에는 Mock Exam이 3개 포함되어 있는데 실제 시험과 난이도가 매우 비슷하고 문제도 크게 다르지 않아서 시험을 준비하는데 많은 도움이 되었습니다.
+가격도 계속 2만원 선으로 되어있는 것 같으니 그렇게 큰 부담도 되지 않을 것 같습니다.
+저의 경우 회사에서 Udemy 서비스를 지원해주어 이를 통해 강의를 들었습니다.
+강의 내용이 평소 혼자 공부할 때에는 넘어갈 수 있는 부분들이 많이 포함되어 있어 부족한 부분을 채우는 데 매우 좋았습니다.</p>
+<p>저는 이렇게 3가지만 공부하고 시험을 치뤘습니다.
+심화된 내용을 모두 공부하는 것도 좋겠지만 이정도로만 해도 <code>CKA</code>를 취득하는 데에는 무리가 없습니다.</p>
+<h2 id=공부해야-할-것들>공부해야 할 것들</h2>
+<ul>
+<li><code>kubectl create</code> 명령어 및 <code>kubectl run</code>(파드 실행) 명령어에 익숙해지기</li>
+<li><code>--dry-run -o yaml</code> 옵션을 통해 대강의 뼈대를 구성하고 <code>kubernetes.io</code>를 참조하며 수정하기</li>
+<li><code>journalctl -u kubelet -f</code>로 <code>kubelet</code>의 로그 확인하기</li>
+<li><code>service kubelet status</code>로 <code>kubelet</code>의 상태 확인하기</li>
+<li><code>static pod</code>를 구성하는 방법 알아보기 (<code>kubelet</code>에서 <code>static pod</code> 위치 지정하는 것, 실제로 <code>static pod</code>를 생성해보는 것)</li>
+<li><code>etcdctl</code>을 통해 ETCD를 백업하고 복구하기</li>
+<li><code>kubeadm</code>을 통해 클러스터 구성하고, 업그레이드 하기</li>
+<li><code>kubeadm</code>을 통해 새로운 노드를 워커노드로 붙이기</li>
+<li><code>pv</code>, <code>pvc</code>를 통해 파드에 볼륨 추가하기</li>
+<li><code>taint</code>, <code>toleration</code>, <code>cordon</code>, <code>drain</code>, <code>nodeSelector</code>, <code>affinity</code>를 사용하여 파드가 뜨는 위치를 원하는 대로 조정하기</li>
+</ul>
+<footer class=footline>
+</footer>
+<div id=utterance>
+<script src=https://utteranc.es/client.js repo=kimmj/kimmj.github.io issue-term=pathname label=comments theme=github-light crossorigin=anonymous async></script>
+</div>
+</div>
+</div>
+<div id=navigation>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/js/clipboard.min.js?1639316885></script>
+<script src=/js/perfect-scrollbar.min.js?1639316885></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1639316885></script>
+<script src=/js/jquery.sticky.js?1639316885></script>
+<script src=/js/featherlight.min.js?1639316885></script>
+<script src=/js/highlight.pack.js?1639316885></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/js/modernizr.custom-3.6.0.js?1639316885></script>
+<script src=/js/learn.js?1639316885></script>
+<script src=/js/hugo-learn.js?1639316885></script>
+<link href=/mermaid/mermaid.css?1639316885 rel=stylesheet>
+<script src=/mermaid/mermaid.js?1639316885></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>
